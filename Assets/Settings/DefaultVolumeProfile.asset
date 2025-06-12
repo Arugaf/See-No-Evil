@@ -548,7 +548,6 @@ MonoBehaviour:
   - {fileID: 6009260814397855181}
   - {fileID: 8335438822182674896}
   - {fileID: -4262230924223317639}
-  - {fileID: 7776579113712866417}
 --- !u!114 &853819529557874667
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -974,34 +973,34 @@ MonoBehaviour:
   active: 1
   fogDensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 16.3
   fogDistance:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 70
   fogColor:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 0}
   ambientColor:
     m_OverrideState: 1
-    m_Value: {r: 0.1, g: 0.1, b: 0.1, a: 0.1}
+    m_Value: {r: 0, g: 0, b: 0, a: 0}
   fogNear:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2.1
   fogFar:
     m_OverrideState: 1
     m_Value: 100
   fogAltScale:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 45.7
   fogThinning:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 390
   noiseScale:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 499
   noiseStrength:
     m_OverrideState: 1
-    m_Value: 0.05
+    m_Value: 0.062
 --- !u!114 &6940869943325143175
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1105,7 +1104,7 @@ MonoBehaviour:
     m_Value: 0
   ditherThreshold:
     m_OverrideState: 1
-    m_Value: 512
+    m_Value: 256
   ditherStrength:
     m_OverrideState: 1
     m_Value: 1
