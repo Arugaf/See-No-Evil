@@ -548,6 +548,7 @@ MonoBehaviour:
   - {fileID: 6009260814397855181}
   - {fileID: 8335438822182674896}
   - {fileID: -4262230924223317639}
+  - {fileID: 7776579113712866417}
 --- !u!114 &853819529557874667
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1070,6 +1071,22 @@ MonoBehaviour:
   scale:
     m_OverrideState: 1
     m_Value: 1
+--- !u!114 &7776579113712866417
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d261568f61268469dc2cf3efeae4ae, type: 3}
+  m_Name: MeatVolumeEffect
+  m_EditorClassIdentifier: 
+  active: 1
+  myParameter:
+    m_OverrideState: 1
+    m_Value: 0.5
 --- !u!114 &8335438822182674896
 MonoBehaviour:
   m_ObjectHideFlags: 3
