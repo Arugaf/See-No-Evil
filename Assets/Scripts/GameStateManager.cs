@@ -1,10 +1,12 @@
 using System;
-using System.Collections;
+using InputModule;
 using UI;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// todo: deconstruct scene manager from game state manager and pause menu from game state manager
+// todo: use good singletons
 public class GameStateManager : MonoBehaviour {
     private static GameStateManager _instance = null;
 
@@ -25,15 +27,17 @@ public class GameStateManager : MonoBehaviour {
 
         if (!_instance) {
             _instance = this;
+            InputHandlerOld.GotEscapeKeyDown += OnGamePaused;
+
+            _pauseMenu = FindFirstObjectByType<PauseMenu>();
+
+            if (_pauseMenu) {
+                _pauseMenu.GameObject().SetActive(false);
+            }
         }
         else if (_instance != this) {
             Destroy(gameObject);
         }
-    }
-
-    private void Start() {
-        // _pauseMenu = FindFirstObjectByType<PauseMenu>();
-        // _pauseMenu.GameObject().SetActive(false);
     }
 
     private enum GameScene {
@@ -79,18 +83,10 @@ public class GameStateManager : MonoBehaviour {
         Application.Quit();
     }
 
-    public void Unpause() {
-        Time.timeScale = 1.0f;
-        currentGameStatus = GameStatus.Active;
-
-        if (_pauseMenu) {
-            _pauseMenu.GameObject().SetActive(false);
-        }
-    }
-
-    private void GotPauseGame() {
+    public void OnGamePaused() {
         if (_currentScene is GameScene.MainMenu or GameScene.End) return;
 
+        Debug.Log("Pausing...");
         Time.timeScale = currentGameStatus switch {
             GameStatus.Active => 0.0f,
             GameStatus.Paused => 1.0f,
@@ -99,9 +95,7 @@ public class GameStateManager : MonoBehaviour {
 
         currentGameStatus = currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
 
-        if (_pauseMenu) {
-            _pauseMenu.GameObject().SetActive(currentGameStatus == GameStatus.Paused);
-        }
+        _pauseMenu.GameObject().SetActive(currentGameStatus == GameStatus.Paused);
     }
 
     private void LoadNextLevel() {
