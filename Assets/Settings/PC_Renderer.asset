@@ -65,19 +65,6 @@ MonoBehaviour:
   passIndex: 0
   bindDepthStencilAttachment: 0
   m_Version: 1
---- !u!114 &-5394619709984849947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df6534dd185a4f18b50629b58de296b6, type: 3}
-  m_Name: PixelationRenderFeature
-  m_EditorClassIdentifier: 
-  m_Active: 1
 --- !u!114 &-432014720364240546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,11 +104,10 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 7200000, guid: b9a23f869c4fd45f19c5ada54dd82176, type: 3}
   m_RendererFeatures:
   - {fileID: 7833122117494664109}
-  - {fileID: -432014720364240546}
-  - {fileID: -5394619709984849947}
   - {fileID: -7425473352196800314}
   - {fileID: 1981814087339261067}
-  m_RendererFeatureMap: ad6b866f10d7b46c5e21f396e62c01fae53f08a8f47522b5c6402ef9536bf3988bbcb88e69d1801b
+  - {fileID: -432014720364240546}
+  m_RendererFeatureMap: ad6b866f10d7b46cc6402ef9536bf3988bbcb88e69d1801b5e21f396e62c01fa
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
