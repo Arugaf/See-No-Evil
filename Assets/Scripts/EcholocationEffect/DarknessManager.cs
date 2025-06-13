@@ -14,16 +14,27 @@ namespace Features.VFX
         [SerializeField] private float smoothTime;
         private InputAction act;
 
-        private float currentVelocity;
+        private SmoothDampArticulator articulator;
         private void Awake()
         {
+            articulator = new SmoothDampArticulator(0, smoothTime);
             DarknessFactor = 0;
             Shader.SetGlobalFloat(DARKNESS_FACTOR, DarknessFactor);
             act = asset.FindAction("Crouch");
         }
+        private void OnDestroy()
+        {
+            SetDarknessFactor(0);
+        }
         private void Update()
         {
-            DarknessFactor = Mathf.SmoothDamp(DarknessFactor, act.IsPressed() ? 1.0f: 0.0f, ref currentVelocity, smoothTime);
+            articulator.Target = act.IsPressed() ? 1.0f : 0.0f;
+            articulator.Update();
+            SetDarknessFactor(articulator.Current);
+        }
+        private void SetDarknessFactor(float fac)
+        {
+            DarknessFactor = fac;
             Shader.SetGlobalFloat(DARKNESS_FACTOR, DarknessFactor);
         }
     }
