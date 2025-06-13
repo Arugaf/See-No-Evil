@@ -31,10 +31,8 @@ namespace Actors {
                 patroller.TriggerChase(transform);
             }
 
-            foreach (var patroller in patrollers) {
-                if (!currentPatrollers.Contains(patroller)) {
-                    patroller.GoBackToPatrol();
-                }
+            foreach (var patroller in patrollers.Where(patroller => !currentPatrollers.Contains(patroller))) {
+                patroller.GoBackToPatrol();
             }
 
             patrollers = new List<Patroller>(currentPatrollers);

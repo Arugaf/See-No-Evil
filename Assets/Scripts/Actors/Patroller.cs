@@ -33,7 +33,6 @@ namespace Actors {
         }
 
         public void TriggerChase(Transform target) {
-            Debug.Log("hi!");
             _target = target;
 
             --destinationPointIdx;
