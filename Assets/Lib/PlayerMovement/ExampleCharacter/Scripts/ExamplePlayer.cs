@@ -20,7 +20,7 @@ namespace KinematicCharacterController.Examples
 
         private void Start()
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
             LookAction = Main.FindAction("Look");
             MoveAction = Main.FindAction("Move");
             PressMouse = Main.FindAction("Attack");
@@ -36,10 +36,10 @@ namespace KinematicCharacterController.Examples
 
         private void Update()
         {
-            if (PressMouse.IsPressed())
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+            //if (PressMouse.IsPressed() && GameStateManager.CurrentGameStatus == GameStateManager.GameStatus.Active)
+            //{
+            //    Cursor.lockState = CursorLockMode.Locked;
+            //}
 
             HandleCharacterInput();
         }
@@ -76,10 +76,10 @@ namespace KinematicCharacterController.Examples
             CharacterCamera.UpdateWithInput(Time.deltaTime, 0, lookInputVector);
 
             // Handle toggling zoom level
-            if (PressMouse.IsPressed())
-            {
-                CharacterCamera.TargetDistance = (CharacterCamera.TargetDistance == 0f) ? CharacterCamera.DefaultDistance : 0f;
-            }
+            //if (PressMouse.IsPressed())
+            //{
+            //    CharacterCamera.TargetDistance = (CharacterCamera.TargetDistance == 0f) ? CharacterCamera.DefaultDistance : 0f;
+            //}
         }
 
         private void HandleCharacterInput()

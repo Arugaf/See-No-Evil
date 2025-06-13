@@ -16,8 +16,7 @@ public class GameStateManager : MonoBehaviour {
         Win,
         Lose,
     }
-
-    [SerializeField] private GameStatus currentGameStatus = GameStatus.Active;
+    [SerializeField] private GameStatus _currentGameStatus = GameStatus.Active;
     private GameScene _currentScene = GameScene.MainMenu;
 
     private PauseMenu _pauseMenu;
@@ -51,10 +50,11 @@ public class GameStateManager : MonoBehaviour {
 
     public void LoadGame() {
         _currentScene = GameScene.MainScene;
+        Cursor.lockState = CursorLockMode.Locked;
 
         Debug.Log("MainScene loaded");
         SceneManager.LoadScene("MainScene");
-        currentGameStatus = GameStatus.Active;
+        _currentGameStatus = GameStatus.Active;
         Time.timeScale = 1.0f;
     }
 
@@ -68,7 +68,7 @@ public class GameStateManager : MonoBehaviour {
             _pauseMenu.GameObject().SetActive(false);
         }
 
-        currentGameStatus = GameStatus.Paused;
+        _currentGameStatus = GameStatus.Paused;
     }
 
     public void LoadGameOverScene() {
@@ -88,17 +88,17 @@ public class GameStateManager : MonoBehaviour {
 
     private void OnGamePaused() {
         if (_currentScene is GameScene.MainMenu or GameScene.End) return;
-
         Debug.Log("Pausing...");
-        Time.timeScale = currentGameStatus switch {
+        Time.timeScale = _currentGameStatus switch {
             GameStatus.Active => 0.0f,
             GameStatus.Paused => 1.0f,
             _ => Time.timeScale
         };
 
-        currentGameStatus = currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
+        _currentGameStatus = _currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
 
-        _pauseMenu.GameObject().SetActive(currentGameStatus == GameStatus.Paused);
+        _pauseMenu.GameObject().SetActive(_currentGameStatus == GameStatus.Paused);
+        ConfineCursor();
     }
 
     // todo: delete in release build
@@ -119,11 +119,12 @@ public class GameStateManager : MonoBehaviour {
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        ConfineCursor();
     }
 
     private void LoadNextLevel() {
         if (_currentScene == GameScene.End) {
-            currentGameStatus = GameStatus.Win;
+            _currentGameStatus = GameStatus.Win;
             LoadGameOverScene();
             return;
         }
@@ -142,5 +143,16 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log(scene + " loaded");
         SceneManager.LoadScene(sceneName);
+    }
+    private void ConfineCursor()
+    {
+        if (_currentScene == GameScene.MainScene && _currentGameStatus == GameStatus.Active)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
