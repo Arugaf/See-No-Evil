@@ -16,18 +16,18 @@ namespace Actors {
 
         private void Start() {
             _agent = GetComponent<NavMeshAgent>();
-            _agent.autoBraking = false;
 
             GotoNextPoint();
         }
 
         private void Update() {
+            if (_agent.pathPending) return;
             if (_target) {
                 _agent.destination = _target.position;
                 return;
             }
 
-            if (_agent.remainingDistance < 0.5f) {
+            if (_agent.remainingDistance <= _agent.stoppingDistance && !_agent.hasPath) {
                 GotoNextPoint();
             }
         }

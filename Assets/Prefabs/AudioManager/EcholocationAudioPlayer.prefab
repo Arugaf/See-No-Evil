@@ -5069,3 +5069,6 @@ MonoBehaviour:
   source: {fileID: 6445297065491657413}
   echolocationParticles: {fileID: 2854134062179805037}
   audioSourceDistanceMultiplicator: 5
+  lifetimeMultiplicator: 2
+  lifetimeAddition: 0
+  particleLifetimeMultiplicator: 1
