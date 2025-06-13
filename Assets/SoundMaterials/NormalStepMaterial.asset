@@ -46,5 +46,6 @@ MonoBehaviour:
       m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
+    SoundType: 1
     Clips:
     - {fileID: 8300000, guid: 6b3ae13d0fc62194da3be192ae2b8de8, type: 3}

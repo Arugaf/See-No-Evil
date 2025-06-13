@@ -3,16 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Features.AudioManager
 {
+    public enum SoundType { Normal = 0, Loud = 1 };
     public class AudioManager : MonoBehaviour
     {
         private static AudioManager Instance;
-        private IObjectPool<IAudioEffect> effects;
+        private Dictionary<SoundType, IObjectPool<IAudioEffect>> effects = new Dictionary<SoundType, IObjectPool<IAudioEffect>>();
         private List<IAudioCallbackReciever> callbackRecievers = new List<IAudioCallbackReciever>(); 
-        [SerializeField] private int PoolSize = 10;
-        [SerializeField] private GameObject AtomicSoundPrefab;
+        [SerializeField] private int EachPoolSize = 10;
+        [Header("0 = Normal\n1 = Loud")]
+        [SerializeField] private GameObject[] SoundPrefabs;
         private void Awake()
         {
             if (Instance == null) Instance = this;
@@ -22,26 +25,10 @@ namespace Features.AudioManager
                 Destroy(gameObject);
                 return;
             }
-            effects = new LinkedPool<IAudioEffect>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject, true, PoolSize);
-        }
-        IAudioEffect CreatePooledItem()
-        {
-            var go = Instantiate(AtomicSoundPrefab, transform);
-            go.name = "Atomic Sound";
-            return go.GetComponent<IAudioEffect>();
-        }
-        void OnReturnedToPool(IAudioEffect system)
-        {
-            system.SetActive(false);
-        }
-        void OnTakeFromPool(IAudioEffect system)
-        {
-            system.SetActive(true);
-        }
-
-        void OnDestroyPoolObject(IAudioEffect system)
-        {
-            system.Delete();
+            for(int i = 0; i < 2; i++)
+            {
+                effects.Add((SoundType)i, new AudioEffectPool(SoundPrefabs[i], transform, EachPoolSize));
+            }
         }
 
         public static void PlayAtomic(Vector3 position, AudioPlayDeterminedParams parameters)
@@ -51,19 +38,24 @@ namespace Features.AudioManager
                 Debug.LogError("Atomic sounds not working because we should have a shitty singleton");
                 return;
             }
-            Instance.effects.Get(out IAudioEffect effect);
+            if (!Instance.effects.TryGetValue(parameters.SoundType, out var pool))
+            {
+                Debug.LogError("Setup atomic sound prefabs in SoundPrefabs");
+                return;
+            }
+            pool.Get(out IAudioEffect effect);
             effect.SetPosition(position);
-            effect.Play(parameters);
-            Instance.StartCoroutine(Instance.AtomicLifetime(effect, parameters.SoundDuration));
+            effect.Play(parameters, out float lifetime);
+            Instance.StartCoroutine(Instance.AtomicLifetime(pool, effect, lifetime));
             foreach(var callbacker in Instance.callbackRecievers)
             {
                 callbacker.AudioPlays(parameters, position);
             }
         }
-        private IEnumerator AtomicLifetime(IAudioEffect effect, float lifetime)
+        private IEnumerator AtomicLifetime(IObjectPool<IAudioEffect> pool, IAudioEffect effect, float lifetime)
         {
             yield return new WaitForSeconds(lifetime);
-            effects.Release(effect);
+            pool.Release(effect);
         }
         public static Action RegisterAudioCallbackReciever(IAudioCallbackReciever audioCallbackReciever)
         {
