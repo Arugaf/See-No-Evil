@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26258394}
   - component: {fileID: 26258393}
+  - component: {fileID: 26258395}
   m_Layer: 0
   m_Name: DarkEffectSetter (IMPORTANT)
   m_TagString: Untagged
@@ -165,6 +166,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &26258395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26258392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412a4a249341adc4198b2ad8abbae6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
 --- !u!1 &68297433
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +892,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  gotDeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gotVictoryEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &354108057
 Transform:
   m_ObjectHideFlags: 0
