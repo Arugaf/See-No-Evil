@@ -144,6 +144,7 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log(scene + " loaded");
         SceneManager.LoadScene(sceneName);
+        ConfineCursor();
     }
     private void ConfineCursor()
     {
