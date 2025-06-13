@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -8,6 +10,7 @@ namespace Features.AudioManager
     {
         private static AudioManager Instance;
         private IObjectPool<IAudioEffect> effects;
+        private List<IAudioCallbackReciever> callbackRecievers = new List<IAudioCallbackReciever>(); 
         [SerializeField] private int PoolSize = 10;
         [SerializeField] private GameObject AtomicSoundPrefab;
         private void Awake()
@@ -17,6 +20,7 @@ namespace Features.AudioManager
             {
                 Debug.LogWarning("Multiple Audio Managers :L");
                 Destroy(gameObject);
+                return;
             }
             effects = new LinkedPool<IAudioEffect>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject, true, PoolSize);
         }
@@ -51,12 +55,25 @@ namespace Features.AudioManager
             effect.SetPosition(position);
             effect.Play(parameters);
             Instance.StartCoroutine(Instance.AtomicLifetime(effect, parameters.SoundDuration));
+            foreach(var callbacker in Instance.callbackRecievers)
+            {
+                callbacker.AudioPlays(parameters, position);
+            }
         }
         private IEnumerator AtomicLifetime(IAudioEffect effect, float lifetime)
         {
             yield return new WaitForSeconds(lifetime);
             effects.Release(effect);
         }
-
+        public static Action RegisterAudioCallbackReciever(IAudioCallbackReciever audioCallbackReciever)
+        {
+            if(Instance == null)
+            {
+                Debug.LogError("Could not listen to the sounds because we should have a shitty singleton");
+                return null!;
+            }
+            Instance.callbackRecievers.Add(audioCallbackReciever);
+            return () => Instance?.callbackRecievers.Remove(audioCallbackReciever);
+        }
     }
 }
