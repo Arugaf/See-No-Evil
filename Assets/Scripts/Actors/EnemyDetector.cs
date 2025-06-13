@@ -13,23 +13,31 @@ namespace Actors {
         
         [SerializeField] private bool gizmosActive = true;
         [SerializeField] private Color radiusSphereColor = Color.mediumPurple;
+        private Collider[] noAllocOverlapCache = new Collider[16];
 
         private void Update() {
             DetectEnemies();
         }
 
         private void DetectEnemies() {
-            var hitColliders = Physics.OverlapSphere(transform.position, detectionRadius, enemyLayer);
+            int idx = Physics.OverlapSphereNonAlloc(transform.position, detectionRadius, noAllocOverlapCache, enemyLayer);
             currentPatrollers.Clear();
-            
-            foreach (Collider enemyCollider in hitColliders) {
-                var patroller = enemyCollider.GetComponent<Patroller>();
-
+            for(int i = 0; i < idx; i++)
+            {
+                var patroller = noAllocOverlapCache[i].GetComponent<Patroller>();
                 if (currentPatrollers.Contains(patroller)) continue;
-                
+
                 currentPatrollers.Add(patroller);
                 patroller.TriggerChase(transform);
             }
+            //foreach (Collider enemyCollider in hitColliders) {
+            //    var patroller = enemyCollider.GetComponent<Patroller>();
+
+            //    if (currentPatrollers.Contains(patroller)) continue;
+                
+            //    currentPatrollers.Add(patroller);
+            //    patroller.TriggerChase(transform);
+            //}
 
             foreach (var patroller in patrollers.Where(patroller => !currentPatrollers.Contains(patroller))) {
                 patroller.GoBackToPatrol();
