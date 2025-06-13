@@ -20,8 +20,7 @@ namespace Actors {
 
         private void DetectEnemies() {
             var hitColliders = Physics.OverlapSphere(transform.position, detectionRadius, enemyLayer);
-
-            if (hitColliders.Length <= 0) return;
+            currentPatrollers.Clear();
             
             foreach (Collider enemyCollider in hitColliders) {
                 var patroller = enemyCollider.GetComponent<Patroller>();
