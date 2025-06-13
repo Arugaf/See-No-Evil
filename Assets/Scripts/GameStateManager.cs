@@ -16,7 +16,7 @@ public class GameStateManager : MonoBehaviour {
         Win,
         Lose,
     }
-    [SerializeField] private GameStatus _currentGameStatus = GameStatus.Active;
+    [SerializeField] private GameStatus currentGameStatus = GameStatus.Active;
     private GameScene _currentScene = GameScene.MainMenu;
 
     private PauseMenu _pauseMenu;
@@ -50,12 +50,13 @@ public class GameStateManager : MonoBehaviour {
 
     public void LoadGame() {
         _currentScene = GameScene.MainScene;
-        Cursor.lockState = CursorLockMode.Locked;
+
 
         Debug.Log("MainScene loaded");
         SceneManager.LoadScene("MainScene");
-        _currentGameStatus = GameStatus.Active;
+        currentGameStatus = GameStatus.Active;
         Time.timeScale = 1.0f;
+        ConfineCursor();
     }
 
     public void LoadMenu() {
@@ -68,7 +69,7 @@ public class GameStateManager : MonoBehaviour {
             _pauseMenu.GameObject().SetActive(false);
         }
 
-        _currentGameStatus = GameStatus.Paused;
+        currentGameStatus = GameStatus.Paused;
     }
 
     public void LoadGameOverScene() {
@@ -89,15 +90,15 @@ public class GameStateManager : MonoBehaviour {
     private void OnGamePaused() {
         if (_currentScene is GameScene.MainMenu or GameScene.End) return;
         Debug.Log("Pausing...");
-        Time.timeScale = _currentGameStatus switch {
+        Time.timeScale = currentGameStatus switch {
             GameStatus.Active => 0.0f,
             GameStatus.Paused => 1.0f,
             _ => Time.timeScale
         };
 
-        _currentGameStatus = _currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
+        currentGameStatus = currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
 
-        _pauseMenu.GameObject().SetActive(_currentGameStatus == GameStatus.Paused);
+        _pauseMenu.GameObject().SetActive(currentGameStatus == GameStatus.Paused);
         ConfineCursor();
     }
 
@@ -124,7 +125,7 @@ public class GameStateManager : MonoBehaviour {
 
     private void LoadNextLevel() {
         if (_currentScene == GameScene.End) {
-            _currentGameStatus = GameStatus.Win;
+            currentGameStatus = GameStatus.Win;
             LoadGameOverScene();
             return;
         }
@@ -146,7 +147,7 @@ public class GameStateManager : MonoBehaviour {
     }
     private void ConfineCursor()
     {
-        if (_currentScene == GameScene.MainScene && _currentGameStatus == GameStatus.Active)
+        if (_currentScene == GameScene.MainScene && currentGameStatus == GameStatus.Active)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
