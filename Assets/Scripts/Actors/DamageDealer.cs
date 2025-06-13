@@ -6,6 +6,7 @@ namespace Actors {
         [SerializeField] private int damage = 25;
         [SerializeField] private float radius = 5f;
 
+        [SerializeField] private bool gizmosActive = true;
         [SerializeField] private Color radiusSphereColor = Color.mediumAquamarine;
         [SerializeField] private Color radiusSphereColorTriggered = Color.crimson;
 
@@ -23,6 +24,8 @@ namespace Actors {
         }
 
         private void OnDrawGizmos() {
+            if (!gizmosActive) return;
+            
             if (debugTriggerTarget) {
                 currentDistance = Vector3.Distance(transform.position, debugTriggerTarget.position);
 
