@@ -24,11 +24,15 @@ namespace InputModule {
             if (Input.GetMouseButtonUp(PrimaryButton)) GotPrimaryMouseButtonUp?.Invoke();
 
             if (Input.GetKeyDown(KeyCode.Escape)) GotEscapeKeyDown?.Invoke();
+
+            if (Input.GetKeyDown(KeyCode.N)) GotNKeyDown?.Invoke();
         }
 
         public static event UnityAction GotPrimaryMouseButtonDown;
         public static event UnityAction GotPrimaryMouseButtonUp;
 
         public static event UnityAction GotEscapeKeyDown;
+        
+        public static event UnityAction GotNKeyDown;
     }
 }
