@@ -16,7 +16,6 @@ public class GameStateManager : MonoBehaviour {
         Win,
         Lose,
     }
-
     [SerializeField] private GameStatus currentGameStatus = GameStatus.Active;
     private GameScene _currentScene = GameScene.MainMenu;
 
@@ -52,10 +51,12 @@ public class GameStateManager : MonoBehaviour {
     public void LoadGame() {
         _currentScene = GameScene.MainScene;
 
+
         Debug.Log("MainScene loaded");
         SceneManager.LoadScene("MainScene");
         currentGameStatus = GameStatus.Active;
         Time.timeScale = 1.0f;
+        ConfineCursor();
     }
 
     public void LoadMenu() {
@@ -88,7 +89,6 @@ public class GameStateManager : MonoBehaviour {
 
     private void OnGamePaused() {
         if (_currentScene is GameScene.MainMenu or GameScene.End) return;
-
         Debug.Log("Pausing...");
         Time.timeScale = currentGameStatus switch {
             GameStatus.Active => 0.0f,
@@ -99,6 +99,7 @@ public class GameStateManager : MonoBehaviour {
         currentGameStatus = currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
 
         _pauseMenu.GameObject().SetActive(currentGameStatus == GameStatus.Paused);
+        ConfineCursor();
     }
 
     // todo: delete in release build
@@ -119,6 +120,7 @@ public class GameStateManager : MonoBehaviour {
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        ConfineCursor();
     }
 
     private void LoadNextLevel() {
@@ -142,5 +144,16 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log(scene + " loaded");
         SceneManager.LoadScene(sceneName);
+    }
+    private void ConfineCursor()
+    {
+        if (_currentScene == GameScene.MainScene && currentGameStatus == GameStatus.Active)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
