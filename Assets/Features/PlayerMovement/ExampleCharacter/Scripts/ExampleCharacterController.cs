@@ -39,11 +39,12 @@ namespace KinematicCharacterController.Examples
         TowardsGravity,
         TowardsGroundSlopeAndGravity,
     }
-
+    
     public class ExampleCharacterController : MonoBehaviour, ICharacterController
     {
         public KinematicCharacterMotor Motor;
-
+        [Header("Custom Additions")]
+        [SerializeField] private ExampleControllerCallbackReciever CallbackReciever;
         [Header("Stable Movement")]
         public float MaxStableMoveSpeed = 10f;
         public float StableMovementSharpness = 15f;
@@ -216,6 +217,7 @@ namespace KinematicCharacterController.Examples
         /// </summary>
         public void BeforeCharacterUpdate(float deltaTime)
         {
+            
         }
 
         /// <summary>
@@ -374,6 +376,7 @@ namespace KinematicCharacterController.Examples
                                 _jumpRequested = false;
                                 _jumpConsumed = true;
                                 _jumpedThisFrame = true;
+                                CallbackReciever.Jumped();
                             }
                         }
 
@@ -386,6 +389,7 @@ namespace KinematicCharacterController.Examples
                         break;
                     }
             }
+            CallbackReciever.MovementUpdate(currentVelocity, deltaTime);
         }
 
         /// <summary>
@@ -503,10 +507,12 @@ namespace KinematicCharacterController.Examples
 
         protected void OnLanded()
         {
+            CallbackReciever.GroundedStateChanged(true);
         }
 
         protected void OnLeaveStableGround()
         {
+            CallbackReciever.GroundedStateChanged(false);
         }
 
         public void OnDiscreteCollisionDetected(Collider hitCollider)
