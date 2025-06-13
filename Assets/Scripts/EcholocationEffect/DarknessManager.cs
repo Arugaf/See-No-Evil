@@ -21,9 +21,17 @@ namespace Features.VFX
             Shader.SetGlobalFloat(DARKNESS_FACTOR, DarknessFactor);
             act = asset.FindAction("Crouch");
         }
+        private void OnDestroy()
+        {
+            SetDarknessFactor(0);
+        }
         private void Update()
         {
-            DarknessFactor = Mathf.SmoothDamp(DarknessFactor, act.IsPressed() ? 1.0f: 0.0f, ref currentVelocity, smoothTime);
+            SetDarknessFactor(Mathf.SmoothDamp(DarknessFactor, act.IsPressed() ? 1.0f: 0.0f, ref currentVelocity, smoothTime));
+        }
+        private void SetDarknessFactor(float fac)
+        {
+            DarknessFactor = fac;
             Shader.SetGlobalFloat(DARKNESS_FACTOR, DarknessFactor);
         }
     }
