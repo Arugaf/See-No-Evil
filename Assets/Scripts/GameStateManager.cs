@@ -29,6 +29,9 @@ public class GameStateManager : MonoBehaviour {
             _instance = this;
             InputHandlerOld.GotEscapeKeyDown += OnGamePaused;
 
+            // todo: delete in release build
+            InputHandlerOld.GotNKeyDown += OnNextScene;
+
             _pauseMenu = FindFirstObjectByType<PauseMenu>();
 
             if (_pauseMenu) {
@@ -83,7 +86,7 @@ public class GameStateManager : MonoBehaviour {
         Application.Quit();
     }
 
-    public void OnGamePaused() {
+    private void OnGamePaused() {
         if (_currentScene is GameScene.MainMenu or GameScene.End) return;
 
         Debug.Log("Pausing...");
@@ -96,6 +99,26 @@ public class GameStateManager : MonoBehaviour {
         currentGameStatus = currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
 
         _pauseMenu.GameObject().SetActive(currentGameStatus == GameStatus.Paused);
+    }
+
+    // todo: delete in release build
+    private void OnNextScene() {
+        switch (_currentScene) {
+            case GameScene.MainMenu: {
+                LoadGame();
+                break;
+            }
+            case GameScene.MainScene: {
+                LoadGameOverScene();
+                break;
+            }
+            case GameScene.End: {
+                LoadMenu();
+                break;
+            }
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 
     private void LoadNextLevel() {

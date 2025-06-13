@@ -12,7 +12,7 @@ namespace Actors {
         public uint maxHealth = 100;
         public int health;
 
-        [SerializeField] public Status status = Status.Alive;
+        [SerializeField] private Status status = Status.Alive;
 
         public UnityEvent gotHealthIsZero;
 
@@ -21,14 +21,18 @@ namespace Actors {
         }
 
         private void Update() {
-            // todo: remove from release version
+            // todo: remove in release version
+            if (status == Status.Dead) {
+                gotHealthIsZero?.Invoke();
+            }
+            
             ApplyHpChange(0);
         }
 
         public void ApplyHpChange(int hpChange) {
             health -= hpChange;
             status = health <= 0 ? Status.Dead : Status.Alive;
-
+            
             if (status == Status.Dead) {
                 gotHealthIsZero?.Invoke();
             }
