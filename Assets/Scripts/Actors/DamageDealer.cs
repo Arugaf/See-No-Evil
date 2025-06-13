@@ -17,8 +17,9 @@ namespace Actors {
 
         [SerializeField] private Transform debugTriggerTarget;
         [SerializeField] private float currentDistance;
-        public bool Attacking { get; private set; }
+
 #endif
+        public bool Attacking { get; private set; }
         private Coroutine currentAttack;
         public void DoAttack(Transform attacking)
         {
