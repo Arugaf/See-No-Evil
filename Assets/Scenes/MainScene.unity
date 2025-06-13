@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 96323332}
   - component: {fileID: 96323333}
   - component: {fileID: 96323334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 96323326}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.99, y: 0, z: 11.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -555,7 +555,7 @@ MonoBehaviour:
   radiusSphereColor: {r: 0.4, g: 0.8039216, b: 0.6666667, a: 1}
   radiusSphereColorTriggered: {r: 0.8627452, g: 0.07843138, b: 0.2352941, a: 1}
   debugTriggerTarget: {fileID: 204570878}
-  currentDistance: 0
+  currentDistance: 12.807166
 --- !u!195 &96323333
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -596,6 +596,7 @@ MonoBehaviour:
   - {fileID: 1698815258}
   - {fileID: 220863581}
   destinationPointIdx: 0
+  pointsConnectorColor: {r: 1, g: 0.4980392, b: 0.3137255, a: 1}
 --- !u!1 &131135064
 GameObject:
   m_ObjectHideFlags: 0
@@ -7760,6 +7761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6353920370766191027, guid: 63ee915336d6c90498cb013b4ba7c3c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6410008884878139913, guid: 63ee915336d6c90498cb013b4ba7c3c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7807,6 +7812,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2452201451447419993, guid: 63ee915336d6c90498cb013b4ba7c3c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2001968164}
+    - targetCorrespondingSourceObject: {fileID: 2452201451447419993, guid: 63ee915336d6c90498cb013b4ba7c3c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2001968165}
   m_SourcePrefab: {fileID: 100100000, guid: 63ee915336d6c90498cb013b4ba7c3c2, type: 3}
 --- !u!1 &1968644552
 GameObject:
@@ -7954,6 +7962,24 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2001968165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001968160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4096c706d0453f74ab007f597fb45933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  gizmosActive: 1
+  radiusSphereColor: {r: 0.5764706, g: 0.4392157, b: 0.8588236, a: 1}
 --- !u!1 &2046500980
 GameObject:
   m_ObjectHideFlags: 0
