@@ -12,7 +12,7 @@ namespace Features.VFX
 
         [SerializeField] private InputActionAsset asset;
         [SerializeField] private float smoothTime;
-        [SerializeField] private InputAction act;
+        private InputAction act;
 
         private float currentVelocity;
         private void Awake()
