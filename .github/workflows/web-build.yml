@@ -11,8 +11,6 @@ name: Build And Push To Itch
 # 
 # https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestpaths
 on:
-  pull_request:
-    types: [opened, reopened]
   workflow_dispatch: {}
 
 env:
