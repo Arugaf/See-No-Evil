@@ -9,7 +9,9 @@ namespace Actors {
         [SerializeField] private int destinationPointIdx = 0;
 
         private NavMeshAgent _agent;
-        
+
+        private Transform _target;
+
         [SerializeField] private Color pointsConnectorColor = Color.coral;
 
         private void Start() {
@@ -20,9 +22,30 @@ namespace Actors {
         }
 
         private void Update() {
+            if (_target) {
+                _agent.destination = _target.position;
+                return;
+            }
+
             if (_agent.remainingDistance < 0.5f) {
                 GotoNextPoint();
             }
+        }
+
+        public void TriggerChase(Transform target) {
+            Debug.Log("hi!");
+            _target = target;
+
+            --destinationPointIdx;
+            if (destinationPointIdx < 0) {
+                destinationPointIdx = 0;
+            }
+        }
+
+        public void GoBackToPatrol() {
+            _target = null;
+
+            GotoNextPoint();
         }
 
         private void GotoNextPoint() {
@@ -34,7 +57,7 @@ namespace Actors {
 
         private void OnDrawGizmos() {
             Gizmos.color = pointsConnectorColor;
-            
+
             for (var i = 0; i < points.Length - 1; ++i) {
                 Gizmos.DrawLine(points[i].position, points[i + 1].position);
             }
