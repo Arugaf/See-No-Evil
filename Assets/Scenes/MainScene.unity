@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 96323329}
   - component: {fileID: 96323328}
   - component: {fileID: 96323327}
+  - component: {fileID: 96323332}
   m_Layer: 0
   m_Name: Bob
   m_TagString: Untagged
@@ -472,6 +473,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &96323332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96323326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f87772fadd98e6459e9bbd9b0d735aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 25
+  radius: 5
+  radiusSphereColor: {r: 0.4, g: 0.8039216, b: 0.6666667, a: 1}
+  radiusSphereColorTriggered: {r: 0.8627452, g: 0.07843138, b: 0.2352941, a: 1}
+  debugTriggerTarget: {fileID: 204570878}
+  currentDistance: 0
 --- !u!1 &131135064
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +703,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &204570878 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6353920370766191027, guid: 63ee915336d6c90498cb013b4ba7c3c2, type: 3}
+  m_PrefabInstance: {fileID: 1945086327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &311824720
 GameObject:
   m_ObjectHideFlags: 0
