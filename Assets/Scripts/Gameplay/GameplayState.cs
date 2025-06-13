@@ -10,12 +10,16 @@ namespace Gameplay {
         public int minutes {
             get => Mathf.FloorToInt(timeRemaining / 60);
         }
-        
+
         public int seconds {
             get => Mathf.FloorToInt(timeRemaining % 60);
         }
 
         public UnityEvent gotTimerRunOut;
+
+        public UnityEvent gotDeadEvent;
+
+        public UnityEvent gotVictoryEvent;
 
         private void Start() {
             timeRemaining = initialTime;
@@ -26,9 +30,20 @@ namespace Gameplay {
 
             timeRemaining -= Time.deltaTime;
 
-            if (timeRemaining <= 0f) {
-                gotTimerRunOut?.Invoke();
-            }
+            if (!(timeRemaining <= 0f)) return;
+            
+            Debug.Log("Timer runout triggered");
+            gotTimerRunOut?.Invoke();
+        }
+
+        public void Victory() {
+            Debug.Log("Victory triggered");
+            gotVictoryEvent?.Invoke();
+        }
+
+        public void Defeat() {
+            Debug.Log("Defeat triggered");
+            gotDeadEvent?.Invoke();
         }
     }
 }
