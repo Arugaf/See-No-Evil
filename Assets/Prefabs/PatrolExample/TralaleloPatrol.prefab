@@ -326,7 +326,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8714557069245164128}
   m_Enabled: 1
   m_AgentTypeID: 1479372276
-  m_Radius: 1.5
+  m_Radius: 1.2
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -836,7 +836,19 @@ MonoBehaviour:
   deltaTime: 0
   OnAttackTriggeredByAnimator:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3542822416981659061}
+        m_TargetAssemblyTypeName: RandomAudioSource, Assembly-CSharp
+        m_MethodName: PlayRandomSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   gizmosActive: 1
   radiusSphereColor: {r: 0.4, g: 0.8039216, b: 0.6666667, a: 1}
   radiusSphereColorTriggered: {r: 0.8627452, g: 0.07843138, b: 0.2352941, a: 1}
