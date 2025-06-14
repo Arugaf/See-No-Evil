@@ -9,22 +9,27 @@ namespace KinematicCharacterController.Examples
 {
     public class ExamplePlayer : MonoBehaviour
     {
+        /// <summary>
+        /// Please do something with me. I am going insane. This is SOOOOOO STINKY
+        /// </summary>
+        public static float PlayerCameraSensivityCoeff = 1;
         public ExampleCharacterController Character;
         public ExampleCharacterCamera CharacterCamera;
         public InputActionAsset Main;
         private InputAction LookAction;
         private InputAction MoveAction;
-        private InputAction Jump;
+        //private InputAction Jump;
         private InputAction Crouch;
         private InputAction PressMouse;
-
+        private float resolutionSensivityCoeff;
         private void Start()
         {
+            resolutionSensivityCoeff = 100.0f / Mathf.Min(Screen.width, Screen.height);
             //Cursor.lockState = CursorLockMode.Locked;
             LookAction = Main.FindAction("Look");
             MoveAction = Main.FindAction("Move");
             PressMouse = Main.FindAction("Attack");
-            Jump = Main.FindAction("Jump");
+            //Jump = Main.FindAction("Jump");
             Crouch = Main.FindAction("Crouch");
             // Tell camera to follow transform
             CharacterCamera.SetFollowTransform(Character.CameraFollowPoint);
@@ -62,7 +67,7 @@ namespace KinematicCharacterController.Examples
             Vector2 look = LookAction.ReadValue<Vector2>();
             float mouseLookAxisUp = look.y;
             float mouseLookAxisRight = look.x;
-            Vector3 lookInputVector = new Vector3(mouseLookAxisRight, mouseLookAxisUp, 0f);
+            Vector3 lookInputVector = new Vector3(mouseLookAxisRight, mouseLookAxisUp, 0f) * resolutionSensivityCoeff * PlayerCameraSensivityCoeff;
 
             // Prevent moving the camera while the cursor isn't locked
             if (Cursor.lockState != CursorLockMode.Locked)
@@ -91,7 +96,7 @@ namespace KinematicCharacterController.Examples
             characterInputs.MoveAxisForward = rd.y;
             characterInputs.MoveAxisRight = rd.x;
             characterInputs.CameraRotation = CharacterCamera.Transform.rotation;
-            characterInputs.JumpDown = Jump.IsPressed();
+            characterInputs.JumpDown = false;//Jump.IsPressed();
             characterInputs.CrouchDown = Crouch.IsPressed();
             characterInputs.CrouchUp = !characterInputs.CrouchDown;
 

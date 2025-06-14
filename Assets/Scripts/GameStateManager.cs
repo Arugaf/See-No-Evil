@@ -76,6 +76,7 @@ public class GameStateManager : MonoBehaviour {
         SceneManager.LoadScene("EndScene");
 
         SetPauseState(false);
+        ConfineCursor();
     }
 
     public void Exit() {

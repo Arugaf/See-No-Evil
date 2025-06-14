@@ -72,12 +72,8 @@ namespace Features.IntroScene
             yield return new WaitForSeconds(transitionDuration);
             GameStateManager.LoadGameScene();
         }
-        private void Update()
+        private void ReadInputs()
         {
-            xAngleArticulator.Update();
-            yAngleArticulator.Update();
-            cameraFarPlane.Update();
-            mainCamera.farClipPlane = cameraFarPlane.Current;
             mouseScreenPoint = mouseActionMap.ReadValue<Vector2>();
             centerAlignedPoint = mouseScreenPoint;
             // Aling to center
@@ -85,15 +81,28 @@ namespace Features.IntroScene
             centerAlignedPoint.y /= Screen.height;
             centerAlignedPoint -= new Vector2(0.5f, 0.5f);
             centerAlignedPoint *= 2;
+        }
+        private void LookForCamera()
+        {
+            xAngleArticulator.Target = centerAlignedPoint.x * xMaxAngle;
+            yAngleArticulator.Target = centerAlignedPoint.y * yMaxAngle;
+
+            mainCamera.transform.rotation = Quaternion.Euler(-yAngleArticulator.Current, xAngleArticulator.Current, 0);
+            xAngleArticulator.Update();
+            yAngleArticulator.Update();
+        }
+        private void Update()
+        {
+            cameraFarPlane.Update();
+            ReadInputs();
+            mainCamera.farClipPlane = cameraFarPlane.Current;
+            
             if(transitionCoroutine == null)
             {
                 if (enableTransitionCountdown > 0) enableTransitionCountdown -= Time.deltaTime;
                 else darknessRegulator.SetDarknessFactor(Mathf.Min(1, 1 + triggerRadius - centerAlignedPoint.magnitude));
             }
-            xAngleArticulator.Target = centerAlignedPoint.x * xMaxAngle;
-            yAngleArticulator.Target = centerAlignedPoint.y * yMaxAngle;
-
-            mainCamera.transform.rotation = Quaternion.Euler(-yAngleArticulator.Current, xAngleArticulator.Current, 0);
+            LookForCamera();
             Ray ray = mainCamera.ScreenPointToRay(mouseScreenPoint);
             if (!Physics.Raycast(ray, out RaycastHit lst)) lastHit = null;
             else lastHit = lst;

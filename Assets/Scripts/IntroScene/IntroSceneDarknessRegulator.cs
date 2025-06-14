@@ -7,10 +7,11 @@ namespace Features.IntroScene
     {
         private SmoothDampArticulator articulator;
         [SerializeField] private float smoothTime;
+        [SerializeField, Range(0, 1)] private float initialValue = 0;
         
         private void Start()
         {
-            articulator = new SmoothDampArticulator(0, smoothTime);
+            articulator = new SmoothDampArticulator(initialValue, smoothTime);
         }
 
         private void Update()

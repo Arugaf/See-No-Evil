@@ -17,8 +17,8 @@ namespace Features.VFX
         private SmoothDampArticulator articulator;
         private void Awake()
         {
-            articulator = new SmoothDampArticulator(0, smoothTime);
-            DarknessFactor = 0;
+            articulator = new SmoothDampArticulator(1, smoothTime);
+            DarknessFactor = 1;
             Shader.SetGlobalFloat(DARKNESS_FACTOR, DarknessFactor);
             act = asset.FindAction("Crouch");
         }
@@ -29,8 +29,8 @@ namespace Features.VFX
         private void Update()
         {
             articulator.Target = act.IsPressed() ? 1.0f : 0.0f;
-            articulator.Update();
             SetDarknessFactor(articulator.Current);
+            articulator.Update();
         }
         private void SetDarknessFactor(float fac)
         {
