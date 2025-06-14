@@ -19,8 +19,6 @@ public class GameStateManager : MonoBehaviour {
     [SerializeField] private GameStatus currentGameStatus = GameStatus.Active;
     private GameScene _currentScene = GameScene.MainMenu;
 
-    private PauseMenu _pauseMenu;
-
     private void Awake() {
         DontDestroyOnLoad(this);
 
@@ -31,17 +29,15 @@ public class GameStateManager : MonoBehaviour {
             // todo: delete in release build
             InputHandlerOld.GotNKeyDown += OnNextScene;
 
-            _pauseMenu = FindFirstObjectByType<PauseMenu>();
-
-            if (_pauseMenu) {
-                _pauseMenu.GameObject().SetActive(false);
-            }
+            PauseMenu.SetState(false);
         }
         else if (_instance != this) {
             Destroy(gameObject);
         }
     }
-
+    public static void LoadGameScene() => _instance?.LoadGame();
+    public static void LoadGameOver() => _instance?.LoadGameOverScene();
+    public static void LoadIntroScene() => _instance?.LoadMenu();
     private enum GameScene {
         MainMenu = 0,
         MainScene,
@@ -64,10 +60,7 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log("IntroScene loaded");
         SceneManager.LoadScene("IntroScene");
-
-        if (_pauseMenu) {
-            _pauseMenu.GameObject().SetActive(false);
-        }
+        PauseMenu.SetState(false);
 
         currentGameStatus = GameStatus.Paused;
     }
@@ -78,9 +71,7 @@ public class GameStateManager : MonoBehaviour {
         Debug.Log("EndScene loaded");
         SceneManager.LoadScene("EndScene");
 
-        if (_pauseMenu) {
-            _pauseMenu.GameObject().SetActive(false);
-        }
+        PauseMenu.SetState(false);
     }
 
     public void Exit() {
@@ -97,8 +88,7 @@ public class GameStateManager : MonoBehaviour {
         };
 
         currentGameStatus = currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
-
-        _pauseMenu.GameObject().SetActive(currentGameStatus == GameStatus.Paused);
+        PauseMenu.SetState(currentGameStatus == GameStatus.Paused);
         ConfineCursor();
     }
 

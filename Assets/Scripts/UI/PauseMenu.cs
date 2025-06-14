@@ -14,5 +14,10 @@ namespace UI {
                 Destroy(gameObject);
             }
         }
+        
+        public static void SetState(bool shown)
+        {
+            _instance?.gameObject.SetActive(shown);
+        }
     }
 }

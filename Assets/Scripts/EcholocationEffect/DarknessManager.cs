@@ -5,7 +5,7 @@ namespace Features.VFX
 {
     public class DarknessManager : MonoBehaviour
     {
-        private const string DARKNESS_FACTOR = "DARKNESS_FACTOR";
+        public const string DARKNESS_FACTOR = "DARKNESS_FACTOR";
         private const float DARKNESS_MAX_STATE = 0.95f;
         public static float DarknessFactor { get; private set; }
         public static bool ShowDarknessObjects => DarknessFactor > DARKNESS_MAX_STATE;
