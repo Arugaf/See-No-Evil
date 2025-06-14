@@ -19,8 +19,6 @@ public class GameStateManager : MonoBehaviour {
     [SerializeField] private GameStatus currentGameStatus = GameStatus.Active;
     private GameScene _currentScene = GameScene.MainMenu;
 
-    private PauseMenu _pauseMenu;
-
     private void Awake() {
         DontDestroyOnLoad(this);
 
@@ -31,17 +29,15 @@ public class GameStateManager : MonoBehaviour {
             // todo: delete in release build
             InputHandlerOld.GotNKeyDown += OnNextScene;
 
-            _pauseMenu = FindFirstObjectByType<PauseMenu>();
-
-            if (_pauseMenu) {
-                _pauseMenu.GameObject().SetActive(false);
-            }
+            PauseMenu.SetState(false);
         }
         else if (_instance != this) {
             Destroy(gameObject);
         }
     }
-
+    public static void LoadGameScene() => _instance?.LoadGame();
+    public static void LoadGameOver() => _instance?.LoadGameOverScene();
+    public static void LoadIntroScene() => _instance?.LoadMenu();
     private enum GameScene {
         MainMenu = 0,
         MainScene,
@@ -54,8 +50,7 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log("MainScene loaded");
         SceneManager.LoadScene("MainScene");
-        currentGameStatus = GameStatus.Active;
-        Time.timeScale = 1.0f;
+        SetPauseState(false);
         ConfineCursor();
     }
 
@@ -64,23 +59,23 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log("IntroScene loaded");
         SceneManager.LoadScene("IntroScene");
-
-        if (_pauseMenu) {
-            _pauseMenu.GameObject().SetActive(false);
-        }
+        SetPauseState(false);
 
         currentGameStatus = GameStatus.Paused;
     }
-
+    private void SetPauseState(bool paused)
+    {
+        Time.timeScale = paused ? 0.0f : 1.0f;
+        currentGameStatus = paused ? GameStatus.Paused : GameStatus.Active;
+        PauseMenu.SetState(paused);
+    }
     public void LoadGameOverScene() {
         _currentScene = GameScene.End;
 
         Debug.Log("EndScene loaded");
         SceneManager.LoadScene("EndScene");
 
-        if (_pauseMenu) {
-            _pauseMenu.GameObject().SetActive(false);
-        }
+        SetPauseState(false);
     }
 
     public void Exit() {
@@ -90,15 +85,7 @@ public class GameStateManager : MonoBehaviour {
     private void OnGamePaused() {
         if (_currentScene is GameScene.MainMenu or GameScene.End) return;
         Debug.Log("Pausing...");
-        Time.timeScale = currentGameStatus switch {
-            GameStatus.Active => 0.0f,
-            GameStatus.Paused => 1.0f,
-            _ => Time.timeScale
-        };
-
-        currentGameStatus = currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
-
-        _pauseMenu.GameObject().SetActive(currentGameStatus == GameStatus.Paused);
+        SetPauseState(currentGameStatus == GameStatus.Active); // inverse logic -> pause on active
         ConfineCursor();
     }
 
@@ -144,6 +131,7 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log(scene + " loaded");
         SceneManager.LoadScene(sceneName);
+        
         ConfineCursor();
     }
     private void ConfineCursor()

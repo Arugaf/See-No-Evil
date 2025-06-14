@@ -1,5 +1,16 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!245 &-8750802880251859401
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EcholocationSnapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 6232a37852593d1419b7c5c5ca564f1f
+  m_FloatValues: {}
+  m_TransitionOverrides: {}
 --- !u!244 &-7817955062530243867
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -14,13 +25,24 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!245 &-7280450263465045143
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PausedSnapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 8a7488329089ee345a484a8155d8aa5a
+  m_FloatValues: {}
+  m_TransitionOverrides: {}
 --- !u!243 &-5804638559059469808
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ambient
+  m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: d331384f329ef8d4982c2eb4bb65d3c6
   m_Children: []
@@ -44,11 +66,17 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: -7280450263465045143}
+  - {fileID: -8750802880251859401}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: f2c55009c4a421a489ae89f65be3f0e6
+    name: Volume_Music
+  - guid: 0d9852a4ff022ad4d8da6c2427b67f37
+    name: Volume_SFX
   m_AudioMixerGroupViews:
   - guids:
     - 014a9fa5819210841a40f6afa62d3f2a
@@ -57,7 +85,7 @@ AudioMixerController:
     - d331384f329ef8d4982c2eb4bb65d3c6
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: -8750802880251859401}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
