@@ -50,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2854134062179805037, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: lengthInSec
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2854134062179805037, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2854134062179805037, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4690463888059269432, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: lifetimeAddition
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4690463888059269432, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: lifetimeMultiplicator
