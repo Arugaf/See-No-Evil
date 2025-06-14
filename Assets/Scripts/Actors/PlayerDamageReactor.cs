@@ -11,7 +11,7 @@ namespace Actors
         private Coroutine stunCoroutine = null;
         public void Damage(in DamageParameters parameters)
         {
-            health.ApplyHpChange(parameters.Damage);
+            health.DoDamage(parameters.Damage);
             playerMovementParametersManager.SetStunCoeff(parameters.StunCoeff);
             if (stunCoroutine != null) StopCoroutine(stunCoroutine);
             stunCoroutine = StartCoroutine(Stun(parameters));

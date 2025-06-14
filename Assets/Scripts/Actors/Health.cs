@@ -26,14 +26,27 @@ namespace Actors {
                 gotHealthIsZero?.Invoke();
             }
             
-            ApplyHpChange(0);
+            DoDamage(0);
         }
 
-        public void ApplyHpChange(int hpChange) {
+        public void DoDamage(int hpChange) {
+            if (status == Status.Dead) return;
             health -= hpChange;
+            ConstraintHP();
+        }
+        public void AddHealth(int hpChange)
+        {
+            health += hpChange;
+            if (health > maxHealth) health = (int)maxHealth;
+            ConstraintHP();
+        }
+        void ConstraintHP()
+        {
+
             status = health <= 0 ? Status.Dead : Status.Alive;
-            
-            if (status == Status.Dead) {
+
+            if (status == Status.Dead)
+            {
                 gotHealthIsZero?.Invoke();
             }
         }
