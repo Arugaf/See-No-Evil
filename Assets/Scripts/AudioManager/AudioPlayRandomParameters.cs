@@ -11,6 +11,7 @@ namespace Features.AudioManager
         public Vector2 volumeRange;
         public Vector2 distanceRange;
         public Gradient EchoAnnotation;
+        public SoundType SoundType;
         public List<AudioClip> Clips;
         public AudioPlayDeterminedParams Generate()
         {
@@ -18,7 +19,7 @@ namespace Features.AudioManager
             float volume = UnityEngine.Random.Range(pitchRange.x, pitchRange.y);
             float distance = UnityEngine.Random.Range(distanceRange.x, distanceRange.y);
             AudioClip clip = Clips[UnityEngine.Random.Range(0, Clips.Count)];
-            return new AudioPlayDeterminedParams(pitch, distance, volume, EchoAnnotation, clip);
+            return new AudioPlayDeterminedParams(pitch, distance, volume, EchoAnnotation, clip, SoundType);
         }
     }
 }
