@@ -8,45 +8,58 @@ namespace Actors {
     }
 
     public class Health : MonoBehaviour {
-        public uint initialHealth = 100;
-        public uint maxHealth = 100;
-        public int health;
+        public float initialHealth = 100;
+        public float maxHealth = 100;
+        public float health;
 
-        [SerializeField] private Status status = Status.Alive;
+        public Status Status { get; private set; } = Status.Alive;
 
         public UnityEvent gotHealthIsZero;
 
+        [SerializeField] private float gotDamageDelay = 5f;
+        public bool ReceivedDamageRecently { get; private set; } = false;
+        private float _gotDamageCooldown = 0f;
+
         private void Start() {
-            health = (int)initialHealth;
+            health = initialHealth;
         }
 
         private void Update() {
             // todo: remove in release version
-            if (status == Status.Dead) {
+            if (Status == Status.Dead) {
                 gotHealthIsZero?.Invoke();
             }
-            
+
             DoDamage(0);
+
+            if (!ReceivedDamageRecently) return;
+            
+            _gotDamageCooldown -= Time.deltaTime;
+
+            if (_gotDamageCooldown <= 0f) {
+                ReceivedDamageRecently = false;
+            }
         }
 
-        public void DoDamage(int hpChange) {
-            if (status == Status.Dead) return;
+        public void DoDamage(float hpChange) {
+            if (Status == Status.Dead) return;
             health -= hpChange;
             ConstraintHP();
+
+            ReceivedDamageRecently = true;
+            _gotDamageCooldown = gotDamageDelay;
         }
-        public void AddHealth(int hpChange)
-        {
+
+        public void AddHealth(float hpChange) {
             health += hpChange;
-            if (health > maxHealth) health = (int)maxHealth;
+            if (health > maxHealth) health = maxHealth;
             ConstraintHP();
         }
-        void ConstraintHP()
-        {
 
-            status = health <= 0 ? Status.Dead : Status.Alive;
+        void ConstraintHP() {
+            Status = health <= 0 ? Status.Dead : Status.Alive;
 
-            if (status == Status.Dead)
-            {
+            if (Status == Status.Dead) {
                 gotHealthIsZero?.Invoke();
             }
         }
