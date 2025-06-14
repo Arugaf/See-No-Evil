@@ -7,7 +7,6 @@ namespace Actors {
         private Health _health;
 
         [SerializeField] private float regenerationRate = 1f;
-        [SerializeField] private float regenerationDelay = 2f;
 
         private bool _isRegenerating = false;
 
@@ -24,11 +23,6 @@ namespace Actors {
             if (_isRegenerating) return;
 
             StopRegeneration();
-            StartCoroutine(RegenerateHealth());
-        }
-
-        private IEnumerator StartRegenerationDelay() {
-            yield return new WaitForSeconds(regenerationDelay);
             StartCoroutine(RegenerateHealth());
         }
 
