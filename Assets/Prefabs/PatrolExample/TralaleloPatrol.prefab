@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage:
-    Damage: 40
+    Damage: 20
     StunTime: 0.5
     StunCoeff: 0
   <AttackRadius>k__BackingField: 5
