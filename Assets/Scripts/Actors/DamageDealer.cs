@@ -9,7 +9,7 @@ namespace Actors {
         [SerializeField] private DamageParameters damage; 
         [field: SerializeField] public float AttackRadius { get; private set; } = 5f;
         [SerializeField] private float deltaTime;
-        [SerializeField] private UnityEvent OnEachAttack;
+        [SerializeField] private UnityEvent OnAttackTriggeredByAnimator;
 #if UNITY_EDITOR
         [SerializeField] private bool gizmosActive = true;
         [SerializeField] private Color radiusSphereColor = Color.mediumAquamarine;
@@ -20,39 +20,31 @@ namespace Actors {
 
 #endif
         public bool Attacking { get; private set; }
-        private Coroutine currentAttack;
+        private Transform currentAttackingTransorm;
         public void DoAttack(Transform attacking)
         {
             if (attacking != null && !Attacking)
             {
                 Attacking = true;
-                currentAttack = StartCoroutine(DoAttackCoroutine(attacking));
+                currentAttackingTransorm = attacking;
             }
             else if(attacking == null && Attacking)
             {
                 Attacking = false;
-                StopCoroutine(currentAttack);
-                currentAttack = null;
+                currentAttackingTransorm = null;
             }
         }
-        private IEnumerator DoAttackCoroutine(Transform t)
+        // Animator triggers it (in order to achieve animator sync)
+        public void TriggerAttack()
         {
-            IDamageable hp = t.GetComponent<IDamageable>();
-            if (hp == null)
+            if(Vector3.Distance(transform.position, currentAttackingTransorm.transform.position) > AttackRadius)
             {
                 Attacking = false;
-                yield break;
             }
-            while (true)
+            else if(currentAttackingTransorm.TryGetComponent<IDamageable>(out var currentAttacking)) 
             {
-                OnEachAttack?.Invoke();
-                yield return new WaitForSeconds(deltaTime);
-                if (Vector3.Distance(transform.position, t.transform.position) > AttackRadius)
-                {
-                    Attacking = false;
-                    yield break;
-                }
-                hp.Damage(damage);
+                currentAttacking.Damage(damage);
+                OnAttackTriggeredByAnimator?.Invoke();
             }
         }
 
