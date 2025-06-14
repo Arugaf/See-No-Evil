@@ -23,7 +23,7 @@ namespace InputModule {
 
             if (Input.GetMouseButtonUp(PrimaryButton)) GotPrimaryMouseButtonUp?.Invoke();
 
-            if (Input.GetKeyDown(KeyCode.Escape)) GotEscapeKeyDown?.Invoke();
+            if (Input.GetKeyDown(KeyCode.Space)) GotEscapeKeyDown?.Invoke();
 
             if (Input.GetKeyDown(KeyCode.N)) GotNKeyDown?.Invoke();
         }

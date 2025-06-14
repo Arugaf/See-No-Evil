@@ -25,10 +25,10 @@ public class GameStateManager : MonoBehaviour {
         if (!_instance) {
             _instance = this;
             InputHandlerOld.GotEscapeKeyDown += OnGamePaused;
-
+#if UNITY_EDITOR
             // todo: delete in release build
             InputHandlerOld.GotNKeyDown += OnNextScene;
-
+#endif
             PauseMenu.SetState(false);
         }
         else if (_instance != this) {

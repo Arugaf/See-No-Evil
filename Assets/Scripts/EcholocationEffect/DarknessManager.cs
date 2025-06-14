@@ -20,7 +20,7 @@ namespace Features.VFX
             articulator = new SmoothDampArticulator(1, smoothTime);
             DarknessFactor = 1;
             Shader.SetGlobalFloat(DARKNESS_FACTOR, DarknessFactor);
-            act = asset.FindAction("Crouch");
+            act = asset.FindAction("Attack");
         }
         private void OnDestroy()
         {
