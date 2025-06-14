@@ -16,7 +16,7 @@ namespace Features.AudioManager
         public AudioPlayDeterminedParams Generate()
         {
             float pitch = UnityEngine.Random.Range(pitchRange.x, pitchRange.y);
-            float volume = UnityEngine.Random.Range(pitchRange.x, pitchRange.y);
+            float volume = UnityEngine.Random.Range(volumeRange.x, volumeRange.y);
             float distance = UnityEngine.Random.Range(distanceRange.x, distanceRange.y);
             AudioClip clip = Clips[UnityEngine.Random.Range(0, Clips.Count)];
             return new AudioPlayDeterminedParams(pitch, distance, volume, EchoAnnotation, clip, SoundType);

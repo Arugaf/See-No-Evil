@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d527d69313144fa48a7775db4bcd9b41, type: 3}
+  m_Name: TralaleloFootstep
+  m_EditorClassIdentifier: 
+  Parameters:
+    pitchRange: {x: 0.5, y: 0.7}
+    volumeRange: {x: 0.9, y: 1}
+    distanceRange: {x: 20, y: 24}
+    EchoAnnotation:
+      serializedVersion: 2
+      key0: {r: 0.3137255, g: 0.3207733, b: 0.49803922, a: 1}
+      key1: {r: 0.050980378, g: 0.42174414, b: 0.49019608, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65407
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 39964
+      atime2: 65535
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: -1
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 3
+    SoundType: 0
+    Clips:
+    - {fileID: 8300000, guid: 7ad887abdd31c3a4d97b93948e24751a, type: 3}
+    - {fileID: 8300000, guid: 09ee7db94e606074a8e20ed623bb47ad, type: 3}
+    - {fileID: 8300000, guid: c8558873225c44c4eb89de7db5b92b91, type: 3}
+    - {fileID: 8300000, guid: 7570635612908a2449cde776c772976e, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: WoodStepMaterial
   m_EditorClassIdentifier: 
   Parameters:
-    pitchRange: {x: 0.7, y: 0.8}
-    volumeRange: {x: 0.95, y: 1.05}
+    pitchRange: {x: 0.9, y: 1}
+    volumeRange: {x: 0.1, y: 0.1}
     distanceRange: {x: 15, y: 16}
     EchoAnnotation:
       serializedVersion: 2
@@ -48,6 +48,7 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     SoundType: 0
     Clips:
-    - {fileID: 8300000, guid: a7dd4b5bac87eeb40bd27e564783696b, type: 3}
-    - {fileID: 8300000, guid: d1e5fd78b0e918d45a46384e03e74298, type: 3}
-    - {fileID: 8300000, guid: 0ce6fc8c9377d5241b67b84a128cae53, type: 3}
+    - {fileID: 8300000, guid: 54ee20de0b7bc5441ad5bb9958409af5, type: 3}
+    - {fileID: 8300000, guid: f6d6421d0d6a9724f8dcb6031986449c, type: 3}
+    - {fileID: 8300000, guid: 311162e2bd77c544593c54343bfc94cf, type: 3}
+    - {fileID: 8300000, guid: 6616b1010a7a69848b04963c06dec4ef, type: 3}
