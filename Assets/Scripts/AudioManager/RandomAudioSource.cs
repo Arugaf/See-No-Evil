@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomAudioSource : MonoBehaviour
 {
-    private AudioPlayRandomParameters randomParameters;
+    [SerializeField] private AudioStepMaterial randomParameters;
     [SerializeField] private bool _playOnStart;
     private void Start()
     {
