@@ -50,8 +50,7 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log("MainScene loaded");
         SceneManager.LoadScene("MainScene");
-        currentGameStatus = GameStatus.Active;
-        Time.timeScale = 1.0f;
+        SetPauseState(false);
         ConfineCursor();
     }
 
@@ -60,18 +59,23 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log("IntroScene loaded");
         SceneManager.LoadScene("IntroScene");
-        PauseMenu.SetState(false);
+        SetPauseState(false);
 
         currentGameStatus = GameStatus.Paused;
     }
-
+    private void SetPauseState(bool paused)
+    {
+        Time.timeScale = paused ? 0.0f : 1.0f;
+        currentGameStatus = paused ? GameStatus.Paused : GameStatus.Active;
+        PauseMenu.SetState(paused);
+    }
     public void LoadGameOverScene() {
         _currentScene = GameScene.End;
 
         Debug.Log("EndScene loaded");
         SceneManager.LoadScene("EndScene");
 
-        PauseMenu.SetState(false);
+        SetPauseState(false);
     }
 
     public void Exit() {
@@ -81,14 +85,7 @@ public class GameStateManager : MonoBehaviour {
     private void OnGamePaused() {
         if (_currentScene is GameScene.MainMenu or GameScene.End) return;
         Debug.Log("Pausing...");
-        Time.timeScale = currentGameStatus switch {
-            GameStatus.Active => 0.0f,
-            GameStatus.Paused => 1.0f,
-            _ => Time.timeScale
-        };
-
-        currentGameStatus = currentGameStatus == GameStatus.Active ? GameStatus.Paused : GameStatus.Active;
-        PauseMenu.SetState(currentGameStatus == GameStatus.Paused);
+        SetPauseState(currentGameStatus == GameStatus.Active); // inverse logic -> pause on active
         ConfineCursor();
     }
 
@@ -134,6 +131,7 @@ public class GameStateManager : MonoBehaviour {
 
         Debug.Log(scene + " loaded");
         SceneManager.LoadScene(sceneName);
+        
         ConfineCursor();
     }
     private void ConfineCursor()

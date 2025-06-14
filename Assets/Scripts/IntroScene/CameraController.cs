@@ -18,6 +18,7 @@ namespace Features.IntroScene
         [SerializeField] private float triggerRadius = 0.2f;
         [SerializeField] private UnityEvent OnEnter;
         [SerializeField] private float transitionDuration = 3.0f;
+        [SerializeField] private float enableTransitionCountdown = 1.0f;
         
         private InputAction mouseActionMap;
         private InputAction mouseClickActionMap;
@@ -29,14 +30,19 @@ namespace Features.IntroScene
         private RaycastHit? lastHit;
         private bool toggle = false;
         private Coroutine transitionCoroutine;
-        
-       
+        private bool interactable = true;
+
+        public void SetInteractableState(bool state)
+        {
+            interactable = state;
+        }
 
         public void Start()
         {
             mouseActionMap = uiMainAsset.FindAction("Point");
             mouseClickActionMap = uiMainAsset.FindAction("Click");
             mouseClickActionMap.performed += MouseClickActionMap_performed;
+            destroyCancellationToken.Register(() => { mouseClickActionMap.performed -= MouseClickActionMap_performed; });
             xAngleArticulator = new SmoothDampArticulator(0, smoothTime);
             yAngleArticulator = new SmoothDampArticulator(0, smoothTime);
             cameraFarPlane = new SmoothDampArticulator(mainCamera.nearClipPlane + 1.0f, smoothTime);
@@ -47,13 +53,13 @@ namespace Features.IntroScene
 
         private void MouseClickActionMap_performed(InputAction.CallbackContext obj)
         {
-            if (transitionCoroutine != null) return;
+            if (transitionCoroutine != null || !interactable) return;
             toggle = !toggle;
             if (obj.performed && toggle)
             {
                 Raycast();
             }
-            if(centerAlignedPoint.magnitude < triggerRadius)
+            if(centerAlignedPoint.magnitude < triggerRadius && enableTransitionCountdown <= 0)
             {
                 OnEnter?.Invoke();
                 transitionCoroutine = StartCoroutine(ActionSequence());
@@ -80,7 +86,10 @@ namespace Features.IntroScene
             centerAlignedPoint -= new Vector2(0.5f, 0.5f);
             centerAlignedPoint *= 2;
             if(transitionCoroutine == null)
-                darknessRegulator.SetDarknessFactor(Mathf.Min(1, 1 + triggerRadius - centerAlignedPoint.magnitude));
+            {
+                if (enableTransitionCountdown > 0) enableTransitionCountdown -= Time.deltaTime;
+                else darknessRegulator.SetDarknessFactor(Mathf.Min(1, 1 + triggerRadius - centerAlignedPoint.magnitude));
+            }
             xAngleArticulator.Target = centerAlignedPoint.x * xMaxAngle;
             yAngleArticulator.Target = centerAlignedPoint.y * yMaxAngle;
 
