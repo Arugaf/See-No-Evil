@@ -12,6 +12,7 @@ namespace Gameplay {
             FailureByTime
         }
         public static Result LastGameState { get; private set; }
+        public static float LastGameTime { get; private set; }
         public float initialTime = 121f;
         [SerializeField] private float timeRemaining;
         [SerializeField] private bool activeTimer = true;
@@ -27,10 +28,18 @@ namespace Gameplay {
 
         [SerializeField] private Animator gameplayUIAnimator;
         [SerializeField] private float transitionDuration;
+        public static string GetTimeSpec(float timeRemaining)
+        {
+            int minutes = Mathf.FloorToInt(timeRemaining) / 60;
+            int seconds = Mathf.FloorToInt(timeRemaining) % 60;
+            return $"{minutes:D2}:{seconds:D2}";
+        }
 
-
-        private void Start() {
+        private void Start()
+        {
             timeRemaining = initialTime;
+            LastGameTime = 0;
+            LastGameState = Result.Victory;
         }
 
         private void Update() {
@@ -49,6 +58,7 @@ namespace Gameplay {
             if (isTransitioning) return;
             Debug.Log("Victory triggered");
             LastGameState = Result.Victory;
+            LastGameTime = TotalSeconds;
             TriggerTransition();
         }
 

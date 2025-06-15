@@ -1,9 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 namespace UI {
     public class PauseMenu : MonoBehaviour {
         private static PauseMenu _instance = null;
+        [SerializeField] private Animator anim;
+        [SerializeField] private float hidTime = 0.25f;
         [SerializeField] GameObject MenuObject;
+        private Coroutine hidTimeCoroutine;
         private void Awake() {
             DontDestroyOnLoad(gameObject);
 
@@ -17,7 +21,25 @@ namespace UI {
         
         public static void SetState(bool shown)
         {
-            _instance?.MenuObject.SetActive(shown);
+            _instance?.ChangeState(shown);
+        }
+        private IEnumerator HideMainMene()
+        {
+            yield return new WaitForSecondsRealtime(hidTime);
+            MenuObject.SetActive(false);
+        }
+        private void ChangeState(bool shown)
+        {
+            if (hidTimeCoroutine != null) StopCoroutine(hidTimeCoroutine);
+            if (shown)
+            {
+                MenuObject.SetActive(true);
+            }
+            else
+            {
+                hidTimeCoroutine = StartCoroutine(HideMainMene());
+            }
+            anim.SetBool("Show", shown);
         }
         public void Update()
         {
