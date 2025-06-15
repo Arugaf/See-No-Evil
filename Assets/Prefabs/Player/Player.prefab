@@ -5106,7 +5106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4096c706d0453f74ab007f597fb45933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 5
+  detectionRadius: 8
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
