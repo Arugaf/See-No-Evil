@@ -58,7 +58,7 @@ namespace Gameplay {
             if (isTransitioning) return;
             Debug.Log("Victory triggered");
             LastGameState = Result.Victory;
-            LastGameTime = TotalSeconds;
+            LastGameTime = initialTime - TotalSeconds;
             TriggerTransition();
         }
 
