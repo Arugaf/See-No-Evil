@@ -15,7 +15,7 @@ MonoBehaviour:
   Parameters:
     pitchRange: {x: 0.8, y: 0.9}
     volumeRange: {x: 0.9, y: 1}
-    distanceRange: {x: 6, y: 8}
+    distanceRange: {x: 12, y: 16}
     EchoAnnotation:
       serializedVersion: 2
       key0: {r: 0.49685526, g: 0.31404996, b: 0.3616839, a: 1}
