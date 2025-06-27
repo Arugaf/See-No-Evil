@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.Events;
+using YG;
+using VContainer;
+using Monetization;
+using Cysharp.Threading.Tasks;
 namespace Features.IntroScene
 {
     public class EndSceneRotationController: MonoBehaviour
@@ -21,6 +25,7 @@ namespace Features.IntroScene
         private SmoothDampArticulator farPlaneArticullator;
 
         private InputAction mouseActionMap;
+        private IAdManager adManager;
 
         private Vector2 mouseScreenPoint;
         private Vector2 centerAlignedPoint;
@@ -31,6 +36,12 @@ namespace Features.IntroScene
             yAngleArticulator = new SmoothDampArticulator(0, smoothTime);
             farPlaneArticullator = new SmoothDampArticulator(mainCamera.farClipPlane, smoothTime);
             regulator.SetDarknessFactor(0);
+            adManager?.PreloadAdvertisement().Forget();
+        }
+        [Inject]
+        private void Initialize(IAdManager manager)
+        {
+            adManager = manager;
         }
         private void ReadInputs()
         {
@@ -55,19 +66,28 @@ namespace Features.IntroScene
         {
             ReadInputs();
             UpdateCameraRotation();
-            farPlaneArticullator.Update();
+            if(Time.timeScale != 0)
+                farPlaneArticullator.Update();
             mainCamera.farClipPlane = farPlaneArticullator.Current;
         }
         public void TransitionToGameplay()
         {
             if (transitioning) return;
             transitioning = true;
-            regulator.SetDarknessFactor(1);
             StartCoroutine(DoTransition(true));
 
         }
         private IEnumerator DoTransition(bool toGameplay)
         {
+            yield return adManager?.ShowAdvertisement().ToCoroutine();
+            if (toGameplay)
+            {
+                regulator.SetDarknessFactor(1);
+            }
+            else
+            {
+                farPlaneArticullator.Target = mainCamera.nearClipPlane + 1.0f;
+            }
             OnTransition?.Invoke();
             yield return new WaitForSeconds(transitionTime);
             if (!toGameplay)
@@ -79,11 +99,14 @@ namespace Features.IntroScene
                 GameStateManager.LoadGameScene();
             }
         }
+        private void OnDestroy()
+        {
+            adManager?.Dispose();
+        }
         public void TransitionToMenu()
         {
             if (transitioning) return;
             transitioning = true;
-            farPlaneArticullator.Target = mainCamera.nearClipPlane + 1.0f;
             StartCoroutine(DoTransition(false));
         }
 

@@ -861,7 +861,7 @@ MonoBehaviour:
     - line: '|   webEnableSubmoduleStrippingCompatibility: 0'
     - line: '|   scriptingDefineSymbols:'
     - line: '|     Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2'
-    - line: '|     WebGL: PLUGIN_YG_2;TMP_YG2;YandexGamesPlatform_yg;RU_YG2'
+    - line: '|     WebGL: PLUGIN_YG_2;TMP_YG2;YandexGamesPlatform_yg;RU_YG2;InterstitialAdv_yg;QuitGameEvent_yg'
     - line: '|   additionalCompilerArguments: {}'
     - line: '|   platformArchitecture: {}'
     - line: '|   scriptingBackend:'

@@ -1,4 +1,5 @@
 using System;
+using Cysharp.Threading.Tasks;
 using InputModule;
 using UI;
 using Unity.VisualScripting;
@@ -8,15 +9,26 @@ using UnityEngine.SceneManagement;
 // todo: deconstruct scene manager from game state manager and pause menu from game state manager
 // todo: use good singletons
 public class GameStateManager : MonoBehaviour {
-    private static GameStateManager _instance = null;
-
-    public enum GameStatus {
+    private enum GameScene
+    {
+        MainMenu = 0,
+        MainScene = 1,
+        End = 2,
+    }
+    public enum GameStatus
+    {
         Active,
         Paused,
-        Win,
-        Lose,
+        Transition
     }
+    private const string MAIN_SCENE = "MainScene";
+    private const string INTRO_SCENE = "IntroScene";
+    private const string END_SCENE = "EndScene";
+    private static readonly string[] GAME_SCENE = { INTRO_SCENE, MAIN_SCENE, END_SCENE };
+    private static GameStateManager _instance = null;
+
     [SerializeField] private GameStatus currentGameStatus = GameStatus.Active;
+    
     private GameScene _currentScene = GameScene.MainMenu;
 
     private void Awake() {
@@ -35,33 +47,19 @@ public class GameStateManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
     public static void LoadGameScene() => _instance?.LoadGame();
     public static void LoadGameOver() => _instance?.LoadGameOverScene();
     public static void LoadIntroScene() => _instance?.LoadMenu();
-    private enum GameScene {
-        MainMenu = 0,
-        MainScene,
-        End,
-    }
-
-    public void LoadGame() {
-        _currentScene = GameScene.MainScene;
 
 
-        Debug.Log("MainScene loaded");
-        SceneManager.LoadScene("MainScene");
-        SetPauseState(false);
-        ConfineCursor();
+    public void LoadGame()
+    {
+        TransitionToOtherScene(GameScene.MainScene).Forget();
     }
 
     public void LoadMenu() {
-        _currentScene = GameScene.MainMenu;
-
-        Debug.Log("IntroScene loaded");
-        SceneManager.LoadScene("IntroScene");
-        SetPauseState(false);
-
-        currentGameStatus = GameStatus.Paused;
+        TransitionToOtherScene(GameScene.MainMenu).Forget();
     }
     private void SetPauseState(bool paused)
     {
@@ -69,20 +67,15 @@ public class GameStateManager : MonoBehaviour {
         currentGameStatus = paused ? GameStatus.Paused : GameStatus.Active;
         PauseMenu.SetState(paused);
     }
-    public void LoadGameOverScene() {
-        _currentScene = GameScene.End;
-
-        Debug.Log("EndScene loaded");
-        SceneManager.LoadScene("EndScene");
-
-        SetPauseState(false);
-        ConfineCursor();
+    public void LoadGameOverScene() 
+    {
+        TransitionToOtherScene(GameScene.End).Forget();
     }
 
     public void Exit() {
         Application.Quit();
     }
-
+    
     private void OnGamePaused() {
         if (_currentScene is GameScene.MainMenu or GameScene.End) return;
         Debug.Log("Pausing...");
@@ -110,31 +103,6 @@ public class GameStateManager : MonoBehaviour {
         }
         ConfineCursor();
     }
-
-    private void LoadNextLevel() {
-        if (_currentScene == GameScene.End) {
-            currentGameStatus = GameStatus.Win;
-            LoadGameOverScene();
-            return;
-        }
-
-        var scene = (int)_currentScene == Enum.GetNames(typeof(GameScene)).Length - 1
-            ? _currentScene = 0
-            : ++_currentScene;
-
-        LoadScene(scene);
-    }
-
-    private void LoadScene(GameScene scene) {
-        _currentScene = scene;
-
-        var sceneName = scene.ToString();
-
-        Debug.Log(scene + " loaded");
-        SceneManager.LoadScene(sceneName);
-        
-        ConfineCursor();
-    }
     private void ConfineCursor()
     {
         if (_currentScene == GameScene.MainScene && currentGameStatus == GameStatus.Active)
@@ -145,5 +113,15 @@ public class GameStateManager : MonoBehaviour {
         {
             Cursor.lockState = CursorLockMode.None;
         }
+    }
+    private async UniTask TransitionToOtherScene(GameScene newScene)
+    {
+        if (currentGameStatus == GameStatus.Transition) return;
+        currentGameStatus = GameStatus.Transition;
+        await SceneManager.LoadSceneAsync(GAME_SCENE[(int)newScene]);
+        _currentScene = newScene;
+        SetPauseState(false);
+        ConfineCursor();
+        currentGameStatus = GameStatus.Active;
     }
 }
