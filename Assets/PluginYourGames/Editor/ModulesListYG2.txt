@@ -1,2 +1,3 @@
 InterstitialAdv v1.002
 QuitGameEvent v1.001
+Storage v1.02
