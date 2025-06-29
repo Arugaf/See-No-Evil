@@ -14,16 +14,19 @@ namespace SaveManager
 
     public class PluginYGGameSaveManager : IGameSaveManager
     {
-        public UniTask<GameSaveData> Load(bool reload)
+        public GameSaveData GetValue() => YG2.saves.SaveData ?? new GameSaveData();
+
+        public UniTask Load()
         {
-            return UniTask.FromResult(YG2.saves.SaveData);
+            return UniTask.CompletedTask;
         }
 
-        public UniTask Save(GameSaveData data)
+        public UniTask Save()
         {
-            YG2.saves.SaveData = data;
             YG2.SaveProgress();
             return UniTask.CompletedTask;
         }
+
+        public void SetValue(GameSaveData value) => YG2.saves.SaveData = value;
     }
 }
