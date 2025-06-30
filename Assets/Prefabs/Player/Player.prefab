@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6057987806223544330}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7344826254316614931}
   - component: {fileID: 6925587256645845405}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FootstepAudioPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3352168585545553747}
   - component: {fileID: 2196389766452936312}
   - component: {fileID: 1002021357812968445}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 1049306026385911858}
   - component: {fileID: 5864961635998864545}
   - component: {fileID: 852897437076022903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ExampleCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5122,7 +5122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2127381507337798072}
   - component: {fileID: 3332826127788998019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerMovement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5169,7 +5169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8229400850306237148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5201,7 +5201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6410008884878139913}
   - component: {fileID: 6501411640278540949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5253,7 +5253,7 @@ GameObject:
   - component: {fileID: 7887664860662106542}
   - component: {fileID: 8044682112050222276}
   - component: {fileID: 1573114854302191623}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5329,7 +5329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161770637513926541}
   - component: {fileID: 1131624466531239155}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FootstepManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5374,7 +5374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1890370994758055646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5409,7 +5409,7 @@ GameObject:
   - component: {fileID: 6147958169175957409}
   - component: {fileID: 7184367194630818531}
   - component: {fileID: 8142580813547931405}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5499,6 +5499,10 @@ PrefabInstance:
     - target: {fileID: 1937979026721672, guid: c75e91cf060bbf04e89204fa400606df, type: 3}
       propertyPath: m_Name
       value: ExampleCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937979026721672, guid: c75e91cf060bbf04e89204fa400606df, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4353896453404184, guid: c75e91cf060bbf04e89204fa400606df, type: 3}
       propertyPath: m_LocalPosition.x
