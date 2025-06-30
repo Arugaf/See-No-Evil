@@ -14,16 +14,11 @@ namespace Gameplay {
 
         private void Update() {
             UpdateTime();
-            slider.value = 1.0f - (gameplayState.TotalSeconds / gameplayState.initialTime);
+            slider.value = (gameplayState.TotalSeconds / gameplayState.initialTime);
         }
 
         private void UpdateTime() {
-            var minutes = gameplayState.minutes;
-            var seconds = gameplayState.seconds;
-
-            _text.text = (minutes > 0
-                ? minutes.ToString()
-                : 0) + ":" + (seconds > 0 ? (seconds / 10 != 0 ? seconds : "0" + seconds) : "00");
+            _text.text = GameplayState.GetTimeSpec(gameplayState.TotalSeconds);
         }
 
     }

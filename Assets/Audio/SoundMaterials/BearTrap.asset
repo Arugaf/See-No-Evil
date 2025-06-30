@@ -15,7 +15,7 @@ MonoBehaviour:
   Parameters:
     pitchRange: {x: 0.6, y: 0.6}
     volumeRange: {x: 1, y: 1}
-    distanceRange: {x: 100, y: 100}
+    distanceRange: {x: 40, y: 40}
     EchoAnnotation:
       serializedVersion: 2
       key0: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
@@ -46,6 +46,6 @@ MonoBehaviour:
       m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    SoundType: 1
+    SoundType: 0
     Clips:
     - {fileID: 8300000, guid: ead60ab69fb8599479fbd4f1e18addb0, type: 3}
