@@ -4,79 +4,13 @@ using SaveManager;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
 using VContainer;
 using VContainer.Unity;
-public interface ILocaleInfo
-{
-    public string Name { get; }
-    public string Identifier { get; }
-}
-public struct LocaleInfo : ILocaleInfo
-{
-    public readonly string Name { get; }
-
-    public readonly string Identifier { get; }
-    public LocaleInfo(string name, string identifier)
-    {
-        Name = name;
-        Identifier = identifier;
-    }
-    public LocaleInfo(Locale locale)
-    {
-        Name = locale.Identifier.Code switch
-        {
-            "ru" => "Русский",
-            "en" => "English",
-            _ => locale.Identifier.CultureInfo.Name
-        };
-        Identifier = locale.Identifier.Code;
-    }
-}
-public class LocaleController
-{
-    public int CurrentLanguageIndex { get => currIndex; set => SetIndex(value); }
-    private int currIndex;
-    private bool awaiting = false;
-    public void SetIndex(int idx)
-    {
-        if (!awaiting)
-        {
-            if (!LocalizationSettings.InitializationOperation.IsDone)
-            {
-                currIndex = idx;
-                awaiting = true;
-                LocalizationSettings.InitializationOperation.Completed += InitializationOperation_Completed;
-            }
-            else
-            {
-                currIndex = idx < 0 ? 0 : idx % LocalizationSettings.AvailableLocales.Locales.Count;
-                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[currIndex];
-            }
-        }
-    }
-
-    private void InitializationOperation_Completed(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<LocalizationSettings> obj)
-    {
-        currIndex = currIndex < 0 ? 0 : currIndex % LocalizationSettings.AvailableLocales.Locales.Count;
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[currIndex];
-        awaiting = false;
-    }
-
-    public IEnumerable<ILocaleInfo> GetLocales()
-    {
-        foreach(var loc in LocalizationSettings.AvailableLocales.Locales)
-        {
-            yield return new LocaleInfo(loc);
-        }
-    }
-    
-}
 public class SettingsManager: ISettingsManager, IAsyncStartable
 {
     public ISettingSaveManager saveManager;

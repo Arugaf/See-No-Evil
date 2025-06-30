@@ -8,6 +8,6 @@
 
         protected override GameSaveData.SettingsData Get(GameSaveData data) => data.Settings;
 
-        protected override void Set(GameSaveData data, GameSaveData.SettingsData value) => data.Settings = value;
+        protected override GameSaveData Set(GameSaveData data, GameSaveData.SettingsData value) { data.Settings = value; return data; }
     }
 }

@@ -49,11 +49,14 @@ public class PluginYGLanguageResolver : ILanguageResolver
     public int GetSpecifiedLanguageIndex()
     {
         if (!IsInitialized) return -1;
+        Debug.Log($"SPECIFIED LANGUAGE: {YG2.lang}");
         int idx = 0;
         foreach(var q in LocalizationSettings.AvailableLocales.Locales)
         {
-            if(q.Identifier.Code == YG2.lang)
+            Debug.Log($"LOCALE CODE: {q.Identifier.Code} == {YG2.lang}, {q.Identifier.Code == YG2.lang}");
+            if (q.Identifier.Code == YG2.lang)
             {
+                Debug.Log($"RETURNED {idx}");
                 return idx;
             }
             idx++;

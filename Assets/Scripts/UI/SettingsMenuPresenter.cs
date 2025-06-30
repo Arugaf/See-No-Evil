@@ -40,6 +40,7 @@ public class SettingsMenuPresenter : MonoBehaviour
         }
         languageDropdown.value = settings.CurrentLanguageIndex;
         languageDropdown.onValueChanged.AddListener(LanguageIndexChanged);
+        Debug.Log("SETUP LANGUAGE DROPDOWN");
     }
     private void OnDisable()
     {

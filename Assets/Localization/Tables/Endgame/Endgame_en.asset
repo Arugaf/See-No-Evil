@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: d8d3c247a64ccee4f8ea19e6e48b0781, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 7583230136772985138
   m_TableData:
   - m_Id: 230146174976
     m_Localized: Successful relief!
@@ -41,7 +42,14 @@ MonoBehaviour:
   - m_Id: 1163894714368
     m_Localized: 'Time: {Time}'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 7583230136772985138
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7583230136772985138
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1163894714368
