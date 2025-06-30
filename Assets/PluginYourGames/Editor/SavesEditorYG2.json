@@ -7,12 +7,13 @@
         false,
         false
     ],
-    "idSave": 9,
+    "idSave": 23,
     "SaveData": {
         "Settings": {
-            "MusicVolume": 0.16520580649375916,
-            "SFXVolume": 0.5559966564178467,
-            "CameraSensivity": 1.1287813186645508
+            "MusicVolume": 1.0,
+            "SFXVolume": 1.0,
+            "CameraSensivity": 1.4675912857055665,
+            "CurrentLocaleName": ""
         }
     }
 }
