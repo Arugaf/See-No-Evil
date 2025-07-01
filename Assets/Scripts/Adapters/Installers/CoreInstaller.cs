@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using VContainer;
 using VContainer.Unity;
+using YG;
 public class GameActionOnQuit : IApplicationQuitAction
 {
     private IGameSaveManager saveManager;
@@ -13,6 +14,8 @@ public class GameActionOnQuit : IApplicationQuitAction
     }
     public void OnApplicationQuit()
     {
+        // guys we HAVE to save that shit NGL
+        YG2.infoYG.Storage.flush = true;
         saveManager.Save().GetAwaiter().GetResult();
     }
 }

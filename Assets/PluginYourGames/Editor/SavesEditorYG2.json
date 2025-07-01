@@ -1,18 +1,11 @@
 {
-    "intExample": 5,
-    "strExample": "Hello!",
-    "boolExample": [
-        false,
-        false,
-        false,
-        false
-    ],
-    "idSave": 9,
+    "idSave": 45,
     "SaveData": {
         "Settings": {
-            "MusicVolume": 0.16520580649375916,
-            "SFXVolume": 0.5559966564178467,
-            "CameraSensivity": 1.1287813186645508
+            "MusicVolume": 0.5478878021240234,
+            "SFXVolume": 0.32005923986434939,
+            "CameraSensivity": 1.1082254648208619,
+            "CurrentLocaleName": ""
         }
     }
 }

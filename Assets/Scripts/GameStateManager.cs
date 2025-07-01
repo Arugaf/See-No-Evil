@@ -2,7 +2,6 @@ using System;
 using Cysharp.Threading.Tasks;
 using InputModule;
 using UI;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
