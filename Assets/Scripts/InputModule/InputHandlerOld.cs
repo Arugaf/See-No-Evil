@@ -18,20 +18,15 @@ namespace InputModule {
             }
         }
 
-        private void Update() {
-            if (Input.GetMouseButtonDown(PrimaryButton)) GotPrimaryMouseButtonDown?.Invoke();
-
-            if (Input.GetMouseButtonUp(PrimaryButton)) GotPrimaryMouseButtonUp?.Invoke();
-
-            if (Input.GetKeyDown(KeyCode.Space)) GotEscapeKeyDown?.Invoke();
-            if (Input.GetKeyDown(KeyCode.Escape)) GotEscapeKeyDown?.Invoke();
-
+        private void Update()
+        {
             if (Input.GetKeyDown(KeyCode.N)) GotNKeyDown?.Invoke();
         }
-
+        [System.Obsolete("Remove this shit")]
         public static event UnityAction GotPrimaryMouseButtonDown;
+        [System.Obsolete("Remove this shit")]
         public static event UnityAction GotPrimaryMouseButtonUp;
-
+        [System.Obsolete("Remove this shit")]
         public static event UnityAction GotEscapeKeyDown;
         
         public static event UnityAction GotNKeyDown;

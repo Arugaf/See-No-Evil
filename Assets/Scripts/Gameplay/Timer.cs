@@ -1,15 +1,21 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using VContainer;
 
 namespace Gameplay {
     public class Timer : MonoBehaviour {
-        [SerializeField] private GameplayState gameplayState;
+        private GameplayState gameplayState;
 
         private TextMeshProUGUI _text;
         [SerializeField] private Slider slider;
         private void Start() {
             _text = GetComponent<TextMeshProUGUI>();
+        }
+        [Inject]
+        private void Construct(GameplayState gameplayState)
+        {
+            this.gameplayState = gameplayState;
         }
 
         private void Update() {

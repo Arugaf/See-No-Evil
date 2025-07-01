@@ -6396,6 +6396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317c19123b9515b4db0cc995933be87a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainAsset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   currentGameStatus: 0
 --- !u!4 &1311115049
 Transform:

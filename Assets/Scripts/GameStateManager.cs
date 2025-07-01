@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using InputModule;
 using UI;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 // todo: deconstruct scene manager from game state manager and pause menu from game state manager
@@ -25,6 +26,7 @@ public class GameStateManager : MonoBehaviour {
     private const string END_SCENE = "EndScene";
     private static readonly string[] GAME_SCENE = { INTRO_SCENE, MAIN_SCENE, END_SCENE };
     private static GameStateManager _instance = null;
+    [SerializeField] private InputActionAsset mainAsset; // todo: make it to be injected via VContainer
 
     [SerializeField] private GameStatus currentGameStatus = GameStatus.Active;
     
@@ -35,7 +37,8 @@ public class GameStateManager : MonoBehaviour {
 
         if (!_instance) {
             _instance = this;
-            InputHandlerOld.GotEscapeKeyDown += OnGamePaused;
+            mainAsset.FindAction("Pause").performed += PauseActionPerformed;
+            // InputHandlerOld.GotEscapeKeyDown += OnGamePaused;
 #if UNITY_EDITOR
             // todo: delete in release build
             InputHandlerOld.GotNKeyDown += OnNextScene;
@@ -45,6 +48,11 @@ public class GameStateManager : MonoBehaviour {
         else if (_instance != this) {
             Destroy(gameObject);
         }
+    }
+
+    private void PauseActionPerformed(InputAction.CallbackContext obj)
+    {
+        OnGamePaused();
     }
 
     public static void LoadGameScene() => _instance?.LoadGame();
