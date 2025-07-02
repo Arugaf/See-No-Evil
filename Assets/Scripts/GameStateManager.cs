@@ -89,7 +89,7 @@ public class GameStateManager : MonoBehaviour {
         SetPauseState(currentGameStatus == GameStatus.Active); // inverse logic -> pause on active
         ConfineCursor();
     }
-
+    public static void TogglePauseGame() => _instance?.OnGamePaused();
     // todo: delete in release build
     private void OnNextScene() {
         switch (_currentScene) {

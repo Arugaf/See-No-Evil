@@ -46,6 +46,10 @@ namespace UI {
             // Diabolical. Why Pause Menu? Idk, maybe because it's shader has only requirements for that.
             Shader.SetGlobalFloat("UNSCALED_TIME", Time.unscaledTime);
         }
+        public void Hide()
+        {
+            GameStateManager.TogglePauseGame();
+        }
         public void QuitToMainMenu()
         {
             
