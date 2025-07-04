@@ -1,4 +1,6 @@
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using InputModule;
 using UI;
@@ -9,7 +11,7 @@ using VContainer.Unity;
 
 // todo: deconstruct scene manager from game state manager and pause menu from game state manager
 // todo: use good singletons
-public class GameStateManager: IInitializable
+public class GameStateManager: IInitializable, IAsyncStartable
 {
     private enum GameScene
     {
@@ -23,18 +25,16 @@ public class GameStateManager: IInitializable
         Paused,
         Transition
     }
-    private const string MAIN_SCENE = "MainScene";
-    private const string INTRO_SCENE = "IntroScene";
-    private const string END_SCENE = "EndScene";
-    private static readonly string[] GAME_SCENE = { INTRO_SCENE, MAIN_SCENE, END_SCENE };
     private static GameStateManager _instance = null;
     private InputActionAsset mainAsset;
+    private IGameSceneDefinition gameSceneDefinition;
     private GameStatus currentGameStatus = GameStatus.Active;
     
     private GameScene _currentScene = GameScene.MainMenu;
-    public GameStateManager(InputActionAsset inputActions)
+    public GameStateManager(InputActionAsset inputActions, IGameSceneDefinition gameSceneDefinition)
     {
         mainAsset = inputActions;
+        this.gameSceneDefinition = gameSceneDefinition;
     }
     void IInitializable.Initialize() 
     {
@@ -126,10 +126,26 @@ public class GameStateManager: IInitializable
     {
         if (currentGameStatus == GameStatus.Transition) return;
         currentGameStatus = GameStatus.Transition;
-        await SceneManager.LoadSceneAsync(GAME_SCENE[(int)newScene]);
+        switch (newScene)
+        {
+            case GameScene.MainMenu:
+                await gameSceneDefinition.LoadMenu();
+                break;
+            case GameScene.MainScene:
+                await gameSceneDefinition.LoadGameplay(0);
+                break;
+            case GameScene.End:
+                await gameSceneDefinition.LoadGameOver();
+                break;
+        }
         _currentScene = newScene;
         SetPauseState(false);
         ConfineCursor();
         currentGameStatus = GameStatus.Active;
+    }
+
+    public async Awaitable StartAsync(CancellationToken cancellation = default)
+    {
+        await TransitionToOtherScene(GameScene.MainMenu);
     }
 }

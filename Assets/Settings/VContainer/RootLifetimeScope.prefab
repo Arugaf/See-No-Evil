@@ -53,3 +53,4 @@ MonoBehaviour:
   gameplayCanvasInstaller:
     PCGameplayCanvas: {fileID: 6899649748627391775, guid: 375a964a040054c4abb66e2b30e6ee75, type: 3}
     MobileGameplayCanvas: {fileID: 7712099580660829952, guid: 08234ddbb3e94614dad02d4775435059, type: 3}
+  sceneDefinitionObject: {fileID: 11400000, guid: 3d8d84431ddfafb469f40756f9443665, type: 2}

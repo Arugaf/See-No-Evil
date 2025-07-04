@@ -41,7 +41,7 @@ public class CoreInstaller: LifetimeScope
     [SerializeField] private AudioMixer mainAudioMixer;
     [SerializeField] private InputActionAsset mainInputActionAsset;
     [SerializeField] private GameplayCanvasInstaller gameplayCanvasInstaller;
-
+    [SerializeField] private GameSceneDefinitionObject sceneDefinitionObject;
     protected override void Configure(IContainerBuilder builder)
     {
         // Main systems
@@ -51,6 +51,7 @@ public class CoreInstaller: LifetimeScope
         builder.RegisterInstance(mainInputActionAsset);
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<IApplicationQuitAction, GameActionOnQuit>(Lifetime.Singleton);
+        builder.RegisterInstance<IGameSceneDefinition>(sceneDefinitionObject);
 
         gameplayCanvasInstaller.Configure(builder);
         PluginYGInstaller.Configure(builder);

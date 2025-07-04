@@ -13,7 +13,7 @@ public class FastPlayTestWindow : EditorWindow
         EditorSceneManager.playModeStartScene = (SceneAsset)EditorGUILayout.ObjectField(new GUIContent("Start Scene"), EditorSceneManager.playModeStartScene, typeof(SceneAsset), false);
 
         // Or set the start Scene from code
-        var scenePath = "Assets\\Scenes\\IntroScene.unity";
+        var scenePath = "Assets\\Scenes\\EntryPoint.unity";
         if (GUILayout.Button("Set start Scene: " + scenePath))
             SetPlayModeStartScene(scenePath);
         if (GUILayout.Button("Disable start scene"))
