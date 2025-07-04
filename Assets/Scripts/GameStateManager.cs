@@ -5,10 +5,12 @@ using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using VContainer.Unity;
 
 // todo: deconstruct scene manager from game state manager and pause menu from game state manager
 // todo: use good singletons
-public class GameStateManager : MonoBehaviour {
+public class GameStateManager: IInitializable
+{
     private enum GameScene
     {
         MainMenu = 0,
@@ -26,16 +28,18 @@ public class GameStateManager : MonoBehaviour {
     private const string END_SCENE = "EndScene";
     private static readonly string[] GAME_SCENE = { INTRO_SCENE, MAIN_SCENE, END_SCENE };
     private static GameStateManager _instance = null;
-    [SerializeField] private InputActionAsset mainAsset; // todo: make it to be injected via VContainer
-
-    [SerializeField] private GameStatus currentGameStatus = GameStatus.Active;
+    private InputActionAsset mainAsset;
+    private GameStatus currentGameStatus = GameStatus.Active;
     
     private GameScene _currentScene = GameScene.MainMenu;
-
-    private void Awake() {
-        DontDestroyOnLoad(this);
-
-        if (!_instance) {
+    public GameStateManager(InputActionAsset inputActions)
+    {
+        mainAsset = inputActions;
+    }
+    void IInitializable.Initialize() 
+    {
+        if (_instance == null)
+        {
             _instance = this;
             mainAsset.FindAction("Pause").performed += PauseActionPerformed;
             // InputHandlerOld.GotEscapeKeyDown += OnGamePaused;
@@ -44,9 +48,6 @@ public class GameStateManager : MonoBehaviour {
             InputHandlerOld.GotNKeyDown += OnNextScene;
 #endif
             PauseMenu.SetState(false);
-        }
-        else if (_instance != this) {
-            Destroy(gameObject);
         }
     }
 

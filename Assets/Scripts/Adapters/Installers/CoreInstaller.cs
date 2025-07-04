@@ -7,7 +7,6 @@ using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using VContainer;
 using VContainer.Unity;
-using YG;
 public class GameActionOnQuit : IApplicationQuitAction
 {
     private IGameSaveManager saveManager;
@@ -19,7 +18,6 @@ public class GameActionOnQuit : IApplicationQuitAction
     public void OnApplicationQuit()
     {
         // guys we HAVE to save that shit NGL
-        YG2.infoYG.Storage.flush = true;
         saveManager.Save().GetAwaiter().GetResult();
     }
 }
@@ -46,6 +44,8 @@ public class CoreInstaller: LifetimeScope
 
     protected override void Configure(IContainerBuilder builder)
     {
+        // Main systems
+        builder.RegisterEntryPoint<GameStateManager>(Lifetime.Singleton);
         SaveManagerInstaller.UseHierachyInstallment(builder);
         builder.RegisterInstance(mainAudioMixer);
         builder.RegisterInstance(mainInputActionAsset);

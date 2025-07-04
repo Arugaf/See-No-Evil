@@ -1,23 +1,19 @@
 using UnityEngine;
 
 namespace UI {
-    public class GameStateDummy : MonoBehaviour {
-        private GameStateManager _gameStateManager;
-
-        void Start() {
-            _gameStateManager = FindFirstObjectByType<GameStateManager>();
-        }
+    public class GameStateDummy : MonoBehaviour 
+    {
         
         public void LoadGame() {
-            _gameStateManager.LoadGame();
+            GameStateManager.LoadGameScene();
         }
 
         public void LoadMenu() {
-            _gameStateManager.LoadMenu();
+            GameStateManager.LoadIntroScene();
         }
 
         public void LoadGameOverScene() {
-            _gameStateManager.LoadGameOverScene();
+            GameStateManager.LoadGameOver();
         }
     }
 }
