@@ -1,9 +1,12 @@
-﻿using SaveManager;
+﻿using Gameplay;
+using SaveManager;
+using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 using VContainer;
 using VContainer.Unity;
-using YG;
 public class GameActionOnQuit : IApplicationQuitAction
 {
     private IGameSaveManager saveManager;
@@ -15,19 +18,41 @@ public class GameActionOnQuit : IApplicationQuitAction
     public void OnApplicationQuit()
     {
         // guys we HAVE to save that shit NGL
-        YG2.infoYG.Storage.flush = true;
         saveManager.Save().GetAwaiter().GetResult();
+    }
+}
+[Serializable]
+public class GameplayCanvasInstaller
+{
+    [SerializeField] private GameObject PCGameplayCanvas;
+    [SerializeField] private GameObject MobileGameplayCanvas;
+    public void Configure(IContainerBuilder builder)
+    {
+        bool isMobile = StaticPlatformDefiner.IsMobile();
+        GameObject chosenOne = (isMobile ? MobileGameplayCanvas : PCGameplayCanvas);
+        builder.RegisterFactory<AbstractGameplayUIView>(container => 
+        {
+            return () => container.Instantiate(chosenOne).GetComponent<AbstractGameplayUIView>(); // Execute per factory invocation
+        }, Lifetime.Scoped);
     }
 }
 public class CoreInstaller: LifetimeScope
 {
     [SerializeField] private AudioMixer mainAudioMixer;
+    [SerializeField] private InputActionAsset mainInputActionAsset;
+    [SerializeField] private GameplayCanvasInstaller gameplayCanvasInstaller;
+
     protected override void Configure(IContainerBuilder builder)
     {
+        // Main systems
+        builder.RegisterEntryPoint<GameStateManager>(Lifetime.Singleton);
         SaveManagerInstaller.UseHierachyInstallment(builder);
         builder.RegisterInstance(mainAudioMixer);
+        builder.RegisterInstance(mainInputActionAsset);
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<IApplicationQuitAction, GameActionOnQuit>(Lifetime.Singleton);
+
+        gameplayCanvasInstaller.Configure(builder);
         PluginYGInstaller.Configure(builder);
     }
 }

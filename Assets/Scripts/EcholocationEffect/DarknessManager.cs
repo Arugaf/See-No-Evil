@@ -11,12 +11,7 @@ namespace Features.VFX
         public static bool EnableDarkness;
         public static bool ShowDarknessObjects => DarknessFactor > DARKNESS_MAX_STATE;
 
-        [SerializeField] private InputActionAsset asset;
         [SerializeField] private float smoothTime;
-        [SerializeField] private float regenSpeed;
-        [SerializeField] private float wasteSpeed;
-        
-        private InputAction act;
 
         private SmoothDampArticulator articulator;
         private void Awake()
@@ -25,7 +20,6 @@ namespace Features.VFX
             DarknessFactor = 1;
             Shader.SetGlobalFloat(DARKNESS_FACTOR, DarknessFactor);
             EnableDarkness = false;
-            act = asset.FindAction("Attack");
         }
         private void OnDestroy()
         {

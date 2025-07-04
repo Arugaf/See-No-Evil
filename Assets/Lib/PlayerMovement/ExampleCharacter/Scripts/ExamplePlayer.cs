@@ -4,6 +4,9 @@ using UnityEngine;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
 using UnityEngine.InputSystem;
+using VContainer;
+using Gameplay;
+using System;
 
 namespace KinematicCharacterController.Examples
 {
@@ -15,23 +18,19 @@ namespace KinematicCharacterController.Examples
         public static float PlayerCameraSensivityCoeff = 1;
         public ExampleCharacterController Character;
         public ExampleCharacterCamera CharacterCamera;
-        public InputActionAsset Main;
-        private InputAction LookAction;
-        private InputAction MoveAction;
-        //private InputAction Jump;
-        private InputAction Crouch;
-        private InputAction PressMouse;
         private float resolutionSensivityCoeff;
+        private AbstractGameplayUIView gameplayControl;
+        private Func<AbstractGameplayUIView> ctrlCreator;
+        [Inject]
+        private void Construct(Func<AbstractGameplayUIView> ctrlCreator)
+        {
+            this.ctrlCreator = ctrlCreator;
+        }
         private void Start()
         {
+            gameplayControl = ctrlCreator();
             resolutionSensivityCoeff = 100.0f / Mathf.Min(Screen.width, Screen.height);
             //Cursor.lockState = CursorLockMode.Locked;
-            LookAction = Main.FindAction("Look");
-            MoveAction = Main.FindAction("Move");
-            PressMouse = Main.FindAction("Attack");
-            //Jump = Main.FindAction("Jump");
-            Crouch = Main.FindAction("Crouch");
-            // Tell camera to follow transform
             CharacterCamera.SetFollowTransform(Character.CameraFollowPoint);
 
             // Ignore the character's collider(s) for camera obstruction checks
@@ -64,7 +63,7 @@ namespace KinematicCharacterController.Examples
         private void HandleCameraInput()
         {
             // Create the look input vector for the camera
-            Vector2 look = LookAction.ReadValue<Vector2>();
+            Vector2 look = gameplayControl.GetLookVector();
             float mouseLookAxisUp = look.y;
             float mouseLookAxisRight = look.x;
             Vector3 lookInputVector = new Vector3(mouseLookAxisRight, mouseLookAxisUp, 0f) * resolutionSensivityCoeff * PlayerCameraSensivityCoeff;
@@ -92,13 +91,13 @@ namespace KinematicCharacterController.Examples
             PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
 
             // Build the CharacterInputs struct
-            Vector2 rd = MoveAction.ReadValue<Vector2>();
+            Vector2 rd = gameplayControl.GetMoveVector();
             characterInputs.MoveAxisForward = rd.y;
             characterInputs.MoveAxisRight = rd.x;
             characterInputs.CameraRotation = CharacterCamera.Transform.rotation;
             characterInputs.JumpDown = false;//Jump.IsPressed();
-            characterInputs.CrouchDown = Crouch.IsPressed();
-            characterInputs.CrouchUp = !characterInputs.CrouchDown;
+            characterInputs.CrouchDown = false;
+            characterInputs.CrouchUp = true;
 
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);

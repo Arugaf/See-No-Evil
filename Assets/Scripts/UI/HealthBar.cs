@@ -2,13 +2,18 @@ using Actors;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using VContainer;
 
 namespace UI {
     public class HpBar : MonoBehaviour {
         private Slider _slider;
         [SerializeField] private TextMeshProUGUI healthValue;
-        [SerializeField] private Health health;
-
+        private Health health;
+        [Inject]
+        private void Construct(Health hp)
+        {
+            health = hp;
+        }
         private void Awake() {
             _slider = GetComponent<Slider>();
         }

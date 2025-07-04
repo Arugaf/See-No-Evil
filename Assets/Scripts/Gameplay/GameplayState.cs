@@ -26,7 +26,7 @@ namespace Gameplay {
         }
         public float TotalSeconds => timeRemaining;
 
-        [SerializeField] private Animator gameplayUIAnimator;
+        public event UnityAction OnGameOver;
         [SerializeField] private float transitionDuration;
         public static string GetTimeSpec(float timeRemaining)
         {
@@ -75,7 +75,7 @@ namespace Gameplay {
         private IEnumerator TransitionCoroutine()
         {
             isTransitioning = true;
-            gameplayUIAnimator.SetBool("Hide", true);
+            OnGameOver?.Invoke();
             yield return new WaitForSeconds(transitionDuration);
             GameStateManager.LoadGameOver();
         }
