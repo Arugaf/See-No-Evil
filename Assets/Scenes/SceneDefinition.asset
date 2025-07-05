@@ -19,15 +19,10 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   <GameplayScenesReferences>k__BackingField:
-  - m_AssetGUID: 72e324aefb4f29246bfd63856d52df1c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+  - {fileID: 11400000, guid: bccbfd0f8d367c94cacd8c92ea61fe3a, type: 2}
   <GameOverSceneReference>k__BackingField:
     m_AssetGUID: 6876c48f7a178e8498dcb6af5b39c49b
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  <SettingsInstaller>k__BackingField: {fileID: 11400000, guid: 530166027e1e7d6439358d335a59d186, type: 2}

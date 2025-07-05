@@ -16,17 +16,16 @@ public interface IGameSceneDefinition
 public class GameSceneDefinitionObject : ScriptableObject, IGameSceneDefinition
 {
     [field: SerializeField] public AssetReference MenuSceneReference { get; private set; }
-    [field: SerializeField] public AssetReference[] GameplayScenesReferences { get; private set; }
+    [field: SerializeField] public GameLevelInfoObject[] GameplayScenesReferences { get; private set; }
 
     [field: SerializeField] public AssetReference GameOverSceneReference { get; private set; }
-    [field: SerializeField] public GameSettingsInstaller SettingsInstaller { get; private set; }
     public int LevelCount { get => GameplayScenesReferences.Length; }
     public UniTask LoadMenu() => MenuSceneReference.LoadSceneAsync().ToUniTask();
     public async UniTask LoadGameplay(int levelIndex)
     {
-        using (LifetimeScope.Enqueue(SettingsInstaller))
+        using (LifetimeScope.Enqueue(GameplayScenesReferences[levelIndex].LevelSettings))
         {
-            await GameplayScenesReferences[levelIndex].LoadSceneAsync();
+            await GameplayScenesReferences[levelIndex].SceneReference.LoadSceneAsync();
         }
     }
 
