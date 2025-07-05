@@ -12,7 +12,7 @@ namespace Features.VFX
         }
         private void Update()
         {
-            _renderer.enabled = DarknessManager.ShowDarknessObjects;
+            _renderer.enabled = GameplayDarknessManager.ShowDarknessObjects;
         }
     }
 }

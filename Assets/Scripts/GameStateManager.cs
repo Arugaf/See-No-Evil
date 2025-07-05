@@ -126,6 +126,7 @@ public class GameStateManager: IInitializable, IAsyncStartable
     {
         if (currentGameStatus == GameStatus.Transition) return;
         currentGameStatus = GameStatus.Transition;
+        
         switch (newScene)
         {
             case GameScene.MainMenu:

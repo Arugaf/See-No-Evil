@@ -1,49 +1,63 @@
+using Cysharp.Threading.Tasks;
 using Features.VFX;
+using System;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using VContainer.Unity;
 
-namespace Gameplay {
-    public class GameplayState : MonoBehaviour {
+namespace Gameplay 
+{
+    public class GameplayState : ITickable
+    {
+        [Serializable]
+        public struct Settings
+        {
+            public float InitialTime;
+            public float TransitionDuration;
+        }
         public enum Result
         {
             Victory,
             Killed,
             FailureByTime
         }
+        public event UnityAction OnGameOver;
         public static Result LastGameState { get; private set; }
         public static float LastGameTime { get; private set; }
-        public float initialTime = 121f;
-        [SerializeField] private float timeRemaining;
-        [SerializeField] private bool activeTimer = true;
-        private bool isTransitioning = false;
-        public int minutes {
+        public int Minutes
+        {
             get => Mathf.FloorToInt(timeRemaining / 60);
         }
 
-        public int seconds {
+        public int Seconds
+        {
             get => Mathf.FloorToInt(timeRemaining % 60);
         }
         public float TotalSeconds => timeRemaining;
-
-        public event UnityAction OnGameOver;
-        [SerializeField] private float transitionDuration;
+        public float InitialTime => settings.InitialTime;
+        private float timeRemaining;
+        private Settings settings;
+        private bool isTransitioning = false;
         public static string GetTimeSpec(float timeRemaining)
         {
+            if (timeRemaining < 0) return "00:00";
             int minutes = Mathf.FloorToInt(timeRemaining) / 60;
             int seconds = Mathf.FloorToInt(timeRemaining) % 60;
             return $"{minutes:D2}:{seconds:D2}";
         }
 
-        private void Start()
+        public GameplayState(Settings settings)
         {
-            timeRemaining = initialTime;
+            this.settings = settings;
+            timeRemaining = settings.InitialTime;
             LastGameTime = 0;
             LastGameState = Result.Victory;
         }
 
-        private void Update() {
-            if (!activeTimer || !(timeRemaining > 0f)) return;
+        public void Tick() {
+            if (!(timeRemaining > 0f)) return;
 
             timeRemaining -= Time.deltaTime;
 
@@ -58,7 +72,7 @@ namespace Gameplay {
             if (isTransitioning) return;
             Debug.Log("Victory triggered");
             LastGameState = Result.Victory;
-            LastGameTime = initialTime - TotalSeconds;
+            LastGameTime = settings.InitialTime - TotalSeconds;
             TriggerTransition();
         }
 
@@ -70,13 +84,14 @@ namespace Gameplay {
         }
         public void TriggerTransition()
         {
-            StartCoroutine(TransitionCoroutine());
+            isTransitioning = true;
+            TransitionTask().Forget();
         }
-        private IEnumerator TransitionCoroutine()
+        private async UniTask TransitionTask()
         {
             isTransitioning = true;
             OnGameOver?.Invoke();
-            yield return new WaitForSeconds(transitionDuration);
+            await UniTask.WaitForSeconds(settings.TransitionDuration);
             GameStateManager.LoadGameOver();
         }
     }

@@ -7,7 +7,7 @@ namespace Features.AudioManager
         [SerializeField] private AudioMixer audioMixer;
         private void Update()
         {
-            audioMixer.SetFloat("DARKNESS_FACTOR", VFX.DarknessManager.DarknessFactor);
+            audioMixer.SetFloat("DARKNESS_FACTOR", VFX.GameplayDarknessManager.DarknessFactor);
         }
         private void OnDestroy()
         {

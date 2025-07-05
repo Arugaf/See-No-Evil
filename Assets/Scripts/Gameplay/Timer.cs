@@ -20,7 +20,7 @@ namespace Gameplay {
 
         private void Update() {
             UpdateTime();
-            slider.value = (gameplayState.TotalSeconds / gameplayState.initialTime);
+            slider.value = (gameplayState.TotalSeconds / gameplayState.InitialTime);
         }
 
         private void UpdateTime() {

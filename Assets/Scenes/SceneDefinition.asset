@@ -30,3 +30,4 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
+  <SettingsInstaller>k__BackingField: {fileID: 11400000, guid: 530166027e1e7d6439358d335a59d186, type: 2}

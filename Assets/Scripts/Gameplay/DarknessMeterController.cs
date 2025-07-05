@@ -1,37 +1,46 @@
 using Features.VFX;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using VContainer.Unity;
 namespace Gameplay
 {
-    public class DarknessMeterController: MonoBehaviour
+    public class DarknessMeterController: ITickable
     {
+        [Serializable]
+        public struct Settings
+        {
+            public float darknessRegenSpeed;
+            public float darknessDecaySpeed;
+        }
         [SerializeField] private UnityEvent OnDarknessStarts;
-        [SerializeField] private InputActionAsset asset;
-        [SerializeField] private float darknessRegenSpeed;
-        [SerializeField] private float darknessDecaySpeed;
+        [SerializeField] private Settings settings;
         private InputAction act;
+        private GameplayDarknessManager darknessManager;
         public float Ratio { get; private set; }
         public bool DoDecay { get; private set; }
-        private void Start()
+        public DarknessMeterController(InputActionAsset asset, Settings settings, GameplayDarknessManager darknessManager)
         {
             act = asset.FindAction("Attack");
+            this.settings = settings;
+            this.darknessManager = darknessManager;
         }
-        private void Update()
+        public void Tick()
         {
             if(DoDecay && Ratio > 0)
             {
-                Ratio -= Time.deltaTime * darknessDecaySpeed;
+                Ratio -= Time.deltaTime * settings.darknessDecaySpeed;
                 if(Ratio <= 0)
                 {
                     Ratio = 0;
                     DoDecay = false;
-                    DarknessManager.EnableDarkness = false;
+                    darknessManager.EnableDarkness = false;
                 }
             }
             else if(!DoDecay && Ratio < 1)
             {
-                Ratio += Time.deltaTime * darknessRegenSpeed;
+                Ratio += Time.deltaTime * settings.darknessRegenSpeed;
                 if (Ratio > 1)
                 {
                     Ratio = 1;
@@ -40,13 +49,13 @@ namespace Gameplay
             else if(Ratio == 1 && act.IsPressed())
             {
                 DoDecay = true;
-                DarknessManager.EnableDarkness = true;
+                darknessManager.EnableDarkness = true;
                 OnDarknessStarts?.Invoke();
             }
         }
         public void Push()
         {
-            DarknessManager.EnableDarkness = true;
+            darknessManager.EnableDarkness = true;
             DoDecay = true;
         }
     }

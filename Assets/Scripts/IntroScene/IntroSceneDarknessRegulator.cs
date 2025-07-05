@@ -17,7 +17,7 @@ namespace Features.IntroScene
         private void Update()
         {
             articulator.Update();
-            Shader.SetGlobalFloat(DarknessManager.DARKNESS_FACTOR, articulator.Current);
+            Shader.SetGlobalFloat(GameplayDarknessManager.DARKNESS_FACTOR, articulator.Current);
         }
         public void SetDarknessFactor(float fac)
         {
