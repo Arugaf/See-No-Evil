@@ -1,11 +1,17 @@
 {
-    "idSave": 89,
+    "idSave": 92,
     "SaveData": {
         "Settings": {
             "MusicVolume": 0.5478878021240234,
             "SFXVolume": 0.32005923986434939,
             "CameraSensivity": 1.1082254648208619,
             "CurrentLocaleName": ""
+        },
+        "Loot": {
+            "LootList": []
+        },
+        "LevelStats": {
+            "CompletedLevels": []
         }
     }
 }

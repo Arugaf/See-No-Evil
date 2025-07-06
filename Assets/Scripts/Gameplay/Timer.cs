@@ -24,7 +24,7 @@ namespace Gameplay {
         }
 
         private void UpdateTime() {
-            _text.text = GameplayState.GetTimeSpec(gameplayState.TotalSeconds);
+            _text.text = GameplayResultStorage.GetTimeSpec(gameplayState.TotalSeconds);
         }
 
     }

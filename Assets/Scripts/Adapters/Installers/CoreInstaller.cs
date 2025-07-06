@@ -46,12 +46,14 @@ public class CoreInstaller: LifetimeScope
     {
         // Main systems
         builder.RegisterEntryPoint<GameStateManager>(Lifetime.Singleton);
+        builder.Register<GameplayResultStorage>(Lifetime.Singleton).AsSelf();
         SaveManagerInstaller.UseHierachyInstallment(builder);
         builder.RegisterInstance(mainAudioMixer);
         builder.RegisterInstance(mainInputActionAsset);
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<IApplicationQuitAction, GameActionOnQuit>(Lifetime.Singleton);
-        builder.RegisterInstance<IGameSceneDefinition>(sceneDefinitionObject);
+        builder.RegisterInstance(sceneDefinitionObject).AsImplementedInterfaces();
+        
 
         gameplayCanvasInstaller.Configure(builder);
         PluginYGInstaller.Configure(builder);

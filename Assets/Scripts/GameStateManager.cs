@@ -1,7 +1,9 @@
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
+using Gameplay;
 using InputModule;
 using UI;
 using UnityEngine;
@@ -29,12 +31,16 @@ public class GameStateManager: IInitializable, IAsyncStartable
     private InputActionAsset mainAsset;
     private IGameSceneDefinition gameSceneDefinition;
     private GameStatus currentGameStatus = GameStatus.Active;
+    private GameplayResultStorage gameplayResultStorage;
+    private ILevelDefinition levelDefinition;
     
     private GameScene _currentScene = GameScene.MainMenu;
-    public GameStateManager(InputActionAsset inputActions, IGameSceneDefinition gameSceneDefinition)
+    public GameStateManager(InputActionAsset inputActions, IGameSceneDefinition gameSceneDefinition, GameplayResultStorage storage, ILevelDefinition levelDefinition)
     {
         mainAsset = inputActions;
         this.gameSceneDefinition = gameSceneDefinition;
+        gameplayResultStorage = storage;
+        this.levelDefinition = levelDefinition;
     }
     void IInitializable.Initialize() 
     {
@@ -133,7 +139,9 @@ public class GameStateManager: IInitializable, IAsyncStartable
                 await gameSceneDefinition.LoadMenu();
                 break;
             case GameScene.MainScene:
-                await gameSceneDefinition.LoadGameplay(0);
+                // TODO: do not do that (so other managers are calling SetLevel)
+                gameplayResultStorage.SetLevel(levelDefinition.Levels.First());
+                await gameSceneDefinition.LoadGameplay(gameplayResultStorage.gameLevelInfo);
                 break;
             case GameScene.End:
                 await gameSceneDefinition.LoadGameOver();

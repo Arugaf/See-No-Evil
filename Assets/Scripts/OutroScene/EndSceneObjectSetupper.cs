@@ -6,7 +6,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.SmartFormat.PersistentVariables;
-using GameResult = Gameplay.GameplayState.Result;
+using VContainer;
+using GameResult = Gameplay.GameplayResultStorage.Result;
 public class EndSceneObjectSetupper : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI descriptionText;
@@ -17,15 +18,21 @@ public class EndSceneObjectSetupper : MonoBehaviour
     [SerializeField] private LocalizedString overtimeText;
     [SerializeField] private LocalizedString killedText;
     [SerializeField] private LocalizedString victoryRemainingTimeText;
+    private GameplayResultStorage gameplayResultStorage;
+    [Inject]
+    private void Construct(GameplayResultStorage resultStorage)
+    {
+        gameplayResultStorage = resultStorage;
+    }
     private async void Start()
     {
-        var state = Gameplay.GameplayState.LastGameState;
-        var time = Gameplay.GameplayState.LastGameTime;
+        var state = gameplayResultStorage.LastGameState;
+        var time = gameplayResultStorage.LastGameTime;
         if (state == GameResult.Victory)
         {
             victory.SetActive(true);
             descriptionText.text = await victoryText.GetLocalizedStringAsync();
-            var arguments = new Dictionary<string, string> { { "Time", GameplayState.GetTimeSpec(time) } };
+            var arguments = new Dictionary<string, string> { { "Time", GameplayResultStorage.GetTimeSpec(time) } };
             textTime.text = await victoryRemainingTimeText.GetLocalizedStringAsync(arguments);
         }
         else if (state == GameResult.Killed)
