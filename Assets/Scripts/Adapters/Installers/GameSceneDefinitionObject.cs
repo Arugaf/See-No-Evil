@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Registries;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -18,15 +19,14 @@ public interface ILevelDefinition
     IReadOnlyCollection<GameLevelInfoObject> Levels { get; }
 }
 [CreateAssetMenu(fileName = "GameSceneDefinitionObject", menuName = "Scriptable Objects/GameSceneDefinitionObject")]
-public class GameSceneDefinitionObject : ScriptableObject, IGameSceneDefinition, ILevelDefinition
+public class GameSceneDefinitionObject : IdentifiableRegistry<GameLevelInfoObject>, IGameSceneDefinition, ILevelDefinition
 {
     [field: SerializeField] public AssetReference MenuSceneReference { get; private set; }
-    [field: SerializeField] public GameLevelInfoObject[] GameplayScenesReferences { get; private set; }
 
     [field: SerializeField] public AssetReference GameOverSceneReference { get; private set; }
-    public int LevelCount { get => GameplayScenesReferences.Length; }
+    public int LevelCount { get => Values.Length; }
 
-    public IReadOnlyCollection<GameLevelInfoObject> Levels => GameplayScenesReferences;
+    public IReadOnlyCollection<GameLevelInfoObject> Levels => Values;
 
     public UniTask LoadMenu() => MenuSceneReference.LoadSceneAsync().ToUniTask();
     public async UniTask LoadGameplay(GameLevelInfoObject levelObject)

@@ -1,17 +1,9 @@
 using System;
-using UnityEngine;
+using System.Collections;
 using UnityEngine.Events;
 using VContainer.Unity;
 namespace Gameplay.Loot
 {
-    public abstract class GambleBoxBehaviour: MonoBehaviour
-    {
-        public event UnityAction OnBeingPickedUp;
-    }
-    public interface ILootSpawner
-    {
-        public GambleBoxBehaviour CreateLootAtRandomPos(GameObject prefab);
-    }
     public class GameplayLootManager : IStartable, IDisposable
     {
         public bool GotTheLoot { get; private set; }
