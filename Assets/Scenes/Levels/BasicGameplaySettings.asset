@@ -20,3 +20,5 @@ MonoBehaviour:
     darknessDecaySpeed: 0.5
   GameplayDarknessManagerSettings:
     smoothTime: 0.2
+  GameplayLootSettings:
+    LootBoxPrefab: {fileID: 2846861121691759072, guid: 8d0cd5b7ec876594aa1a5fcac50e2b4a, type: 3}

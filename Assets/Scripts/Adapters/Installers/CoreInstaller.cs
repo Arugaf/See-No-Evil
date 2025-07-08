@@ -1,4 +1,5 @@
 ﻿using Gameplay;
+using Gameplay.Loot;
 using SaveManager;
 using System;
 using System.Runtime.InteropServices;
@@ -53,7 +54,7 @@ public class CoreInstaller: LifetimeScope
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<IApplicationQuitAction, GameActionOnQuit>(Lifetime.Singleton);
         builder.RegisterInstance(sceneDefinitionObject).AsImplementedInterfaces();
-        
+        builder.Register<IRandom, BasicRandom>(Lifetime.Singleton);
 
         gameplayCanvasInstaller.Configure(builder);
         PluginYGInstaller.Configure(builder);

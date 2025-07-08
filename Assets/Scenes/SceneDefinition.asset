@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8068b301f63d0f478cce880d819d5f1, type: 3}
   m_Name: SceneDefinition
   m_EditorClassIdentifier: 
+  <Values>k__BackingField:
+  - {fileID: 11400000, guid: bccbfd0f8d367c94cacd8c92ea61fe3a, type: 2}
   <MenuSceneReference>k__BackingField:
     m_AssetGUID: 2cd6074f33e8b52408219ab768120683
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  <GameplayScenesReferences>k__BackingField:
-  - {fileID: 11400000, guid: bccbfd0f8d367c94cacd8c92ea61fe3a, type: 2}
   <GameOverSceneReference>k__BackingField:
     m_AssetGUID: 6876c48f7a178e8498dcb6af5b39c49b
     m_SubObjectName: 
