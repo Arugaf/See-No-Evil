@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using static SaveManager.GameSaveData.LootboxData;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
+using Registries;
 
 namespace SaveManager
 {
@@ -14,48 +17,87 @@ namespace SaveManager
             public string CurrentLocaleName = "";
         }
         [System.Serializable]
-        public class LootboxData
+        public class LootboxData : ListDictionaryContainer<LootboxData.Loot>
         {
             [System.Serializable]
-            public class Loot
+            public class Loot: ListDictionaryIdentifiableBase
             {
-                public string Identifier;
                 public int Count;
+                public Loot(int count = 0)
+                {
+                    Count = count;
+                }
             }
-            public List<Loot> LootList = new List<Loot>();
             public void Add(string id, int count = 1)
             {
-                Loot found = LootList.Find(x => x.Identifier == id);
+                Loot found = Values.Find(x => x.ID == id);
                 if (found != null) found.Count += count;
-                else LootList.Add(new Loot() { Identifier = id, Count = count });
+                else Values.Add(new Loot() { ID = id, Count = count });
             }
         }
         [System.Serializable]
-        public class LevelStatsData
+        public class LevelStatsData : ListDictionaryContainer<LevelStatsData.LevelCompletion>
         {
             [System.Serializable]
-            public class LevelCompletion
+            public class LevelCompletion : ListDictionaryIdentifiableBase
             {
-                public string Identifier;
                 public float BestTime;
                 public int BestScore;
-            }
-            public List<LevelCompletion> CompletedLevels = new List<LevelCompletion>();
-            public void Update(string id, float bestTime, int bestScore)
-            {
-                LevelCompletion found = CompletedLevels.Find(x => x.Identifier == id);
-                if (found != null)
+                public LevelCompletion() { }
+                public LevelCompletion(float bestTime, int bestScore)
                 {
-                    if (bestScore > found.BestScore) found.BestScore = bestScore;
-                    if (bestTime < found.BestTime) found.BestTime = bestTime;
+                    BestTime = bestTime;
+                    BestScore = bestScore;
                 }
-                else CompletedLevels.Add(new LevelCompletion()
-                { Identifier = id, BestScore = bestScore, BestTime = bestTime}
-                );
             }
         }
         public SettingsData Settings = new SettingsData();
         public LootboxData Loot = new LootboxData();
         public LevelStatsData LevelStats = new LevelStatsData();
+    }
+    public interface IListDictionaryIdentifiable
+    {
+        public string ID { get; set; }
+    }
+    public class ListDictionaryIdentifiableBase: IListDictionaryIdentifiable
+    {
+        public string ID { get => Id; set => Id = value; }
+        public string Id;
+    }
+    public class ListDictionaryContainer<T> where T: IListDictionaryIdentifiable
+    {
+        public List<T> Values = new List<T>();
+        private Dictionary<string, T> _dictionaryCache;
+        private Dictionary<string, T> EnsureCache()
+        {
+            if (_dictionaryCache == null)
+            {
+                _dictionaryCache = new Dictionary<string, T>();
+                foreach (var kvp in Values)
+                {
+                    _dictionaryCache.Add(kvp.ID, kvp);
+                }
+            }
+            return _dictionaryCache;
+        }
+        public bool TryGetValue(string key, out T result)
+        {
+            return EnsureCache().TryGetValue(key, out result);
+        }
+        public void SetValue(string key, in T result)
+        {
+            EnsureCache();
+            result.ID = key;
+            if (_dictionaryCache.ContainsKey(key))
+            {
+                Values.RemoveAll(x=>x.ID== key);
+                _dictionaryCache[result.ID] = result;
+            }
+            else
+            {
+                _dictionaryCache.Add(key, result);
+            }
+            Values.Add(result);
+        }
     }
 }

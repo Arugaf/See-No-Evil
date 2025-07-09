@@ -96621,6 +96621,7 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 1945086328}
   - {fileID: 563764588}
+  - {fileID: 92552084}
   playerHealth: {fileID: 249054502}
   SpawnPoints:
   - {fileID: 521383057}

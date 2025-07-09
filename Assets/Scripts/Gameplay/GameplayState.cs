@@ -20,14 +20,18 @@ namespace Gameplay
         public GameLevelInfoObject gameLevelInfo { get; private set; }
         public Result LastGameState { get; set; }
         public float LastGameTime { get; set; }
-        public float LastGameHP { get; set; }
+        public int LastGameHP { get; set; }
         public bool AquiredPrize { get; set; }
+        public int AquiredHPBonusCount { get; set; }
+        public float TotalLevelTime { get; set; }
         public void SetLevel(GameLevelInfoObject gameLevelInfoObject)
         {
             gameLevelInfo = gameLevelInfoObject;
             LastGameState = Result.Victory;
             LastGameTime = 0;
+            TotalLevelTime = 0;
             LastGameHP = 0;
+            AquiredHPBonusCount = 0;
             AquiredPrize = false;
         }
         public void FailByTime()
@@ -86,6 +90,7 @@ namespace Gameplay
             this.settings = settings;
             timeRemaining = settings.InitialTime;
             gameplayResultStorage = resultStorage;
+            resultStorage.TotalLevelTime = settings.InitialTime;
             //LastGameTime = 0;
             //LastGameState = Result.Victory;
         }

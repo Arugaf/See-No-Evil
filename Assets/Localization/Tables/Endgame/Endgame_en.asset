@@ -17,7 +17,7 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: d8d3c247a64ccee4f8ea19e6e48b0781, type: 2}
   m_Metadata:
     m_Items:
-    - rid: 7583230136772985138
+    - rid: 4927362621492428897
   m_TableData:
   - m_Id: 230146174976
     m_Localized: Successful relief!
@@ -40,14 +40,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1163894714368
-    m_Localized: 'Time: {Time}'
+    m_Localized: 'Time: {Time}
+
+      Score: {Score}'
     m_Metadata:
       m_Items:
-      - rid: 7583230136772985138
+      - rid: 4927362621492428897
   references:
     version: 2
     RefIds:
-    - rid: 7583230136772985138
+    - rid: 4927362621492428897
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_Entries: 

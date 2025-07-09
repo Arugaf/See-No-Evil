@@ -27,6 +27,7 @@ public class GameSettingsInstaller : AbstractGameSettingsInstaller
         builder.RegisterInstance(DarknessMeterControllerSettings);
         builder.RegisterInstance(GameplayDarknessManagerSettings);
         builder.RegisterInstance(GameplayLootSettings);
+        builder.Register<IGameplayScoreManager, GameplayScoreManager>(Lifetime.Singleton);
         builder.RegisterEntryPoint<GameplayState>(Lifetime.Singleton).AsSelf();
         builder.RegisterEntryPoint<DarknessMeterController>(Lifetime.Singleton).AsSelf();
         builder.RegisterEntryPoint<GameplayDarknessManager>(Lifetime.Singleton).AsSelf();

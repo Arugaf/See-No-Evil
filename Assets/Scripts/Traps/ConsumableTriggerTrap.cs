@@ -12,10 +12,10 @@ namespace Traps
         {
             if (other.TryGetComponent(out IDamageable damageable))
             {
-                Destroy(gameObject);
                 if(spawnEffect != null) Instantiate(spawnEffect, transform.position, transform.rotation);
                 damageable.Damage(damageParameters);
                 OnAttackAction?.Invoke();
+                Destroy(gameObject);
             }
         }
     }

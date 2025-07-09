@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using Gameplay;
+using Gameplay.LevelStats;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,11 +19,15 @@ public class EndSceneObjectSetupper : MonoBehaviour
     [SerializeField] private LocalizedString overtimeText;
     [SerializeField] private LocalizedString killedText;
     [SerializeField] private LocalizedString victoryRemainingTimeText;
+    private IScoreEvaluator scoreEvaluator;
+    private ILevelStatsManager levelStatsManager;
     private GameplayResultStorage gameplayResultStorage;
     [Inject]
-    private void Construct(GameplayResultStorage resultStorage)
+    private void Construct(GameplayResultStorage resultStorage, IScoreEvaluator scoreEvaluator, ILevelStatsManager levelStatsManager)
     {
         gameplayResultStorage = resultStorage;
+        this.scoreEvaluator = scoreEvaluator;
+        this.levelStatsManager = levelStatsManager;
     }
     private async void Start()
     {
@@ -31,8 +36,11 @@ public class EndSceneObjectSetupper : MonoBehaviour
         if (state == GameResult.Victory)
         {
             victory.SetActive(true);
+            int totalScore = scoreEvaluator.Evaluate(gameplayResultStorage);
             descriptionText.text = await victoryText.GetLocalizedStringAsync();
-            var arguments = new Dictionary<string, string> { { "Time", GameplayResultStorage.GetTimeSpec(time) } };
+            levelStatsManager.SubmitResult(totalScore, gameplayResultStorage);
+            var arguments = new Dictionary<string, string> { { "Time", GameplayResultStorage.GetTimeSpec(time) },
+                                                             { "Score", totalScore.ToString()} };
             textTime.text = await victoryRemainingTimeText.GetLocalizedStringAsync(arguments);
         }
         else if (state == GameResult.Killed)

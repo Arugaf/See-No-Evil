@@ -1,17 +1,23 @@
 {
-    "idSave": 101,
+    "idSave": 2,
     "SaveData": {
         "Settings": {
-            "MusicVolume": 0.5478878021240234,
-            "SFXVolume": 0.32005923986434939,
-            "CameraSensivity": 1.1082254648208619,
+            "MusicVolume": 1.0,
+            "SFXVolume": 1.0,
+            "CameraSensivity": 1.0,
             "CurrentLocaleName": ""
         },
         "Loot": {
-            "LootList": []
+            "Values": []
         },
         "LevelStats": {
-            "CompletedLevels": []
+            "Values": [
+                {
+                    "Id": "FirstLevel",
+                    "BestTime": 64.81129455566406,
+                    "BestScore": 1110
+                }
+            ]
         }
     }
 }
