@@ -1,12 +1,14 @@
 using Cysharp.Threading.Tasks;
 using Gameplay;
+using Gameplay.LevelStats;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.SmartFormat.PersistentVariables;
-using GameResult = Gameplay.GameplayState.Result;
+using VContainer;
+using GameResult = Gameplay.GameplayResultStorage.Result;
 public class EndSceneObjectSetupper : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI descriptionText;
@@ -17,15 +19,28 @@ public class EndSceneObjectSetupper : MonoBehaviour
     [SerializeField] private LocalizedString overtimeText;
     [SerializeField] private LocalizedString killedText;
     [SerializeField] private LocalizedString victoryRemainingTimeText;
+    private IScoreEvaluator scoreEvaluator;
+    private ILevelStatsManager levelStatsManager;
+    private GameplayResultStorage gameplayResultStorage;
+    [Inject]
+    private void Construct(GameplayResultStorage resultStorage, IScoreEvaluator scoreEvaluator, ILevelStatsManager levelStatsManager)
+    {
+        gameplayResultStorage = resultStorage;
+        this.scoreEvaluator = scoreEvaluator;
+        this.levelStatsManager = levelStatsManager;
+    }
     private async void Start()
     {
-        var state = Gameplay.GameplayState.LastGameState;
-        var time = Gameplay.GameplayState.LastGameTime;
+        var state = gameplayResultStorage.LastGameState;
+        var time = gameplayResultStorage.LastGameTime;
         if (state == GameResult.Victory)
         {
             victory.SetActive(true);
+            int totalScore = scoreEvaluator.Evaluate(gameplayResultStorage);
             descriptionText.text = await victoryText.GetLocalizedStringAsync();
-            var arguments = new Dictionary<string, string> { { "Time", GameplayState.GetTimeSpec(time) } };
+            levelStatsManager.SubmitResult(totalScore, gameplayResultStorage);
+            var arguments = new Dictionary<string, string> { { "Time", GameplayResultStorage.GetTimeSpec(time) },
+                                                             { "Score", totalScore.ToString()} };
             textTime.text = await victoryRemainingTimeText.GetLocalizedStringAsync(arguments);
         }
         else if (state == GameResult.Killed)

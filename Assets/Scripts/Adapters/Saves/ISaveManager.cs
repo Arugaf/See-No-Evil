@@ -11,9 +11,7 @@ namespace SaveManager
         public UniTask Save();
         public UniTask Load();
     }
-    public interface ISettingSaveManager: ISaveManager<GameSaveData.SettingsData>
-    {
-    }
+
     /// <summary>
     /// The ROOT.
     /// </summary>
@@ -25,6 +23,8 @@ namespace SaveManager
         public static void UseHierachyInstallment(IContainerBuilder builder)
         {
             builder.Register<ISettingSaveManager, SettingsSaveManager>(Lifetime.Singleton);
+            builder.Register<ILootGameSaveManager, LootGameSaveManager>(Lifetime.Singleton);
+            builder.Register<ILevelStatsSaveManager, LevelStatsSaveManager>(Lifetime.Singleton);
         }
     }
 }

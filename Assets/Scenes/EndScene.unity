@@ -9195,6 +9195,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 1579360067}
+  - {fileID: 421424145}
 --- !u!4 &2092914789
 Transform:
   m_ObjectHideFlags: 0
@@ -9204,7 +9205,7 @@ Transform:
   m_GameObject: {fileID: 2092914787}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.31073, y: 0.28706, z: 42.86965}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
