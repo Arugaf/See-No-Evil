@@ -1,5 +1,5 @@
 {
-    "idSave": 15,
+    "idSave": 28,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -14,7 +14,7 @@
             "Values": [
                 {
                     "Id": "FirstLevel",
-                    "BestTime": 64.81129455566406,
+                    "BestTime": 58.685909271240237,
                     "BestScore": 1110
                 }
             ]
