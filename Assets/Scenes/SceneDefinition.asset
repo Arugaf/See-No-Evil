@@ -15,7 +15,7 @@ MonoBehaviour:
   <Values>k__BackingField:
   - {fileID: 11400000, guid: bccbfd0f8d367c94cacd8c92ea61fe3a, type: 2}
   <MenuSceneReference>k__BackingField:
-    m_AssetGUID: 2cd6074f33e8b52408219ab768120683
+    m_AssetGUID: 18d8b31f61a87bd4d84fdc36f608c139
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 

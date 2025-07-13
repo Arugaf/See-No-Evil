@@ -1,6 +1,7 @@
 ﻿using Gameplay;
 using Gameplay.LevelStats;
 using Gameplay.Loot;
+using Levels;
 using SaveManager;
 using System;
 using System.Runtime.InteropServices;
@@ -45,13 +46,15 @@ public class CoreInstaller: LifetimeScope
     [SerializeField] private GameplayCanvasInstaller gameplayCanvasInstaller;
     [SerializeField] private GameSceneDefinitionObject sceneDefinitionObject;
     [SerializeField] private BasicScoreEvaluator.Settings scoreSettings;
+    [SerializeField] private GameLevelManager.Settings gameManagerSettings;
     protected override void Configure(IContainerBuilder builder)
     {
         // Main systems
-        builder.RegisterEntryPoint<GameStateManager>(Lifetime.Singleton);
+        builder.RegisterEntryPoint<GameStateManager>(Lifetime.Singleton).AsSelf();
         builder.Register<GameplayResultStorage>(Lifetime.Singleton).AsSelf();
         builder.Register<IScoreEvaluator, BasicScoreEvaluator>(Lifetime.Singleton);
         SaveManagerInstaller.UseHierachyInstallment(builder);
+        builder.RegisterInstance(gameManagerSettings);
         builder.RegisterInstance(scoreSettings);
         builder.RegisterInstance(mainAudioMixer);
         builder.RegisterInstance(mainInputActionAsset);
@@ -60,6 +63,7 @@ public class CoreInstaller: LifetimeScope
         builder.Register<IApplicationQuitAction, GameActionOnQuit>(Lifetime.Singleton);
         builder.RegisterInstance(sceneDefinitionObject).AsImplementedInterfaces();
         builder.Register<IRandom, BasicRandom>(Lifetime.Singleton);
+        builder.Register<IGameLevelManager, GameLevelManager>(Lifetime.Singleton);
 
         gameplayCanvasInstaller.Configure(builder);
         PluginYGInstaller.Configure(builder);

@@ -5,11 +5,11 @@ namespace UI
     public class MenuItem: MonoBehaviour
     {
         [SerializeField] private Animator anim;
-        [SerializeField] private CameraController controller;
+        [SerializeField] private LegacyIntroCameraController controller;
         public void SetEnabled(bool enabled)
         {
             anim.SetBool("Show", enabled);
-            controller.SetInteractableState(!enabled);
+            controller?.SetInteractableState(!enabled);
         }
     }
 }

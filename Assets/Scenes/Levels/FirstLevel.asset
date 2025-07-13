@@ -20,3 +20,15 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   <scoreboardName>k__BackingField: idk
   <LevelSettings>k__BackingField: {fileID: 11400000, guid: 530166027e1e7d6439358d335a59d186, type: 2}
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:34626dbd51ffb5049bace1b2fd53d4ee
+    m_TableEntryReference:
+      m_KeyId: 829172477952
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

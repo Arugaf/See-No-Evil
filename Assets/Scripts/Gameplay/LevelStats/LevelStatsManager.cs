@@ -6,9 +6,17 @@ namespace Gameplay.LevelStats
 {
     public interface ILevelStatsManager
     {
+        public struct LevelStats
+        {
+            public int Score;
+            public float Time;
+        }
         /// <returns>True if it was a highscore and is actually saved</returns>
         bool SubmitResult(GameLevelInfoObject level, int score, float time);
-        bool IsUnlocked(GameLevelInfoObject level);
+        bool TryGetData(string levelID, out LevelStats stats);
+        bool HaveDataFor(GameLevelInfoObject level);
+        string LastPlayedLevelID { get; set; }
+        
     }
     public static class LevelStatsManagerExtensions
     {
@@ -26,12 +34,23 @@ namespace Gameplay.LevelStats
             SaveManager = saveManager;
         }
 
-        public bool IsUnlocked(GameLevelInfoObject level)
+        public bool HaveDataFor(GameLevelInfoObject level)
         {
             if (levelStatsData.TryGetValue(level.ID, out _)) return true;
             return false;
         }
 
+        public string LastPlayedLevelID
+        {
+            get => levelStatsData.LastPlayedLevelID;
+            set {
+                if (levelStatsData.LastPlayedLevelID != value)
+                {
+                    levelStatsData.LastPlayedLevelID = value;
+                    SaveManager.SetValue(levelStatsData);
+                }
+            }
+        }
         public void Start()
         {
             levelStatsData = SaveManager.GetValue();
@@ -68,6 +87,18 @@ namespace Gameplay.LevelStats
                 SaveManager.SetValue(levelStatsData);
             }
             return changed;
+        }
+
+        public bool TryGetData(string levelID, out ILevelStatsManager.LevelStats stats)
+        {
+            if (levelStatsData.TryGetValue(levelID, out var x))
+            {
+                stats.Score = x.BestScore;
+                stats.Time = x.BestTime;
+                return true;
+            }
+            stats = default;
+            return false;
         }
     }
 }

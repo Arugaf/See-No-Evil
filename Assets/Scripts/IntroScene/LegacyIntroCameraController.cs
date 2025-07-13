@@ -6,8 +6,9 @@ using System.Collections;
 using UnityEngine.Events;
 namespace Features.IntroScene
 {
-    public class CameraController: MonoBehaviour
+    public class LegacyIntroCameraController: MonoBehaviour
     {
+        [Header("Please do not use it. It is an unsupportable piece of code.")]
         [SerializeField] private InputActionAsset uiMainAsset;
         [SerializeField] private Camera mainCamera;
         [SerializeField] private float xMaxAngle;

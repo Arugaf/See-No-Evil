@@ -2,6 +2,7 @@
 using static SaveManager.GameSaveData.LootboxData;
 using UnityEditor.Localization.Plugins.XLIFF.V12;
 using Registries;
+using System;
 
 namespace SaveManager
 {
@@ -50,6 +51,7 @@ namespace SaveManager
                     BestScore = bestScore;
                 }
             }
+            public string LastPlayedLevelID;
         }
         public SettingsData Settings = new SettingsData();
         public LootboxData Loot = new LootboxData();
@@ -64,7 +66,8 @@ namespace SaveManager
         public string ID { get => Id; set => Id = value; }
         public string Id;
     }
-    public class ListDictionaryContainer<T> where T: IListDictionaryIdentifiable
+    [Serializable]
+    public class ListDictionaryContainer<T> where T : IListDictionaryIdentifiable
     {
         public List<T> Values = new List<T>();
         private Dictionary<string, T> _dictionaryCache;
@@ -90,7 +93,7 @@ namespace SaveManager
             result.ID = key;
             if (_dictionaryCache.ContainsKey(key))
             {
-                Values.RemoveAll(x=>x.ID== key);
+                Values.RemoveAll(x => x.ID == key);
                 _dictionaryCache[result.ID] = result;
             }
             else
@@ -98,6 +101,10 @@ namespace SaveManager
                 _dictionaryCache.Add(key, result);
             }
             Values.Add(result);
+        }
+        public T this[string key]
+        {
+            get => EnsureCache()[key]; set => SetValue(key, value);
         }
     }
 }

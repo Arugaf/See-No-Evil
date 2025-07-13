@@ -59,3 +59,34 @@ MonoBehaviour:
     ArtifactBonus: 500
     AdditionalScoreForHPGain: 50
     HPMultiplier: 1
+  gameManagerSettings:
+    fullStatString:
+      m_TableReference:
+        m_TableCollectionName: GUID:d8d3c247a64ccee4f8ea19e6e48b0781
+      m_TableEntryReference:
+        m_KeyId: 1163894714368
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    emptyStatString:
+      m_TableReference:
+        m_TableCollectionName: GUID:f47ef5da148572e45979ef2ede6ff16b
+      m_TableEntryReference:
+        m_KeyId: 426449471795200
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    lockedLevelString:
+      m_TableReference:
+        m_TableCollectionName: GUID:f47ef5da148572e45979ef2ede6ff16b
+      m_TableEntryReference:
+        m_KeyId: 1678493872128
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
