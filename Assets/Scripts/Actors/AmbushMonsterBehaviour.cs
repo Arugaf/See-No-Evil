@@ -21,7 +21,6 @@ public class AmbushMonsterBehaviour : AbstractAmbushMonsterBehaviour
         Vector3 acc = Vector3.zero, velocity = Vector3.zero;
         while (i < targetPoints.Length)
         {
-            Debug.Log("DOING");
             float tFactor = Mathf.Exp(rotationSmoothSpeed * Time.deltaTime) - 1;
             Vector3 moveVector = targetPoints[i].position - transform.position;
             Quaternion rot = Quaternion.LookRotation(moveVector.normalized, Vector3.up);

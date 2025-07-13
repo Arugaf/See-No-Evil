@@ -33,9 +33,7 @@ namespace Gameplay
             else
             {
                 Debug.Log("DO AMBUSH");
-                activateObject.SetActive(true);
                 await ambushBehaviour.DoAmbush(player);
-                activateObject.SetActive(false);
                 canTrigger = true;
             }
         }
