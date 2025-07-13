@@ -7,13 +7,13 @@ public class LevelStatView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI levelLabel;
     [SerializeField] private TextMeshProUGUI levelStats;
-    [SerializeField] private GameObject enterText;
+    [SerializeField] private GameObject[] enterButtons;
     public async UniTask Show(ILevelListItem levelListItem)
     {
+        foreach(GameObject gm in enterButtons) gm.SetActive(levelListItem.IsUnlocked);
         string levelD = await levelListItem.GetStatDescription();
         string name = await levelListItem.LevelInfoObject.LocalizedName.GetLocalizedStringAsync();
         levelStats.text = levelD;
         levelLabel.text = name;
-        enterText.SetActive(levelListItem.IsUnlocked);
     }
 }

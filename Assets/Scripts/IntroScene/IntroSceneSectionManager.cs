@@ -14,9 +14,11 @@ namespace Features.IntroScene {
         {
             yield return new WaitForEndOfFrame();
             prevIndex = InitID;
+            transition = true;
             // All IntroScenes are deactivated by default;
             if (introSceneStages.TryGetValue(InitID, out var result))
                 yield return result.SetActivation(true).ToCoroutine();
+            transition = false;
         }
         public void ChangeSection(string newID)
         {

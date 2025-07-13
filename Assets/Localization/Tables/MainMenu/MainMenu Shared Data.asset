@@ -31,6 +31,26 @@ MonoBehaviour:
     m_Key: Credits
     m_Metadata:
       m_Items: []
+  - m_Id: 4828561167687680
+    m_Key: StartGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4828714029096960
+    m_Key: Collection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4828878949130240
+    m_Key: QuitTheGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4831367622631424
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4847461578121216
+    m_Key: LogoSubtext
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

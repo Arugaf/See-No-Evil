@@ -96658,7 +96658,7 @@ GameObject:
   - component: {fileID: 461263704}
   - component: {fileID: 461263703}
   m_Layer: 0
-  m_Name: Scope
+  m_Name: Scope (IMPORTANT)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448254,6 +448254,7 @@ SceneRoots:
   - {fileID: 492490048}
   - {fileID: 1862327023}
   - {fileID: 473737139}
+  - {fileID: 461263704}
   - {fileID: 75800587}
   - {fileID: 1152867633}
   - {fileID: 1978739510}
@@ -448266,6 +448267,5 @@ SceneRoots:
   - {fileID: 470878717}
   - {fileID: 92552085}
   - {fileID: 923764340}
-  - {fileID: 461263704}
   - {fileID: 205864322}
   - {fileID: 370690991}

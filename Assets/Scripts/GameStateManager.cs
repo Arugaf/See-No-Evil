@@ -139,8 +139,6 @@ public class GameStateManager: IInitializable, IAsyncStartable
                 await gameSceneDefinition.LoadMenu();
                 break;
             case GameScene.MainScene:
-                // TODO: do not do that (so other managers are calling SetLevel)
-                gameplayResultStorage.SetLevel(levelDefinition.Levels.First());
                 await gameSceneDefinition.LoadGameplay(gameplayResultStorage.gameLevelInfo);
                 break;
             case GameScene.End:

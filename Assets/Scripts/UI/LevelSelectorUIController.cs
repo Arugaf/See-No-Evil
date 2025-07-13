@@ -34,6 +34,7 @@ public class LevelSelectorUIController : MonoBehaviour
     }
     private async UniTask SetLevel(int idx)
     {
+        currentSelected = idx;
         levelSelectorBar.SetSelection(idx);
         await levelStatView.Show(levelListItems[idx]);
         levelManager.SetLevel(levelListItems[idx]);

@@ -34,6 +34,26 @@ MonoBehaviour:
     m_Localized: Axelous you know the drill
     m_Metadata:
       m_Items: []
+  - m_Id: 4828561167687680
+    m_Localized: Start the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4828714029096960
+    m_Localized: Collection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4828878949130240
+    m_Localized: Quit the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4831367622631424
+    m_Localized: Back to menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4847461578121216
+    m_Localized: Run to the Toilet!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da0685c8066ffb94f8448e86c24d700d, type: 3}
-  m_Name: FirstLevel
+  m_Name: SecondLevel
   m_EditorClassIdentifier: 
   <SceneReference>k__BackingField:
-    m_AssetGUID: 72e324aefb4f29246bfd63856d52df1c
+    m_AssetGUID: fabe537dc3a24ac4d973263233d1a7f9
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   <scoreboardName>k__BackingField: idk
-  <LevelSettings>k__BackingField: {fileID: 11400000, guid: 530166027e1e7d6439358d335a59d186, type: 2}
+  <LevelSettings>k__BackingField: {fileID: 11400000, guid: 27fe3d5dc80934f499974f7ed724f395, type: 2}
   <LocalizedName>k__BackingField:
     m_TableReference:
       m_TableCollectionName: GUID:1c161822375022140be1ee846183e9f3
     m_TableEntryReference:
-      m_KeyId: 84346216448
+      m_KeyId: 161122951168
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
