@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using static SaveManager.GameSaveData.LootboxData;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using Registries;
 using System;
 
