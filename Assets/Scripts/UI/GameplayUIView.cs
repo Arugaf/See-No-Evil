@@ -9,6 +9,10 @@ namespace Gameplay
         // tbh i dont know what to have here
         public abstract Vector2 GetMoveVector();
         public abstract Vector2 GetLookVector();
+        public virtual void InitiateTutorial()
+        {
+            Debug.LogError("Tutorial is not made for this platform yet XD");
+        }
     }
     public abstract class BaseGameplayUIView: AbstractGameplayUIView
     {
