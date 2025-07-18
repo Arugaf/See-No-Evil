@@ -16,7 +16,7 @@ namespace Gameplay
             if (other.CompareTag("Player"))
             {
                 canTrigger = false;
-                TriggerProcess(other.transform).Forget();
+                TriggerProcess(other.transform).AttachExternalCancellation(destroyCancellationToken).Forget();
             }
         }
         private async UniTask TriggerProcess(Transform player)

@@ -18,6 +18,7 @@ public class SettingsManager: ISettingsManager, IAsyncStartable
     private VolumeSliderController sfxVolume;
     private LocaleController localeController;
     private ILanguageResolver languageResolver;
+    private bool showTutorial;
     [Inject]
     public SettingsManager(ISettingSaveManager saveManager, ILanguageResolver languageResolver, AudioMixer mainAudioMixer)
     {
@@ -34,6 +35,7 @@ public class SettingsManager: ISettingsManager, IAsyncStartable
     public float CameraSensivity { get => ExamplePlayer.PlayerCameraSensivityCoeff; set { ExamplePlayer.PlayerCameraSensivityCoeff = value; Sync(); } }
 
     public int CurrentLanguageIndex { get => localeController.CurrentLanguageIndex; set => localeController.CurrentLanguageIndex = value; }
+    public bool ShowTutorial { get => showTutorial; set { showTutorial = value; Sync(); } }
 
     private bool noSync = false;
     private void Sync()
@@ -43,7 +45,8 @@ public class SettingsManager: ISettingsManager, IAsyncStartable
         {
             CameraSensivity = CameraSensivity,
             SFXVolume = SFXVolume,
-            MusicVolume = MusicVolume
+            MusicVolume = MusicVolume,
+            ShowTutorial = showTutorial
         });
     }
     public IEnumerable<ILocaleInfo> GetLocales() => localeController.GetLocales();
@@ -55,6 +58,7 @@ public class SettingsManager: ISettingsManager, IAsyncStartable
         CameraSensivity = settingsData.CameraSensivity;
         SFXVolume = settingsData.SFXVolume;
         MusicVolume = settingsData.MusicVolume;
+        showTutorial = settingsData.ShowTutorial;
         noSync = false;
         if (!languageResolver.IsInitialized) await languageResolver.Initialize();
         localeController.SetIndex(languageResolver.GetSpecifiedLanguageIndex());

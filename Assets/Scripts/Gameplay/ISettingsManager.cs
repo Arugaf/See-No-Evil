@@ -6,5 +6,6 @@ public interface ISettingsManager
     public float MusicVolume { get; set; }
     public float CameraSensivity { get; set; }
     public int CurrentLanguageIndex { get; set; }
+    public bool ShowTutorial{ get; set; }
     public IEnumerable<ILocaleInfo> GetLocales();
 }
