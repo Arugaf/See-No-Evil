@@ -31,6 +31,18 @@ MonoBehaviour:
     m_Key: tutorial_allsettled
     m_Metadata:
       m_Items: []
+  - m_Id: 187476399169536
+    m_Key: tutorial_mobile_move
+    m_Metadata:
+      m_Items: []
+  - m_Id: 187617424252928
+    m_Key: tutorial_mobile_look
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188829620051968
+    m_Key: tutorial_mobile_tap
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

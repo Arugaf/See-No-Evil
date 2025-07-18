@@ -34,6 +34,18 @@ MonoBehaviour:
     m_Localized: Everything's done! Now hurry up, before the timer ends!
     m_Metadata:
       m_Items: []
+  - m_Id: 187476399169536
+    m_Localized: Use the joystick to move around
+    m_Metadata:
+      m_Items: []
+  - m_Id: 187617424252928
+    m_Localized: Swipe for look around
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188829620051968
+    m_Localized: Press the "ear" button to reveal hidden things
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -1,12 +1,12 @@
 {
-    "idSave": 14,
+    "idSave": 24,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
             "SFXVolume": 1.0,
-            "CameraSensivity": 1.0,
+            "CameraSensivity": 0.6800000667572022,
             "CurrentLocaleName": "",
-            "ShowTutorial": true
+            "ShowTutorial": false
         },
         "Loot": {
             "Values": []

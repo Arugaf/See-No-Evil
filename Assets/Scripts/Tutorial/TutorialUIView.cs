@@ -29,15 +29,18 @@ namespace Tutorial
         }
         public override UniTask Show()
         {
-            return UniTask.WaitForSeconds(showHideDuration);
+            mainAnimator.SetBool("Hide", false);
+            return UniTask.CompletedTask;//UniTask.WaitForSeconds(showHideDuration / 3.0f);
         }
         public override UniTask DoLogicalBreak()
         {
+            mainAnimator.SetTrigger("Success");
             return UniTask.WaitForSeconds(logicalBreakDuration);
         }
         public override UniTask Hide()
         {
-           return UniTask.WaitForSeconds(showHideDuration);
+            mainAnimator.SetBool("Hide", true);
+            return UniTask.WaitForSeconds(showHideDuration);
         }
     }
 }

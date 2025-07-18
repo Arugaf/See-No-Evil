@@ -4,23 +4,20 @@ using UnityEngine.InputSystem;
 using UnityEngine.Localization;
 namespace Tutorial
 {
-    public class InputActionTutorialSection : LocalizedTutorialSection
+    public abstract class ContiguousActionTutorialSection : LocalizedTutorialSection
     {
-        private InputAction reference;
         private float lTime;
-        public InputActionTutorialSection(LocalizedString loc, InputAction act, float time = 1.0f) : base(loc)
+        public ContiguousActionTutorialSection(LocalizedString loc, float time = 1.0f) : base(loc)
         {
-            reference = act;
             lTime = time;
         }
-
-        protected override async UniTask DoPerform(ITutorialView view)
+        protected sealed override async UniTask DoPerform(ITutorialView view)
         {
             float progress = 0;
             view.Progress = 0;
             while (progress < 1)
             {
-                if (reference.IsPressed())
+                if (IsProgressing())
                 {
                     if (lTime == 0) progress = 1;
                     else
@@ -33,5 +30,17 @@ namespace Tutorial
             }
             await view.DoLogicalBreak();
         }
+        protected abstract bool IsProgressing();
+    }
+    public class InputActionTutorialSection : ContiguousActionTutorialSection
+    {
+        private InputAction reference;
+
+        public InputActionTutorialSection(LocalizedString loc, InputAction act, float time = 1) : base(loc, time)
+        {
+            reference = act;
+        }
+
+        protected override bool IsProgressing() => reference.IsPressed();
     }
 }

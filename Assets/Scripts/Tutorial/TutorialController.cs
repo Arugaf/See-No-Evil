@@ -27,8 +27,10 @@ namespace Tutorial
         }
         private async UniTask ShowTutorial()
         {
+            await baseTutorialView.Show();
             await GetTutorialSection().Perform(baseTutorialView);
             manager.ShowTutorial = false;
+            await baseTutorialView.Hide();
             baseTutorialView.gameObject.SetActive(false);
         }
         protected abstract ITutorialSection GetTutorialSection();

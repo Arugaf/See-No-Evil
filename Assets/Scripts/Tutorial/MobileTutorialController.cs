@@ -1,11 +1,26 @@
+using Gameplay;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization;
 using VContainer;
 namespace Tutorial
 {
-    public class PCTutorialController : BaseTutorialController
+    public class MobileViewAction : ContiguousActionTutorialSection
     {
+        MobileGameplayUIView view;
+        public MobileViewAction(LocalizedString loc, MobileGameplayUIView view, float time = 1) : base(loc, time)
+        {
+            this.view = view;
+        }
+
+        protected override bool IsProgressing()
+        {
+            return view.CurrentLookVector.magnitude > 0.1f;
+        }
+    }
+    public class MobileTutorialController : BaseTutorialController
+    {
+        [SerializeField] private MobileGameplayUIView mobileGameplayUIView;
         [SerializeField] private LocalizedString moveHelpingLabel;
         [SerializeField] private LocalizedString lookHelpingLabel;
         [SerializeField] private LocalizedString tapHelpingLabel;
@@ -21,7 +36,7 @@ namespace Tutorial
         {
             return new CompositeTutorialSection(
                 new InputActionTutorialSection(moveHelpingLabel, asset.FindAction("Move")),
-                new InputActionTutorialSection(lookHelpingLabel, asset.FindAction("Look")),
+                new MobileViewAction(lookHelpingLabel, mobileGameplayUIView),
                 new InputActionTutorialSection(tapHelpingLabel, asset.FindAction("Attack"), 0.0f),
                 new DullSection(allSettledLabel, 3.0f)
             );

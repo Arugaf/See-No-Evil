@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6502908394102571287, guid: 22103746285fb4849b3b5718e88889bb, type: 3}
       propertyPath: m_Name
-      value: BaseGameplayCanvasPC Variant
+      value: PCGameplayCanvas Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6961290324719468619, guid: 22103746285fb4849b3b5718e88889bb, type: 3}
       propertyPath: m_AnchorMax.x
@@ -127,5 +127,76 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7076833701411437107, guid: 22103746285fb4849b3b5718e88889bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1287802750109885031}
   m_SourcePrefab: {fileID: 100100000, guid: 22103746285fb4849b3b5718e88889bb, type: 3}
+--- !u!114 &3996665603127890813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3641582958551930741, guid: 22103746285fb4849b3b5718e88889bb, type: 3}
+  m_PrefabInstance: {fileID: 431925932785091592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f33f2b4ab2b5d4240b02f3ea6bd409a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7479199807929286203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7076833701411437107, guid: 22103746285fb4849b3b5718e88889bb, type: 3}
+  m_PrefabInstance: {fileID: 431925932785091592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1287802750109885031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7479199807929286203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da638a5a992f4343a4f58e0550b2d9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseTutorialView: {fileID: 3996665603127890813}
+  moveHelpingLabel:
+    m_TableReference:
+      m_TableCollectionName: GUID:8413049291fbded409d353e24935d083
+    m_TableEntryReference:
+      m_KeyId: 5765931008
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  lookHelpingLabel:
+    m_TableReference:
+      m_TableCollectionName: GUID:8413049291fbded409d353e24935d083
+    m_TableEntryReference:
+      m_KeyId: 149303402496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tapHelpingLabel:
+    m_TableReference:
+      m_TableCollectionName: GUID:8413049291fbded409d353e24935d083
+    m_TableEntryReference:
+      m_KeyId: 199366615040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  allSettledLabel:
+    m_TableReference:
+      m_TableCollectionName: GUID:8413049291fbded409d353e24935d083
+    m_TableEntryReference:
+      m_KeyId: 583984291840
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
