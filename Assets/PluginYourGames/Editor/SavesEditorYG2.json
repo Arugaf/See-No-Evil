@@ -1,5 +1,5 @@
 {
-    "idSave": 24,
+    "idSave": 31,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -19,7 +19,7 @@
                     "BestScore": 970
                 }
             ],
-            "LastPlayedLevelID": "FirstLevel"
+            "LastPlayedLevelID": "SecondLevel"
         }
     }
 }

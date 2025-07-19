@@ -11,7 +11,7 @@ namespace Gameplay.Loot
         }
         public void Append()
         {
-
+            
         }
     }
 }

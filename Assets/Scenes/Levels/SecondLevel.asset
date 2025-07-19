@@ -29,6 +29,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  <RandomLootObject>k__BackingField: {fileID: 0}
+  <LevelTime>k__BackingField: 30
   references:
     version: 2
     RefIds: []

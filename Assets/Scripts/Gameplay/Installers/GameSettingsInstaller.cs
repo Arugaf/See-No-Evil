@@ -20,13 +20,23 @@ public class GameSettingsInstaller : AbstractGameSettingsInstaller
     [SerializeField] private GameplayState.Settings GameplayStateSettings;
     [SerializeField] private DarknessMeterController.Settings DarknessMeterControllerSettings;
     [SerializeField] private GameplayDarknessManager.Settings GameplayDarknessManagerSettings;
-    [SerializeField] private GameplayLootSettings GameplayLootSettings;
     public override void Install(IContainerBuilder builder)
     {
         builder.RegisterInstance(GameplayStateSettings);
         builder.RegisterInstance(DarknessMeterControllerSettings);
         builder.RegisterInstance(GameplayDarknessManagerSettings);
-        builder.RegisterInstance(GameplayLootSettings);
+        builder.Register((irp) =>
+        {
+            GameplayLootSettings stx = new GameplayLootSettings();
+            stx.LootBoxPrefab = irp.Resolve<GameLevelInfoObject>().RandomLootObject.InGamePrefab;
+            return stx;
+        }, Lifetime.Singleton);
+        builder.Register((irp) =>
+        {
+            GameplayState.Settings settings = GameplayStateSettings;
+            settings.InitialTime = irp.Resolve<GameLevelInfoObject>().LevelTime;
+            return settings;
+        }, Lifetime.Singleton);
         builder.Register<IGameplayScoreManager, GameplayScoreManager>(Lifetime.Singleton);
         builder.RegisterEntryPoint<GameplayState>(Lifetime.Singleton).AsSelf();
         builder.RegisterEntryPoint<DarknessMeterController>(Lifetime.Singleton).AsSelf();

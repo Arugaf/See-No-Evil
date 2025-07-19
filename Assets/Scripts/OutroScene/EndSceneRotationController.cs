@@ -11,7 +11,7 @@ namespace Features.IntroScene
 {
     public class EndSceneRotationController: MonoBehaviour
     {
-        [SerializeField] private InputActionAsset uiMainAsset;
+        private InputActionAsset uiMainAsset;
         [SerializeField] private Camera mainCamera;
         [SerializeField] private float xMaxAngle;
         [SerializeField] private float yMaxAngle;
@@ -39,8 +39,9 @@ namespace Features.IntroScene
             adManager?.PreloadAdvertisement().Forget();
         }
         [Inject]
-        private void Initialize(IAdManager manager)
+        private void Initialize(IAdManager manager, InputActionAsset asset)
         {
+            uiMainAsset = asset;
             adManager = manager;
         }
         private void ReadInputs()
