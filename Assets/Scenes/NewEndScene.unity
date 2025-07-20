@@ -3118,7 +3118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b226ad64ff844f84586e8d9b40141fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneAnimator: {fileID: 0}
   descriptionText: {fileID: 2097905538}
   textTime: {fileID: 1704490686}
   victory: {fileID: 1961867331}
@@ -4278,18 +4277,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Features.IntroScene.EndSceneRotationController,
-          Assembly-CSharp
-        m_MethodName: TransitionToGameplay
-        m_Mode: 1
+      - m_Target: {fileID: 1235677729}
+        m_TargetAssemblyTypeName: Features.OutroScene.EndSceneManager, Assembly-CSharp
+        m_MethodName: Transition
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &733751160
 MonoBehaviour:
@@ -4800,6 +4798,52 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0802603, y: 1.650431, z: 1.0174417}
   m_Center: {x: -0.00000055134296, y: 0.8252155, z: -0.0068134977}
+--- !u!1 &820581678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820581680}
+  - component: {fileID: 820581679}
+  m_Layer: 0
+  m_Name: DarknessRegulator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &820581679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820581678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdd0c988ad21ff48a9281a579d353ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTime: 1
+  initialValue: 0
+--- !u!4 &820581680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820581678}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.43039, y: -0.36, z: -7.74909}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &822661560
 GameObject:
   m_ObjectHideFlags: 0
@@ -5084,6 +5128,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0039999997, y: 0.019999998, z: 0.032}
   m_Center: {x: 0, y: 0, z: 0.016}
+--- !u!1 &941637959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941637961}
+  - component: {fileID: 941637960}
+  m_Layer: 0
+  m_Name: AdManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &941637960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941637959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a84ada2c6b82c4286328b398aa6541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &941637961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941637959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235677730}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &973064655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5500,7 +5588,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b4b510651e1764599eacd0b8d486a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Managers: []
+  Managers:
+  - {fileID: 421424146}
+  - {fileID: 941637960}
+  - {fileID: 1966802998}
 --- !u!4 &1235677730
 Transform:
   m_ObjectHideFlags: 0
@@ -5515,6 +5606,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 421424147}
+  - {fileID: 941637961}
+  - {fileID: 1966802997}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1242771902
@@ -7071,11 +7164,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Features.IntroScene.EndSceneRotationController,
-          Assembly-CSharp
-        m_MethodName: TransitionToMenu
-        m_Mode: 1
+      - m_Target: {fileID: 1235677729}
+        m_TargetAssemblyTypeName: Features.OutroScene.EndSceneManager, Assembly-CSharp
+        m_MethodName: Transition
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7627,11 +7719,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579360067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fdd0c988ad21ff48a9281a579d353ec, type: 3}
+  m_Script: {fileID: 11500000, guid: c186929efa497cb47bcfb1675cd9d8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 1
-  initialValue: 1
+  smoothTime: 0.7
+  xMaxAngle: 4
+  yMaxAngle: 4
 --- !u!1001 &1662829900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8705,6 +8798,56 @@ Transform:
   - {fileID: 589190040}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1966802996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966802997}
+  - component: {fileID: 1966802998}
+  m_Layer: 0
+  m_Name: EndTransitionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966802997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966802996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235677730}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966802998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966802996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ec823cfb0a99b4db43d4ee958667db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneAnimator: {fileID: 243047995}
+  startMenuAnimation: 1.5
+  mainCamera: {fileID: 1579360069}
+  subcomponent: {fileID: 1579360072}
+  regulator: {fileID: 820581679}
+  transitionTime: 2
 --- !u!1001 &2015420253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9207,6 +9350,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 1235677728}
+  - {fileID: 1579360067}
 --- !u!4 &2092914789
 Transform:
   m_ObjectHideFlags: 0
@@ -9654,3 +9798,4 @@ SceneRoots:
   - {fileID: 74974678}
   - {fileID: 2092914789}
   - {fileID: 1235677730}
+  - {fileID: 820581680}

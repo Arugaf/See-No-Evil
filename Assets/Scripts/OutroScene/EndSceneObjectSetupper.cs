@@ -13,7 +13,6 @@ namespace Features.OutroScene
 {
     public class EndSceneObjectSetupper : EndSceneManagerBehaviour
     {
-        [SerializeField] private Animator sceneAnimator;
         [SerializeField] private TextMeshProUGUI descriptionText;
         [SerializeField] private TextMeshProUGUI textTime;
         [SerializeField] private GameObject victory;
@@ -28,7 +27,7 @@ namespace Features.OutroScene
         [Inject]
         private void Construct(GameplayResultStorage resultStorage, IScoreEvaluator scoreEvaluator, ILevelStatsManager levelStatsManager)
         {
-            gameplayResultStorage = resultStorage; 
+            gameplayResultStorage = resultStorage;
             this.scoreEvaluator = scoreEvaluator;
             this.levelStatsManager = levelStatsManager;
         }
