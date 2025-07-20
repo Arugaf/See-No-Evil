@@ -2,4 +2,5 @@ Authorization v1.021
 InterstitialAdv v1.002
 Localization v1.001
 QuitGameEvent v1.001
+RewardedAdv v1.001
 Storage v1.02

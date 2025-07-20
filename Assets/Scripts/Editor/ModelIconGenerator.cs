@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.IO;
+using UnityEngine.Rendering.Universal;
 #if UNITY_EDITOR
 [CustomEditor(typeof(ModelIconGeneratorSettings), true)]
 public class ModelIconGeneratorSettingsEditor : Editor
@@ -71,6 +72,9 @@ public class ModelIconGenerator : EditorWindow
 
         // Setup camera
         Camera renderCam = new GameObject("RenderCamera").AddComponent<Camera>();
+        var dat = renderCam.gameObject.AddComponent<UniversalAdditionalCameraData>();
+        dat.renderPostProcessing = false;
+        dat.SetRenderer(Settings.RendererToUse);
         renderCam.transform.SetParent(tempParent.transform);
         renderCam.backgroundColor = new Color(0, 0, 0, 0);
         renderCam.clearFlags = CameraClearFlags.SolidColor;
@@ -78,7 +82,8 @@ public class ModelIconGenerator : EditorWindow
         renderCam.orthographicSize = 1.5f;
         renderCam.nearClipPlane = 0.1f;
         renderCam.farClipPlane = 10f;
-
+        renderCam.allowHDR = false;
+        renderCam.forceIntoRenderTexture = true;
         // Instantiate model
         GameObject modelInstance = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
         modelInstance.transform.position = tempParent.transform.position;
@@ -91,7 +96,7 @@ public class ModelIconGenerator : EditorWindow
         renderCam.orthographicSize = Mathf.Max(bounds.extents.x, bounds.extents.y) * 1.2f;
 
         // Create render texture
-        RenderTexture rt = RenderTexture.GetTemporary(resolution, resolution, 24, RenderTextureFormat.ARGB32);
+        RenderTexture rt = RenderTexture.GetTemporary(resolution, resolution, 24, RenderTextureFormat.ARGBFloat);
         renderCam.targetTexture = rt;
         renderCam.Render();
 
@@ -102,28 +107,25 @@ public class ModelIconGenerator : EditorWindow
         icon.filterMode = FilterMode.Point;
         icon.Apply();
         icon = ResizeTexture(icon, resolution / 4, resolution / 4);
-
         // Save results
         SaveIcon(icon, prefab.name);
-
         // Cleanup
         RenderTexture.active = null;
+        renderCam.targetTexture = null;
         DestroyImmediate(tempParent);
         RenderTexture.ReleaseTemporary(rt);
     }
     Texture2D ResizeTexture(Texture2D source, int newWidth, int newHeight)
     {
-        RenderTexture rt = RenderTexture.GetTemporary(newWidth, newHeight, 24);
+        RenderTexture rt = RenderTexture.GetTemporary(newWidth, newHeight, 24, RenderTextureFormat.ARGBFloat);
         RenderTexture.active = rt;
 
         // Blit with bilinear filtering
         Graphics.Blit(source, rt);
-
         Texture2D result = new Texture2D(newWidth, newHeight, TextureFormat.ARGB32, false);
-
         result.ReadPixels(new Rect(0, 0, newWidth, newHeight), 0, 0);
         result.Apply();
-        result.filterMode = FilterMode.Point;
+        result.filterMode = FilterMode.Point; 
         RenderTexture.active = null;
         RenderTexture.ReleaseTemporary(rt);
         return result;

@@ -5,6 +5,7 @@ namespace Monetization
 {
     public class PluginYGAdManager : IAdManager
     {
+        private const string ID = "idk";
         public PluginYGAdManager()
         {
 
@@ -39,6 +40,28 @@ namespace Monetization
                 return UniTask.FromResult(new AdShowResult(AdShowResult.Status.Failure));
             }
             
+        }
+
+        public UniTask<AdShowResult> ShowRewardedAdverticement()
+        {
+            UniTaskCompletionSource<AdShowResult> result = new UniTaskCompletionSource<AdShowResult>();
+            // Do I mention how i HATE this API?
+            YG2.onErrorRewardedAdv = () =>
+            {
+                AdShowResult ret = new AdShowResult(AdShowResult.Status.Failure);
+                result.TrySetResult(ret);
+                YG2.onErrorRewardedAdv = null;
+                YG2.onRewardAdv = null;
+            };
+            YG2.onRewardAdv = (string id) =>
+            {
+                AdShowResult ret = new AdShowResult(AdShowResult.Status.Success);
+                result.TrySetResult(ret);
+                YG2.onRewardAdv = null;
+                YG2.onErrorRewardedAdv = null;
+            };
+            YG2.RewardedAdvShow(ID);
+            return result.Task;
         }
     }
 }

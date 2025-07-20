@@ -9,7 +9,8 @@ using Monetization;
 using Cysharp.Threading.Tasks;
 namespace Features.IntroScene
 {
-    public class EndSceneRotationController: MonoBehaviour
+    [System.Obsolete("Please do not use it. This is an unsupportable piece of code")]
+    public class EndSceneRotationController : MonoBehaviour
     {
         private InputActionAsset uiMainAsset;
         [SerializeField] private Camera mainCamera;
@@ -23,10 +24,8 @@ namespace Features.IntroScene
         private SmoothDampArticulator xAngleArticulator;
         private SmoothDampArticulator yAngleArticulator;
         private SmoothDampArticulator farPlaneArticullator;
-
-        private InputAction mouseActionMap;
         private IAdManager adManager;
-
+        private InputAction mouseActionMap;
         private Vector2 mouseScreenPoint;
         private Vector2 centerAlignedPoint;
         private void Start()
@@ -67,7 +66,7 @@ namespace Features.IntroScene
         {
             ReadInputs();
             UpdateCameraRotation();
-            if(Time.timeScale != 0)
+            if (Time.timeScale != 0)
                 farPlaneArticullator.Update();
             mainCamera.farClipPlane = farPlaneArticullator.Current;
         }

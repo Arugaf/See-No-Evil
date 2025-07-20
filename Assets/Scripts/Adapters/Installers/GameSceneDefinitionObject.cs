@@ -31,7 +31,7 @@ public class GameSceneDefinitionObject : IdentifiableRegistry<GameLevelInfoObjec
     public UniTask LoadMenu() => MenuSceneReference.LoadSceneAsync().ToUniTask();
     public async UniTask LoadGameplay(GameLevelInfoObject levelObject)
     {
-        using (LifetimeScope.Enqueue(levelObject.LevelSettings))
+        using (LifetimeScope.Enqueue(levelObject))
         {
             await levelObject.SceneReference.LoadSceneAsync();
         }

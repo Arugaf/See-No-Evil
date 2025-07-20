@@ -22,7 +22,6 @@ public class GameSettingsInstaller : AbstractGameSettingsInstaller
     [SerializeField] private GameplayDarknessManager.Settings GameplayDarknessManagerSettings;
     public override void Install(IContainerBuilder builder)
     {
-        builder.RegisterInstance(GameplayStateSettings);
         builder.RegisterInstance(DarknessMeterControllerSettings);
         builder.RegisterInstance(GameplayDarknessManagerSettings);
         builder.Register((irp) =>
