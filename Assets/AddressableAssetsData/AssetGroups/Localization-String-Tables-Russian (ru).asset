@@ -27,6 +27,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4176b55679d1fd543a17b637f7527dad
+    m_Address: LootDescription_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 58b7f9042e8a51349b7ff23ff2783b08
     m_Address: PauseMenu_ru
     m_ReadOnly: 1

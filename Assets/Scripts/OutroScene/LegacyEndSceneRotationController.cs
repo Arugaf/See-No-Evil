@@ -1,4 +1,4 @@
-﻿using Features.VFX;
+using Features.VFX;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
@@ -10,7 +10,7 @@ using Cysharp.Threading.Tasks;
 namespace Features.IntroScene
 {
     [System.Obsolete("Please do not use it. This is an unsupportable piece of code")]
-    public class EndSceneRotationController : MonoBehaviour
+    public class LegacyEndSceneRotationController : MonoBehaviour
     {
         private InputActionAsset uiMainAsset;
         [SerializeField] private Camera mainCamera;

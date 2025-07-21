@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using Features.IntroScene;
 using Features.VFX;
+using Unity.Cinemachine;
 using UnityEngine;
 namespace Features.OutroScene
 {
@@ -8,14 +9,15 @@ namespace Features.OutroScene
     {
         [SerializeField] private Animator sceneAnimator;
         [SerializeField] private float startMenuAnimation = 1.5f;
-        [SerializeField] private Camera mainCamera;
+        [SerializeField] private float farPlaneSmoothTime = 0.7f;
+        [SerializeField] private CinemachineCamera mainCamera;
         [SerializeField] private CameraLookIntroSceneSubcomponent subcomponent;
         [SerializeField] private IntroSceneDarknessRegulator regulator;
         [SerializeField] private float transitionTime;
         private SmoothDampArticulator farPlaneArticullator;
         public void Awake()
         {
-            farPlaneArticullator = new SmoothDampArticulator(mainCamera.farClipPlane, 1.0f);
+            farPlaneArticullator = new SmoothDampArticulator(mainCamera.Lens.FarClipPlane, farPlaneSmoothTime);
         }
         public override UniTask TransitionProcess(bool toGameplay)
         {
@@ -26,12 +28,13 @@ namespace Features.OutroScene
             }
             else
             {
-                farPlaneArticullator.Target = mainCamera.nearClipPlane + 1.0f;
+                farPlaneArticullator.Target = mainCamera.Lens.NearClipPlane + 1.0f;
             }
             return UniTask.WaitForSeconds(transitionTime);
         }
         public override UniTask DoProcess()
         {
+            regulator.SetDarknessFactor(0);
             subcomponent.IntentionForActivation(true);
             subcomponent.SetActivation(true);
             return UniTask.WaitForSeconds(startMenuAnimation);
@@ -40,7 +43,7 @@ namespace Features.OutroScene
         {
             if (Time.timeScale != 0)
                 farPlaneArticullator.Update();
-            mainCamera.farClipPlane = farPlaneArticullator.Current;
+            mainCamera.Lens.FarClipPlane = farPlaneArticullator.Current;
         }
     }
 }

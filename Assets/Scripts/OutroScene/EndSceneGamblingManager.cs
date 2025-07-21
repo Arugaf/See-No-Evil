@@ -3,16 +3,18 @@ using Gameplay;
 using Gameplay.Loot;
 using Monetization;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using VContainer;
 namespace Features.OutroScene
 {
-    public abstract class EndSceneGamblingController: MonoBehaviour
+    public abstract class AbstractEndSceneGamblingController: MonoBehaviour
     {
+        public abstract UniTask ShowObject(GambleBoxLootObject obj);
         public abstract UniTask<LootAndCount> DoPick(IRandom rnd, GambleBoxLootObject loot);
     }
     public class EndSceneGamblingManager : EndSceneManagerBehaviour
     {
-        [SerializeField] private EndSceneGamblingController controller;
+        [SerializeField] private AbstractEndSceneGamblingController controller;
         private IGameLootManager lootManager;
         private GameplayResultStorage res;
 
@@ -21,6 +23,13 @@ namespace Features.OutroScene
         {
             lootManager = manager;
             this.res = res;
+        }
+        public async override UniTask Init()
+        {
+            if (res.AquiredPrize)
+            {
+                await controller.ShowObject(res.gameLevelInfo.RandomLootObject);
+            }
         }
         public async override UniTask DoProcess()
         {

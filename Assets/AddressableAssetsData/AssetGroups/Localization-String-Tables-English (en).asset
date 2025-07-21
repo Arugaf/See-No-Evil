@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: daa949957d185eb468bb501bf8373fa5
   m_SerializeEntries:
+  - m_GUID: 734e546c25240b54db103ee66bf844f3
+    m_Address: LootDescription_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a51b8b03258608c43932cbded51e16a4
     m_Address: Endgame_en
     m_ReadOnly: 1

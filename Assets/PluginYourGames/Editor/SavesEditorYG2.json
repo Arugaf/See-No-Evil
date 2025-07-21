@@ -1,15 +1,20 @@
 {
-    "idSave": 12,
+    "idSave": 58,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
             "SFXVolume": 1.0,
             "CameraSensivity": 1.0,
             "CurrentLocaleName": "",
-            "ShowTutorial": true
+            "ShowTutorial": false
         },
         "Loot": {
-            "Values": []
+            "Values": [
+                {
+                    "Id": "BasicLoot",
+                    "Count": 2
+                }
+            ]
         },
         "LevelStats": {
             "Values": [
@@ -17,9 +22,14 @@
                     "Id": "FirstLevel",
                     "BestTime": 0.0,
                     "BestScore": 1210
+                },
+                {
+                    "Id": "SecondLevel",
+                    "BestTime": 0.0,
+                    "BestScore": 800
                 }
             ],
-            "LastPlayedLevelID": "FirstLevel"
+            "LastPlayedLevelID": "SecondLevel"
         }
     }
 }
