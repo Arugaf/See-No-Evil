@@ -62,11 +62,11 @@ public class CoreInstaller: LifetimeScope
         builder.RegisterInstance(lootRegistry);
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<LevelStatsManager>(Lifetime.Singleton).AsImplementedInterfaces();
+        builder.Register<GameLootManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<IApplicationQuitAction, GameActionOnQuit>(Lifetime.Singleton);
         builder.RegisterInstance(sceneDefinitionObject).AsImplementedInterfaces();
         builder.Register<IRandom, BasicRandom>(Lifetime.Singleton);
         builder.Register<IGameLevelManager, GameLevelManager>(Lifetime.Singleton);
-        builder.Register<IGameLootManager, GameLootManager>(Lifetime.Singleton);
         gameplayCanvasInstaller.Configure(builder);
         PluginYGInstaller.Configure(builder);
     }

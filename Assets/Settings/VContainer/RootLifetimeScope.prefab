@@ -57,7 +57,7 @@ MonoBehaviour:
   lootRegistry: {fileID: 11400000, guid: 33b814cf741dd094eba267e287ed8f20, type: 2}
   scoreSettings:
     TimeSecondsGain: 10
-    ArtifactBonus: 500
+    ArtifactBonus: 100
     AdditionalScoreForHPGain: 50
     HPMultiplier: 1
   gameManagerSettings:

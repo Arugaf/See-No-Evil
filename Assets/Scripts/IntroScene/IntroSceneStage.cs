@@ -32,8 +32,8 @@ namespace Features.IntroScene
             isActive = false;
             cinemachineCamera.enabled = false;
             transitorAnim.SetBool(KEY_ANIM_HIDDEN, true);
-            await UniTask.WaitForSeconds(transitionDisableDuration);
             IntentionSetEnabledSubcomponents(false);
+            await UniTask.WaitForSeconds(transitionDisableDuration);
             mainCanvasObject.SetActive(false);
             SetEnabledSubcomponents(false);
             transition = false;

@@ -25,6 +25,7 @@ namespace Gameplay.Loot
         public GameLootManager(ILootGameSaveManager saveManager, LootRegistryScriptableObject registry)
         {
             this.saveManager = saveManager;
+            lootRegistry = registry;
             lootboxData = new GameSaveData.LootboxData();
         }
         public void AddLoot(string key, int count = 1)

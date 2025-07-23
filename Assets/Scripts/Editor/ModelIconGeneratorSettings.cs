@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.Rendering.Universal;
 
 public class ModelIconGeneratorSettings : ScriptableObject
 {
@@ -9,4 +8,5 @@ public class ModelIconGeneratorSettings : ScriptableObject
     public string SavePath;
     [Min(17)] public int Resolution;
     public int RendererToUse;
+    [Min(1.0f)] public float SpacingFactor = 1.0f;
 }

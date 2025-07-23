@@ -93,7 +93,7 @@ public class ModelIconGenerator : EditorWindow
         // Position model and camera
         Bounds bounds = CalculateBounds(modelInstance);
         renderCam.transform.position = bounds.center - Vector3.forward * 5f;
-        renderCam.orthographicSize = Mathf.Max(bounds.extents.x, bounds.extents.y) * 1.2f;
+        renderCam.orthographicSize = Mathf.Max(bounds.extents.x, bounds.extents.y) * Settings.SpacingFactor;
 
         // Create render texture
         RenderTexture rt = RenderTexture.GetTemporary(resolution, resolution, 24, RenderTextureFormat.ARGBFloat);
@@ -124,8 +124,9 @@ public class ModelIconGenerator : EditorWindow
         Graphics.Blit(source, rt);
         Texture2D result = new Texture2D(newWidth, newHeight, TextureFormat.ARGB32, false);
         result.ReadPixels(new Rect(0, 0, newWidth, newHeight), 0, 0);
-        result.Apply();
         result.filterMode = FilterMode.Point; 
+        result.Apply();
+
         RenderTexture.active = null;
         RenderTexture.ReleaseTemporary(rt);
         return result;

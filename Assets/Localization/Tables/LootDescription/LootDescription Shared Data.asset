@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: labubu_01_descr
     m_Metadata:
       m_Items: []
+  - m_Id: 374350422024192
+    m_Key: loot_unselected
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

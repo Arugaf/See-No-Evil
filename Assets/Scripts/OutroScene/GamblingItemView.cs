@@ -39,7 +39,7 @@ namespace Features.OutroScene
         }
         public void Rotate(float degrees)
         {
-            coreViewTransform.Rotate(new Vector3(0, degrees, 0));
+            if(enabled) coreViewTransform.Rotate(new Vector3(0, degrees, 0));
         }
         void OnDestroy()
         {

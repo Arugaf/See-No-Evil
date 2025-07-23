@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41661e9f3cb36034c9fa57011831141f, type: 3}
-  m_Name: BasicLoot
+  m_Name: NewLabubu
   m_EditorClassIdentifier: 
   <Name>k__BackingField:
     m_TableReference:
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  <Image>k__BackingField: {fileID: 21300000, guid: dfa3684e93aaaa047b2b3175660d3874, type: 3}
+  <Image>k__BackingField: {fileID: 21300000, guid: 046c4bce8fce92b428eb3c14d69294cb, type: 3}
   <ScoreToGrant>k__BackingField: 100
   references:
     version: 2

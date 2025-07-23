@@ -1,5 +1,5 @@
 {
-    "idSave": 58,
+    "idSave": 89,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -11,7 +11,7 @@
         "Loot": {
             "Values": [
                 {
-                    "Id": "BasicLoot",
+                    "Id": "FirstLabubu",
                     "Count": 2
                 }
             ]
