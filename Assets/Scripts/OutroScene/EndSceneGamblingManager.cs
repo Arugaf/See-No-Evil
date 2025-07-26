@@ -24,16 +24,17 @@ namespace Features.OutroScene
             lootManager = manager;
             this.res = res;
         }
+        bool DoGivePrize { get => res.AquiredPrize && res.LastGameState == GameplayResultStorage.Result.Victory; }
         public async override UniTask Init()
         {
-            if (res.AquiredPrize)
+            if (DoGivePrize)
             {
                 await controller.ShowObject(res.gameLevelInfo.RandomLootObject);
             }
         }
         public async override UniTask DoProcess()
         {
-            if (res.AquiredPrize)
+            if (DoGivePrize)
             {
                 var result = await controller.DoPick(lootManager.GetRandom(), res.gameLevelInfo.RandomLootObject);
                 lootManager.AddLoot(result.Loot.ID, result.Count);

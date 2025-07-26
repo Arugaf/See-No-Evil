@@ -46,6 +46,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 4927362621492428897
+  - m_Id: 9355864350466048
+    m_Localized: Open the prize box!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9356098598150144
+    m_Localized: Take the prize
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9357388187246592
+    m_Localized: Reroll the prize
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9360917358518272
+    m_Localized: New!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9360993317363712
+    m_Localized: Duplicate
+    m_Metadata:
+      m_Items:
+      - rid: 4927362621492428897
+  - m_Id: 9361540967636992
+    m_Localized: Open the box!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -55,3 +80,4 @@ MonoBehaviour:
         m_Entries: 
         m_SharedEntries:
         - id: 1163894714368
+        - id: 9360993317363712

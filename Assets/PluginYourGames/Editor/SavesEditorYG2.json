@@ -1,5 +1,5 @@
 {
-    "idSave": 89,
+    "idSave": 121,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -12,7 +12,7 @@
             "Values": [
                 {
                     "Id": "FirstLabubu",
-                    "Count": 2
+                    "Count": 9
                 }
             ]
         },

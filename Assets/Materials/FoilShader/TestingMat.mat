@@ -37,16 +37,21 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _FoilMask:
+        m_Texture: {fileID: 2800000, guid: 0659c991bbceee24d9f091e35cf1a927, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c99dee80464f91042bdee7a831599b83, type: 3}
+        m_Texture: {fileID: 2800000, guid: d65520f7d86878a41a06b2f9ab540eed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _Density: 8
-    - _MaxMetallic: 0.3
+    - _MaxMetallic: 0.6
     - _QueueControl: 0
+    - _Smoothness: 1
     m_Colors:
-    - _ColorMultiplier: {r: 2, g: 2, b: 2, a: 1}
+    - _ColorMultiplier: {r: 7.129739, g: 7.129739, b: 7.129739, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

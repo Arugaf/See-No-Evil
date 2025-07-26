@@ -39,6 +39,30 @@ MonoBehaviour:
     m_Key: TimeFormat
     m_Metadata:
       m_Items: []
+  - m_Id: 9355864350466048
+    m_Key: GamblingProposal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9356098598150144
+    m_Key: GamblingConfirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9357388187246592
+    m_Key: GamblingReroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9360917358518272
+    m_Key: GamblingNewItem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9360993317363712
+    m_Key: GamblingOldItem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9361540967636992
+    m_Key: GamblingDoRoll
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

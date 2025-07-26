@@ -1,7 +1,10 @@
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Features.IntroScene;
 using Gameplay.Loot;
 using UnityEngine;
+using UnityEngine.Localization;
+using VContainer;
 namespace Features.OutroScene
 {
     public class GamblingControllerSegmentSetupper : MonoBehaviour
@@ -10,11 +13,20 @@ namespace Features.OutroScene
         [SerializeField] private Animator basicUIAnimator;
         [SerializeField] private float transitionDelay = 1.5f;
         [SerializeField] private LocalizedTextController textController;
+        [SerializeField] private LocalizedTextController itemCountController;
+        [SerializeField] private LocalizedString newItemLocString;
+        [SerializeField] private LocalizedString oldItemLocString;
         [SerializeField] private CameraLookIntroSceneSubcomponent firstCam;
         [SerializeField] private CameraLookIntroSceneSubcomponent secondCam;
         [SerializeField] private Transform gambleBoxTransform;
         [SerializeField] private GamblingItemView gamblingItemView;
         private IGambleBoxView gambleBoxView;
+        private IGameLootManager lootManager;
+        [Inject]
+        private void Construct(IGameLootManager mng)
+        {
+            lootManager = mng;
+        }
 
         public UniTask InitObject(GambleBoxLootObject lootObject)
         {
@@ -40,6 +52,7 @@ namespace Features.OutroScene
             firstCam.gameObject.SetActive(false);
             secondCam.gameObject.SetActive(true);
             await textController.SetText(obj.Name);
+            await SetupLootCount(obj);
             gamblingItemView.enabled = true;
         }
         public async UniTask DoSetActive(bool active)
@@ -60,6 +73,21 @@ namespace Features.OutroScene
                 basicUIAnimator.SetBool("Hide", true);
                 await UniTask.WaitForSeconds(transitionDelay);
                 basicUIAnimator.gameObject.SetActive(false);
+            }
+        }
+        private async UniTask SetupLootCount(LootScriptableObject obj)
+        {
+            var loot = lootManager.Get(obj.ID);
+            if (loot.Count == 0)
+            {
+                await itemCountController.SetText(newItemLocString);
+            }
+            else
+            {
+                await itemCountController.SetText(oldItemLocString, new System.Collections.Generic.Dictionary<string, string>()
+                {
+                    {"Count", loot.Count.ToString()}
+                });
             }
         }
     }

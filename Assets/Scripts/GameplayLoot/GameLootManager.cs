@@ -14,6 +14,7 @@ namespace Gameplay.Loot
         public IRandom GetRandom();
         public void AddLoot(string key, int count = 1);
         public IEnumerable<LootAndCount> GetMyLoot();
+        public LootAndCount Get(string key);
         public IEnumerable<LootAndCount> GetAllPossibleLoot();
     }
     public class GameLootManager: IGameLootManager, IStartable
@@ -32,6 +33,17 @@ namespace Gameplay.Loot
         {
             lootboxData.Add(key, count);
             saveManager.SetValue(lootboxData);
+        }
+
+        public LootAndCount Get(string key)
+        {
+            var lt = lootRegistry.Get(key);
+            int cnt = 0;
+            if (lootboxData.TryGetValue(key, out var result))
+            {
+                cnt = result.Count;
+            }
+            return new LootAndCount() { Count = cnt, Loot = lt };
         }
 
         public IEnumerable<LootAndCount> GetAllPossibleLoot()

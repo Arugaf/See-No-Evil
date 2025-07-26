@@ -6,7 +6,7 @@ public class SimpleHealingItemAnimator : MonoBehaviour
     [SerializeField] private Vector3 verticalAcc;
     [SerializeField] private float period;
     [SerializeField] private float rotationPeriod;
-        [SerializeField] private float rotationAmplitude;
+    [SerializeField] private float rotationAmplitude;
     [SerializeField] private Transform targetTransorm;
 
     private bool isVisible = true;
