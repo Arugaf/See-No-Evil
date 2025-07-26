@@ -1,6 +1,6 @@
-Authorization v1.021
-InterstitialAdv v1.002
-Localization v1.001
+Authorization v1.022
+InterstitialAdv v1.003
+Localization v1.0011
 QuitGameEvent v1.001
 RewardedAdv v1.001
 Storage v1.02
