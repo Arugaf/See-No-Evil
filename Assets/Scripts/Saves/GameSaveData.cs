@@ -13,7 +13,8 @@ namespace SaveManager
             public float SFXVolume = 1.0f;
             public float CameraSensivity = 1.0f;
             public string CurrentLocaleName = "";
-            public bool ShowTutorial = true;
+            public bool ShowTutorialPC = true;
+            public bool ShowTutorialMobile = true;
         }
         [System.Serializable]
         public class LootboxData : ListDictionaryContainer<LootboxData.Loot>

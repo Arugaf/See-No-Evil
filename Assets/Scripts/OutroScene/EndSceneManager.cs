@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using VContainer;
 namespace Features.OutroScene
