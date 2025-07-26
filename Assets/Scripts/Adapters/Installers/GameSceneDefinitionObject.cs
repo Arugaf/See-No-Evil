@@ -6,16 +6,16 @@ using UnityEngine.AddressableAssets;
 using VContainer.Unity;
 public interface IGameSceneDefinition
 {
-    public int LevelCount
-    {
-        get;
-    }
     public UniTask LoadMenu();
     public UniTask LoadGameplay(GameLevelInfoObject levelObject);
     public UniTask LoadGameOver();
 }
 public interface ILevelDefinition
 {
+    public int LevelCount
+    {
+        get;
+    }
     IReadOnlyCollection<GameLevelInfoObject> Levels { get; }
 }
 [CreateAssetMenu(fileName = "GameSceneDefinitionObject", menuName = "Scriptable Objects/GameSceneDefinitionObject")]
@@ -31,7 +31,7 @@ public class GameSceneDefinitionObject : IdentifiableRegistry<GameLevelInfoObjec
     public UniTask LoadMenu() => MenuSceneReference.LoadSceneAsync().ToUniTask();
     public async UniTask LoadGameplay(GameLevelInfoObject levelObject)
     {
-        using (LifetimeScope.Enqueue(levelObject.LevelSettings))
+        using (LifetimeScope.Enqueue(levelObject))
         {
             await levelObject.SceneReference.LoadSceneAsync();
         }

@@ -25,10 +25,16 @@ MonoBehaviour:
     postponeCallByFail: 0
     postponeCallTimer: 10
     labelAdvSimLabel: 0
+  Localization:
+    setLanguageMod: 1
   QuitGameEvent:
     enable: 1
     objectName: PluginYGApplicationQuitHandler
     methodName: QuitMessage
+  RewardedAdv:
+    rewardedAfterClosing: 1
+    skipInterAdvAfterReward: 0
+    labelAdvSimLabel: 0
   Storage:
     saveLocal: 0
     saveCloud: 1
@@ -70,7 +76,10 @@ MonoBehaviour:
       color2: {r: 1, g: 1, b: 1, a: 0.67058825}
     fixedAspectRatio: 0
     aspectRatio: 16/9
+    disableForMobile: 1
     fillBackground: 0
+    imageBackground: 0
+    imageName: background.jpg
     gradientBackgroundByAspectRatio:
       radial: 0
       angleInclination: 140
@@ -85,6 +94,7 @@ MonoBehaviour:
     showFirstAdv: 0
     interAdvInterval: 0
     postponeCallByFail: 0
+    skipInterAdvAfterReward: 0
     saveLocal: 0
     saveCloud: 0
     selectWebGLTemplate: 1

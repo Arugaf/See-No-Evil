@@ -19,7 +19,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   <scoreboardName>k__BackingField: idk
-  <LevelSettings>k__BackingField: {fileID: 11400000, guid: 27fe3d5dc80934f499974f7ed724f395, type: 2}
+  <LevelSettings>k__BackingField: {fileID: 11400000, guid: 530166027e1e7d6439358d335a59d186, type: 2}
   <LocalizedName>k__BackingField:
     m_TableReference:
       m_TableCollectionName: GUID:1c161822375022140be1ee846183e9f3
@@ -29,6 +29,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  <RandomLootObject>k__BackingField: {fileID: 11400000, guid: 85645397959b2ff4daac5e749299eb69, type: 2}
+  <LevelTime>k__BackingField: 30
   references:
     version: 2
     RefIds: []

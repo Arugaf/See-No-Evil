@@ -31,7 +31,7 @@ namespace SaveManager
             {
                 Loot found = Values.Find(x => x.ID == id);
                 if (found != null) found.Count += count;
-                else Values.Add(new Loot() { ID = id, Count = count });
+                else SetValue(id, new Loot() { ID = id, Count = count });
             }
         }
         [System.Serializable]

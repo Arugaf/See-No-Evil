@@ -45,6 +45,7 @@ public class CoreInstaller: LifetimeScope
     [SerializeField] private InputActionAsset mainInputActionAsset;
     [SerializeField] private GameplayCanvasInstaller gameplayCanvasInstaller;
     [SerializeField] private GameSceneDefinitionObject sceneDefinitionObject;
+    [SerializeField] private LootRegistryScriptableObject lootRegistry;
     [SerializeField] private BasicScoreEvaluator.Settings scoreSettings;
     [SerializeField] private GameLevelManager.Settings gameManagerSettings;
     protected override void Configure(IContainerBuilder builder)
@@ -58,13 +59,14 @@ public class CoreInstaller: LifetimeScope
         builder.RegisterInstance(scoreSettings);
         builder.RegisterInstance(mainAudioMixer);
         builder.RegisterInstance(mainInputActionAsset);
+        builder.RegisterInstance(lootRegistry);
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<LevelStatsManager>(Lifetime.Singleton).AsImplementedInterfaces();
+        builder.Register<GameLootManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<IApplicationQuitAction, GameActionOnQuit>(Lifetime.Singleton);
         builder.RegisterInstance(sceneDefinitionObject).AsImplementedInterfaces();
         builder.Register<IRandom, BasicRandom>(Lifetime.Singleton);
         builder.Register<IGameLevelManager, GameLevelManager>(Lifetime.Singleton);
-
         gameplayCanvasInstaller.Configure(builder);
         PluginYGInstaller.Configure(builder);
     }
