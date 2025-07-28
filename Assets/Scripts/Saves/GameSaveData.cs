@@ -20,7 +20,7 @@ namespace SaveManager
         public class LootboxData : ListDictionaryContainer<LootboxData.Loot>
         {
             [System.Serializable]
-            public class Loot: ListDictionaryIdentifiableBase
+            public class Loot : ListDictionaryIdentifiableBase
             {
                 public int Count;
                 public Loot(int count = 0)
@@ -52,9 +52,15 @@ namespace SaveManager
             }
             public string LastPlayedLevelID;
         }
+        [System.Serializable]
+        public class LeaderboardData
+        {
+            public int GlobalScore;
+        }
         public SettingsData Settings = new SettingsData();
         public LootboxData Loot = new LootboxData();
         public LevelStatsData LevelStats = new LevelStatsData();
+        public LeaderboardData Leaderboard = new LeaderboardData();
     }
 
 }

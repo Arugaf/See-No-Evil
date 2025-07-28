@@ -1,18 +1,19 @@
 {
-    "idSave": 121,
+    "idSave": 135,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
             "SFXVolume": 1.0,
-            "CameraSensivity": 1.0,
+            "CameraSensivity": 0.9791287183761597,
             "CurrentLocaleName": "",
-            "ShowTutorial": false
+            "ShowTutorialPC": false,
+            "ShowTutorialMobile": false
         },
         "Loot": {
             "Values": [
                 {
                     "Id": "FirstLabubu",
-                    "Count": 9
+                    "Count": 11
                 }
             ]
         },
@@ -30,6 +31,9 @@
                 }
             ],
             "LastPlayedLevelID": "SecondLevel"
+        },
+        "Leaderboard": {
+            "GlobalScore": 2110
         }
     }
 }

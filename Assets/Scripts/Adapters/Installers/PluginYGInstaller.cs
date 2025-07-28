@@ -1,3 +1,5 @@
+using Auth;
+using Leaderboard;
 using Monetization;
 using SaveManager;
 using UnityEngine;
@@ -10,6 +12,8 @@ public static class PluginYGInstaller
         builder.Register<IAdManager, PluginYGAdManager>(Lifetime.Singleton);
         builder.Register<IGameSaveManager, PluginYGGameSaveManager>(Lifetime.Singleton);
         builder.Register<ILanguageResolver, PluginYGLanguageResolver>(Lifetime.Singleton);
+        builder.Register<PluginYGAuthManager>(Lifetime.Singleton).AsImplementedInterfaces();
+        builder.Register<PluginYGLeaderboardMaster>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.RegisterComponentOnNewGameObject<PluginYGApplicationQuitHandler>
             (Lifetime.Singleton, 
             nameof(PluginYGApplicationQuitHandler))

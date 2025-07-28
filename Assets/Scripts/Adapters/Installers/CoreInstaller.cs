@@ -1,6 +1,7 @@
 ﻿using Gameplay;
 using Gameplay.LevelStats;
 using Gameplay.Loot;
+using Leaderboard;
 using Levels;
 using SaveManager;
 using System;
@@ -63,11 +64,15 @@ public class CoreInstaller: LifetimeScope
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<LevelStatsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<GameLootManager>(Lifetime.Singleton).AsImplementedInterfaces();
+        builder.Register<GlobalLeaderboardScoreSaver>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<IApplicationQuitAction, GameActionOnQuit>(Lifetime.Singleton);
         builder.RegisterInstance(sceneDefinitionObject).AsImplementedInterfaces();
-        builder.Register<IRandom, BasicRandom>(Lifetime.Singleton);
         builder.Register<IGameLevelManager, GameLevelManager>(Lifetime.Singleton);
         gameplayCanvasInstaller.Configure(builder);
+#if PLUGIN_YG_2
         PluginYGInstaller.Configure(builder);
+        #else
+        #error "Should not hold YG2"
+        #endif
     }
 }

@@ -2,11 +2,6 @@ using System;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
-
-public interface IApplicationQuitAction
-{
-    public void OnApplicationQuit();
-}
 public class PluginYGApplicationQuitHandler : MonoBehaviour, IInitializable
 {
     private bool called = false;
