@@ -18,7 +18,14 @@ public class SettingsManager: ISettingsManager, IAsyncStartable
     private VolumeSliderController sfxVolume;
     private LocaleController localeController;
     private ILanguageResolver languageResolver;
-    private bool showTutorial;
+    private bool showTutorial { get => StaticPlatformDefiner.IsMobile() ? showTutorialMobile : showTutorialPC; set
+    {
+            if (StaticPlatformDefiner.IsMobile()) showTutorialMobile = value;
+            else showTutorialPC = value;
+    }
+    }
+    private bool showTutorialPC;
+    private bool showTutorialMobile;
     [Inject]
     public SettingsManager(ISettingSaveManager saveManager, ILanguageResolver languageResolver, AudioMixer mainAudioMixer)
     {
@@ -46,7 +53,8 @@ public class SettingsManager: ISettingsManager, IAsyncStartable
             CameraSensivity = CameraSensivity,
             SFXVolume = SFXVolume,
             MusicVolume = MusicVolume,
-            ShowTutorial = showTutorial
+            ShowTutorialPC = showTutorialPC,
+            ShowTutorialMobile = showTutorialMobile
         });
     }
     public IEnumerable<ILocaleInfo> GetLocales() => localeController.GetLocales();
@@ -58,7 +66,8 @@ public class SettingsManager: ISettingsManager, IAsyncStartable
         CameraSensivity = settingsData.CameraSensivity;
         SFXVolume = settingsData.SFXVolume;
         MusicVolume = settingsData.MusicVolume;
-        showTutorial = settingsData.ShowTutorial;
+        showTutorialPC = settingsData.ShowTutorialPC;
+        showTutorialMobile = settingsData.ShowTutorialMobile;
         noSync = false;
         if (!languageResolver.IsInitialized) await languageResolver.Initialize();
         localeController.SetIndex(languageResolver.GetSpecifiedLanguageIndex());

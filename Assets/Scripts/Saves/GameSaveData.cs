@@ -13,13 +13,14 @@ namespace SaveManager
             public float SFXVolume = 1.0f;
             public float CameraSensivity = 1.0f;
             public string CurrentLocaleName = "";
-            public bool ShowTutorial = true;
+            public bool ShowTutorialPC = true;
+            public bool ShowTutorialMobile = true;
         }
         [System.Serializable]
         public class LootboxData : ListDictionaryContainer<LootboxData.Loot>
         {
             [System.Serializable]
-            public class Loot: ListDictionaryIdentifiableBase
+            public class Loot : ListDictionaryIdentifiableBase
             {
                 public int Count;
                 public Loot(int count = 0)
@@ -51,9 +52,15 @@ namespace SaveManager
             }
             public string LastPlayedLevelID;
         }
+        [System.Serializable]
+        public class LeaderboardData
+        {
+            public int GlobalScore;
+        }
         public SettingsData Settings = new SettingsData();
         public LootboxData Loot = new LootboxData();
         public LevelStatsData LevelStats = new LevelStatsData();
+        public LeaderboardData Leaderboard = new LeaderboardData();
     }
 
 }
