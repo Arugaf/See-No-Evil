@@ -40,6 +40,14 @@ namespace Features.VFX
             this.smoothTime = smoothTime;
             this.maxSpeed = maxSpeed;
         }
+        public SmoothDampArticulatorToMultiplier(float current, float maxVal, float smoothTime, float maxSpeed = float.MaxValue)
+        {
+            this.maxVal = maxVal;
+            target = maxVal;
+            Current = current;
+            this.smoothTime = smoothTime;
+            this.maxSpeed = maxSpeed;
+        }
         public void Update() => Update(Time.deltaTime);
         public void Update(float dt)
         {

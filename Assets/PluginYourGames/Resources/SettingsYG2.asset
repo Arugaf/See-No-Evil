@@ -15,10 +15,10 @@ MonoBehaviour:
   Authorization:
     playerPhotoSize: 1
     authorized: 1
-    playerName: Player current
-    uniqueID: 000
-    playerPhoto: demo image
-    payingStatus: 0
+    playerName: My name
+    uniqueID: 1477
+    playerPhoto: https://i.pinimg.com/474x/79/14/6c/79146c2c198fd8cda20c0627afdebbbf.jpg
+    payingStatus: 3
   InterstitialAdv:
     showFirstAdv: 1
     interAdvInterval: 60
@@ -27,7 +27,7 @@ MonoBehaviour:
     labelAdvSimLabel: 0
   Leaderboards:
     enable: 1
-    saveScoreAnonymousPlayers: 1
+    saveScoreAnonymousPlayers: 0
     listLBSim:
     - technoName: totalscore
       entries: '1. Max: 10
@@ -119,7 +119,7 @@ MonoBehaviour:
         extraData: 
       currentPlayer:
         rank: 5
-        score: 60
+        score: 222
         extraData: 
     - technoName: time
       entries: '1. Max: 7123

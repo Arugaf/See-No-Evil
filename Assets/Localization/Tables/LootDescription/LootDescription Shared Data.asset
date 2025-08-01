@@ -27,6 +27,10 @@ MonoBehaviour:
     m_Key: loot_unselected
     m_Metadata:
       m_Items: []
+  - m_Id: 3986614156861440
+    m_Key: loot_scoreadd
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

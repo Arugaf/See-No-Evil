@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.SmartFormat.PersistentVariables;
 namespace Features.OutroScene
 {
     [Serializable]
@@ -16,25 +17,32 @@ namespace Features.OutroScene
         {
             this.text = text;
         }
-
+        public void Reset(string value = "")
+        {
+            if (current != null)
+            {
+                current.StringChanged -= StringChanged;
+            }
+            current = null;
+            text.text = value;
+        }
         public async UniTask SetText(LocalizedString localizedString, Dictionary<string, string> keyVals = null)
         {
-
             if (current != null)
             {
                 current.StringChanged -= StringChanged;
             }
             current = localizedString;
-            current.StringChanged += StringChanged;
             if (keyVals != null)
             {
-                StringChanged(await localizedString.GetLocalizedStringAsync(keyVals));
+                current.Values.Clear();
+                foreach (var p in keyVals)
+                {
+                    current.Add(p.Key, new StringVariable { Value = p.Value });
+                }
             }
-            else
-            {
-                StringChanged(await localizedString.GetLocalizedStringAsync());
-            }
-            
+            StringChanged(await localizedString.GetLocalizedStringAsync());
+            current.StringChanged += StringChanged;
         }
         public void StringChanged(string s) => text.text = s;
 
