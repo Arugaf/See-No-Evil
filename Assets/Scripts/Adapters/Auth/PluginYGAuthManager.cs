@@ -10,7 +10,7 @@ namespace Auth
     {
         public bool IsAvailable => true;
 
-        public bool IsAuthenticated => !string.IsNullOrEmpty(YG2.player.id);
+        public bool IsAuthenticated => YG2.player.auth;
 
         public string AuthUserID => YG2.player.id;
 

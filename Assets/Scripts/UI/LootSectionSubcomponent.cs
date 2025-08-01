@@ -17,7 +17,9 @@ public class LootSectionSubcomponent : IntroSceneStageSubcomponent
 {
     [SerializeField] private GamblingItemView itemView;
     [SerializeField] private LocalizedTextController nameTextController;
+    [SerializeField] private LocalizedTextController scoreBonusController;
     [SerializeField] private LocalizedString unselectedThings;
+    [SerializeField] private LocalizedString scoreBonus;
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private Transform buttonParent;
     private IGameLootManager gameLootManager;
@@ -43,8 +45,10 @@ public class LootSectionSubcomponent : IntroSceneStageSubcomponent
     }
     private void Init()
     {
+
         blockChange = false;
         nameTextController.SetText(unselectedThings).Forget();
+        scoreBonusController.Reset();
         lastLootSecButton = null;
         foreach (GameObject obj in buttons) Destroy(obj);
         buttons.Clear();
@@ -60,8 +64,9 @@ public class LootSectionSubcomponent : IntroSceneStageSubcomponent
     }
     public void Show(LootAndCount lootAndCount, ILootSectionButton sec)
     {
-        if (lootAndCount.Count > 0 && !blockChange)
+        if (lootAndCount.Count > 0 && !blockChange && lastLootSecButton != sec)
         {
+            blockChange = true;
             lastLootSecButton?.SetSelected(false);
             lastLootSecButton = sec;
             lastLootSecButton.SetSelected(true);
@@ -73,6 +78,10 @@ public class LootSectionSubcomponent : IntroSceneStageSubcomponent
         blockChange = true;
         await itemView.ToShow(count.Loot);
         await nameTextController.SetText(count.Loot.Name);
+        await scoreBonusController.SetText(scoreBonus, new Dictionary<string, string>()
+        {
+            {"Score", count.Loot.ScoreToGrant.ToString()}
+        });
         blockChange = false;
     }
 }

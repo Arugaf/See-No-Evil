@@ -19,6 +19,7 @@ namespace Features.OutroScene
         {
             if (currentRef != null)
             {
+                enabled = false;
                 GameObject.Destroy(currentInstance);
                 currentRef.ReleaseAsset();
             }

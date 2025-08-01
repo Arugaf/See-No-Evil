@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 83fd667859d1f7f4cb91d1e0341366c3, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 6908657099095933038
   m_TableData:
   - m_Id: 9880543232
     m_Localized: LABUBU 01
@@ -30,6 +31,17 @@ MonoBehaviour:
     m_Localized: Select to see more info
     m_Metadata:
       m_Items: []
+  - m_Id: 3986614156861440
+    m_Localized: 'Bonus score: {Score}'
+    m_Metadata:
+      m_Items:
+      - rid: 6908657099095933038
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6908657099095933038
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 3986614156861440
