@@ -1,5 +1,5 @@
 {
-    "idSave": 223,
+    "idSave": 233,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -27,13 +27,13 @@
                 {
                     "Id": "SecondLevel",
                     "BestTime": 0.0,
-                    "BestScore": 1020
+                    "BestScore": 1150
                 }
             ],
             "LastPlayedLevelID": "SecondLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 2480
+            "GlobalScore": 2610
         }
     }
 }
