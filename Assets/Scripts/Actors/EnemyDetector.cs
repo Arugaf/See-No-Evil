@@ -6,6 +6,7 @@ using UnityEngine;
 namespace Actors {
     public class EnemyDetector : MonoBehaviour {
         [SerializeField] private float detectionRadius = 5f;
+        [SerializeField] private float heightDistanceMax = 3.0f;
         [SerializeField] private LayerMask enemyLayer;
 
         private List<Patroller> currentPatrollers = new List<Patroller>();
@@ -24,6 +25,8 @@ namespace Actors {
             currentPatrollers.Clear();
             for(int i = 0; i < idx; i++)
             {
+                Vector3 db = noAllocOverlapCache[i].bounds.ClosestPoint(transform.position);
+                if (Mathf.Abs(transform.position.y - db.y) > heightDistanceMax) continue;
                 var patroller = noAllocOverlapCache[i].GetComponent<Patroller>();
                 if (currentPatrollers.Contains(patroller)) continue;
 

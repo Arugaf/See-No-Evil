@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da0685c8066ffb94f8448e86c24d700d, type: 3}
-  m_Name: SecondLevel
+  m_Name: SomeLevel
   m_EditorClassIdentifier: 
   <SceneReference>k__BackingField:
     m_AssetGUID: fa3015c81c6ae4141a414e3e80434a46
@@ -24,13 +24,13 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:1c161822375022140be1ee846183e9f3
     m_TableEntryReference:
-      m_KeyId: 161122951168
+      m_KeyId: 84346216448
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   <RandomLootObject>k__BackingField: {fileID: 11400000, guid: 85645397959b2ff4daac5e749299eb69, type: 2}
-  <LevelTime>k__BackingField: 180
+  <LevelTime>k__BackingField: 121
   references:
     version: 2
     RefIds: []
