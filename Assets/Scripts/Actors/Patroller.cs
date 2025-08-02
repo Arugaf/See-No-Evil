@@ -76,6 +76,7 @@ namespace Actors {
             if (memoryCoroutine != null)
             {
                 StopCoroutine(memoryCoroutine);
+                memoryCoroutine = null;
             }
             _target = target;
             --destinationPointIdx;
@@ -100,10 +101,10 @@ namespace Actors {
                 StopCoroutine(memoryCoroutine);
             }
             memoryCoroutine = StartCoroutine(MemoryCoroutine());
-            _target = null;
-            speedRegulator.TargetRatio = 1;
-            animator.SetBool(ANIMATOR_NAME_CHASE, false);
-            GotoNextPoint();
+            // _target = null;
+            // speedRegulator.TargetRatio = 1;
+            // animator.SetBool(ANIMATOR_NAME_CHASE, false);
+            //GotoNextPoint();
         }
 
         private void GotoNextPoint() {
