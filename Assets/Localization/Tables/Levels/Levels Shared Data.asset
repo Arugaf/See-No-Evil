@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: level_locked
     m_Metadata:
       m_Items: []
+  - m_Id: 7115209164193792
+    m_Key: level_apartments
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

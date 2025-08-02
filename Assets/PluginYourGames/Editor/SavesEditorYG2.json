@@ -1,5 +1,5 @@
 {
-    "idSave": 250,
+    "idSave": 253,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -40,7 +40,7 @@
                     "BestScore": 1030
                 }
             ],
-            "LastPlayedLevelID": "TemplateLevel"
+            "LastPlayedLevelID": "ApartmentsLevel"
         },
         "Leaderboard": {
             "GlobalScore": 4770
