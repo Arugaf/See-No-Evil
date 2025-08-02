@@ -1,5 +1,5 @@
 {
-    "idSave": 271,
+    "idSave": 286,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -38,12 +38,17 @@
                     "Id": "TemplateLevel",
                     "BestTime": 12.353866577148438,
                     "BestScore": 1030
+                },
+                {
+                    "Id": "ApartmentsLevel",
+                    "BestTime": 59.133544921875,
+                    "BestScore": 1360
                 }
             ],
             "LastPlayedLevelID": "ApartmentsLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 4770
+            "GlobalScore": 6130
         }
     }
 }

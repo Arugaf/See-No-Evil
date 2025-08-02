@@ -498,6 +498,7 @@ MonoBehaviour:
   damageDealer: {fileID: 385429463458135942}
   speedMultiplierOnChase: 2
   speedSmoothTime: 0.2
+  memoryTime: 1.5
   animator: {fileID: 9218011549228399546}
   pointsConnectorColor: {r: 1, g: 0.4980392, b: 0.3137255, a: 1}
 --- !u!1 &8752605230372328431
@@ -987,7 +988,7 @@ MonoBehaviour:
     Damage: 20
     StunTime: 0.5
     StunCoeff: 0
-  <AttackRadius>k__BackingField: 5
+  <AttackRadius>k__BackingField: 4
   deltaTime: 0
   OnAttackTriggeredByAnimator:
     m_PersistentCalls:
