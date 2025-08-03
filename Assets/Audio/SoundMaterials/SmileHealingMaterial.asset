@@ -48,4 +48,4 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     SoundType: 0
     Clips:
-    - {fileID: 8300000, guid: 7d8fea9aaf603a0438a6dd17222b6e09, type: 3}
+    - {fileID: 8300000, guid: 728692bbf4b654514841477c4efaa07a, type: 3}

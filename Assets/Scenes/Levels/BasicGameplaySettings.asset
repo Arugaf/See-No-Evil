@@ -20,5 +20,8 @@ MonoBehaviour:
     darknessDecaySpeed: 0.5
   GameplayDarknessManagerSettings:
     smoothTime: 0.2
-  GameplayLootSettings:
-    LootBoxPrefab: {fileID: 2846861121691759072, guid: 8d0cd5b7ec876594aa1a5fcac50e2b4a, type: 3}
+  DarknessAudioSettings:
+    transitionTime: 0.2
+    darknessSnapshot: {fileID: -8750802880251859401, guid: fcbb5f2e9b6bb8349bf5b91ae96f348e, type: 2}
+    normalSnapshot: {fileID: 24500006, guid: fcbb5f2e9b6bb8349bf5b91ae96f348e, type: 2}
+  GameSceneFixture: {fileID: 6107677625986211783, guid: b5299ee91baa7b64ab98fc1a7e378296, type: 3}

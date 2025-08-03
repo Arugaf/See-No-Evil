@@ -5070,6 +5070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9673a6cbe1bf8e145b58c2bac64e1f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickupSound: {fileID: 11400000, guid: 349353f7759a70f42aa0b00dca9dabdb, type: 2}
 --- !u!1 &8860677934851311917
 GameObject:
   m_ObjectHideFlags: 0

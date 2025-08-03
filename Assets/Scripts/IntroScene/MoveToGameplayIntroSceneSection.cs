@@ -10,6 +10,7 @@ public class MoveToGameplayIntroSceneSection : AbstractIntroSceneStage
     [SerializeField] private CinemachineCamera virtualCamera;
     [SerializeField] private IntroSceneDarknessRegulator regulator;
     [SerializeField] private float transitionTime = 2.0f;
+    [SerializeField] private AudioSource tranisitonSource;
     private GameStateManager manager;
     [Inject]
     private void Construct(GameStateManager manager)
@@ -21,6 +22,7 @@ public class MoveToGameplayIntroSceneSection : AbstractIntroSceneStage
         if (active)
         {
             virtualCamera.enabled = active;
+            tranisitonSource.Play();
             regulator.SetDarknessFactor(1.0f);
             await UniTask.WaitForSeconds(transitionTime);
             manager.LoadGame();
