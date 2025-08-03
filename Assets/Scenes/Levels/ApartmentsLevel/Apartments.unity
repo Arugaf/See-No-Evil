@@ -26995,7 +26995,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8.78923, y: 7.999999, z: 13.993801}
   m_Center: {x: -2.105383, y: -1.4999995, z: -1.944952}
@@ -48955,7 +48955,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.789234, y: 10.999997, z: 14.441853}
   m_Center: {x: 1.8946164, y: -1.4975847e-15, z: -1.7209263}
@@ -56800,7 +56800,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.7892327, y: 7.999999, z: 16.993801}
   m_Center: {x: -5.6053824, y: -1.4999995, z: -3.444952}
@@ -61617,7 +61617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3278177189648099525, guid: 8c24b801bf03d0944bb73fc49376e18e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.162
+      value: 3.009
       objectReference: {fileID: 0}
     - target: {fileID: 3278177189648099525, guid: 8c24b801bf03d0944bb73fc49376e18e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -61724,7 +61724,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.7892313, y: 11.999997, z: 15.441853}
   m_Center: {x: 1.8946157, y: -0.5, z: -1.2209263}
@@ -64669,7 +64669,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.789233, y: 11.999997, z: 8.993801}
   m_Center: {x: -6.1053824, y: -3.5, z: -4.444952}
@@ -68491,7 +68491,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.7892321, y: 8.999998, z: 10.441853}
   m_Center: {x: 3.8946157, y: -2, z: 1.2790737}

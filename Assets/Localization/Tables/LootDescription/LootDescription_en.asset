@@ -20,11 +20,11 @@ MonoBehaviour:
     - rid: 6908657099095933038
   m_TableData:
   - m_Id: 9880543232
-    m_Localized: LABUBU 01
+    m_Localized: Lucky
     m_Metadata:
       m_Items: []
   - m_Id: 105909133312
-    m_Localized: LABUBU 01 Description
+    m_Localized: This field is not used YET.
     m_Metadata:
       m_Items: []
   - m_Id: 374350422024192
@@ -36,6 +36,30 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 6908657099095933038
+  - m_Id: 4869454369202176
+    m_Localized: Carat 24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4870093807624192
+    m_Localized: Chill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4870249437274112
+    m_Localized: Faithful
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4871002113515520
+    m_Localized: Lovesick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4871362290982912
+    m_Localized: Dreamy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4871860339417088
+    m_Localized: Happy
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

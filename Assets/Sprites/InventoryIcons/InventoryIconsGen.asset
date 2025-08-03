@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp-Editor::ModelIconGeneratorSettings
   ToRender:
   - {fileID: 6846611381484395911, guid: 512464e31e15cb8408c14038916af8d8, type: 3}
+  - {fileID: 8385413420372168658, guid: 85f3d23f9abacdb4a87a224b209284d3, type: 3}
+  - {fileID: 251976113397327857, guid: 364c2b2084bc06c4293948af7138100e, type: 3}
+  - {fileID: 654231596746956294, guid: 4ac84d5083a728c4299f39189676418a, type: 3}
+  - {fileID: 593853490622164014, guid: 1bc982c2f84b309459ff08cd8e9f0793, type: 3}
+  - {fileID: 123972048680651707, guid: 2226b7f88bd7009408c799f50e8812b7, type: 3}
+  - {fileID: 1597238020400376308, guid: ce2861a95bad1fa49aa8435a610a461d, type: 3}
   RotationOffset: {x: 0, y: 70, z: -20}
   SavePath: Assets/Sprites/InventoryIcons
   Resolution: 128

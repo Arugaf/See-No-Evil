@@ -16,7 +16,7 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 83fd667859d1f7f4cb91d1e0341366c3
   m_Entries:
   - m_Id: 9880543232
-    m_Key: labubu_01_name
+    m_Key: baselabubu_name
     m_Metadata:
       m_Items: []
   - m_Id: 105909133312
@@ -29,6 +29,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3986614156861440
     m_Key: loot_scoreadd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4869454369202176
+    m_Key: goldlabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4870093807624192
+    m_Key: greenlabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4870249437274112
+    m_Key: peachlabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4871002113515520
+    m_Key: redlabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4871362290982912
+    m_Key: bluelabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4871860339417088
+    m_Key: beigelabubu_name
     m_Metadata:
       m_Items: []
   m_Metadata:
