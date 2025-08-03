@@ -1,3 +1,4 @@
+using Features.AudioManager;
 using Features.VFX;
 using System;
 using System.Collections;
@@ -5,6 +6,11 @@ using UnityEngine;
 using UnityEngine.AI;
 
 namespace Actors {
+    public class PatrollerAudioManager : MonoBehaviour
+    {
+        [SerializeField] private AudioStepMaterial ambientAudio;
+        [SerializeField] private AudioStepMaterial aggroAudio;
+    }
     [RequireComponent(typeof(NavMeshAgent))]
     public class Patroller : MonoBehaviour {
         private const string ANIMATOR_NAME_ATTACK = "Attack";

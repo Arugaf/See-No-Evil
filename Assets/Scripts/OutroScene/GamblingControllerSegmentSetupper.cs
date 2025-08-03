@@ -20,6 +20,7 @@ namespace Features.OutroScene
         [SerializeField] private CameraLookIntroSceneSubcomponent secondCam;
         [SerializeField] private Transform gambleBoxTransform;
         [SerializeField] private GamblingItemView gamblingItemView;
+                [SerializeField] private float openGambleBoxDelay = 0.6f;
         private IGambleBoxView gambleBoxView;
         private IGameLootManager lootManager;
         [Inject]
@@ -47,6 +48,7 @@ namespace Features.OutroScene
         public async UniTask EndSegment(LootScriptableObject obj)
         {
             gambleBoxView.SetOpen(true);
+            await UniTask.WaitForSeconds(openGambleBoxDelay);
             await gamblingItemView.ToShow(obj);
             basicUIAnimator.SetBool("EndSegment", true);
             firstCam.gameObject.SetActive(false);
