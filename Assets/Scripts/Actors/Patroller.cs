@@ -1,5 +1,6 @@
 using Features.VFX;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,6 +14,7 @@ namespace Actors {
         [SerializeField] private DamageDealer damageDealer;
         [SerializeField] private float speedMultiplierOnChase = 1.0f;
         [SerializeField] private float speedSmoothTime = 0.2f;
+        [SerializeField] private float memoryTime = 1.5f;
         [SerializeField] private Animator animator;
         private SmoothDampArticulatorToMultiplier speedRegulator;
 
@@ -21,8 +23,10 @@ namespace Actors {
         private Transform _target;
 
         [SerializeField] private Color pointsConnectorColor = Color.coral;
+        private Coroutine memoryCoroutine;
 
-        private void Start() {
+        private void Start()
+        {
             _agent = GetComponent<NavMeshAgent>();
             speedRegulator = new SmoothDampArticulatorToMultiplier(_agent.speed, speedSmoothTime);
             GotoNextPoint();
@@ -69,6 +73,11 @@ namespace Actors {
         }
 
         public void TriggerChase(Transform target) {
+            if (memoryCoroutine != null)
+            {
+                StopCoroutine(memoryCoroutine);
+                memoryCoroutine = null;
+            }
             _target = target;
             --destinationPointIdx;
             speedRegulator.TargetRatio = speedMultiplierOnChase;
@@ -77,12 +86,25 @@ namespace Actors {
                 destinationPointIdx = 0;
             }
         }
-
-        public void GoBackToPatrol() {
+        private IEnumerator MemoryCoroutine()
+        {
+            yield return new WaitForSeconds(memoryTime);
             _target = null;
             speedRegulator.TargetRatio = 1;
             animator.SetBool(ANIMATOR_NAME_CHASE, false);
             GotoNextPoint();
+            memoryCoroutine = null;
+        }
+        public void GoBackToPatrol() {
+            if (memoryCoroutine != null)
+            {
+                StopCoroutine(memoryCoroutine);
+            }
+            memoryCoroutine = StartCoroutine(MemoryCoroutine());
+            // _target = null;
+            // speedRegulator.TargetRatio = 1;
+            // animator.SetBool(ANIMATOR_NAME_CHASE, false);
+            //GotoNextPoint();
         }
 
         private void GotoNextPoint() {

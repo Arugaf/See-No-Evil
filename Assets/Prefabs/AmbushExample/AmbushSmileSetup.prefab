@@ -190,7 +190,7 @@ MonoBehaviour:
   damageParameters:
     Damage: 30
     StunTime: 2
-    StunCoeff: 1
+    StunCoeff: 0
   cooldown: 0
   OnAttackAction:
     m_PersistentCalls:

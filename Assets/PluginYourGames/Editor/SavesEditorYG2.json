@@ -1,5 +1,5 @@
 {
-    "idSave": 200,
+    "idSave": 296,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -13,27 +13,42 @@
             "Values": [
                 {
                     "Id": "FirstLabubu",
-                    "Count": 14
+                    "Count": 16
                 }
             ]
         },
         "LevelStats": {
             "Values": [
                 {
-                    "Id": "SecondLevel",
-                    "BestTime": 0.0,
-                    "BestScore": 800
-                },
-                {
                     "Id": "FirstLevel",
                     "BestTime": 0.0,
                     "BestScore": 1360
+                },
+                {
+                    "Id": "SecondLevel",
+                    "BestTime": 0.0,
+                    "BestScore": 1250
+                },
+                {
+                    "Id": "TemplateLevel",
+                    "BestTime": 12.353866577148438,
+                    "BestScore": 1030
+                },
+                {
+                    "Id": "ApartmentsLevel",
+                    "BestTime": 59.133544921875,
+                    "BestScore": 1360
+                },
+                {
+                    "Id": "CocktailPartyLevel",
+                    "BestTime": 47.7332763671875,
+                    "BestScore": 1420
                 }
             ],
-            "LastPlayedLevelID": "SecondLevel"
+            "LastPlayedLevelID": "ApartmentsLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 2260
+            "GlobalScore": 6520
         }
     }
 }

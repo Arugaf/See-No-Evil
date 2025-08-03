@@ -4,7 +4,7 @@ public class FootstepAudioPlayer : MonoBehaviour
 {
     [SerializeField] private float distanceToGround;
     [SerializeField] private LayerMask layerMask;
-    [SerializeField] private AudioMaterialHolder defaultAudioMaterial;
+    [SerializeField] private AudioStepMaterial defaultAudioMaterial;
     public void Play()
     {
         if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit info, distanceToGround, layerMask))
@@ -12,7 +12,7 @@ public class FootstepAudioPlayer : MonoBehaviour
             AudioPlayDeterminedParams? param = null;
             if (info.collider.gameObject.TryGetComponent(out IAudioMaterialHolder holder))
             {
-                param = holder.Generate();
+                param = holder.RetrieveAt(info.point);
             }
             else param = defaultAudioMaterial?.Generate();
             if(param != null)

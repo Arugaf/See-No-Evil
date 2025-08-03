@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3008ead6176f6e4ab0ada8cd4af80cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToGround: 0.2
+  distanceToGround: 0.8
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5165,6 +5165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRadius: 8
+  heightDistanceMax: 3
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64

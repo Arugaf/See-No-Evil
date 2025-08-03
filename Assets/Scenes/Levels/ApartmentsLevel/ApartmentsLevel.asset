@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da0685c8066ffb94f8448e86c24d700d, type: 3}
-  m_Name: SecondLevel
+  m_Name: ApartmentsLevel
   m_EditorClassIdentifier: 
   <SceneReference>k__BackingField:
-    m_AssetGUID: fabe537dc3a24ac4d973263233d1a7f9
+    m_AssetGUID: b918f697d2093b94696280f3986684fd
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
@@ -24,13 +24,13 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:1c161822375022140be1ee846183e9f3
     m_TableEntryReference:
-      m_KeyId: 161122951168
+      m_KeyId: 7115209164193792
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   <RandomLootObject>k__BackingField: {fileID: 11400000, guid: 85645397959b2ff4daac5e749299eb69, type: 2}
-  <LevelTime>k__BackingField: 30
+  <LevelTime>k__BackingField: 180
   references:
     version: 2
     RefIds: []
