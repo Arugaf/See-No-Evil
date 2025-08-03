@@ -1,5 +1,5 @@
 {
-    "idSave": 286,
+    "idSave": 296,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -30,11 +30,6 @@
                     "BestScore": 1250
                 },
                 {
-                    "Id": "CocktailPartyLevel",
-                    "BestTime": 87.32685089111328,
-                    "BestScore": 1030
-                },
-                {
                     "Id": "TemplateLevel",
                     "BestTime": 12.353866577148438,
                     "BestScore": 1030
@@ -43,12 +38,17 @@
                     "Id": "ApartmentsLevel",
                     "BestTime": 59.133544921875,
                     "BestScore": 1360
+                },
+                {
+                    "Id": "CocktailPartyLevel",
+                    "BestTime": 47.7332763671875,
+                    "BestScore": 1420
                 }
             ],
             "LastPlayedLevelID": "ApartmentsLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 6130
+            "GlobalScore": 6520
         }
     }
 }
