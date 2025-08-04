@@ -61,6 +61,7 @@ namespace SaveManager
         public LootboxData Loot = new LootboxData();
         public LevelStatsData LevelStats = new LevelStatsData();
         public LeaderboardData Leaderboard = new LeaderboardData();
+        public int GameVersionCode;
     }
 
 }

@@ -31,11 +31,17 @@ namespace Features.OutroScene
         }
         public void Transition(bool toGameplay)
         {
+            EnsureTransition(toGameplay);
+        }
+        public bool EnsureTransition(bool toGameplay)
+        {
             if (canQuit)
             {
                 TransitionProcess(toGameplay).Forget();
                 canQuit = false;
+                return true;
             }
+            return false;
         }
         private async UniTask TransitionProcess(bool toGameplay)
         {

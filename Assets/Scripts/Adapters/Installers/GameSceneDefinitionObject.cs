@@ -17,6 +17,7 @@ public interface ILevelDefinition
         get;
     }
     IReadOnlyCollection<GameLevelInfoObject> Levels { get; }
+    public bool TryGetNext(string currentID, out GameLevelInfoObject next);
 }
 [CreateAssetMenu(fileName = "GameSceneDefinitionObject", menuName = "Scriptable Objects/GameSceneDefinitionObject")]
 public class GameSceneDefinitionObject : IdentifiableRegistry<GameLevelInfoObject>, IGameSceneDefinition, ILevelDefinition
@@ -39,4 +40,22 @@ public class GameSceneDefinitionObject : IdentifiableRegistry<GameLevelInfoObjec
 
     public UniTask LoadGameOver() => GameOverSceneReference.LoadSceneAsync().ToUniTask();
 
+    public bool TryGetNext(string currentID, out GameLevelInfoObject next)
+    {
+        next = null;
+        bool selectNext = false;
+        foreach (var x in Values)
+        {
+            if (x.ID == currentID)
+            {
+                selectNext = true;
+            }
+            else if (selectNext)
+            {
+                next = x;
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -76,6 +76,7 @@ public class LootSectionSubcomponent : IntroSceneStageSubcomponent
     private async UniTask ShowProcess(LootAndCount count)
     {
         blockChange = true;
+        itemView.enabled = false;
         await itemView.ToShow(count.Loot);
         await nameTextController.SetText(count.Loot.Name);
         await scoreBonusController.SetText(scoreBonus, new Dictionary<string, string>()
