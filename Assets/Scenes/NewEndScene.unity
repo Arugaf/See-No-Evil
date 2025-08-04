@@ -1177,6 +1177,7 @@ MonoBehaviour:
   secondCam: {fileID: 1526247639}
   gambleBoxTransform: {fileID: 2142172509}
   gamblingItemView: {fileID: 1723598966}
+  openGambleBoxDelay: 0.6
   references:
     version: 2
     RefIds: []
@@ -10644,7 +10645,7 @@ AudioSource:
   m_GameObject: {fileID: 1738069083}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5804638559059469808, guid: fcbb5f2e9b6bb8349bf5b91ae96f348e, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1

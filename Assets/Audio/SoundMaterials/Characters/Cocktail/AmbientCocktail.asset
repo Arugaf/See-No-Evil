@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parameters:
     pitchRange: {x: 0.8, y: 1.1}
-    volumeRange: {x: 0.4, y: 0.5}
-    distanceRange: {x: 20, y: 26.66667}
+    volumeRange: {x: 0.3, y: 0.4}
+    distanceRange: {x: 16, y: 25}
     EchoAnnotation:
       serializedVersion: 2
       key0: {r: 0.7122642, g: 0.49724102, b: 0.49724102, a: 1}
