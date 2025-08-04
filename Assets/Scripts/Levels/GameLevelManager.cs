@@ -6,7 +6,7 @@ using UnityEngine.Localization;
 using VContainer;
 namespace Levels
 {
-    public class GameLevelManager: IGameLevelManager
+    public class GameLevelManager : IGameLevelManager
     {
         [Serializable]
         public class Settings
@@ -40,7 +40,7 @@ namespace Levels
                 }
                 else
                 {
-                    yield return new UndiscoveredLevelListItem(level, lastWasUnlocked ? settings.emptyStatString: settings.lockedLevelString, lastWasUnlocked, isMain);
+                    yield return new UndiscoveredLevelListItem(level, lastWasUnlocked ? settings.emptyStatString : settings.lockedLevelString, lastWasUnlocked, isMain);
                     lastWasUnlocked = false;
                 }
             }
@@ -48,8 +48,12 @@ namespace Levels
 
         public void SetLevel(ILevelListItem levelListItem)
         {
-            if(levelListItem.IsUnlocked) resultStorage.SetLevel(levelListItem.LevelInfoObject);
+            if (levelListItem.IsUnlocked) resultStorage.SetLevel(levelListItem.LevelInfoObject);
             statsManager.LastPlayedLevelID = levelListItem.LevelInfoObject.ID;
         }
+        // public bool HasNextLevel()
+        // {
+            
+        // }
     }
 }

@@ -15,50 +15,150 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 9e85298b55052834e87a819ca6991ed3
   m_SerializeEntries:
+  - m_GUID: 016f0faf1c70399428f3191541a17c60
+    m_Address: Assets/Settings/VContainer/RootLifetimeScope.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 052faaac586de48259a63d0c4782560b
+    m_Address: Assets/InputSystem_Actions.inputactions
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 060565448dd78f6439109f319ed377ef
     m_Address: Assets/Scenes/NewEndScene.unity
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 095d778cb656d544b8bc2820b8870358
+    m_Address: Assets/Audio/Music/main_theme.MP3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAssets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0fa03566dc83f724f86aa45b1a117cd0
+    m_Address: Assets/Sprites/bayer.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 18d8b31f61a87bd4d84fdc36f608c139
     m_Address: Assets/Scenes/NewIntroScene.unity
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2cd6074f33e8b52408219ab768120683
-    m_Address: Assets/Scenes/IntroScene.unity
+  - m_GUID: 2e0a78a2b1f3f4d6fb1fefbd72ed1e14
+    m_Address: Assets/Audio/Music/ambient_noise.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAssets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31321ba15b8f8eb4c954353edc038b1d
+    m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36e335017ad71d54fbb10842863188ae
+    m_Address: Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/FallbackShader.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3d8d84431ddfafb469f40756f9443665
     m_Address: Assets/Scenes/SceneDefinition.asset
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 43910a1c4016dda41aac5a9581f093d7
-    m_Address: Assets/Scenes/Levels/Template/BasicLevel.unity
+  - m_GUID: 4ee461fa0daaab84bac3fa4cae99fe96
+    m_Address: Assets/Animations/PauseUI/PauseAnimator.controller
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6876c48f7a178e8498dcb6af5b39c49b
-    m_Address: Assets/Scenes/EndScene.unity
+  - m_GUID: 546d6c862931ecb44b4afcd6ac4f1fa6
+    m_Address: Assets/Sprites/sample_button_blanked.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - CommonAssets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68e6db2ebdc24f95958faec2be5558d6
+    m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 72e324aefb4f29246bfd63856d52df1c
     m_Address: Assets/Scenes/MainScene.unity
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b918f697d2093b94696280f3986684fd
-    m_Address: Assets/Scenes/Levels/ApartmentsLevel/Apartments.unity
+  - m_GUID: 8547ec39534635c4289065e5c5033f43
+    m_Address: Packages/com.unity.probuilder/Content/Shader/Standard Vertex Color.shadergraph
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fa3015c81c6ae4141a414e3e80434a46
-    m_Address: Assets/Scenes/Levels/SomeLevel.unity
+  - m_GUID: 8d2bb70cbf9db8d4da26e15b26e74248
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/SimpleLit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 933532a4fcc9baf4fa0491de14d08ed7
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b488fc9e011ec234580de2e0ba21b4ea
+    m_Address: Assets/Sprites/gameplay_buttons.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAssets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca9f5fa95ffab41fb9a615ab714db018
+    m_Address: Packages/com.unity.inputsystem/InputSystem/Plugins/PlayerInput/DefaultInputActions.inputactions
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cbc2cb236f253df4ba5f400646ac8f29
+    m_Address: Assets/Fonts/Alagard/alagard-12px-unicode SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6e9a19c3678ded42a3bc431ebef7dbd
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eaf5284a026b5984c9deea900bd350d6
+    m_Address: Assets/Fonts/Alagard/OutlinedAlagard.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAssets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee775c9b46d5e6e4198ffbc153ce809e
+    m_Address: Assets/Sprites/gear.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAssets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcbb5f2e9b6bb8349bf5b91ae96f348e
+    m_Address: Assets/Audio/MixerGroup/Main.mixer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
+    m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 56835e73b1757d741aa1b36ffc6ace18, type: 2}

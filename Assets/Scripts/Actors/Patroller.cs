@@ -82,7 +82,7 @@ namespace Actors {
             }
             if (_target == null)
             {
-                            audioManager?.OnAggro();
+                audioManager?.OnAggro();
             }
             _target = target;
             --destinationPointIdx;

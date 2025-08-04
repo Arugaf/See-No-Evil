@@ -1,10 +1,15 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Auth;
+using Cysharp.Threading.Tasks;
 using Leaderboard;
 using Monetization;
 using SaveManager;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
+using YG;
 public static class PluginYGInstaller
 {
     public static void Configure(IContainerBuilder builder)
@@ -15,9 +20,42 @@ public static class PluginYGInstaller
         builder.Register<PluginYGAuthManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<PluginYGLeaderboardMaster>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.RegisterComponentOnNewGameObject<PluginYGApplicationQuitHandler>
-            (Lifetime.Singleton, 
+            (Lifetime.Singleton,
             nameof(PluginYGApplicationQuitHandler))
             .DontDestroyOnLoad()
             .AsImplementedInterfaces();
+        builder.RegisterEntryPoint<PluginYGDefiblirator>(Lifetime.Singleton);
+    }
+    // I hate this shit so much you cant imagine ADDRESSABLES HAVE BEEN LOBOTOMIZED MY PLUGINYG TwT
+    public class PluginYGDefiblirator : IAsyncStartable
+    {
+        [Inject]
+        public PluginYGDefiblirator()
+        {
+            
+        }
+        public async Awaitable StartAsync(CancellationToken cancellation = default)
+        {
+            while (true)
+            {
+                try
+                {
+                    // to be cool (69 is cool)
+                    await UniTask.WaitForSeconds(0.69f, true);
+                    if (!YG2.isSDKEnabled)
+                    {
+                        YG2.StartInit();
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.LogError("DEFIBLIRATOR ERROR: " + ex.ToString());
+                }
+            }
+        }
     }
 }
