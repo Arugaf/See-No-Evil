@@ -10,23 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Duplicate Asset Isolation
+  m_Name: Misc
   m_EditorClassIdentifier: 
-  m_GroupName: Duplicate Asset Isolation
-  m_GUID: 051ebc04d42dbfa459ce093ba963bb30
+  m_GroupName: Misc
+  m_GUID: e7f37023017ebbd4a8b1ad6727a449eb
   m_SerializeEntries:
   - m_GUID: 0659c991bbceee24d9f091e35cf1a927
     m_Address: Assets/Models/Consumables/materials/textures/labubu_box_shader_mask.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0b6009a389d3f482b8816677909bcaf6
-    m_Address: Assets/Models/House/modular_housepack/modular_house_pack.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0fa03566dc83f724f86aa45b1a117cd0
-    m_Address: Assets/Sprites/bayer.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -40,8 +30,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 349353f7759a70f42aa0b00dca9dabdb
-    m_Address: Assets/Audio/SFX/Consumables/ArtifactPickupAudioStepMat.asset
+  - m_GUID: 2a49a1d93502d6a429d2e4ad15cf48db
+    m_Address: Assets/Models/Characters/SmileFace/SmileBite.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b44697cfb697274a877d009fe67c4d2
+    m_Address: Assets/Animations/FreakyTV/FreakyTV.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 393132919eb7dde45bc5463cf0ef4d94
+    m_Address: Assets/Scenes/Levels/JamLevel/MainScene/OcclusionCullingData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c378f94442bcd040a5b5796cd00d9ce
+    m_Address: Assets/Materials/Enchantment/HealingItemShader.shadergraph
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -50,13 +55,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 546d6c862931ecb44b4afcd6ac4f1fa6
-    m_Address: Assets/Sprites/sample_button_blanked.png
+  - m_GUID: 6a14c65a1b0a1a74d89f6283ab52ce98
+    m_Address: Assets/Scenes/Levels/CocktailParty/SomeLevelLightSettings.lighting
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 68e6db2ebdc24f95958faec2be5558d6
-    m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+  - m_GUID: 6fbbd534b52e17d44b5cf331d0d02be6
+    m_Address: Assets/Materials/Echolocation/TexturedOverlayDarkness.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7278975ae5b6486479631015228d3de1
+    m_Address: Assets/Models/Tech1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 728692bbf4b654514841477c4efaa07a
+    m_Address: Assets/Audio/SFX/Consumables/healing_item.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7570635612908a2449cde776c772976e
+    m_Address: Assets/Audio/SFX/MonsterStep/monster_3.MP3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -70,18 +90,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90d5f3be1a3d4b54aa80b32dff8e8a3c
+    m_Address: Assets/Scenes/Levels/CocktailParty/SomeLevelVolume.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 977a977b20c89b74188838a0cb14a26b
+    m_Address: Assets/Models/Characters/Jam/T_C_Jam.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9d2c22a015d48d54a9ffa5e22171763c
     m_Address: Assets/Models/Traps/Banana/Banana.fbx
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a6ed7622249744e4c9652bee9d8d3347
-    m_Address: Assets/Models/models 1/Furniture/Toilet.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b488fc9e011ec234580de2e0ba21b4ea
-    m_Address: Assets/Sprites/gameplay_buttons.png
+  - m_GUID: 9dd7abd909f5c5848bdabb0ecbe82fce
+    m_Address: Assets/Materials/Echolocation/DarknessTransparentMaterial.shadergraph
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -90,13 +115,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cbc2cb236f253df4ba5f400646ac8f29
-    m_Address: Assets/Fonts/Alagard/alagard-12px-unicode SDF.asset
+  - m_GUID: d18ce710470fabf48b01cc40a252aefc
+    m_Address: Assets/Models/Traps/Banana/BananaTexture.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d18ce710470fabf48b01cc40a252aefc
-    m_Address: Assets/Models/Traps/Banana/BananaTexture.png
+  - m_GUID: d1e5fd78b0e918d45a46384e03e74298
+    m_Address: Assets/Audio/SFX/Example/wood_damage_2.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -105,18 +130,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: eaf5284a026b5984c9deea900bd350d6
-    m_Address: Assets/Fonts/Alagard/OutlinedAlagard.mat
+  - m_GUID: d94d48c7fe4b30f4a8430eb106821085
+    m_Address: Assets/Models/models 2/Signs/Sign2.fbx
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ee775c9b46d5e6e4198ffbc153ce809e
-    m_Address: Assets/Sprites/gear.png
+  - m_GUID: dffef66376be4fa480fb02b19edbe903
+    m_Address: Assets/TextMesh Pro/Sprites/EmojiOne.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
-    m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+  - m_GUID: f2429ebd748ebb74aa5a4c6610cb8589
+    m_Address: Assets/Animations/FreakyTV/freakytv_idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f248016a46e52ec49865b8d9fbe69c92
+    m_Address: Assets/Models/Characters/SmileFace/Animator/SmileRig.controller
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -124,5 +154,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 56835e73b1757d741aa1b36ffc6ace18, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 9522c797c4b93694b90e404763afb1f2, type: 2}
-    - {fileID: 11400000, guid: e37a60362a22a9f478ddab0e5cbb7aba, type: 2}
+    - {fileID: 11400000, guid: ee2eccaf77d7b43489a3fa6738e70a77, type: 2}
+    - {fileID: 11400000, guid: 32ffc9580c8185441b07399d788ff375, type: 2}

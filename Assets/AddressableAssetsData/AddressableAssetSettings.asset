@@ -59,14 +59,17 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
-  - {fileID: 11400000, guid: 6e7f2113928cabd4695b747a843349bb, type: 2}
   - {fileID: 11400000, guid: 548e6dbde560f3c40bfed9672726ec38, type: 2}
   - {fileID: 11400000, guid: f06e6a6b411e3794b8ee47a7db1abc07, type: 2}
+  - {fileID: 11400000, guid: 113abf261bb66bd47b87f6918ed233ee, type: 2}
+  - {fileID: 11400000, guid: 4d2e62af4d5dcc94c849a27830ff6d7d, type: 2}
   - {fileID: 11400000, guid: b8ba0a568d07728488c76bc7f3320a72, type: 2}
   - {fileID: 11400000, guid: 4ffce54883e90b4439d1e3dbc0a17420, type: 2}
   - {fileID: 11400000, guid: d7ea9868962a58643a3b81c14dcdbbe3, type: 2}
   - {fileID: 11400000, guid: a0432d68c89d25240bcfc1b0724e487e, type: 2}
+  - {fileID: 11400000, guid: 8eac95d9c8b8ded45a281932df18b294, type: 2}
   - {fileID: 11400000, guid: f776ddcb56dc47b498ae03c40c31440b, type: 2}
+  - {fileID: 11400000, guid: b2435629ef75cf648b8889822f6f9d07, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
@@ -109,6 +112,14 @@ MonoBehaviour:
     - Locale
     - Locale-en
     - Locale-ru
+    - Enemy
+    - Tung
+    - Tralalelo
+    - Ghost
+    - Max
+    - Cocktail
+    - CommonAssets
+    - NESSESARY
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: f8c1b7b191c572a45af36365be2174e0, type: 2}

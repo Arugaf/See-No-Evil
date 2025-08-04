@@ -8,6 +8,7 @@ public class EntryPoint : MonoBehaviour
     public AssetReferenceGameObject firmware;
     public async Awaitable Start()
     {
+        Debug.Log("GAME INIT...");
         GameObject x = await firmware.LoadAssetAsync();
         var instance = Instantiate(x);
         LifetimeScope.EnqueueParent(instance.GetComponent<LifetimeScope>());

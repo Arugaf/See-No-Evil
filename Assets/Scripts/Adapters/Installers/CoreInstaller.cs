@@ -69,6 +69,9 @@ public class CoreInstaller: LifetimeScope
         builder.RegisterInstance(sceneDefinitionObject).AsImplementedInterfaces();
         builder.Register<IGameLevelManager, GameLevelManager>(Lifetime.Singleton);
         gameplayCanvasInstaller.Configure(builder);
+        // who thought it was a good idea UNITY? WHYYYY
+        mainInputActionAsset.Enable();
+        
 #if PLUGIN_YG_2
         PluginYGInstaller.Configure(builder);
         #else

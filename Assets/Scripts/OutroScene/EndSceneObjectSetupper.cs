@@ -17,7 +17,6 @@ namespace Features.OutroScene
         [SerializeField] private TextMeshProUGUI textTime;
         [SerializeField] private GameObject victory;
         [SerializeField] private GameObject loss;
-        [SerializeField] private GameObject nextLevelButton;
         [SerializeField] private LocalizedString victoryText;
         [SerializeField] private LocalizedString overtimeText;
         [SerializeField] private LocalizedString killedText;
@@ -26,14 +25,12 @@ namespace Features.OutroScene
         private ILevelStatsManager levelStatsManager;
         private ILevelDefinition levelDefinition;
         private GameplayResultStorage gameplayResultStorage;
-        private GameLevelInfoObject nextLevel;
         [Inject]
-        private void Construct(GameplayResultStorage resultStorage, IScoreEvaluator scoreEvaluator, ILevelStatsManager levelStatsManager, ILevelDefinition levelDefinition)
+        private void Construct(GameplayResultStorage resultStorage, IScoreEvaluator scoreEvaluator, ILevelStatsManager levelStatsManager)
         {
             gameplayResultStorage = resultStorage;
             this.scoreEvaluator = scoreEvaluator;
             this.levelStatsManager = levelStatsManager;
-            this.levelDefinition = levelDefinition;
         }
         public async override UniTask Init()
         {
@@ -60,24 +57,6 @@ namespace Features.OutroScene
                 loss.SetActive(true);
                 descriptionText.text = await overtimeText.GetLocalizedStringAsync();
                 textTime.text = "";
-            }
-        }
-        private void SetupButton()
-        {
-            if (gameplayResultStorage.LastGameState == GameResult.Victory)
-            {
-                if (levelDefinition.TryGetNext(gameplayResultStorage.gameLevelInfo.ID, out nextLevel))
-                {
-                    nextLevelButton.SetActive(true);
-                }
-                else
-                {
-                    nextLevelButton.SetActive(false);
-                }
-            }
-            else
-            {
-                nextLevelButton.SetActive(false);
             }
         }
     }
