@@ -1,5 +1,5 @@
 {
-    "idSave": 385,
+    "idSave": 402,
     "SaveData": {
         "Settings": {
             "MusicVolume": 0.4221586585044861,
@@ -17,6 +17,14 @@
                 },
                 {
                     "Id": "GreenLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "PeachLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "RedLabubu",
                     "Count": 1
                 }
             ]
@@ -49,10 +57,10 @@
                     "BestScore": 1950
                 }
             ],
-            "LastPlayedLevelID": "FirstLevel"
+            "LastPlayedLevelID": "ApartmentsLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 7050
+            "GlobalScore": 7250
         }
     }
 }

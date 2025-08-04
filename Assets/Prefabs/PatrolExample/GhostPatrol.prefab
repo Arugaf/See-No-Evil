@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &70746673840077793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4619174909272897916}
+  - component: {fileID: 2055726695737835723}
+  m_Layer: 0
+  m_Name: AngryGhost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4619174909272897916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70746673840077793}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3712684140774191396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2055726695737835723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70746673840077793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582942ab8d3d42d46b8f4a8535b1a8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomParameters: {fileID: 11400000, guid: 6e9d5d34abb7dbd4b98d7d3cce87ab0b, type: 2}
+  _playOnStart: 0
 --- !u!1 &542630760237871255
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +253,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomParameters: {fileID: 11400000, guid: 022676f35d407644790a55825779b06c, type: 2}
   _playOnStart: 0
+--- !u!1 &3237427925037574243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 709326174458428316}
+  - component: {fileID: 282334413787358665}
+  m_Layer: 0
+  m_Name: GhostAmbient
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &709326174458428316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3237427925037574243}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3712684140774191396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282334413787358665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3237427925037574243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582942ab8d3d42d46b8f4a8535b1a8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomParameters: {fileID: 11400000, guid: 2aa8f7f0434453e43a5c8d8d29d2be54, type: 2}
+  _playOnStart: 0
+--- !u!1 &6005940235715329315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3712684140774191396}
+  - component: {fileID: 3946782501501704856}
+  m_Layer: 6
+  m_Name: GhostAmbient
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3712684140774191396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005940235715329315}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 709326174458428316}
+  - {fileID: 4619174909272897916}
+  m_Father: {fileID: 370509330235231572}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3946782501501704856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005940235715329315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7a514512f830b47b10c31e1c65845e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientAudio: {fileID: 282334413787358665}
+  aggroAudio: {fileID: 2055726695737835723}
+  ambientDuration: {x: 5, y: 8}
+  aggroDuration: 3
 --- !u!1 &6597529716006970291
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +384,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7415428419938325563}
+  - {fileID: 3712684140774191396}
   m_Father: {fileID: 2998337115933735340}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8366764933803568427
@@ -363,7 +506,9 @@ MonoBehaviour:
   damageDealer: {fileID: 4463723009207070502}
   speedMultiplierOnChase: 1.5
   speedSmoothTime: 0.2
+  memoryTime: 1.5
   animator: {fileID: 4564289985481293307}
+  audioManager: {fileID: 3946782501501704856}
   pointsConnectorColor: {r: 1, g: 0.4980392, b: 0.3137255, a: 1}
 --- !u!1 &7732656147969488478
 GameObject:

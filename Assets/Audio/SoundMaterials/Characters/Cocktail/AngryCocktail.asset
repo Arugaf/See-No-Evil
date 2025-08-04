@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d527d69313144fa48a7775db4bcd9b41, type: 3}
-  m_Name: SmileHealingMaterial
+  m_Name: AngryCocktail
   m_EditorClassIdentifier: 
   Parameters:
-    pitchRange: {x: 0.9, y: 1.5}
-    volumeRange: {x: 1, y: 1}
-    distanceRange: {x: 20, y: 20}
+    pitchRange: {x: 0.8, y: 1.1}
+    volumeRange: {x: 0.9, y: 1}
+    distanceRange: {x: 40, y: 40}
     EchoAnnotation:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.13261986, a: 1}
-      key1: {r: 0.16043895, g: 0.8113208, b: 0, a: 0}
+      key0: {r: 1, g: 0, b: 0.23993587, a: 1}
+      key1: {r: 1, g: 0.6179246, b: 0.6179246, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -35,8 +35,8 @@ MonoBehaviour:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 59753
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
       m_Mode: 0
       m_ColorSpace: -1
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
-    SoundType: 0
+      m_NumAlphaKeys: 3
+    SoundType: 1
     Clips:
-    - {fileID: 8300000, guid: 728692bbf4b654514841477c4efaa07a, type: 3}
+    - {fileID: 8300000, guid: aacb02397b3d645858a46156617806bf, type: 3}

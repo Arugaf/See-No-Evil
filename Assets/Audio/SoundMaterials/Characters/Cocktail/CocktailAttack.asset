@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d527d69313144fa48a7775db4bcd9b41, type: 3}
-  m_Name: SmileHealingMaterial
+  m_Name: CocktailAttack
   m_EditorClassIdentifier: 
   Parameters:
-    pitchRange: {x: 0.9, y: 1.5}
-    volumeRange: {x: 1, y: 1}
-    distanceRange: {x: 20, y: 20}
+    pitchRange: {x: 0.8, y: 1.1}
+    volumeRange: {x: 1.5, y: 1.5}
+    distanceRange: {x: 40, y: 40}
     EchoAnnotation:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.13261986, a: 1}
-      key1: {r: 0.16043895, g: 0.8113208, b: 0, a: 0}
+      key0: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 1, g: 0, b: 0, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -48,4 +48,4 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     SoundType: 0
     Clips:
-    - {fileID: 8300000, guid: 728692bbf4b654514841477c4efaa07a, type: 3}
+    - {fileID: 8300000, guid: 0ac6e67b4c1634236950de0b34e72da4, type: 3}

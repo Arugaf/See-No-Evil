@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d527d69313144fa48a7775db4bcd9b41, type: 3}
-  m_Name: Boo
+  m_Name: TralaleloAttack
   m_EditorClassIdentifier: 
   Parameters:
-    pitchRange: {x: 0.3, y: 0.4}
-    volumeRange: {x: 1, y: 1}
-    distanceRange: {x: 100, y: 100}
+    pitchRange: {x: 0.8, y: 1.2}
+    volumeRange: {x: 1.5, y: 1.5}
+    distanceRange: {x: 40, y: 40}
     EchoAnnotation:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 0.9559748, g: 0.387801, b: 0.387801, a: 0}
+      key0: {r: 0.4433962, g: 0.35637423, b: 0.30954075, a: 1}
+      key1: {r: 0.9559748, g: 0.387801, b: 0.387801, a: 0.59607846}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -35,8 +35,8 @@ MonoBehaviour:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 60524
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
       m_Mode: 0
       m_ColorSpace: -1
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     SoundType: 0
     Clips:
-    - {fileID: 8300000, guid: 6b3ae13d0fc62194da3be192ae2b8de8, type: 3}
+    - {fileID: 8300000, guid: aa6ec18e5c245445982312328e277983, type: 3}
