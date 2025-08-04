@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Duplicate Asset Isolation
+  m_EditorClassIdentifier: 
+  m_GroupName: Duplicate Asset Isolation
+  m_GUID: 051ebc04d42dbfa459ce093ba963bb30
+  m_SerializeEntries:
+  - m_GUID: 0659c991bbceee24d9f091e35cf1a927
+    m_Address: Assets/Models/Consumables/materials/textures/labubu_box_shader_mask.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b6009a389d3f482b8816677909bcaf6
+    m_Address: Assets/Models/House/modular_housepack/modular_house_pack.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0fa03566dc83f724f86aa45b1a117cd0
+    m_Address: Assets/Sprites/bayer.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d69423a6d26540d8b491046b49033b4
+    m_Address: Assets/Audio/SFX/Consumables/artifact_collected.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28aa0f1d40680394b93332a6c5810243
+    m_Address: Assets/Materials/FoilShader/FoilBoxShader.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 349353f7759a70f42aa0b00dca9dabdb
+    m_Address: Assets/Audio/SFX/Consumables/ArtifactPickupAudioStepMat.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50615cd1b0ea9364b9432dc373f9d3b8
+    m_Address: Assets/Materials/FoilShader/Particles.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 546d6c862931ecb44b4afcd6ac4f1fa6
+    m_Address: Assets/Sprites/sample_button_blanked.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68e6db2ebdc24f95958faec2be5558d6
+    m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8647cc2c5257e92469eb66b0ccfc1881
+    m_Address: Assets/Materials/FoilShader/TestingMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a0d8c50bee3a9b44a84ab155e4cf2d6
+    m_Address: Assets/Models/Consumables/prefabs/meshes/labuba_box.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d2c22a015d48d54a9ffa5e22171763c
+    m_Address: Assets/Models/Traps/Banana/Banana.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6ed7622249744e4c9652bee9d8d3347
+    m_Address: Assets/Models/models 1/Furniture/Toilet.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b488fc9e011ec234580de2e0ba21b4ea
+    m_Address: Assets/Sprites/gameplay_buttons.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b66ecf146f9eac440934c6ff7c3f1862
+    m_Address: Assets/Sprites/sample_button_mat.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cbc2cb236f253df4ba5f400646ac8f29
+    m_Address: Assets/Fonts/Alagard/alagard-12px-unicode SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d18ce710470fabf48b01cc40a252aefc
+    m_Address: Assets/Models/Traps/Banana/BananaTexture.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d65520f7d86878a41a06b2f9ab540eed
+    m_Address: Assets/Models/Consumables/materials/textures/labubu_box.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eaf5284a026b5984c9deea900bd350d6
+    m_Address: Assets/Fonts/Alagard/OutlinedAlagard.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee775c9b46d5e6e4198ffbc153ce809e
+    m_Address: Assets/Sprites/gear.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
+    m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 56835e73b1757d741aa1b36ffc6ace18, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9522c797c4b93694b90e404763afb1f2, type: 2}
+    - {fileID: 11400000, guid: e37a60362a22a9f478ddab0e5cbb7aba, type: 2}
