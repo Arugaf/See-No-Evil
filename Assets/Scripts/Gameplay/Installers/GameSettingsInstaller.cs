@@ -20,10 +20,14 @@ public class GameSettingsInstaller : AbstractGameSettingsInstaller
     [SerializeField] private GameplayState.Settings GameplayStateSettings;
     [SerializeField] private DarknessMeterController.Settings DarknessMeterControllerSettings;
     [SerializeField] private GameplayDarknessManager.Settings GameplayDarknessManagerSettings;
+    [SerializeField] private DarknessAudioManager.Settings DarknessAudioSettings;
+    [Header("The prefab that would be spawned in all scenes")]
+    [SerializeField] private GameObject GameSceneFixture;
     public override void Install(IContainerBuilder builder)
     {
         builder.RegisterInstance(DarknessMeterControllerSettings);
         builder.RegisterInstance(GameplayDarknessManagerSettings);
+        builder.RegisterInstance(DarknessAudioSettings);
         builder.Register((irp) =>
         {
             GameplayLootSettings stx = new GameplayLootSettings();
@@ -37,9 +41,14 @@ public class GameSettingsInstaller : AbstractGameSettingsInstaller
             return settings;
         }, Lifetime.Singleton);
         builder.Register<IGameplayScoreManager, GameplayScoreManager>(Lifetime.Singleton);
+        builder.RegisterEntryPoint<DarknessAudioManager>(Lifetime.Singleton).AsSelf();
         builder.RegisterEntryPoint<GameplayState>(Lifetime.Singleton).AsSelf();
         builder.RegisterEntryPoint<DarknessMeterController>(Lifetime.Singleton).AsSelf();
         builder.RegisterEntryPoint<GameplayDarknessManager>(Lifetime.Singleton).AsSelf();
         builder.RegisterEntryPoint<GameplayLootManager>(Lifetime.Singleton).AsSelf();
+        builder.RegisterBuildCallback((_) =>
+        {
+            if(GameSceneFixture != null) Instantiate(GameSceneFixture);
+        });
     }
 }

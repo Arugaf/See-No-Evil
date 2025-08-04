@@ -34,7 +34,7 @@ MonoBehaviour:
 
       Esc/Space - pause (recommended to read!)
 
-      
+
 
       Look
       for <b><u>arrows</u></b> when activating "hearing" mode - they will lead you
@@ -73,6 +73,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4847461578121216
     m_Localized: Run to the Toilet!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12479495339319296
+    m_Localized: Sign in to participate in the leaderboard table!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12479995904335872
+    m_Localized: Sign in
     m_Metadata:
       m_Items: []
   references:

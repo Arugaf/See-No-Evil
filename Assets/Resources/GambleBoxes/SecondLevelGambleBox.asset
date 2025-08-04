@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbb4c81edc00204db2696c05c8c9d8c, type: 3}
+  m_Name: SecondLevelGambleBox
+  m_EditorClassIdentifier: 
+  <InGamePrefab>k__BackingField: {fileID: 2846861121691759072, guid: 8d0cd5b7ec876594aa1a5fcac50e2b4a, type: 3}
+  <ViewPrefab>k__BackingField: {fileID: 3356149604768116443, guid: 02749460a6702cc4786391f11bc8fd23, type: 3}
+  _chancePairs:
+  - weight: 0.043
+    Value: {fileID: 11400000, guid: 5cc3777d1f0354944bd1ab465f43970e, type: 2}
+  - weight: 0.165
+    Value: {fileID: 11400000, guid: 7994d7ea71542624fadff19271f615de, type: 2}
+  - weight: 0.457
+    Value: {fileID: 11400000, guid: 063c751a4127ec34fb64b414d43cb129, type: 2}
+  - weight: 0.457
+    Value: {fileID: 11400000, guid: 4c7615c75194dda4d9f41c85ffeee349, type: 2}
+  - weight: 0.165
+    Value: {fileID: 11400000, guid: fd98ab03127b8534681646b74f8c442e, type: 2}
+  - weight: 0.043
+    Value: {fileID: 11400000, guid: 658c9277d572df54e8b06c66979875a1, type: 2}
+  - weight: 0.01
+    Value: {fileID: 11400000, guid: d30680f513e74f444be4f07847dd5e94, type: 2}

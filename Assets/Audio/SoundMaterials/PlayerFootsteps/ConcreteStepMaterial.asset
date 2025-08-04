@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d527d69313144fa48a7775db4bcd9b41, type: 3}
+  m_Name: ConcreteStepMaterial
+  m_EditorClassIdentifier: 
+  Parameters:
+    pitchRange: {x: 0.6, y: 0.8}
+    volumeRange: {x: 8, y: 8}
+    distanceRange: {x: 18, y: 24}
+    EchoAnnotation:
+      serializedVersion: 2
+      key0: {r: 0.8742138, g: 0.8706986, b: 0.86596644, a: 1}
+      key1: {r: 0.81761, g: 0.81662697, b: 0.8150389, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: -1
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    SoundType: 0
+    Clips:
+    - {fileID: 8300000, guid: b18815c23aad44a688302e508249d515, type: 3}
+    - {fileID: 8300000, guid: 6af8c64e5ace148e0adbf5a8f5045b5d, type: 3}
+    - {fileID: 8300000, guid: f4b72fb341e2d4f7782730d090640dac, type: 3}
+    - {fileID: 8300000, guid: ba6548a4ca8344504b31fd4422a9f50f, type: 3}
+    - {fileID: 8300000, guid: 2b6f36ca4ba39497c9580400e116f9e4, type: 3}
+    - {fileID: 8300000, guid: 998005d46f0264ccbbe582955b5a3124, type: 3}
+    - {fileID: 8300000, guid: e162ded79da9f49dd921f3d355c0013f, type: 3}
+    - {fileID: 8300000, guid: e9773376982344ceeb72fd4a13bd8fd0, type: 3}

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+[CreateAssetMenu(menuName = "Scriptable Objects/Editor/ModelIconGeneratorSettings")]
 public class ModelIconGeneratorSettings : ScriptableObject
 {
     public List<GameObject> ToRender;

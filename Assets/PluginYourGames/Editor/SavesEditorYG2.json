@@ -1,5 +1,5 @@
 {
-    "idSave": 296,
+    "idSave": 414,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -13,7 +13,19 @@
             "Values": [
                 {
                     "Id": "FirstLabubu",
-                    "Count": 16
+                    "Count": 20
+                },
+                {
+                    "Id": "GreenLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "PeachLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "RedLabubu",
+                    "Count": 1
                 }
             ]
         },
@@ -41,14 +53,14 @@
                 },
                 {
                     "Id": "CocktailPartyLevel",
-                    "BestTime": 47.7332763671875,
-                    "BestScore": 1420
+                    "BestTime": 0.0,
+                    "BestScore": 1950
                 }
             ],
             "LastPlayedLevelID": "ApartmentsLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 6520
+            "GlobalScore": 7250
         }
     }
 }

@@ -5071,4 +5071,4 @@ MonoBehaviour:
   audioSourceDistanceMultiplicator: 5
   lifetimeMultiplicator: 2
   lifetimeAddition: 0
-  particleLifetimeMultiplicator: 1
+  particleLifetimeMultiplicator: 1.5
