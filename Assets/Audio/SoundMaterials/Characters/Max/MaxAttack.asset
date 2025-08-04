@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d527d69313144fa48a7775db4bcd9b41, type: 3}
-  m_Name: Bonk
+  m_Name: MaxAttack
   m_EditorClassIdentifier: 
   Parameters:
-    pitchRange: {x: 0.8, y: 0.9}
-    volumeRange: {x: 1.5, y: 1.5}
+    pitchRange: {x: 0.6, y: 0.6}
+    volumeRange: {x: 1, y: 1}
     distanceRange: {x: 40, y: 40}
     EchoAnnotation:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0, a: 1}
-      key1: {r: 1, g: 0, b: 0, a: 0}
+      key0: {r: 1, g: 0, b: 0.06068659, a: 1}
+      key1: {r: 0.35220122, g: 0.29571608, b: 0.29571608, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -48,4 +48,4 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     SoundType: 0
     Clips:
-    - {fileID: 8300000, guid: d1e5fd78b0e918d45a46384e03e74298, type: 3}
+    - {fileID: 8300000, guid: 1b5bb1a8724e04148bc93a60abbe95b4, type: 3}

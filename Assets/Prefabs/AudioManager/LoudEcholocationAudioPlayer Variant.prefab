@@ -102,16 +102,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4690463888059269432, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: lifetimeMultiplicator
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4690463888059269432, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: particleLifetimeMultiplicator
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690463888059269432, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
+      propertyPath: audioSourceDistanceMultiplicator
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5015277023702255853, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d91d2645addd86140a9b3f468465acce, type: 2}
+    - target: {fileID: 6445297065491657413, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
+      propertyPath: MaxDistance
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445297065491657413, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9131712271746489022, guid: 15a94627ea3bed74baf6967ff852b1ec, type: 3}
       propertyPath: m_Name
       value: LoudEcholocationAudioPlayer Variant

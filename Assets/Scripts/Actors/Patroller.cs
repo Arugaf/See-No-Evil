@@ -1,4 +1,3 @@
-using Features.AudioManager;
 using Features.VFX;
 using System;
 using System.Collections;
@@ -6,11 +5,6 @@ using UnityEngine;
 using UnityEngine.AI;
 
 namespace Actors {
-    public class PatrollerAudioManager : MonoBehaviour
-    {
-        [SerializeField] private AudioStepMaterial ambientAudio;
-        [SerializeField] private AudioStepMaterial aggroAudio;
-    }
     [RequireComponent(typeof(NavMeshAgent))]
     public class Patroller : MonoBehaviour {
         private const string ANIMATOR_NAME_ATTACK = "Attack";
@@ -22,6 +16,7 @@ namespace Actors {
         [SerializeField] private float speedSmoothTime = 0.2f;
         [SerializeField] private float memoryTime = 1.5f;
         [SerializeField] private Animator animator;
+        [SerializeField] private PatrollerAudioManager audioManager;
         private SmoothDampArticulatorToMultiplier speedRegulator;
 
         private NavMeshAgent _agent;
@@ -79,16 +74,22 @@ namespace Actors {
         }
 
         public void TriggerChase(Transform target) {
+
             if (memoryCoroutine != null)
             {
                 StopCoroutine(memoryCoroutine);
                 memoryCoroutine = null;
             }
+            if (_target == null)
+            {
+                            audioManager?.OnAggro();
+            }
             _target = target;
             --destinationPointIdx;
             speedRegulator.TargetRatio = speedMultiplierOnChase;
             animator.SetBool(ANIMATOR_NAME_CHASE, true);
-            if (destinationPointIdx < 0) {
+            if (destinationPointIdx < 0)
+            {
                 destinationPointIdx = 0;
             }
         }

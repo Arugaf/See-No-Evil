@@ -1,5 +1,5 @@
 {
-    "idSave": 371,
+    "idSave": 385,
     "SaveData": {
         "Settings": {
             "MusicVolume": 0.4221586585044861,
@@ -49,7 +49,7 @@
                     "BestScore": 1950
                 }
             ],
-            "LastPlayedLevelID": "CocktailPartyLevel"
+            "LastPlayedLevelID": "FirstLevel"
         },
         "Leaderboard": {
             "GlobalScore": 7050
