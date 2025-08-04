@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parameters:
     pitchRange: {x: 0.9, y: 1}
-    volumeRange: {x: 0.1, y: 0.1}
-    distanceRange: {x: 15, y: 16}
+    volumeRange: {x: 1, y: 1}
+    distanceRange: {x: 18, y: 24}
     EchoAnnotation:
       serializedVersion: 2
       key0: {r: 0.8742138, g: 0.77092016, b: 0.635042, a: 1}
@@ -48,7 +48,11 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     SoundType: 0
     Clips:
-    - {fileID: 8300000, guid: 54ee20de0b7bc5441ad5bb9958409af5, type: 3}
-    - {fileID: 8300000, guid: f6d6421d0d6a9724f8dcb6031986449c, type: 3}
-    - {fileID: 8300000, guid: 311162e2bd77c544593c54343bfc94cf, type: 3}
-    - {fileID: 8300000, guid: 6616b1010a7a69848b04963c06dec4ef, type: 3}
+    - {fileID: 8300000, guid: 4f7fc1e8644f34317b4e518b36f12c24, type: 3}
+    - {fileID: 8300000, guid: 6a89ad12490654165acf1ff790855419, type: 3}
+    - {fileID: 8300000, guid: e7b34a1e99100479ba84e85ac5332482, type: 3}
+    - {fileID: 8300000, guid: 9ed55f9a7870846d79bf3fce5a3b2017, type: 3}
+    - {fileID: 8300000, guid: 4dae5f8331c294175b5bfc324050a0b8, type: 3}
+    - {fileID: 8300000, guid: bd3545129047645c8a78f308f72e5f70, type: 3}
+    - {fileID: 8300000, guid: 46a4e03e95e024fdd8751289e8ea8852, type: 3}
+    - {fileID: 8300000, guid: c5653644c2ce64b68b94d6706289e7ab, type: 3}

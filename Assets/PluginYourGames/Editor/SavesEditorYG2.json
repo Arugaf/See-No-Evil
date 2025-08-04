@@ -1,9 +1,9 @@
 {
-    "idSave": 354,
+    "idSave": 371,
     "SaveData": {
         "Settings": {
-            "MusicVolume": 1.0,
-            "SFXVolume": 1.0,
+            "MusicVolume": 0.4221586585044861,
+            "SFXVolume": 0.4345036745071411,
             "CameraSensivity": 0.9791287183761597,
             "CurrentLocaleName": "",
             "ShowTutorialPC": false,
@@ -14,6 +14,10 @@
                 {
                     "Id": "FirstLabubu",
                     "Count": 20
+                },
+                {
+                    "Id": "GreenLabubu",
+                    "Count": 1
                 }
             ]
         },
