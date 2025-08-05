@@ -210,6 +210,11 @@ MonoBehaviour:
     m_SerializedLabels:
     - AssetsGroup
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d9ece527f47efa4c9ac4801ad60f32d
+    m_Address: Assets/Models/Characters/Zerg/zerg.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1f65ea4b99c80524bb27ec382f787dd2
     m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/silk.fbx
     m_ReadOnly: 0
@@ -419,6 +424,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4084260edfc1d27438229c8a6d6c07e0
+    m_Address: Assets/Models/Characters/Zerg/zerg.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 40c09010646520b4f9054178bd9c4d5a
     m_Address: Assets/Audio/SoundMaterials/Characters/Max/AmbientMax.asset
