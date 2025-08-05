@@ -47,6 +47,7 @@ namespace Features.OutroScene
         }
         public async UniTask EndSegment(LootScriptableObject obj)
         {
+            await gamblingItemView.Preload(obj);
             gambleBoxView.SetOpen(true);
             await UniTask.WaitForSeconds(openGambleBoxDelay);
             await gamblingItemView.ToShow(obj);
