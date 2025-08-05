@@ -15,11 +15,36 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 9e85298b55052834e87a819ca6991ed3
   m_SerializeEntries:
+  - m_GUID: 00c710ec31356614d8fa41784a57a27c
+    m_Address: Assets/Audio/SFX/AmbushSmile/ambush_laughter.MP3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 016f0faf1c70399428f3191541a17c60
     m_Address: Assets/Settings/VContainer/RootLifetimeScope.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 022676f35d407644790a55825779b06c
+    m_Address: Assets/Audio/SoundMaterials/Characters/Ghost/GhostFuckYou.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 026eed41b686d6a42b8bbcacea4d6bf0
+    m_Address: Assets/Models/Static Props/Teches/Materials/Tech2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 04918890a865ffa49b9f3d88f6feb294
+    m_Address: Assets/Audio/SFX/AmbushSmile/FILLER.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 052faaac586de48259a63d0c4782560b
     m_Address: Assets/InputSystem_Actions.inputactions
@@ -33,11 +58,61 @@ MonoBehaviour:
     m_SerializedLabels:
     - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0659c991bbceee24d9f091e35cf1a927
+    m_Address: Assets/Models/Consumables/materials/textures/labubu_box_shader_mask.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07f01d1f2905a4ca38d576707c3e0287
+    m_Address: Assets/Audio/SFX/Tung/tung_angry.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 084323b59f6902f4abc9fb3232d37c1b
+    m_Address: Assets/Models/Characters/Jam/HealingSmileMaterial 1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 095d778cb656d544b8bc2820b8870358
     m_Address: Assets/Audio/Music/main_theme.MP3
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAssets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09ee7db94e606074a8e20ed623bb47ad
+    m_Address: Assets/Audio/SFX/MonsterStep/monster_1.MP3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a5dace7ab052bb4facac84da947839d
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/Chair.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ac6e67b4c1634236950de0b34e72da4
+    m_Address: Assets/Audio/SFX/Cocktail/cocktail_attack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b6009a389d3f482b8816677909bcaf6
+    m_Address: Assets/Models/House/modular_housepack/modular_house_pack.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0eff9195241077142a529eb274e1ce80
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/closet.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0fa03566dc83f724f86aa45b1a117cd0
     m_Address: Assets/Sprites/bayer.png
@@ -45,11 +120,181 @@ MonoBehaviour:
     m_SerializedLabels:
     - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ff6954c59dcdbd4bb0673b4a04f1da2
+    m_Address: Assets/Audio/SoundMaterials/Characters/Cocktail/AmbientCocktail.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1260d899e4cad4d82906b95ff0031fef
+    m_Address: Assets/Audio/SFX/Tung/tung_ambient2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13d128944c134464b96a30f901bd3831
+    m_Address: Assets/Models/textures 1/Furniture/Materials/furniture5.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 15a94627ea3bed74baf6967ff852b1ec
+    m_Address: Assets/Prefabs/AudioManager/EcholocationAudioPlayer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 15eed566918b347469bc701cda3fe4f3
+    m_Address: Assets/Models/Characters/Max/MaxWalk.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 175879aeff662f84dbda3d2af9e3c1e0
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/toilet.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17a35a9286b39ec4783da924d569065c
+    m_Address: Assets/Models/Static Props/Furnitures/Materials/Textures/Furniture1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17d5bbf0c0bd58747ab7fb7481db971d
+    m_Address: Assets/Models/Characters/Max/MaxRun.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 180ea6baabdaddd4387c44aeed296f26
+    m_Address: Assets/Models/Characters/Tung/Animations/TungRig.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 18d8b31f61a87bd4d84fdc36f608c139
     m_Address: Assets/Scenes/NewIntroScene.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1951eb24243aeaf49b4c32053fbe2068
+    m_Address: Assets/Materials/Enchantment/HealingCubeMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b5bb1a8724e04148bc93a60abbe95b4
+    m_Address: Assets/Audio/SFX/Max/max_attack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bc982c2f84b309459ff08cd8e9f0793
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/GreenLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d69423a6d26540d8b491046b49033b4
+    m_Address: Assets/Audio/SFX/Consumables/artifact_collected.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f65ea4b99c80524bb27ec382f787dd2
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/silk.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f8002b338468a042955ccff8ba578d5
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/chair.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1fc50e9a96b27ec4585d16ab3481b85b
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/Table.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2226b7f88bd7009408c799f50e8812b7
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/PeachLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 283cdae118ed08845a42a60e575bde8e
+    m_Address: Assets/Models/Characters/Jam/Jam.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28817f2d698b6bd4cb153f828b5d4b97
+    m_Address: Assets/Models/House/New_models/textures/house_planks1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28aa0f1d40680394b93332a6c5810243
+    m_Address: Assets/Materials/FoilShader/FoilBoxShader.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2990f92133aba41f4b71cfc393c1bd29
+    m_Address: Assets/Audio/SoundMaterials/BananaTrap.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29c43eed780fbc840b43ce5846e291a4
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/sofa.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29ef1f88c2297e2499bfc58da20ca1cc
+    m_Address: Assets/Models/Characters/Tralalelo/TralaleloRun.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a49a1d93502d6a429d2e4ad15cf48db
+    m_Address: Assets/Models/Characters/SmileFace/SmileBite.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2aa8f7f0434453e43a5c8d8d29d2be54
+    m_Address: Assets/Audio/SoundMaterials/Characters/Ghost/AmbientGhost.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b44697cfb697274a877d009fe67c4d2
+    m_Address: Assets/Animations/FreakyTV/FreakyTV.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b6f36ca4ba39497c9580400e116f9e4
+    m_Address: Assets/Audio/SFX/Footsteps/Concrete/concrete5.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2e0a78a2b1f3f4d6fb1fefbd72ed1e14
     m_Address: Assets/Audio/Music/ambient_noise.mp3
@@ -57,10 +302,67 @@ MonoBehaviour:
     m_SerializedLabels:
     - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30055e879a270cd49af8bddc793d0d89
+    m_Address: Assets/Models/CoocingMachine.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3033d3d6659fdaf489e8f9317ef95b7e
+    m_Address: Assets/Models/Characters/Tung/TungTPose.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31321ba15b8f8eb4c954353edc038b1d
     m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 314c2b038770a4f3691998e571a3ec11
+    m_Address: Assets/Audio/SFX/Tralalelo/tralalero_ambient2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 316ba1c7807cf6a40a2a91969b00cc7e
+    m_Address: Assets/Models/Static Props/Furnitures/Materials/Furniture4.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31d4d4d521d083949b23f8998a15618c
+    m_Address: Assets/Models/models/Furniture/Sources/Furniture.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 329e16eac281ca5459e2138a24f5a2c4
+    m_Address: Assets/Models/Characters/Tung/TungWalking.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33c7fc0d07a5914479f30037b9357b04
+    m_Address: Assets/Audio/SoundMaterials/PlayerFootsteps/ConcreteStepMaterial.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 349353f7759a70f42aa0b00dca9dabdb
+    m_Address: Assets/Audio/SFX/Consumables/ArtifactPickupAudioStepMat.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 364c2b2084bc06c4293948af7138100e
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/BlueLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 36e335017ad71d54fbb10842863188ae
     m_Address: Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/FallbackShader.shader
@@ -68,16 +370,156 @@ MonoBehaviour:
     m_SerializedLabels:
     - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36f2ea75fafed444bafda23933f1c2de
+    m_Address: Assets/Models/Static Props/Decors/Materials/Decor_carpet21.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3811cc02df4945944ae2b0adb3d22213
+    m_Address: Assets/Audio/SFX/Ghost/ghost_whisper_curse.MP3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 393132919eb7dde45bc5463cf0ef4d94
+    m_Address: Assets/Scenes/Levels/JamLevel/MainScene/OcclusionCullingData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39d6f4214b86fa2458f3853c0585651a
+    m_Address: Assets/Models/Characters/Cocktail/CocktailAttack.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b77a4e9552bedc4c993a9536016e3e1
+    m_Address: Assets/Models/House/New_models/meshes/Doorway.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3d8d84431ddfafb469f40756f9443665
     m_Address: Assets/Scenes/SceneDefinition.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40c09010646520b4f9054178bd9c4d5a
+    m_Address: Assets/Audio/SoundMaterials/Characters/Max/AmbientMax.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41fb62225abe8c74e82ed229371852b3
+    m_Address: Assets/Audio/SoundMaterials/Characters/Tung/AmbientTung.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4476dfe1a42c426499411cb14692a5f2
+    m_Address: Assets/Models/Consumables/materials/wildpickles.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 453d154ce964c9240889847c93bfbb48
+    m_Address: Assets/Models/Characters/Ghost/GhostFlyForward.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 455e1f9e6ad4f164e82ea8730f1aa9ec
+    m_Address: Assets/Models/House/New_models/materials/Doorway_planks.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46a4e03e95e024fdd8751289e8ea8852
+    m_Address: Assets/Audio/SFX/Footsteps/Wood/wood7.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 482235bd5c71a2d47afa07fdfe01e299
+    m_Address: Assets/Models/Static Props/Teches/Prefabs/Meshes/washing_machine1.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48667102237fd403589212a84beca160
+    m_Address: Assets/Audio/SFX/Tralalelo/tralalelo_angry.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ac84d5083a728c4299f39189676418a
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/GoldLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4af4c23f1e8c2ce4aae0d9480d58c37d
+    m_Address: Assets/Audio/SoundMaterials/Characters/Tralalelo/AmbientTralalelo.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c378f94442bcd040a5b5796cd00d9ce
+    m_Address: Assets/Materials/Enchantment/HealingItemShader.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d64c8463c2b1314a9e9ad89099a77da
+    m_Address: Assets/Models/textures/furniture/Materials/furniture1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dae5f8331c294175b5bfc324050a0b8
+    m_Address: Assets/Audio/SFX/Footsteps/Wood/wood5.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4ee461fa0daaab84bac3fa4cae99fe96
     m_Address: Assets/Animations/PauseUI/PauseAnimator.controller
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f7fc1e8644f34317b4e518b36f12c24
+    m_Address: Assets/Audio/SFX/Footsteps/Wood/wood1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50615cd1b0ea9364b9432dc373f9d3b8
+    m_Address: Assets/Materials/FoilShader/Particles.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 512464e31e15cb8408c14038916af8d8
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/BasicLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53760314c3a68d245867683729854eb5
+    m_Address: Assets/Audio/SoundMaterials/Characters/Tung/Bonk.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 546d6c862931ecb44b4afcd6ac4f1fa6
     m_Address: Assets/Sprites/sample_button_blanked.png
@@ -85,22 +527,321 @@ MonoBehaviour:
     m_SerializedLabels:
     - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54f9b44f4812ed34ca505dd3be69cf98
+    m_Address: Assets/Models/Static Props/Furnitures/Materials/Bathroom1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56228f85e3e69f743b2cfc8233fbbc46
+    m_Address: Assets/Models/Characters/Tralalelo/trall.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5642d15befd658d4ba1c4e62562f6797
+    m_Address: Assets/Models/Characters/Tralalelo/TralaleloAttack.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b80fe518969b294a86690b507e75ac1
+    m_Address: Assets/Models/models/Furniture/Sources/default.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d103ed2e6ae85d43921c5bff3ea0490
+    m_Address: Assets/Models/Static Props/Furnitures/Materials/Furniture1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5df30fe4c46f3044e8dd43b123be9053
+    m_Address: Assets/Models/textures 2/Furniture/furniture4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 614785427ea084d4faaf2f3022e3098c
+    m_Address: Assets/Materials/Echolocation/VisibleDarkMode.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 631ce809e0c014c4794faaa48c14bb30
+    m_Address: Assets/Audio/SoundMaterials/Characters/Tung/TungFootstep.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63ee915336d6c90498cb013b4ba7c3c2
+    m_Address: Assets/Prefabs/Player/Player.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6488ff904f2417e438d273170549c2c5
+    m_Address: Assets/Models/Characters/Ghost/GhostFlyOnPlace.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64e02ffc7ec07d143b7972be725c9e06
+    m_Address: Assets/Models/WachingMachine.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64ea7d8235267594491179e5715ec48c
+    m_Address: Assets/Models/Static Props/Teches/Materials/Textures/Tech2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66522208f7fc4b142944a89b416cb15a
+    m_Address: Assets/Models/Characters/Max/Max.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 675614780851e0643bd20f7afdb7ddac
+    m_Address: Assets/Models/Characters/Ghost/Animator/GhostRig.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 68e6db2ebdc24f95958faec2be5558d6
     m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6956dd02ed80d50459279dc80553aa5f
+    m_Address: Assets/Audio/SoundMaterials/Characters/Cocktail/AngryCocktail.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69ba315f94b11e949b3bcf43654034fd
+    m_Address: Assets/Models/Characters/Tung/Sahur_Base_color-min.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a14c65a1b0a1a74d89f6283ab52ce98
+    m_Address: Assets/Scenes/Levels/CocktailParty/SomeLevelLightSettings.lighting
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a89ad12490654165acf1ff790855419
+    m_Address: Assets/Audio/SFX/Footsteps/Wood/wood2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6af8c64e5ace148e0adbf5a8f5045b5d
+    m_Address: Assets/Audio/SFX/Footsteps/Concrete/concrete2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c27dd81be964924481099e5627f9284
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/furniture2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c8b6353c7dbf6141a4d6bf355b16ffc
+    m_Address: Assets/Models/Traps/Banana/BananaMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6db8494ef4205834eb67d89b5143b457
+    m_Address: Assets/Models/Static Props/Teches/Materials/Textures/Tech1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ddc59be4213311469cdf6962c75dc2f
+    m_Address: Assets/Audio/SoundMaterials/Characters/Tralalelo/TralaleloFootstep.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e9d5d34abb7dbd4b98d7d3cce87ab0b
+    m_Address: Assets/Audio/SoundMaterials/Characters/Ghost/AngryGhost.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f9d5e78a168b944db0c28e10dfeb20d
+    m_Address: Assets/Models/Characters/Ghost/Spirit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6fbbd534b52e17d44b5cf331d0d02be6
+    m_Address: Assets/Materials/Echolocation/TexturedOverlayDarkness.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70e997a7830158e45854b7cdf1ee20c1
+    m_Address: Assets/Models/Characters/Tung/TungAttack.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71cfe2311aca44cc58cf175c3a0c8d7f
+    m_Address: Assets/Audio/SFX/Cocktail/cocktail_step2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7278975ae5b6486479631015228d3de1
+    m_Address: Assets/Models/Tech1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 728692bbf4b654514841477c4efaa07a
+    m_Address: Assets/Audio/SFX/Consumables/healing_item.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 72e324aefb4f29246bfd63856d52df1c
     m_Address: Assets/Scenes/MainScene.unity
     m_ReadOnly: 0
     m_SerializedLabels:
-    - NESSESARY
+    - LevelsIndependentGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74a817a27867fd64fb5da6c758ab994b
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/table.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7570635612908a2449cde776c772976e
+    m_Address: Assets/Audio/SFX/MonsterStep/monster_3.MP3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76b54e5bdb2e746f9a18915f497167a0
+    m_Address: Assets/Audio/SFX/Ghost (new)/ghost_ambient2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7740f9da24623472690fa5f38c5a78a1
+    m_Address: Assets/Audio/SFX/Tralalelo/tralalero_ambient1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79dba5985fbd4c54cbe53dbe7d08f123
+    m_Address: Assets/Models/House/New_models/textures/house_concrete2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ad887abdd31c3a4d97b93948e24751a
+    m_Address: Assets/Audio/SFX/MonsterStep/monster_0.MP3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d0514dfff48e584cbbda6365a5c1725
+    m_Address: Assets/Models/Characters/Tralalelo/Animation/TralaleloRig.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f4d70ec2ae061641b01ba671cf0b3e9
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/small_bed.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8547ec39534635c4289065e5c5033f43
     m_Address: Packages/com.unity.probuilder/Content/Shader/Standard Vertex Color.shadergraph
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85f3d23f9abacdb4a87a224b209284d3
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/BeigeLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8647cc2c5257e92469eb66b0ccfc1881
+    m_Address: Assets/Materials/FoilShader/TestingMat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86ffbd2fc81b8804a8e321b4f99cc396
+    m_Address: Assets/Models/House/New_models/materials/Doorway_wall.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87a1efeff57d83346aff22011562bf64
+    m_Address: Assets/Models/Static Props/Teches/Materials/Tech1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88cd5dcf0a51fb44ea94485557017c16
+    m_Address: Assets/Models/House/New_models/textures/house_wall_planks1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a0d8c50bee3a9b44a84ab155e4cf2d6
+    m_Address: Assets/Models/Consumables/prefabs/meshes/labuba_box.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a23bd9f939b4a94a8dff9fd1d377ed1
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/Fridge.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8be699ada14916c469c1b43c88163672
+    m_Address: Assets/Models/Static Props/Decors/Materials/Decor_carpet1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cf34da643a924ea4bb2e208b895e8bf
+    m_Address: Assets/Audio/SFX/Cocktail/cocktail_ambient1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8d2bb70cbf9db8d4da26e15b26e74248
     m_Address: Packages/com.unity.render-pipelines.universal/Shaders/SimpleLit.shader
@@ -108,10 +849,211 @@ MonoBehaviour:
     m_SerializedLabels:
     - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d76e17b1a7324a7d885d3c5b428e517
+    m_Address: Assets/Audio/SFX/Traps/bananatrap_exec.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90d5f3be1a3d4b54aa80b32dff8e8a3c
+    m_Address: Assets/Scenes/Levels/CocktailParty/SomeLevelVolume.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 933532a4fcc9baf4fa0491de14d08ed7
     m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 959a03dd87ff42449a07dcb097de892b
+    m_Address: Assets/Audio/SoundMaterials/Characters/Max/MaxAttack.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 975554e888cf6de4da2980a62315561a
+    m_Address: Assets/Models/Static Props/Furnitures/Materials/Textures/Furniture4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 977a977b20c89b74188838a0cb14a26b
+    m_Address: Assets/Models/Characters/Jam/T_C_Jam.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 998005d46f0264ccbbe582955b5a3124
+    m_Address: Assets/Audio/SFX/Footsteps/Concrete/concrete6.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9bcfe26ef48a542448dcede1b802c149
+    m_Address: Assets/Models/Static Props/Teches/Prefabs/Meshes/cooker1.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d16e3e76fbb00747bdf93cc47d796d4
+    m_Address: Assets/Models/Static Props/Decors/Prefabs/Meshes/Carpet.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d2c22a015d48d54a9ffa5e22171763c
+    m_Address: Assets/Models/Traps/Banana/Banana.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9dd7abd909f5c5848bdabb0ecbe82fce
+    m_Address: Assets/Materials/Echolocation/DarknessTransparentMaterial.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ec8604b22ac14fadb2c4286a5f75d13
+    m_Address: Assets/Models/textures 2/Furniture/furniture4.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ed55f9a7870846d79bf3fce5a3b2017
+    m_Address: Assets/Audio/SFX/Footsteps/Wood/wood4.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a142b5fb9b497fd4686154962b5f5ac7
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/bath.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1aea3f33c0882e41a51e5ea43649212
+    m_Address: Assets/Models/textures 1/Furniture/furniture3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1de7c1a8892106408bdc6bfaa981eff
+    m_Address: Assets/Audio/SoundMaterials/Characters/Tralalelo/AngryTralalelo.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2ae31cc637e12a46a1717ef2b30ba52
+    m_Address: Assets/Models/Characters/SmileFace/SmileMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2cd846768b4ef44ead4d93f5ce9167b
+    m_Address: Assets/Audio/SoundMaterials/Characters/Max/AngryMax.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a450978e7e3855d4a8437b44c499a515
+    m_Address: Assets/Models/Static Props/Furnitures/Materials/Textures/Bathroom.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a45a0db380ebd7d46a959c1c1a0fce1f
+    m_Address: Assets/Models/Characters/Max/Animation/MaxRig.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a45bc88cbddef9844a30a9ae2681f9c8
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/Materials/furniture2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5af0ff59ffec26418b84141a3808f67
+    m_Address: Assets/Models/Static Props/Furnitures/Materials/Furniture3.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6ed7622249744e4c9652bee9d8d3347
+    m_Address: Assets/Models/models 1/Furniture/Toilet.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a739917196c887345b3f8d319dc55e7f
+    m_Address: Assets/Models/House/New_models/materials/Concrete.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a74fa746490ba3b47a6691870341126b
+    m_Address: Assets/Models/Static Props/Teches/Prefabs/Meshes/tv.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7cd62dd9eaf40946a4342410223ddd5
+    m_Address: Assets/Audio/SoundMaterials/Characters/Max/MaxFootstep.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a84f15b844e66954287395340d256bb7
+    m_Address: Assets/Models/Tech1.002.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a91718a970ab63f45b78c24499b72d27
+    m_Address: Assets/Audio/SoundMaterials/Characters/Cocktail/CocktailFootstep.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa2cbfcb8501d8540a4605ecc3da67d5
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/Chest.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa6ec18e5c245445982312328e277983
+    m_Address: Assets/Audio/SFX/Tralalelo/tralalelo_attack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aacb02397b3d645858a46156617806bf
+    m_Address: Assets/Audio/SFX/Cocktail/cocktail_angry.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b18815c23aad44a688302e508249d515
+    m_Address: Assets/Audio/SFX/Footsteps/Concrete/concrete1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3cf545fba12cac4d9fa68c7a5a1f869
+    m_Address: Assets/Models/Characters/Cocktail/CocktailWalk.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b488fc9e011ec234580de2e0ba21b4ea
     m_Address: Assets/Sprites/gameplay_buttons.png
@@ -119,16 +1061,298 @@ MonoBehaviour:
     m_SerializedLabels:
     - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b54664080e3c659489537e23723915f6
+    m_Address: Assets/Models/textures/furniture/furniture1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b66ecf146f9eac440934c6ff7c3f1862
+    m_Address: Assets/Sprites/sample_button_mat.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b817022fcfee448c8b78e33be484441f
+    m_Address: Assets/Audio/SFX/Max/max_ambient2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b918f697d2093b94696280f3986684fd
+    m_Address: Assets/Scenes/Levels/ApartmentsLevel/Apartments.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelsIndependentGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba38ec6e606c2bd498d4c40de4970657
+    m_Address: Assets/Models/Characters/SmileFace/Smile.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba6548a4ca8344504b31fd4422a9f50f
+    m_Address: Assets/Audio/SFX/Footsteps/Concrete/concrete4.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc8a741b663050743bf0c888f94e6a52
+    m_Address: Assets/Models/Static Props/Decors/Materials/Textures/decor_carpet.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd3545129047645c8a78f308f72e5f70
+    m_Address: Assets/Audio/SFX/Footsteps/Wood/wood6.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd97a6446312958428fd5b608a5f8867
+    m_Address: Assets/Audio/SoundMaterials/Characters/Tralalelo/TralaleloAttack.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1bdb6fb9dec44548a360132a38f6728
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/TV.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1d230af8a548954d964a347e7491437
+    m_Address: Assets/Models/Characters/Ghost/spirit.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c27ff0e97b279a84d9e57f753343b8cb
+    m_Address: Assets/Models/Characters/Ghost/GhostAttack.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c28a9bfdfd89b7d4595001955f8845d3
+    m_Address: Assets/Models/Characters/Cocktail/Animator/CocktailRig.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c55d16eda12215641ae30a7c14cb7ff5
+    m_Address: Assets/Models/Characters/Ghost/GHOST.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5653644c2ce64b68b94d6706289e7ab
+    m_Address: Assets/Audio/SFX/Footsteps/Wood/wood8.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c574a9343441f469887cd67594afdf42
+    m_Address: Assets/Audio/SFX/Tung/tung_ambient1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8558873225c44c4eb89de7db5b92b91
+    m_Address: Assets/Audio/SFX/MonsterStep/monster_2.MP3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8796aea3ffc349ba956393c22ea23ea
+    m_Address: Assets/Audio/SFX/Max/max_angry.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c99dee80464f91042bdee7a831599b83
+    m_Address: Assets/Models/Characters/Cocktail/CocktailMonsterTexture.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca8237910fd97d747aa566f461ab7dd8
+    m_Address: Assets/Prefabs/AudioManager/LoudEcholocationAudioPlayer Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca86d62d849ecbc41ae35c88c95fdc51
+    m_Address: Assets/Models/Characters/Tralalelo/TralaleloModel.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tralalelo
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ca9f5fa95ffab41fb9a615ab714db018
     m_Address: Packages/com.unity.inputsystem/InputSystem/Plugins/PlayerInput/DefaultInputActions.inputactions
     m_ReadOnly: 0
     m_SerializedLabels:
     - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cac05df1aef579241acd080ad651cca2
+    m_Address: Assets/Models/Characters/Cocktail/Materials/CocktailMonsterTexture.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb73a222aed209c4092c2177beaf1ec6
+    m_Address: Assets/Models/Characters/Max/MaxMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cbc2cb236f253df4ba5f400646ac8f29
     m_Address: Assets/Fonts/Alagard/alagard-12px-unicode SDF.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cdf85a65fa0f44abc8b081121247da86
+    m_Address: Assets/Audio/SFX/Max/max_ambient1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce2861a95bad1fa49aa8435a610a461d
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/RedLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d18ce710470fabf48b01cc40a252aefc
+    m_Address: Assets/Models/Traps/Banana/BananaTexture.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1e5fd78b0e918d45a46384e03e74298
+    m_Address: Assets/Audio/SFX/Example/wood_damage_2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4edb5019a212ba4f9f3362af1deace2
+    m_Address: Assets/Models/Characters/Tung/TungSlowRun.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d582b52b283da49498b53b4a9ed0be09
+    m_Address: Assets/Audio/SFX/Tung/tung_ambient3.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d65520f7d86878a41a06b2f9ab540eed
+    m_Address: Assets/Models/Consumables/materials/textures/labubu_box.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d91d2645addd86140a9b3f468465acce
+    m_Address: Assets/Materials/Echolocation/EcholocBayer.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d94d48c7fe4b30f4a8430eb106821085
+    m_Address: Assets/Models/models 2/Signs/Sign2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d958da41e7b6e0f47a6c0213dfc63b4a
+    m_Address: Assets/Models/Characters/Max/MaxTexture.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d97e97b681648414fbba2843ae606653
+    m_Address: Assets/Models/Consumables/materials/textures/memes/wild_pickles.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9c7ff0a25490484799e0919529fbff8
+    m_Address: Assets/Models/Consumables/materials/textures/memes/pickles.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dec0f61cd6c49bb4ba2839894128e4d3
+    m_Address: Assets/Audio/SoundMaterials/Characters/Tung/AngryTung.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Tung
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dffef66376be4fa480fb02b19edbe903
+    m_Address: Assets/TextMesh Pro/Sprites/EmojiOne.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0bc17cdd27d7734a973c5deb1556a27
+    m_Address: Assets/Sprites/Filler.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e153c82b0ad2345c1bc0c3b433718ee2
+    m_Address: Assets/Audio/SFX/Cocktail/cocktail_step3.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e162ded79da9f49dd921f3d355c0013f
+    m_Address: Assets/Audio/SFX/Footsteps/Concrete/concrete7.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1e14113aa9a98946b57e6fadc8353f6
+    m_Address: Assets/Audio/SoundMaterials/SmileHealingMaterial.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1e3d991bb9a8684da82c29a3054e536
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/Shelf.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3f994d876eff094aa7ed0213498b667
+    m_Address: Assets/Models/House/New_models/materials/WoodenFloor.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e42150eabd4329f438292d2149136927
+    m_Address: Assets/Models/Characters/Max/MaxAttack.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Max
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e6e9a19c3678ded42a3bc431ebef7dbd
     m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
@@ -136,11 +1360,49 @@ MonoBehaviour:
     m_SerializedLabels:
     - NESSESARY
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e730c2026db378f448bd3150344d781c
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/bookshelf.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7b34a1e99100479ba84e85ac5332482
+    m_Address: Assets/Audio/SFX/Footsteps/Wood/wood3.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e956fbadb82c17f40a7c348502af87e5
+    m_Address: Assets/Audio/SFX/Ghost/ghost_whisper.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    - Ghost
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9773376982344ceeb72fd4a13bd8fd0
+    m_Address: Assets/Audio/SFX/Footsteps/Concrete/concrete8.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e97e4fd10e161da4f962bb00bb1680bc
+    m_Address: Assets/Models/models 1/Furniture/TestsWithShaders/Bed.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eaf5284a026b5984c9deea900bd350d6
     m_Address: Assets/Fonts/Alagard/OutlinedAlagard.mat
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAssets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed35aa84dba3f624abf4cd75c96a4281
+    m_Address: Assets/Audio/SoundMaterials/Characters/Cocktail/CocktailAttack.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ee775c9b46d5e6e4198ffbc153ce809e
     m_Address: Assets/Sprites/gear.png
@@ -148,11 +1410,97 @@ MonoBehaviour:
     m_SerializedLabels:
     - CommonAssets
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef10bf5dc03c39845abee51270b8d69f
+    m_Address: Assets/Models/Static Props/Furnitures/Prefabs/Meshes/bedside_table.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f17de3233411bbb478c742c7ca69287a
+    m_Address: Assets/Models/Characters/Cocktail/Cocktail.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2429ebd748ebb74aa5a4c6610cb8589
+    m_Address: Assets/Animations/FreakyTV/freakytv_idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f248016a46e52ec49865b8d9fbe69c92
+    m_Address: Assets/Models/Characters/SmileFace/Animator/SmileRig.controller
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f41f99a351b3e2a44b916255a5cfbcd1
+    m_Address: Assets/Models/Static Props/Furnitures/Materials/Textures/Furniture3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4b47ca3d0cb7144ab0ef98db2aa749a
+    m_Address: Assets/Audio/SoundMaterials/PlayerFootsteps/WoodStepMaterial.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4b72fb341e2d4f7782730d090640dac
+    m_Address: Assets/Audio/SFX/Footsteps/Concrete/concrete3.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f71884e551292864281ba75a36b2c472
+    m_Address: Assets/Models/models/Furniture/Sources/Shelf.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f736fdb2e2b985743b74dc6ad3e9b26b
+    m_Address: Assets/Models/Characters/SmileFace/SmileModel.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8a9ca2f42f0e9747b0124552faa390b
+    m_Address: Assets/Models/Characters/Cocktail/CocktailRun.anim
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cocktail
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f900fa19954b95449ab14f8aa331b7d4
+    m_Address: Assets/Models/Static Props/Teches/Prefabs/Meshes/fridge.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa3015c81c6ae4141a414e3e80434a46
+    m_Address: Assets/Scenes/Levels/SomeLevel.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelsIndependentGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fcbb5f2e9b6bb8349bf5b91ae96f348e
     m_Address: Assets/Audio/MixerGroup/Main.mixer
     m_ReadOnly: 0
     m_SerializedLabels:
     - NESSESARY
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcc85915ff487f24ba73bfdd6dc97410
+    m_Address: Assets/Materials/Echolocation/EcholocationBayer.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe371e3d6acae2742ba3446a4699989a
+    m_Address: Assets/EcholocationVolume.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LevelAssetsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
     m_Address: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader

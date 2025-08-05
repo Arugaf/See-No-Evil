@@ -1,12 +1,12 @@
 {
-    "idSave": 444,
+    "idSave": 450,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
             "SFXVolume": 1.0,
             "CameraSensivity": 0.9791287183761597,
             "CurrentLocaleName": "",
-            "ShowTutorialPC": false,
+            "ShowTutorialPC": true,
             "ShowTutorialMobile": false
         },
         "Loot": {
@@ -57,7 +57,7 @@
                     "BestScore": 1950
                 }
             ],
-            "LastPlayedLevelID": "CocktailPartyLevel"
+            "LastPlayedLevelID": "ApartmentsLevel"
         },
         "Leaderboard": {
             "GlobalScore": 7250
