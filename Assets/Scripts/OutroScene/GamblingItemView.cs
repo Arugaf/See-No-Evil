@@ -11,21 +11,30 @@ namespace Features.OutroScene
         [SerializeField] private Animator anim;
         private AssetReferenceGameObject currentRef;
         private GameObject currentInstance;
+        private GameObject currentPrefab;
         private void Awake()
         {
             basicRot = coreViewTransform.transform.localRotation;
         }
-        public async UniTask ToShow(LootScriptableObject obj)
+        public async UniTask Preload(LootScriptableObject obj)
         {
             if (currentRef != null)
             {
-                enabled = false;
+                OnDisable();
                 GameObject.Destroy(currentInstance);
+                currentPrefab = null;
                 currentRef.ReleaseAsset();
             }
             currentRef = obj.ModelViewPrefab;
-            var prefab = await currentRef.LoadAssetAsync();
-            currentInstance = GameObject.Instantiate(prefab, coreViewTransform);
+            currentPrefab = await currentRef.LoadAssetAsync();
+        }
+        public async UniTask ToShow(LootScriptableObject obj)
+        {
+            if (currentRef != obj.ModelViewPrefab || currentPrefab == null)
+            {
+                await Preload(obj);
+            }
+            currentInstance = GameObject.Instantiate(currentPrefab, coreViewTransform);
             enabled = true;
             anim.gameObject.SetActive(true);
         }

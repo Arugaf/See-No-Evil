@@ -180,6 +180,8 @@ MonoBehaviour:
         rank: 5
         score: 127000
         extraData: 
+  LoadWindow:
+    UseWindowTools: 1
   Localization:
     setLanguageMod: 1
   QuitGameEvent:

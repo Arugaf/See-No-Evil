@@ -40,11 +40,11 @@ namespace Leaderboard
             UniTaskCompletionSource<LBData> task = new UniTaskCompletionSource<LBData>();
             YG2.onGetLeaderboard += (LBData dat) =>
             {
-#if UNITY_EDITOR
-                // I wanna fucking kill the creator of PluginYG.
-                // Why the fuck it is NOT SIMULATED? WHAT IS WRONG WITH YOU
+//#if UNITY_EDITOR
+                // I wanna fucking kill the creator of YandexSDK.
+                // Why the fuck it returns more that I want? WHAT IS WRONG WITH YOU
                 dat = LBMethods.SortLB(dat, topPlaces + nearbySelfPlaces, topPlaces, nearbySelfPlaces);
-#endif
+//#endif
                 task.TrySetResult(dat);
                 YG2.onGetLeaderboard = null;
             };
