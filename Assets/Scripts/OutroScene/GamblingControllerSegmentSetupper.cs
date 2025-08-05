@@ -47,10 +47,10 @@ namespace Features.OutroScene
         }
         public async UniTask EndSegment(LootScriptableObject obj)
         {
-            await gamblingItemView.Preload(obj);
+            var X = await GamblingItemView.Preload(obj);
             gambleBoxView.SetOpen(true);
             await UniTask.WaitForSeconds(openGambleBoxDelay);
-            await gamblingItemView.ToShow(obj);
+            await gamblingItemView.ToShow(X);
             basicUIAnimator.SetBool("EndSegment", true);
             firstCam.gameObject.SetActive(false);
             secondCam.gameObject.SetActive(true);

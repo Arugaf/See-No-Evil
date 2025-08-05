@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using Unity.Android.Gradle.Manifest;
@@ -7,41 +9,80 @@ namespace Features.OutroScene
 {
     public class GamblingItemView : MonoBehaviour
     {
+        public class LoadedLoot : IDisposable
+        {
+            LootScriptableObject obj;
+            GameObject gm;
+            public LoadedLoot(LootScriptableObject obj)
+            {
+                this.obj = obj;
+                gm = null;
+            }
+
+            public void Dispose()
+            {
+                gm = null;
+                obj.ModelViewPrefab.ReleaseAsset();
+            }
+
+            public async UniTask<GameObject> GetPrefab()
+            {
+                if (gm != null) return gm;
+                gm = await obj.ModelViewPrefab.LoadAssetAsync();
+                return gm;
+            }
+            public GameObject LoadedPrefab => gm;
+        }
         [SerializeField] private Transform coreViewTransform;
         [SerializeField] private Quaternion basicRot;
         [SerializeField] private Animator anim;
-        private AssetReferenceGameObject currentRef;
+        private LoadedLoot currentRef;
         private GameObject currentInstance;
-        private GameObject currentPrefab;
         //private bool loading;
         private void Awake()
         {
             basicRot = coreViewTransform.transform.localRotation;
         }
-        public async UniTask Preload(LootScriptableObject obj)
+        public static async UniTask<LoadedLoot> Preload(LootScriptableObject obj)
         {
             //await UniTask.WaitUntil(() => !loading);
             //loading = true;
-            if (currentRef != null)
-            {
-                OnDisable();
-                GameObject.Destroy(currentInstance);
-                currentPrefab = null;
-                currentRef.ReleaseAsset();
-            }
-            currentRef = obj.ModelViewPrefab;
-            currentPrefab = await currentRef.LoadAssetAsync();
+            var result = new LoadedLoot(obj);
+            await result.GetPrefab();
+            return result;
             //loading = false;
         }
         public async UniTask ToShow(LootScriptableObject obj)
         {
-            if (currentRef != obj.ModelViewPrefab || currentPrefab == null)
+            DisposeCurrentRef();
+            await ToShow(await Preload(obj));
+        }
+        // The LoadedLoot is CONSUMED here, this class is now is responsible to dispose it.
+        // This is a bad practice.
+        public async UniTask ToShow(LoadedLoot obj)
+        {
+            if (obj.LoadedPrefab == null)
             {
-                await Preload(obj);
+                Debug.LogError("Please preload.");
+                return;
             }
-            currentInstance = GameObject.Instantiate(currentPrefab, coreViewTransform);
-            enabled = true;
+            DisposeCurrentRef();
+            currentRef = obj;
             anim.gameObject.SetActive(true);
+            anim.Play("init");
+            await UniTask.WaitForEndOfFrame();
+            currentInstance = GameObject.Instantiate(currentRef.LoadedPrefab, coreViewTransform);
+            enabled = true;
+        }
+        void DisposeCurrentRef()
+        {
+            if (currentRef != null)
+            {
+                if (currentInstance != null) Destroy(currentInstance);
+                currentRef.Dispose();
+                currentRef = null;
+                anim.gameObject.SetActive(false);
+            }
         }
         private void OnEnable()
         {
@@ -51,6 +92,7 @@ namespace Features.OutroScene
         private void OnDisable()
         {
             anim.gameObject.SetActive(false);
+            
         }
         public void Rotate(float degrees)
         {
@@ -58,9 +100,13 @@ namespace Features.OutroScene
         }
         void OnDestroy()
         {
-            if (currentRef != null || currentInstance != null)
+            if (currentInstance != null)
             {
-                currentRef.ReleaseAsset();
+                Destroy(currentInstance);
+            }
+            if (currentRef != null)
+            {
+                currentRef.Dispose();
             }
         }
     }
