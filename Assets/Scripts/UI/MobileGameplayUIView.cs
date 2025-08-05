@@ -12,6 +12,7 @@ namespace Gameplay
         [Inject]
         private void Construct(GameplayState state, InputActionAsset mainAsset)
         {
+            actionAsset = mainAsset;
             gameplayState = state;
             MoveAction = mainAsset.FindAction("Move");
         }

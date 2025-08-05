@@ -18,6 +18,11 @@ namespace UI
         {
             if (dragOnUpdate)
             {
+                dragOnUpdate = false;
+            }
+            // one-frame delay so the Tutorial might read CurrentLookVector value. yes, this solution sucks ass
+            else if (mobileGameplayUIView.CurrentLookVector.sqrMagnitude > 0.0001f)
+            {
                 mobileGameplayUIView.CurrentLookVector = Vector2.zero;
             }
         }

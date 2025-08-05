@@ -1,6 +1,7 @@
 Authorization v1.022
 InterstitialAdv v1.003
 Leaderboards v1.01
+LoadWindow v1.0
 Localization v1.0011
 QuitGameEvent v1.001
 RewardedAdv v1.001

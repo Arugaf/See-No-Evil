@@ -15,11 +15,6 @@ MonoBehaviour:
   m_GroupName: Levels
   m_GUID: a0114372cf0e05f438d501ee29dd7b89
   m_SerializeEntries:
-  - m_GUID: 43910a1c4016dda41aac5a9581f093d7
-    m_Address: Assets/Scenes/Levels/Template/BasicLevel.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b918f697d2093b94696280f3986684fd
     m_Address: Assets/Scenes/Levels/ApartmentsLevel/Apartments.unity
     m_ReadOnly: 0

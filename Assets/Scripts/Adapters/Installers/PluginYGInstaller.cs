@@ -10,8 +10,17 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 using YG;
+public class PluginYGFirmwareScreen : IFirmwareLoadScreen
+{
+    public bool Enabled { set => YG2.SetLoadPageVisible(value); }
+    public float Progress { set => YG2.SetLoadPageProgress(value); }
+}
 public static class PluginYGInstaller
 {
+    public static IFirmwareLoadScreen GetFirmwareLoadScreen()
+    {
+        return new PluginYGFirmwareScreen();
+    }
     public static void Configure(IContainerBuilder builder)
     {
         builder.Register<IAdManager, PluginYGAdManager>(Lifetime.Singleton);

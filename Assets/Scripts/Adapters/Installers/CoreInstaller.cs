@@ -34,14 +34,28 @@ public class GameplayCanvasInstaller
     {
         bool isMobile = StaticPlatformDefiner.IsMobile();
         GameObject chosenOne = (isMobile ? MobileGameplayCanvas : PCGameplayCanvas);
-        builder.RegisterFactory<AbstractGameplayUIView>(container => 
+        builder.RegisterFactory<AbstractGameplayUIView>(container =>
         {
             return () => container.Instantiate(chosenOne).GetComponent<AbstractGameplayUIView>(); // Execute per factory invocation
         }, Lifetime.Scoped);
     }
 }
+public class DummyFirmwareLoadScreen : IFirmwareLoadScreen
+{
+    public bool Enabled { get; set; }
+    public float Progress { get; set; }
+}
 public class CoreInstaller: LifetimeScope
 {
+    // I beg this is the only dependency which should be used by EntryPoint
+    public static IFirmwareLoadScreen GetFirmwareLoadScreen()
+    {
+#if PLUGIN_YG_2
+        return PluginYGInstaller.GetFirmwareLoadScreen();
+#else
+        return new DummyFirmwareLoadScreen();
+#endif
+    }
     [SerializeField] private AudioMixer mainAudioMixer;
     [SerializeField] private InputActionAsset mainInputActionAsset;
     [SerializeField] private GameplayCanvasInstaller gameplayCanvasInstaller;
