@@ -17,7 +17,7 @@ MonoBehaviour:
     TransitionDuration: 1.5
   DarknessMeterControllerSettings:
     darknessRegenSpeed: 0.35
-    darknessDecaySpeed: 0.25
+    darknessDecaySpeed: 0.5
   GameplayDarknessManagerSettings:
     smoothTime: 0.2
   DarknessAudioSettings:

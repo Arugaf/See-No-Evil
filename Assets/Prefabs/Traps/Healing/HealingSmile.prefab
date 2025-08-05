@@ -5024,7 +5024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnEffect: {fileID: 0}
   damageParameters:
-    Damage: -10
+    Damage: -25
     StunTime: 0
     StunCoeff: 0
   OnAttackAction:
