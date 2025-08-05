@@ -60,6 +60,26 @@ MonoBehaviour:
     m_Localized: Happy
     m_Metadata:
       m_Items: []
+  - m_Id: 5589299201122304
+    m_Localized: Ghost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5589703079043072
+    m_Localized: ColaBubu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5590365539999744
+    m_Localized: Stitch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5592083828908032
+    m_Localized: Sigma boy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5592337403944960
+    m_Localized: Unidentified bug
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

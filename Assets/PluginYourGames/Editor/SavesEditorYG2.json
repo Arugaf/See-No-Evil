@@ -1,5 +1,5 @@
 {
-    "idSave": 456,
+    "idSave": 470,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -17,7 +17,7 @@
                 },
                 {
                     "Id": "GreenLabubu",
-                    "Count": 1
+                    "Count": 3
                 },
                 {
                     "Id": "PeachLabubu",
@@ -33,6 +33,14 @@
                 },
                 {
                     "Id": "BlueLabubu",
+                    "Count": 2
+                },
+                {
+                    "Id": "SigmaBubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "GoldLabubu",
                     "Count": 1
                 }
             ]
@@ -65,10 +73,10 @@
                     "BestScore": 1950
                 }
             ],
-            "LastPlayedLevelID": "FirstLevel"
+            "LastPlayedLevelID": "CocktailPartyLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 7450
+            "GlobalScore": 7600
         },
         "GameVersionCode": 0
     }

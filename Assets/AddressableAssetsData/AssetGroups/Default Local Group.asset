@@ -234,6 +234,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - LootPrefabsGroup
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23b27f442a229aa4b9e2b4620afe07ca
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/GhostLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 283cdae118ed08845a42a60e575bde8e
     m_Address: Assets/Models/Characters/Jam/Jam.fbx
     m_ReadOnly: 0
@@ -332,6 +338,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31b420e8b2599af4689796ebf7f4eea1
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/SigmaBubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31d4d4d521d083949b23f8998a15618c
     m_Address: Assets/Models/models/Furniture/Sources/Furniture.mat
@@ -501,6 +513,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - FootstepsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 501869b51b8af6947853d26d98c58871
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/ZergLoot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 50615cd1b0ea9364b9432dc373f9d3b8
     m_Address: Assets/Materials/FoilShader/Particles.mat
@@ -835,6 +853,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - LevelAssetsGroup
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c5ef1b335d0fd44fbf921b2c20bd622
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/StitchLabubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8cf34da643a924ea4bb2e208b895e8bf
     m_Address: Assets/Audio/SFX/Cocktail/cocktail_ambient1.mp3
@@ -1422,6 +1446,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cocktail
     - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1c4f4c5f6733a645aec0ca670b227cc
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/ColaBubu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f2429ebd748ebb74aa5a4c6610cb8589
     m_Address: Assets/Animations/FreakyTV/freakytv_idle.anim

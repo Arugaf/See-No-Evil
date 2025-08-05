@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using TMPro;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 namespace Features.OutroScene
@@ -12,12 +13,15 @@ namespace Features.OutroScene
         private AssetReferenceGameObject currentRef;
         private GameObject currentInstance;
         private GameObject currentPrefab;
+        //private bool loading;
         private void Awake()
         {
             basicRot = coreViewTransform.transform.localRotation;
         }
         public async UniTask Preload(LootScriptableObject obj)
         {
+            //await UniTask.WaitUntil(() => !loading);
+            //loading = true;
             if (currentRef != null)
             {
                 OnDisable();
@@ -27,6 +31,7 @@ namespace Features.OutroScene
             }
             currentRef = obj.ModelViewPrefab;
             currentPrefab = await currentRef.LoadAssetAsync();
+            //loading = false;
         }
         public async UniTask ToShow(LootScriptableObject obj)
         {

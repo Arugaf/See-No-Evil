@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 63355f2fdcededd44b5156014c47a987, type: 3}
   m_Name: InventoryIconsGen
   m_EditorClassIdentifier: Assembly-CSharp-Editor::ModelIconGeneratorSettings
   ToRender:
@@ -20,6 +20,12 @@ MonoBehaviour:
   - {fileID: 593853490622164014, guid: 1bc982c2f84b309459ff08cd8e9f0793, type: 3}
   - {fileID: 123972048680651707, guid: 2226b7f88bd7009408c799f50e8812b7, type: 3}
   - {fileID: 1597238020400376308, guid: ce2861a95bad1fa49aa8435a610a461d, type: 3}
+  - {fileID: 1597238020400376308, guid: ce2861a95bad1fa49aa8435a610a461d, type: 3}
+  - {fileID: 4064303169430493959, guid: f1c4f4c5f6733a645aec0ca670b227cc, type: 3}
+  - {fileID: 326868768979684100, guid: 8c5ef1b335d0fd44fbf921b2c20bd622, type: 3}
+  - {fileID: 8695137636807408649, guid: 31b420e8b2599af4689796ebf7f4eea1, type: 3}
+  - {fileID: 6958100640005885950, guid: 23b27f442a229aa4b9e2b4620afe07ca, type: 3}
+  - {fileID: 2328638278642269055, guid: 501869b51b8af6947853d26d98c58871, type: 3}
   RotationOffset: {x: 0, y: 70, z: -20}
   SavePath: Assets/Sprites/InventoryIcons
   Resolution: 128
