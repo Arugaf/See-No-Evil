@@ -1,12 +1,12 @@
 {
-    "idSave": 450,
+    "idSave": 456,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
             "SFXVolume": 1.0,
             "CameraSensivity": 0.9791287183761597,
             "CurrentLocaleName": "",
-            "ShowTutorialPC": true,
+            "ShowTutorialPC": false,
             "ShowTutorialMobile": false
         },
         "Loot": {
@@ -25,6 +25,14 @@
                 },
                 {
                     "Id": "RedLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "BeigeLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "BlueLabubu",
                     "Count": 1
                 }
             ]
@@ -57,10 +65,10 @@
                     "BestScore": 1950
                 }
             ],
-            "LastPlayedLevelID": "ApartmentsLevel"
+            "LastPlayedLevelID": "FirstLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 7250
+            "GlobalScore": 7450
         },
         "GameVersionCode": 0
     }
