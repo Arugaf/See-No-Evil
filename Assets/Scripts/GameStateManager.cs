@@ -123,14 +123,14 @@ public class GameStateManager: IInitializable, IAsyncStartable
         {
             Cursor.lockState = CursorLockMode.Locked;
 #if !UNITY_EDITOR && UNITY_WEBGL
-            UnityEngine.WebGLModule.WebGLInput.stickyCursorLock = true;
+            WebGLInput.stickyCursorLock = true;
 #endif
         }
         else
         {
             Cursor.lockState = CursorLockMode.None;
 #if !UNITY_EDITOR && UNITY_WEBGL
-            UnityEngine.WebGLModule.WebGLInput.stickyCursorLock = false;
+            WebGLInput.stickyCursorLock = false;
 #endif
         }
     }
