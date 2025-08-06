@@ -26,6 +26,7 @@ MonoBehaviour:
   - {fileID: 8695137636807408649, guid: 31b420e8b2599af4689796ebf7f4eea1, type: 3}
   - {fileID: 6958100640005885950, guid: 23b27f442a229aa4b9e2b4620afe07ca, type: 3}
   - {fileID: 2328638278642269055, guid: 501869b51b8af6947853d26d98c58871, type: 3}
+  - {fileID: 7325892589878828518, guid: e301a0dec4c1aed4688d2cab5b309d96, type: 3}
   RotationOffset: {x: 0, y: 70, z: -20}
   SavePath: Assets/Sprites/InventoryIcons
   Resolution: 128

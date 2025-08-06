@@ -1845,7 +1845,7 @@ MonoBehaviour:
   proceedButton: {fileID: 1696499550}
   adRetryButton: {fileID: 1704544586}
   confirmButton: {fileID: 1614774305}
-  retryCount: 1
+  retryCount: 91
 --- !u!1001 &288460939
 PrefabInstance:
   m_ObjectHideFlags: 0

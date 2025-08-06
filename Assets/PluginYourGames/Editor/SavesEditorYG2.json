@@ -1,5 +1,5 @@
 {
-    "idSave": 485,
+    "idSave": 493,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -50,6 +50,10 @@
                 {
                     "Id": "BaseLabubu",
                     "Count": 2
+                },
+                {
+                    "Id": "FurbyLoot",
+                    "Count": 1
                 }
             ]
         },
@@ -81,10 +85,10 @@
                     "BestScore": 1460
                 }
             ],
-            "LastPlayedLevelID": "CocktailPartyLevel"
+            "LastPlayedLevelID": "FirstLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 8190
+            "GlobalScore": 8340
         },
         "GameVersionCode": 0
     }

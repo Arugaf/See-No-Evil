@@ -1375,6 +1375,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - LevelAssetsGroup
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e301a0dec4c1aed4688d2cab5b309d96
+    m_Address: Assets/Prefabs/GambleBox/LootPrefabs/FurbyLoot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LootPrefabsGroup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e3f994d876eff094aa7ed0213498b667
     m_Address: Assets/Models/House/New_models/materials/WoodenFloor.mat
     m_ReadOnly: 0

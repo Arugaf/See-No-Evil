@@ -212,8 +212,8 @@ MonoBehaviour:
     device: 0
     language: ru
     advIntervalSimulation: 60
-    durationAdv: 2
-    loadAdv: 1
+    durationAdv: 0.2
+    loadAdv: 0.2
     testFailAds: 0
   Templates:
     logoImageFormat: 3

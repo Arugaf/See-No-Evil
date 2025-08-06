@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Key: zerg_name
     m_Metadata:
       m_Items: []
+  - m_Id: 5936203877392384
+    m_Key: furbyloot_name
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

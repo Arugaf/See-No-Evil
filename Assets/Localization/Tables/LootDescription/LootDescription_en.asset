@@ -80,6 +80,10 @@ MonoBehaviour:
     m_Localized: Unidentified bug
     m_Metadata:
       m_Items: []
+  - m_Id: 5936203877392384
+    m_Localized: Furbubu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

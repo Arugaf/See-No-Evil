@@ -30,7 +30,7 @@ namespace Features.OutroScene
             public async UniTask<GameObject> GetPrefab()
             {
                 if (alreadyLoaded) return addressHandle.Result;
-                addressHandle = obj.ModelViewPrefab.LoadAssetAsync();
+                addressHandle = Addressables.LoadAssetAsync<GameObject>(obj.ModelViewPrefab);
                 await addressHandle;
                 alreadyLoaded = true;
                 return addressHandle.Result;

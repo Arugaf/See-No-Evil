@@ -35,3 +35,5 @@ MonoBehaviour:
     Value: {fileID: 11400000, guid: fb67a46691ad1ca43a203eb7338f6269, type: 2}
   - weight: 0.01
     Value: {fileID: 11400000, guid: 9456a61e09d43e14b8c75a91b77e167e, type: 2}
+  - weight: 0.08
+    Value: {fileID: 11400000, guid: 59a9b78503994164fb4644f3e0786dcb, type: 2}

@@ -21,6 +21,7 @@ namespace Features.OutroScene
         [SerializeField] private Transform gambleBoxTransform;
         [SerializeField] private GamblingItemView gamblingItemView;
         [SerializeField] private float openGambleBoxDelay = 0.6f;
+        [SerializeField] private float gambleBoxOpenAnimationDelay = 1.0f;
         private IGambleBoxView gambleBoxView;
         private IGameLootManager lootManager;
         [Inject]
@@ -57,6 +58,7 @@ namespace Features.OutroScene
             await textController.SetText(obj.Name);
             await SetupLootCount(obj);
             gamblingItemView.enabled = true;
+            await UniTask.WaitForSeconds(gambleBoxOpenAnimationDelay);
         }
         public async UniTask DoSetActive(bool active)
         {
