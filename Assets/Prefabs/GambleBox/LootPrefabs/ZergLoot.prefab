@@ -84,15 +84,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5634998670152583980, guid: 512464e31e15cb8408c14038916af8d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.61181
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5634998670152583980, guid: 512464e31e15cb8408c14038916af8d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.10789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5634998670152583980, guid: 512464e31e15cb8408c14038916af8d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.61679
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5634998670152583980, guid: 512464e31e15cb8408c14038916af8d8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -124,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6846611381484395911, guid: 512464e31e15cb8408c14038916af8d8, type: 3}
       propertyPath: m_Name
-      value: ZergLoot Variant
+      value: ZergLoot
       objectReference: {fileID: 0}
     - target: {fileID: 9176114771472717770, guid: 512464e31e15cb8408c14038916af8d8, type: 3}
       propertyPath: m_IsActive

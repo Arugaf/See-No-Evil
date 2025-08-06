@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 namespace Features.OutroScene
 {
     public class GamblingItemView : MonoBehaviour
@@ -11,26 +12,30 @@ namespace Features.OutroScene
         public class LoadedLoot : IDisposable
         {
             LootScriptableObject obj;
-            GameObject gm;
+            AsyncOperationHandle<GameObject> addressHandle;
+            private bool alreadyLoaded = false;
             public LoadedLoot(LootScriptableObject obj)
             {
                 this.obj = obj;
-                gm = null;
             }
 
             public void Dispose()
             {
-                gm = null;
-                obj.ModelViewPrefab.ReleaseAsset();
+                if (alreadyLoaded)
+                {
+                    Addressables.Release(addressHandle);
+                }
             }
 
             public async UniTask<GameObject> GetPrefab()
             {
-                if (gm != null) return gm;
-                gm = await obj.ModelViewPrefab.LoadAssetAsync();
-                return gm;
+                if (alreadyLoaded) return addressHandle.Result;
+                addressHandle = obj.ModelViewPrefab.LoadAssetAsync();
+                await addressHandle;
+                alreadyLoaded = true;
+                return addressHandle.Result;
             }
-            public GameObject LoadedPrefab => gm;
+            public GameObject LoadedPrefab => addressHandle.IsValid() ? addressHandle.Result : null;
         }
         [SerializeField] private Transform coreViewTransform;
         [SerializeField] private Quaternion basicRot;

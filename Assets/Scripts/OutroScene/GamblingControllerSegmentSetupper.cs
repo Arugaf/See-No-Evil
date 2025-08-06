@@ -20,7 +20,7 @@ namespace Features.OutroScene
         [SerializeField] private CameraLookIntroSceneSubcomponent secondCam;
         [SerializeField] private Transform gambleBoxTransform;
         [SerializeField] private GamblingItemView gamblingItemView;
-                [SerializeField] private float openGambleBoxDelay = 0.6f;
+        [SerializeField] private float openGambleBoxDelay = 0.6f;
         private IGambleBoxView gambleBoxView;
         private IGameLootManager lootManager;
         [Inject]
