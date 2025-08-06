@@ -1178,6 +1178,7 @@ MonoBehaviour:
   gambleBoxTransform: {fileID: 2142172509}
   gamblingItemView: {fileID: 1723598966}
   openGambleBoxDelay: 0.6
+  gambleBoxOpenAnimationDelay: 1
   references:
     version: 2
     RefIds: []
@@ -1845,7 +1846,7 @@ MonoBehaviour:
   proceedButton: {fileID: 1696499550}
   adRetryButton: {fileID: 1704544586}
   confirmButton: {fileID: 1614774305}
-  retryCount: 91
+  retryCount: 1
 --- !u!1001 &288460939
 PrefabInstance:
   m_ObjectHideFlags: 0

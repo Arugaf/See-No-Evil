@@ -122,10 +122,16 @@ public class GameStateManager: IInitializable, IAsyncStartable
         if (_currentScene == GameScene.MainScene && currentGameStatus == GameStatus.Active)
         {
             Cursor.lockState = CursorLockMode.Locked;
+#if !UNITY_EDITOR && UNITY_WEBGL
+            UnityEngine.WebGLModule.WebGLInput.stickyCursorLock = true;
+#endif
         }
         else
         {
             Cursor.lockState = CursorLockMode.None;
+#if !UNITY_EDITOR && UNITY_WEBGL
+            UnityEngine.WebGLModule.WebGLInput.stickyCursorLock = false;
+#endif
         }
     }
     private async UniTask TransitionToOtherScene(GameScene newScene)
