@@ -55,6 +55,30 @@ MonoBehaviour:
     m_Key: beigelabubu_name
     m_Metadata:
       m_Items: []
+  - m_Id: 5589299201122304
+    m_Key: ghostlabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5589703079043072
+    m_Key: colabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5590365539999744
+    m_Key: stichlabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5592083828908032
+    m_Key: sigmabubu_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5592337403944960
+    m_Key: zerg_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5936203877392384
+    m_Key: furbyloot_name
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

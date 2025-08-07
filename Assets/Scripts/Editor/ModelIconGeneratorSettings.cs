@@ -11,3 +11,4 @@ public class ModelIconGeneratorSettings : ScriptableObject
     public int RendererToUse;
     [Min(1.0f)] public float SpacingFactor = 1.0f;
 }
+ 

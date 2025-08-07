@@ -15,6 +15,7 @@ namespace Features.OutroScene
         [SerializeField] private Button proceedButton;
         [SerializeField] private Button adRetryButton;
         [SerializeField] private Button confirmButton;
+                [SerializeField] private int retryCount = 1;
         private IAdManager adManager;
         [Inject]
         private void Construct(IAdManager adManager)
@@ -59,7 +60,7 @@ namespace Features.OutroScene
         public override async UniTask<LootAndCount> DoPick(IRandom rnd, GambleBoxLootObject loot)
         {
             // warning: current logic supports pickTimes >= 1. Zero would be counted as 1.
-            int pickTimes = 1;
+            int pickTimes = retryCount;
             bool retry = true;
             LootAndCount result;
             await setupper.DoSetActive(true);

@@ -1,5 +1,5 @@
 {
-    "idSave": 456,
+    "idSave": 499,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -17,7 +17,7 @@
                 },
                 {
                     "Id": "GreenLabubu",
-                    "Count": 1
+                    "Count": 4
                 },
                 {
                     "Id": "PeachLabubu",
@@ -33,17 +33,32 @@
                 },
                 {
                     "Id": "BlueLabubu",
+                    "Count": 2
+                },
+                {
+                    "Id": "SigmaBubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "GoldLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "ColaBubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "BaseLabubu",
+                    "Count": 2
+                },
+                {
+                    "Id": "FurbyLoot",
                     "Count": 1
                 }
             ]
         },
         "LevelStats": {
             "Values": [
-                {
-                    "Id": "FirstLevel",
-                    "BestTime": 0.0,
-                    "BestScore": 1360
-                },
                 {
                     "Id": "SecondLevel",
                     "BestTime": 0.0,
@@ -63,12 +78,17 @@
                     "Id": "CocktailPartyLevel",
                     "BestTime": 0.0,
                     "BestScore": 1950
+                },
+                {
+                    "Id": "FirstLevel",
+                    "BestTime": 0.0,
+                    "BestScore": 1460
                 }
             ],
-            "LastPlayedLevelID": "FirstLevel"
+            "LastPlayedLevelID": "ApartmentsLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 7450
+            "GlobalScore": 8340
         },
         "GameVersionCode": 0
     }

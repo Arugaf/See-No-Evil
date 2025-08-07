@@ -27,5 +27,11 @@ MonoBehaviour:
     Value: {fileID: 11400000, guid: fd98ab03127b8534681646b74f8c442e, type: 2}
   - weight: 0.05
     Value: {fileID: 11400000, guid: 658c9277d572df54e8b06c66979875a1, type: 2}
-  - weight: 0.01
+  - weight: 0.04
     Value: {fileID: 11400000, guid: d30680f513e74f444be4f07847dd5e94, type: 2}
+  - weight: 0.08
+    Value: {fileID: 11400000, guid: a33d7358da5380f45876df784f4290ba, type: 2}
+  - weight: 0.08
+    Value: {fileID: 11400000, guid: 9456a61e09d43e14b8c75a91b77e167e, type: 2}
+  - weight: 0.04
+    Value: {fileID: 11400000, guid: 59a9b78503994164fb4644f3e0786dcb, type: 2}
