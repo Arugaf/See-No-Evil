@@ -30,7 +30,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   <RandomLootObject>k__BackingField: {fileID: 11400000, guid: 60b7b3a343426d2489bfd7ac7fb15170, type: 2}
-  <LevelTime>k__BackingField: 180
+  <LevelTime>k__BackingField: 121
   references:
     version: 2
     RefIds: []
