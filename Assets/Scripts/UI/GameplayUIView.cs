@@ -26,6 +26,27 @@ namespace Gameplay
             anim.SetBool("Hide", true);
         }
     }
+    //public class InputActionBroker
+    //{
+    //    private InputAction MoveAction;
+    //    public InputActionBroker(InputAction act)
+    //    {
+    //        MoveAction = act;
+    //    }
+    //    public Vector2 ReadValue()
+    //    {
+    //        Vector2 limit = new Vector2(Screen.width, Screen.height) * 0.95f;
+    //        Vector2 current = MoveAction.ReadValue<Vector2>();
+    //        if (Mathf.Abs(current.x) < limit.x && Mathf.Abs(current.y) < limit.y)
+    //        {
+    //            return current;
+    //        }
+    //        else
+    //        {
+    //            return Vector2.zero;
+    //        }
+    //    }
+    //}
     public class GameplayUIView: BaseGameplayUIView
     {
         private InputActionAsset actionAsset;
@@ -36,7 +57,7 @@ namespace Gameplay
         private void Construct(GameplayState state, InputActionAsset mainAsset)
         {
             gameplayState = state;
-            LookAction = mainAsset.FindAction("Look");
+            LookAction = mainAsset.FindAction("Look");//new InputActionBroker(mainAsset.FindAction("Look"));
             MoveAction = mainAsset.FindAction("Move");
         }
 
