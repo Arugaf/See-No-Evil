@@ -28,6 +28,7 @@ namespace Gameplay
         }
         public void Tick()
         {
+            if (Time.timeScale <= 1e-6) return;
             if(DoDecay && Ratio > 0)
             {
                 Ratio -= Time.deltaTime * settings.darknessDecaySpeed;
