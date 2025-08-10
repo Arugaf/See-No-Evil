@@ -1,5 +1,5 @@
 {
-    "idSave": 552,
+    "idSave": 564,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -21,7 +21,7 @@
                 },
                 {
                     "Id": "PeachLabubu",
-                    "Count": 3
+                    "Count": 4
                 },
                 {
                     "Id": "RedLabubu",
@@ -29,7 +29,7 @@
                 },
                 {
                     "Id": "BeigeLabubu",
-                    "Count": 1
+                    "Count": 2
                 },
                 {
                     "Id": "BlueLabubu",
@@ -37,7 +37,7 @@
                 },
                 {
                     "Id": "SigmaBubu",
-                    "Count": 1
+                    "Count": 2
                 },
                 {
                     "Id": "GoldLabubu",
