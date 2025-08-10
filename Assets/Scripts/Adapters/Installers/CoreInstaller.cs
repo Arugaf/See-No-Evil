@@ -62,6 +62,7 @@ public class CoreInstaller: LifetimeScope
     [SerializeField] private GameSceneDefinitionObject sceneDefinitionObject;
     [SerializeField] private LootRegistryScriptableObject lootRegistry;
     [SerializeField] private BasicScoreEvaluator.Settings scoreSettings;
+    [SerializeField] private ShowGroupButton.Settings showGroupLinks;
     [SerializeField] private GameLevelManager.Settings gameManagerSettings;
     protected override void Configure(IContainerBuilder builder)
     {
@@ -75,6 +76,7 @@ public class CoreInstaller: LifetimeScope
         builder.RegisterInstance(mainAudioMixer);
         builder.RegisterInstance(mainInputActionAsset);
         builder.RegisterInstance(lootRegistry);
+        builder.RegisterInstance(showGroupLinks);
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<LevelStatsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<GameLootManager>(Lifetime.Singleton).AsImplementedInterfaces();

@@ -1,94 +1,23 @@
 {
-    "idSave": 564,
+    "idSave": 8,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
             "SFXVolume": 1.0,
-            "CameraSensivity": 1.7999999523162842,
+            "CameraSensivity": 1.0,
             "CurrentLocaleName": "",
-            "ShowTutorialPC": false,
-            "ShowTutorialMobile": false
+            "ShowTutorialPC": true,
+            "ShowTutorialMobile": true
         },
         "Loot": {
-            "Values": [
-                {
-                    "Id": "FirstLabubu",
-                    "Count": 20
-                },
-                {
-                    "Id": "GreenLabubu",
-                    "Count": 4
-                },
-                {
-                    "Id": "PeachLabubu",
-                    "Count": 4
-                },
-                {
-                    "Id": "RedLabubu",
-                    "Count": 1
-                },
-                {
-                    "Id": "BeigeLabubu",
-                    "Count": 2
-                },
-                {
-                    "Id": "BlueLabubu",
-                    "Count": 4
-                },
-                {
-                    "Id": "SigmaBubu",
-                    "Count": 2
-                },
-                {
-                    "Id": "GoldLabubu",
-                    "Count": 1
-                },
-                {
-                    "Id": "ColaBubu",
-                    "Count": 1
-                },
-                {
-                    "Id": "BaseLabubu",
-                    "Count": 2
-                },
-                {
-                    "Id": "FurbyLoot",
-                    "Count": 1
-                }
-            ]
+            "Values": []
         },
         "LevelStats": {
-            "Values": [
-                {
-                    "Id": "SecondLevel",
-                    "BestTime": 0.0,
-                    "BestScore": 1250
-                },
-                {
-                    "Id": "TemplateLevel",
-                    "BestTime": 12.353866577148438,
-                    "BestScore": 1030
-                },
-                {
-                    "Id": "ApartmentsLevel",
-                    "BestTime": 59.133544921875,
-                    "BestScore": 1360
-                },
-                {
-                    "Id": "CocktailPartyLevel",
-                    "BestTime": 0.0,
-                    "BestScore": 1950
-                },
-                {
-                    "Id": "FirstLevel",
-                    "BestTime": 0.0,
-                    "BestScore": 1460
-                }
-            ],
+            "Values": [],
             "LastPlayedLevelID": "FirstLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 8340
+            "GlobalScore": 0
         },
         "GameVersionCode": 0
     }

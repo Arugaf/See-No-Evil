@@ -59,6 +59,22 @@ MonoBehaviour:
     m_Key: Authorize
     m_Metadata:
       m_Items: []
+  - m_Id: 14965460231258112
+    m_Key: AddLinkButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14965654708551680
+    m_Key: ReviewButtonNormal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14965757250895872
+    m_Key: ReviewedGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14966068078182400
+    m_Key: GroupURL
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
