@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Auth;
 using Cysharp.Threading.Tasks;
+using External;
 using Leaderboard;
 using Monetization;
 using SaveManager;
@@ -34,6 +35,9 @@ public static class PluginYGInstaller
             .DontDestroyOnLoad()
             .AsImplementedInterfaces();
         builder.RegisterEntryPoint<PluginYGDefiblirator>(Lifetime.Singleton);
+        builder.Register<ILinkOpener, PluginYGLinkOpener>(Lifetime.Singleton);
+        builder.Register<IReviewOpener, PluginYGReviewOpener>(Lifetime.Singleton);
+        builder.Register<IAddAsLinkButton, PluginYGAddAsLinkButton>(Lifetime.Singleton);
     }
     // I hate this shit so much you cant imagine ADDRESSABLES HAVE BEEN LOBOTOMIZED MY PLUGINYG TwT
     public class PluginYGDefiblirator : IAsyncStartable

@@ -60,6 +60,8 @@ MonoBehaviour:
     ArtifactBonus: 100
     AdditionalScoreForHPGain: 50
     HPMultiplier: 1
+  showGroupLinks:
+    GroupURL: https://t.me/sleepboy_yg
   gameManagerSettings:
     fullStatString:
       m_TableReference:
