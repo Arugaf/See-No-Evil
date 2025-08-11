@@ -1,23 +1,29 @@
 {
-    "idSave": 8,
+    "idSave": 15,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
             "SFXVolume": 1.0,
             "CameraSensivity": 1.0,
             "CurrentLocaleName": "",
-            "ShowTutorialPC": true,
+            "ShowTutorialPC": false,
             "ShowTutorialMobile": true
         },
         "Loot": {
             "Values": []
         },
         "LevelStats": {
-            "Values": [],
-            "LastPlayedLevelID": "FirstLevel"
+            "Values": [
+                {
+                    "Id": "FirstLevel",
+                    "BestTime": 58.397212982177737,
+                    "BestScore": 680
+                }
+            ],
+            "LastPlayedLevelID": "CocktailPartyLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 0
+            "GlobalScore": 680
         },
         "GameVersionCode": 0
     }

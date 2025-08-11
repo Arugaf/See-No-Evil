@@ -13787,8 +13787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2092a429cbb942b4982bd0a19ec52722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onReviewSuccess: {fileID: 1745448503}
-  onReviewBasic: {fileID: 408929135}
+  onReviewSuccess: {fileID: 408929135}
+  onReviewBasic: {fileID: 1745448503}
 --- !u!114 &1567053967
 MonoBehaviour:
   m_ObjectHideFlags: 0

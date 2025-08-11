@@ -49,7 +49,7 @@ namespace SaveManager
             do
             {
                 dirty = false;
-                await UniTask.WaitForSeconds(savePeriod);
+                await UniTask.WaitForSeconds(savePeriod, true);
             }
             while (dirty);
             YG2.SaveProgress();
