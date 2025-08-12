@@ -58,26 +58,26 @@ MonoBehaviour:
       type: numeric
       players:
       - rank: 1
-        name: Max
-        score: 100
-        photo: demo image
+        name: A leader troll
+        score: 1200
+        photo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlcnhgCFXb0LARYytRETp6MQEw2zFlZI0jfg&s
         uniqueID: 123
         extraData: 
       - rank: 2
-        name: MashaMashaMashaMashaMashaMashaMashaMashaMashaMasha
-        score: 90
-        photo: demo image
+        name: A worse troll
+        score: 1190
+        photo: anonymous
         uniqueID: 321
         extraData: 
       - rank: 3
-        name: anonymous
-        score: 80
-        photo: anonymous
+        name: max
+        score: 1000
+        photo: https://play-lh.googleusercontent.com/31dFqMHjn6kVCqYo107VHktZXictvfavxlQSWaLXwuRqirmYonTZXSyE2Y0LPsJhGOA
         uniqueID: 456
         extraData: 
       - rank: 4
-        name: Player 4
-        score: 70
+        name: pickle rick
+        score: 800
         photo: demo image
         uniqueID: 321
         extraData: 

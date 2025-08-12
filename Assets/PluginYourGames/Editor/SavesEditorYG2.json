@@ -1,5 +1,5 @@
 {
-    "idSave": 25,
+    "idSave": 35,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -18,12 +18,17 @@
                     "Id": "FirstLevel",
                     "BestTime": 58.397212982177737,
                     "BestScore": 680
+                },
+                {
+                    "Id": "CocktailPartyLevel",
+                    "BestTime": 61.49049377441406,
+                    "BestScore": 750
                 }
             ],
-            "LastPlayedLevelID": "ApartmentsLevel"
+            "LastPlayedLevelID": "CocktailPartyLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 680
+            "GlobalScore": 1430
         },
         "GameVersionCode": 0
     }
