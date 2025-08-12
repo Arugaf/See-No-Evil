@@ -38,6 +38,7 @@ public static class PluginYGInstaller
         builder.Register<ILinkOpener, PluginYGLinkOpener>(Lifetime.Singleton);
         builder.Register<IReviewOpener, PluginYGReviewOpener>(Lifetime.Singleton);
         builder.Register<IAddAsLinkButton, PluginYGAddAsLinkButton>(Lifetime.Singleton);
+        builder.Register<IGameReporter, PluginYGGameReporter>(Lifetime.Singleton);
     }
     // I hate this shit so much you cant imagine ADDRESSABLES HAVE BEEN LOBOTOMIZED MY PLUGINYG TwT
     public class PluginYGDefiblirator : IAsyncStartable
