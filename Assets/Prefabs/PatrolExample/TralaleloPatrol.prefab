@@ -639,7 +639,7 @@ MonoBehaviour:
   - {fileID: 1344066962360308618}
   destinationPointIdx: 0
   damageDealer: {fileID: 385429463458135942}
-  speedMultiplierOnChase: 2
+  speedMultiplierOnChase: 1.5
   speedSmoothTime: 0.2
   memoryTime: 1.5
   animator: {fileID: 9218011549228399546}
