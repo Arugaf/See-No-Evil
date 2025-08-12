@@ -5154,7 +5154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -222}
+  m_AnchoredPosition: {x: 0, y: -49}
   m_SizeDelta: {x: 1089.7384, y: 154.7457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1263100999
@@ -5177,7 +5177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Run to the Toilet!
+  m_text: Rise and shine,
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cbc2cb236f253df4ba5f400646ac8f29, type: 2}
   m_sharedMaterial: {fileID: -6815175164776186594, guid: cbc2cb236f253df4ba5f400646ac8f29, type: 2}
@@ -8980,7 +8980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -94}
+  m_AnchoredPosition: {x: 0, y: -185.99997}
   m_SizeDelta: {x: 1089.7384, y: 154.7457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063306435
