@@ -126,6 +126,7 @@ public class GameStateManager: IInitializable, IAsyncStartable
         if (_currentScene == GameScene.MainScene && currentGameStatus == GameStatus.Active)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            reporter.IsPlaying = true;
 //#if !UNITY_EDITOR && UNITY_WEBGL
 //            WebGLInput.stickyCursorLock = true;
 //#endif
@@ -133,6 +134,7 @@ public class GameStateManager: IInitializable, IAsyncStartable
         else
         {
             Cursor.lockState = CursorLockMode.None;
+            reporter.IsPlaying = false;
 //#if !UNITY_EDITOR && UNITY_WEBGL
 //            WebGLInput.stickyCursorLock = false;
 //#endif
@@ -164,6 +166,5 @@ public class GameStateManager: IInitializable, IAsyncStartable
     public async Awaitable StartAsync(CancellationToken cancellation = default)
     {
         await TransitionToOtherScene(GameScene.MainMenu);
-        reporter.GameStarted();
     }
 }

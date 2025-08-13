@@ -3,6 +3,7 @@ namespace External
 {
     public interface IGameReporter
     {
-        public void GameStarted();
+        public void GameIsReadyAndInteractable();
+        public bool IsPlaying { get; set; }
     }
 }
