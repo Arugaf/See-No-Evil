@@ -16,6 +16,7 @@ namespace Monetization
     }
     public interface IAdManager : IDisposable
     {
+        public bool RewardedAdsAvailable { get; }
         public UniTask PreloadAdvertisement();
         public UniTask<AdShowResult> ShowAdvertisement();
         public UniTask<AdShowResult> ShowRewardedAdverticement();

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: PumpkinGames
-  productName: SseeNoEvil
+  productName: SleepBoy
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -140,7 +140,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.0
+  bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -292,7 +292,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 046c4bce8fce92b428eb3c14d69294cb, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1c5bdf0344d04ac4e91019bfe9cef252, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -806,7 +806,7 @@ PlayerSettings:
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 32
-  webGLExceptionSupport: 1
+  webGLExceptionSupport: 2
   webGLNameFilesAsHashes: 0
   webGLShowDiagnostics: 0
   webGLDataCaching: 1
@@ -834,26 +834,28 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    LinuxHeadlessSimulation: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    Nintendo Switch: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    PS4: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    PS5: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg
+    Android: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    LinuxHeadlessSimulation: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    Nintendo Switch: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    PS4: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    PS5: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
     VisionOS: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    WebGL: PLUGIN_YG_2;TMP_YG2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;NJSON_YG2;Leaderboards_yg
-    Windows Store Apps: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    XboxOne: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    iPhone: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    tvOS: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
+    WebGL: PLUGIN_YG_2;TMP_YG2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    Windows Store Apps: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    XboxOne: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    iPhone: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    tvOS: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   il2cppStacktraceInformation: {}
-  managedStrippingLevel: {}
+  managedStrippingLevel:
+    Standalone: 4
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0

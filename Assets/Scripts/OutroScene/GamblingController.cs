@@ -64,6 +64,7 @@ namespace Features.OutroScene
             bool retry = true;
             LootAndCount result;
             await setupper.DoSetActive(true);
+            adRetryButton.gameObject.SetActive(adManager.RewardedAdsAvailable);
             do
             {
                 setupper.StartSegment();

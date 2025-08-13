@@ -3,6 +3,7 @@ namespace Monetization
 {
     public class DummyAdManager : IAdManager
     {
+        public bool RewardedAdsAvailable => false;
         public void Dispose()
         {
             
