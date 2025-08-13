@@ -14,8 +14,8 @@ public class PluginYGStartupLocaleResolver : IStartupLocaleSelector
                 return q;
             }
         }
-#endif
         return availableLocales.GetLocale("en");
-
+#endif
+        return null;
     }
 }

@@ -223,7 +223,7 @@ MonoBehaviour:
     saveCloud: 1
     flush: 0
   Basic:
-    platform: {fileID: 11400000, guid: c2a303d33a9fd394bae4c4b88b9a1c44, type: 2}
+    platform: {fileID: 11400000, guid: 8e47f28e0d590b1419f292ec055752ff, type: 2}
     autoApplySettings: 1
     autoPauseGame: 1
     editEventSystem: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
     skipInterAdvAfterReward: 0
     saveLocal: 0
     saveCloud: 0
-    selectWebGLTemplate: 1
+    selectWebGLTemplate: 0
     runInBackground: 1
     enableExceptions: 1
     compressionFormat: 1

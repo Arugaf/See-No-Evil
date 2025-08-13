@@ -87,11 +87,11 @@ public class CoreInstaller: LifetimeScope
         gameplayCanvasInstaller.Configure(builder);
         // who thought it was a good idea UNITY? WHYYYY
         mainInputActionAsset.Enable();
-        
-#if PLUGIN_YG_2
+
+#if !LobotomizedPlatform_yg
         PluginYGInstaller.Configure(builder);
-        #else
-        #error "Should not hold YG2"
+#else
+        BasicInstaller.ConfigureAllDummies(builder);
         #endif
     }
 }

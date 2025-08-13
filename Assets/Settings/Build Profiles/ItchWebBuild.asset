@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: YandexGamesBuildDev
+  m_Name: ItchWebBuild
   m_EditorClassIdentifier: 
   m_AssetVersion: 1
   m_BuildTarget: 20
@@ -841,7 +841,7 @@ MonoBehaviour:
     - line: '|   webGLDebugSymbols: 0'
     - line: '|   webGLEmscriptenArgs: '
     - line: '|   webGLModulesDirectory: '
-    - line: '|   webGLTemplate: PROJECT:YandexGames'
+    - line: '|   webGLTemplate: APPLICATION:Minimal'
     - line: '|   webGLAnalyzeBuildSize: 0'
     - line: '|   webGLUseEmbeddedResources: 0'
     - line: '|   webGLCompressionFormat: 0'
@@ -862,18 +862,18 @@ MonoBehaviour:
     - line: '|   webWasm2023: 0'
     - line: '|   webEnableSubmoduleStrippingCompatibility: 0'
     - line: '|   scriptingDefineSymbols:'
-    - line: '|     Android: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     LinuxHeadlessSimulation: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     Nintendo Switch: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     PS4: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     PS5: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
+    - line: '|     Android: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
+    - line: '|     LinuxHeadlessSimulation: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
+    - line: '|     Nintendo Switch: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
+    - line: '|     PS4: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
+    - line: '|     PS5: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
+    - line: '|     Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
     - line: '|     VisionOS: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg'
-    - line: '|     WebGL: PLUGIN_YG_2;TMP_YG2;RU_YG2;InterstitialAdv_yg;QuitGameEvent_yg;Storage_yg;Authorization_yg;Localization_yg;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     Windows Store Apps: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     XboxOne: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     iPhone: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
-    - line: '|     tvOS: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;YandexGamesPlatform_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg'
+    - line: '|     WebGL: PLUGIN_YG_2;Authorization_yg;EnvirData_yg;GameLabel_yg;InterstitialAdv_yg;Leaderboards_yg;LoadWindow_yg;Localization_yg;OpenURL_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;LobotomizedPlatform_yg'
+    - line: '|     Windows Store Apps: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
+    - line: '|     XboxOne: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
+    - line: '|     iPhone: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
+    - line: '|     tvOS: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;TMP_YG2;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LoadWindow_yg;Review_yg;EnvirData_yg;OpenURL_yg;GameLabel_yg;LobotomizedPlatform_yg'
     - line: '|   additionalCompilerArguments: {}'
     - line: '|   platformArchitecture: {}'
     - line: '|   scriptingBackend:'
