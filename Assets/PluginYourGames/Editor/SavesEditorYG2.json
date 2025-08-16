@@ -1,5 +1,5 @@
 {
-    "idSave": 37,
+    "idSave": 67,
     "SaveData": {
         "Settings": {
             "MusicVolume": 1.0,
@@ -10,25 +10,47 @@
             "ShowTutorialMobile": true
         },
         "Loot": {
-            "Values": []
+            "Values": [
+                {
+                    "Id": "BaseLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "BlueLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "BeigeLabubu",
+                    "Count": 1
+                },
+                {
+                    "Id": "RedLabubu",
+                    "Count": 1
+                }
+            ]
         },
         "LevelStats": {
             "Values": [
                 {
+                    "Id": "ApartmentsLevel",
+                    "BestTime": 87.17267608642578,
+                    "BestScore": 1080
+                },
+                {
                     "Id": "FirstLevel",
-                    "BestTime": 58.397212982177737,
-                    "BestScore": 680
+                    "BestTime": 0.0,
+                    "BestScore": 1710
                 },
                 {
                     "Id": "CocktailPartyLevel",
-                    "BestTime": 61.49049377441406,
-                    "BestScore": 750
+                    "BestTime": 0.0,
+                    "BestScore": 1360
                 }
             ],
-            "LastPlayedLevelID": "CocktailPartyLevel"
+            "LastPlayedLevelID": "FirstLevel"
         },
         "Leaderboard": {
-            "GlobalScore": 1430
+            "GlobalScore": 4550
         },
         "GameVersionCode": 0
     }
