@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -10,11 +8,11 @@
  */
 
 // Unity rewarded client reference is needed to pass banner client in callback.
-typedef const void* YMAUnityRewardedAdClientRef;
+typedef const void *YMAUnityRewardedAdClientRef;
 
-typedef void (*YMAUnityRewardedAdDidRewardCallback)(YMAUnityRewardedAdClientRef* rewardedAdClient, int amount, char* type);
-typedef void (*YMAUnityRewardedAdDidFailToShowCallback)(YMAUnityRewardedAdClientRef* rewardedAdClient, char* error);
-typedef void (*YMAUnityRewardedAdDidShowCallback)(YMAUnityRewardedAdClientRef* rewardedAdClient);
-typedef void (*YMAUnityRewardedAdDidDismissCallback)(YMAUnityRewardedAdClientRef* rewardedAdClient);
-typedef void (*YMAUnityRewardedAdDidClickCallback)(YMAUnityRewardedAdClientRef* rewardedAdClient);
-typedef void (*YMAUnityRewardedAdDidTrackImpressionCallback)(YMAUnityRewardedAdClientRef* rewardedAdClient, char* rawData);
+typedef void (*YMAUnityRewardedAdDidRewardCallback)(YMAUnityRewardedAdClientRef *rewardedAdClient, int amount, char *type);
+typedef void (*YMAUnityRewardedAdDidFailToShowCallback)(YMAUnityRewardedAdClientRef *rewardedAdClient, char *error);
+typedef void (*YMAUnityRewardedAdDidShowCallback)(YMAUnityRewardedAdClientRef *rewardedAdClient);
+typedef void (*YMAUnityRewardedAdDidDismissCallback)(YMAUnityRewardedAdClientRef *rewardedAdClient);
+typedef void (*YMAUnityRewardedAdDidClickCallback)(YMAUnityRewardedAdClientRef *rewardedAdClient);
+typedef void (*YMAUnityRewardedAdDidTrackImpressionCallback)(YMAUnityRewardedAdClientRef *rewardedAdClient, char *rawData);

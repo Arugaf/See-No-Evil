@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -10,7 +8,7 @@
  */
 #import "YMAUnityInterstitialTypes.h"
 
-typedef const void* YMAUnityInterstitialAdLoaderClientRef;
+typedef const void *YMAUnityInterstitialAdLoaderClientRef;
 
-typedef void (*YMAUnityInterstitialDidLoadAdCallback)(YMAUnityInterstitialAdLoaderClientRef* interstitialLoaderClient, char* interstitialAdObjectID);
-typedef void (*YMAUnityInterstitialDidFailToLoadAdCallback)(YMAUnityInterstitialAdLoaderClientRef* interstitialLoaderClient, char* adUnitId, char* error);
+typedef void (*YMAUnityInterstitialDidLoadAdCallback)(YMAUnityInterstitialAdLoaderClientRef *interstitialLoaderClient, char *interstitialAdObjectID);
+typedef void (*YMAUnityInterstitialDidFailToLoadAdCallback)(YMAUnityInterstitialAdLoaderClientRef *interstitialLoaderClient, char *adUnitId, char *error);

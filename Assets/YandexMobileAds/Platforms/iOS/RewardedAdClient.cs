@@ -11,7 +11,6 @@ using System;
 using System.Runtime.InteropServices;
 using YandexMobileAds.Base;
 using YandexMobileAds.Common;
-using UnityEngine;
 
 namespace YandexMobileAds.Platforms.iOS
 {
@@ -44,8 +43,6 @@ namespace YandexMobileAds.Platforms.iOS
 
         private readonly IntPtr _selfPointer;
         private readonly AdInfo _adInfo;
-        private readonly AudioSessionManagerClient _audioSessionClient;
-
 
         public RewardedAdClient(string rewardedAdObjectId)
         {
@@ -68,8 +65,6 @@ namespace YandexMobileAds.Platforms.iOS
                 adInfoClient.AdSize
             );
             adInfoClient.Destroy();
-
-            this._audioSessionClient = new AudioSessionManagerClient();
         }
 
         public AdInfo GetInfo()
@@ -79,7 +74,6 @@ namespace YandexMobileAds.Platforms.iOS
 
         public void Show()
         {
-            this._audioSessionClient.SetIsCustomManaged();
             RewardedAdBridge.YMAUnityShowRewardedAd(this.ObjectId);
         }
 
@@ -92,7 +86,6 @@ namespace YandexMobileAds.Platforms.iOS
             this.OnAdImpression = null;
             this.OnRewarded = null;
 
-            this._audioSessionClient.Destroy();
             RewardedAdBridge.YMAUnityDestroyRewardedAd(this.ObjectId);
         }
 

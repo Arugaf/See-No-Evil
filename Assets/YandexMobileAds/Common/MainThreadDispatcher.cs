@@ -14,7 +14,7 @@ namespace YandexMobileAds.Common
             get { return instance != null; }
         }
 
-        public static void initialize()
+        internal static void initialize()
         {
             if (IsRunning)
             {
@@ -28,7 +28,7 @@ namespace YandexMobileAds.Common
             instance = obj.AddComponent<MainThreadDispatcher>();
         }
 
-        public static void EnqueueAction(System.Action action)
+        internal static void EnqueueAction(System.Action action)
         {
             lock (mainThreadQueue)
             {

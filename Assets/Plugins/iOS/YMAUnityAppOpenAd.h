@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -12,15 +10,15 @@
 #import <Foundation/Foundation.h>
 #import "YMAUnityAppOpenAdTypes.h"
 
-@interface YMAUnityAppOpenAd: NSObject
+@interface YMAUnityAppOpenAd : NSObject
 
-- (instancetype)initWithClientRef:(YMAUnityAppOpenAdClientRef*)clientRef
-                        appOpenAd:(YMAAppOpenAd*)appOpenAd;
-@property(nonatomic, assign) YMAUnityAppOpenAdDidFailToShowCallback didFailToShowCallback;
-@property(nonatomic, assign) YMAUnityAppOpenAdDidShowCallback didShowCallback;
-@property(nonatomic, assign) YMAUnityAppOpenAdDidDismissCallback didDismissCallback;
-@property(nonatomic, assign) YMAUnityAppOpenAdDidClickCallback didClickCallback;
-@property(nonatomic, assign) YMAUnityAppOpenAdDidTrackImpressionCallback didTrackImpressionCallback;
+- (instancetype)initWithClientRef:(YMAUnityAppOpenAdClientRef *)clientRef
+                         appOpenAd:(YMAAppOpenAd *)appOpenAd;
+@property (nonatomic, assign) YMAUnityAppOpenAdDidFailToShowCallback didFailToShowCallback;
+@property (nonatomic, assign) YMAUnityAppOpenAdDidShowCallback didShowCallback;
+@property (nonatomic, assign) YMAUnityAppOpenAdDidDismissCallback didDismissCallback;
+@property (nonatomic, assign) YMAUnityAppOpenAdDidClickCallback didClickCallback;
+@property (nonatomic, assign) YMAUnityAppOpenAdDidTrackImpressionCallback didTrackImpressionCallback;
 
 - (void)show;
 

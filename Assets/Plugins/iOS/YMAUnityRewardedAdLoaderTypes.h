@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -10,7 +8,7 @@
  */
 #import "YMAUnityRewardedAdTypes.h"
 
-typedef const void* YMAUnityRewardedAdLoaderClientRef;
+typedef const void *YMAUnityRewardedAdLoaderClientRef;
 
-typedef void (*YMAUnityRewardedDidLoadAdCallback)(YMAUnityRewardedAdLoaderClientRef* rewardedAdLoaderClient, char* rewardedAdObjectID);
-typedef void (*YMAUnityRewardedDidFailToLoadAdCallback)(YMAUnityRewardedAdLoaderClientRef* rewardedAdLoaderClient, char* adUnitId, char* error);
+typedef void (*YMAUnityRewardedDidLoadAdCallback)(YMAUnityRewardedAdLoaderClientRef *rewardedAdLoaderClient, char *rewardedAdObjectID);
+typedef void (*YMAUnityRewardedDidFailToLoadAdCallback)(YMAUnityRewardedAdLoaderClientRef *rewardedAdLoaderClient, char *adUnitId, char *error);

@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -10,13 +8,13 @@
  */
 
 // Unity banner client reference is needed to pass banner client in callback.
-typedef const void* YMAUnityBannerClientRef;
+typedef const void *YMAUnityBannerClientRef;
 
-typedef void (*YMAUnityAdViewDidReceiveAdCallback)(YMAUnityBannerClientRef* bannerClient);
-typedef void (*YMAUnityAdViewDidFailToReceiveAdWithErrorCallback)(YMAUnityBannerClientRef* bannerClient, char* error);
-typedef void (*YMAUnityAdViewWillPresentScreenCallback)(YMAUnityBannerClientRef* bannerClient);
-typedef void (*YMAUnityAdViewWillDismissScreenCallback)(YMAUnityBannerClientRef* bannerClient);
-typedef void (*YMAUnityAdViewDidDismissScreenCallback)(YMAUnityBannerClientRef* bannerClient);
-typedef void (*YMAUnityAdViewDidTrackImpressionCallback)(YMAUnityBannerClientRef* bannerClient, char* rawData);
-typedef void (*YMAUnityAdViewWillLeaveApplicationCallback)(YMAUnityBannerClientRef* bannerClient);
-typedef void (*YMAUnityAdViewDidClickCallback)(YMAUnityBannerClientRef* bannerClient);
+typedef void (*YMAUnityAdViewDidReceiveAdCallback)(YMAUnityBannerClientRef *bannerClient);
+typedef void (*YMAUnityAdViewDidFailToReceiveAdWithErrorCallback)(YMAUnityBannerClientRef *bannerClient, char *error);
+typedef void (*YMAUnityAdViewWillPresentScreenCallback)(YMAUnityBannerClientRef *bannerClient);
+typedef void (*YMAUnityAdViewWillDismissScreenCallback)(YMAUnityBannerClientRef *bannerClient);
+typedef void (*YMAUnityAdViewDidDismissScreenCallback)(YMAUnityBannerClientRef *bannerClient);
+typedef void (*YMAUnityAdViewDidTrackImpressionCallback)(YMAUnityBannerClientRef *bannerClient, char *rawData);
+typedef void (*YMAUnityAdViewWillLeaveApplicationCallback)(YMAUnityBannerClientRef *bannerClient);
+typedef void (*YMAUnityAdViewDidClickCallback)(YMAUnityBannerClientRef *bannerClient);

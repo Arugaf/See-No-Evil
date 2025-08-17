@@ -19,11 +19,6 @@ void YMAUnitySetLocationConsent(bool consent)
     [YMAMobileAds setLocationTrackingEnabled:consent];
 }
 
-void YMAUnitySetAgeRestrictedUser(bool ageRestrictedUser)
-{
-    [YMAMobileAds setAgeRestrictedUser:ageRestrictedUser];
-}
-
 void YMAUnityShowDebugPanel(void)
 {
     [YMAMobileAds showDebugPanel];

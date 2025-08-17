@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -11,12 +9,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YMAUnityObjectsStorage: NSObject
+@interface YMAUnityObjectsStorage : NSObject
 
 + (instancetype)sharedInstance;
 
-- (id)objectWithID:(const char*)objectID;
-- (void)setObject:(id)object withID:(const char*)objectID;
-- (void)removeObjectWithID:(const char*)objectID;
+- (id)objectWithID:(const char *)objectID;
+- (void)setObject:(id)object withID:(const char *)objectID;
+- (void)removeObjectWithID:(const char *)objectID;
 
 @end

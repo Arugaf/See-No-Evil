@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -14,14 +12,14 @@
 
 @class YMAAdRequestConfiguration;
 
-@interface YMAUnityInterstitialAdLoader: NSObject
+@interface YMAUnityInterstitialAdLoader : NSObject
 
-- (instancetype)initWithClientRef:(YMAUnityInterstitialAdLoaderClientRef*)clientRef;
+- (instancetype)initWithClientRef:(YMAUnityInterstitialAdLoaderClientRef *)clientRef;
 
-@property(nonatomic, assign) YMAUnityInterstitialDidLoadAdCallback didLoadAdCallback;
-@property(nonatomic, assign) YMAUnityInterstitialDidFailToLoadAdCallback didFailToLoadAdCallback;
+@property (nonatomic, assign) YMAUnityInterstitialDidLoadAdCallback didLoadAdCallback;
+@property (nonatomic, assign) YMAUnityInterstitialDidFailToLoadAdCallback didFailToLoadAdCallback;
 
-- (void)loadWithRequestConfiguration:(YMAAdRequestConfiguration*)adRequestConfiguration;
+- (void)loadWithRequestConfiguration:(YMAAdRequestConfiguration *)adRequestConfiguration;
 - (void)cancelLoading;
 
 @end

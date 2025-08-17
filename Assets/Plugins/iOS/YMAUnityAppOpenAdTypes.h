@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -10,10 +8,10 @@
  */
 
 // Unity appOpen client reference is needed to pass banner client in callback.
-typedef const void* YMAUnityAppOpenAdClientRef;
+typedef const void *YMAUnityAppOpenAdClientRef;
 
-typedef void (*YMAUnityAppOpenAdDidFailToShowCallback)(YMAUnityAppOpenAdClientRef* appOpenAdClient, char* error);
-typedef void (*YMAUnityAppOpenAdDidShowCallback)(YMAUnityAppOpenAdClientRef* appOpenAdClient);
-typedef void (*YMAUnityAppOpenAdDidDismissCallback)(YMAUnityAppOpenAdClientRef* appOpenAdClient);
-typedef void (*YMAUnityAppOpenAdDidClickCallback)(YMAUnityAppOpenAdClientRef* appOpenAdClient);
-typedef void (*YMAUnityAppOpenAdDidTrackImpressionCallback)(YMAUnityAppOpenAdClientRef* appOpenAdClient, char* rawData);
+typedef void (*YMAUnityAppOpenAdDidFailToShowCallback)(YMAUnityAppOpenAdClientRef *appOpenAdClient, char *error);
+typedef void (*YMAUnityAppOpenAdDidShowCallback)(YMAUnityAppOpenAdClientRef *appOpenAdClient);
+typedef void (*YMAUnityAppOpenAdDidDismissCallback)(YMAUnityAppOpenAdClientRef *appOpenAdClient);
+typedef void (*YMAUnityAppOpenAdDidClickCallback)(YMAUnityAppOpenAdClientRef *appOpenAdClient);
+typedef void (*YMAUnityAppOpenAdDidTrackImpressionCallback)(YMAUnityAppOpenAdClientRef *appOpenAdClient, char *rawData);

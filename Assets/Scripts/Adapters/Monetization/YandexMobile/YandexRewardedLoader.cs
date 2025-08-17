@@ -19,7 +19,7 @@ namespace Monetization
             lrdr.OnAdLoaded += HandleInterstitialLoaded;
             this.identifier = identifier;
             this.preloadTime = preloadTime;
-            FailTime = failTime;
+            FailTime = failTime * 10;
         }
         private void HandleInterstitialLoaded(object sender, RewardedAdLoadedEventArgs args)
         {

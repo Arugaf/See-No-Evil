@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -10,10 +8,10 @@
  */
 
 // Unity interstitial client reference is needed to pass banner client in callback.
-typedef const void* YMAUnityInterstitialAdClientRef;
+typedef const void *YMAUnityInterstitialAdClientRef;
 
-typedef void (*YMAUnityInterstitialAdDidFailToShowCallback)(YMAUnityInterstitialAdClientRef* interstitialAdClient, char* error);
-typedef void (*YMAUnityInterstitialAdDidShowCallback)(YMAUnityInterstitialAdClientRef* interstitialAdClient);
-typedef void (*YMAUnityInterstitialAdDidDismissCallback)(YMAUnityInterstitialAdClientRef* interstitialAdClient);
-typedef void (*YMAUnityInterstitialAdDidClickCallback)(YMAUnityInterstitialAdClientRef* interstitialAdClient);
-typedef void (*YMAUnityInterstitialAdDidTrackImpressionCallback)(YMAUnityInterstitialAdClientRef* interstitialAdClient, char* rawData);
+typedef void (*YMAUnityInterstitialAdDidFailToShowCallback)(YMAUnityInterstitialAdClientRef *interstitialAdClient, char *error);
+typedef void (*YMAUnityInterstitialAdDidShowCallback)(YMAUnityInterstitialAdClientRef *interstitialAdClient);
+typedef void (*YMAUnityInterstitialAdDidDismissCallback)(YMAUnityInterstitialAdClientRef *interstitialAdClient);
+typedef void (*YMAUnityInterstitialAdDidClickCallback)(YMAUnityInterstitialAdClientRef *interstitialAdClient);
+typedef void (*YMAUnityInterstitialAdDidTrackImpressionCallback)(YMAUnityInterstitialAdClientRef *interstitialAdClient, char *rawData);

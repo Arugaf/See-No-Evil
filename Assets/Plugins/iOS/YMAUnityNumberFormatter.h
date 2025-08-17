@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -13,9 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YMAUnityNumberFormatter: NSObject
+@interface YMAUnityNumberFormatter : NSObject
 
-- (NSNumber*)numberFromCString:(char*)cString;
+- (NSNumber *)numberFromCString:(char *)cString;
 
 @end
 

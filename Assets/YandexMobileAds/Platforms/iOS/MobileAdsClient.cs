@@ -46,7 +46,7 @@ namespace YandexMobileAds.Platforms.iOS
 
         public void SetAgeRestrictedUser(bool ageRestrictedUser)
         {
-            MobileAdsBridge.YMAUnitySetAgeRestrictedUser(ageRestrictedUser);
+            // TODO(delank): ADLIB-13105 add COPPA for iOS
         }
 
         public void ShowDebugPanel()

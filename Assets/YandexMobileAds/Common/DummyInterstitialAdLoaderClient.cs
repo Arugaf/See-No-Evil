@@ -14,7 +14,6 @@ using UnityEngine;
 
 namespace YandexMobileAds.Common
 {
-    #pragma warning disable 67
     internal class DummyInterstitialAdLoaderClient : IInterstitialAdLoaderClient
     {
         private const string TAG = "Dummy InterstitialAdLoader ";

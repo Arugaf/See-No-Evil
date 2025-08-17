@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -11,10 +9,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YMAUnityStringConverter: NSObject
+@interface YMAUnityStringConverter : NSObject
 
-+ (char*)copiedCStringFromObjCString:(NSString*)string;
-+ (char*)copiedCString:(const char*)string;
-+ (NSString*)NSStringFromCString:(const char*)string;
++ (char *)copiedCStringFromObjCString:(NSString *)string;
++ (char *)copiedCString:(const char *)string;
++ (NSString *)NSStringFromCString:(const char *)string;
 
 @end

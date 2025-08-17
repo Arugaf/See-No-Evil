@@ -14,7 +14,6 @@ using UnityEngine;
 
 namespace YandexMobileAds.Common
 {
-    #pragma warning disable 67
     public class DummyBannerClient : IBannerClient
     {
         private const string TAG = "Dummy Banner ";

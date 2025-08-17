@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -12,15 +10,15 @@
 #import <Foundation/Foundation.h>
 #import "YMAUnityInterstitialTypes.h"
 
-@interface YMAUnityInterstitialAd: NSObject
+@interface YMAUnityInterstitialAd : NSObject
 
-- (instancetype)initWithClientRef:(YMAUnityInterstitialAdClientRef*)clientRef
-                   interstitialAd:(YMAInterstitialAd*)interstitial;
-@property(nonatomic, assign) YMAUnityInterstitialAdDidFailToShowCallback didFailToShowCallback;
-@property(nonatomic, assign) YMAUnityInterstitialAdDidShowCallback didShowCallback;
-@property(nonatomic, assign) YMAUnityInterstitialAdDidDismissCallback didDismissCallback;
-@property(nonatomic, assign) YMAUnityInterstitialAdDidClickCallback didClickCallback;
-@property(nonatomic, assign) YMAUnityInterstitialAdDidTrackImpressionCallback didTrackImpressionCallback;
+- (instancetype)initWithClientRef:(YMAUnityInterstitialAdClientRef *)clientRef
+                         interstitialAd:(YMAInterstitialAd *)interstitial;
+@property (nonatomic, assign) YMAUnityInterstitialAdDidFailToShowCallback didFailToShowCallback;
+@property (nonatomic, assign) YMAUnityInterstitialAdDidShowCallback didShowCallback;
+@property (nonatomic, assign) YMAUnityInterstitialAdDidDismissCallback didDismissCallback;
+@property (nonatomic, assign) YMAUnityInterstitialAdDidClickCallback didClickCallback;
+@property (nonatomic, assign) YMAUnityInterstitialAdDidTrackImpressionCallback didTrackImpressionCallback;
 
 - (YMAAdInfo*)getInfo;
 - (void)show;

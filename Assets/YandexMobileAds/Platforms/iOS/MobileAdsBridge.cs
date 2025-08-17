@@ -22,9 +22,6 @@ namespace YandexMobileAds.Platforms.iOS
         internal static extern void YMAUnitySetLocationConsent(bool consent);
 
         [DllImport("__Internal")]
-        internal static extern void YMAUnitySetAgeRestrictedUser(bool ageRestrictedUser);
-
-        [DllImport("__Internal")]
         internal static extern void YMAUnityShowDebugPanel();
     }
 

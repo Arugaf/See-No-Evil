@@ -1,5 +1,3 @@
-#pragma once
-
 /*
  * This file is a part of the Yandex Advertising Network
  *
@@ -11,8 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YMAUnityObjectIDProvider: NSObject
+@interface YMAUnityObjectIDProvider : NSObject
 
-+ (const char*)IDForObject:(id)object;
++ (const char *)IDForObject:(id)object;
 
 @end
