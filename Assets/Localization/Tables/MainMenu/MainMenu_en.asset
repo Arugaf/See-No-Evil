@@ -99,6 +99,10 @@ MonoBehaviour:
     m_Localized: News about the game
     m_Metadata:
       m_Items: []
+  - m_Id: 17322196309114880
+    m_Localized: SLEEPBOY
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

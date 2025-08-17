@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using External;
 using Gameplay;
-using InputModule;
 using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -55,10 +54,15 @@ public class GameStateManager: IInitializable, IAsyncStartable
             // InputHandlerOld.GotEscapeKeyDown += OnGamePaused;
 #if UNITY_EDITOR
             // todo: delete in release build
-            InputHandlerOld.GotNKeyDown += OnNextScene;
+            mainAsset.FindAction("Crouch").performed += DebugChangeScenePerformed;
 #endif
             PauseMenu.SetState(false);
         }
+    }
+
+    private void DebugChangeScenePerformed(InputAction.CallbackContext obj)
+    {
+        OnNextScene();
     }
 
     private void PauseActionPerformed(InputAction.CallbackContext obj)

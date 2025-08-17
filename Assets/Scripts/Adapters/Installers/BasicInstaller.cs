@@ -36,11 +36,15 @@ public static class BasicInstaller
     }
     public static void ConfigureAllDummies(IContainerBuilder builder)
     {
+        ConfigureAllDummiesWithoutAds(builder);
+        builder.Register<IAdManager, DummyAdManager>(Lifetime.Singleton);
+    }
+    public static void ConfigureAllDummiesWithoutAds(IContainerBuilder builder)
+    {
         UseGeneralDummies(builder);
         builder.Register<IGameSaveManager, PlayerPrefsGameSaveManager>(Lifetime.Singleton);
         builder.Register<IAuthManager, DummyAuthManager>(Lifetime.Singleton);
         builder.Register<ILeaderboardManager, DummyLeaderboardManager>(Lifetime.Singleton);
-        builder.Register<IAdManager, DummyAdManager>(Lifetime.Singleton);
     }
     // I hate this shit so much you cant imagine ADDRESSABLES HAVE BEEN LOBOTOMIZED MY PLUGINYG TwT
    

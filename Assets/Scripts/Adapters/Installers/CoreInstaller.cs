@@ -3,6 +3,7 @@ using Gameplay.LevelStats;
 using Gameplay.Loot;
 using Leaderboard;
 using Levels;
+using Monetization;
 using SaveManager;
 using System;
 using System.Runtime.InteropServices;
@@ -64,6 +65,7 @@ public class CoreInstaller: LifetimeScope
     [SerializeField] private BasicScoreEvaluator.Settings scoreSettings;
     [SerializeField] private ShowGroupButton.Settings showGroupLinks;
     [SerializeField] private GameLevelManager.Settings gameManagerSettings;
+    [SerializeField] private MobileAdsManagerSettings mobileAdsManagerSettings;
     protected override void Configure(IContainerBuilder builder)
     {
         // Main systems
@@ -77,6 +79,7 @@ public class CoreInstaller: LifetimeScope
         builder.RegisterInstance(mainInputActionAsset);
         builder.RegisterInstance(lootRegistry);
         builder.RegisterInstance(showGroupLinks);
+        builder.RegisterInstance(mobileAdsManagerSettings);
         builder.Register<SettingsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<LevelStatsManager>(Lifetime.Singleton).AsImplementedInterfaces();
         builder.Register<GameLootManager>(Lifetime.Singleton).AsImplementedInterfaces();
@@ -90,8 +93,11 @@ public class CoreInstaller: LifetimeScope
 
 #if !LobotomizedPlatform_yg
         PluginYGInstaller.Configure(builder);
-#else
+#elif !UNITY_ANDROID
         BasicInstaller.ConfigureAllDummies(builder);
-        #endif
+#else 
+        BasicInstaller.ConfigureAllDummiesWithoutAds(builder);
+        builder.Register<IAdManager, YandexMobileAdsManager>(Lifetime.Singleton);
+#endif
     }
 }

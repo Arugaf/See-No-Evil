@@ -111,6 +111,10 @@ MonoBehaviour:
     m_Localized: "\u041D\u043E\u0432\u043E\u0441\u0442\u0438 \u043E\u0431 \u0438\u0433\u0440\u0435"
     m_Metadata:
       m_Items: []
+  - m_Id: 17322196309114880
+    m_Localized: SLEEPBOY
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
