@@ -73,7 +73,8 @@ namespace Gameplay.Loot
 
         public IRandom GetRandom()
         {
-            return new BasicRandom();
+            return new LootDependentRandom(this);
+            //return new BasicRandom();
         }
 
         public void Start()
