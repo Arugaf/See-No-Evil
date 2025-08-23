@@ -29,6 +29,7 @@ namespace Monetization
         }
         private async UniTask<T> RunAsync()
         {
+            UnityEngine.Debug.Log("FUNC RUNNING");
             var (isTimeout, t) = await task.Task.TimeoutWithoutException(TimeSpan.FromSeconds(FailTime), DelayType.UnscaledDeltaTime);
             task = null;
             if (isTimeout)
@@ -44,6 +45,7 @@ namespace Monetization
         {
             if(task != null)
             {
+                UnityEngine.Debug.Log($"RETURN RESULT: {result}");
                 task.TrySetResult(result);
             }
         }

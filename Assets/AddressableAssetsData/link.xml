@@ -50,7 +50,6 @@
     <type fullname="GameSceneDefinitionObject" preserve="all" />
     <type fullname="GameSettingsInstaller" preserve="all" />
     <type fullname="HealingObjectScoreAdder" preserve="all" />
-    <type fullname="InputModule.InputHandlerOld" preserve="all" />
     <type fullname="InvisibleObjectSetupper" preserve="all" />
     <type fullname="KillIfTooLow" preserve="all" />
     <type fullname="KinematicCharacterController.Examples.ExampleCharacterCamera" preserve="all" />
@@ -90,6 +89,7 @@
     <type fullname="Gameplay.Loot.GambleBoxLootObject/LootPair" preserve="nothing" serialized="true" />
     <type fullname="GameplayCanvasInstaller" preserve="nothing" serialized="true" />
     <type fullname="Levels.GameLevelManager/Settings" preserve="nothing" serialized="true" />
+    <type fullname="Monetization.MobileAdsManagerSettings" preserve="nothing" serialized="true" />
     <type fullname="ShowGroupButton/Settings" preserve="nothing" serialized="true" />
     <type fullname="Features.OutroScene.LocalizedTextController" preserve="nothing" serialized="true" />
     <type fullname="LevelSelectorBar/LevelSelectionButtonStyle" preserve="nothing" serialized="true" />

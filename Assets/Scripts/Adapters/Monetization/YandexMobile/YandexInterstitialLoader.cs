@@ -18,10 +18,18 @@ namespace Monetization
         {
             lrdr = new InterstitialAdLoader();
             lrdr.OnAdLoaded += HandleInterstitialLoaded;
+            lrdr.OnAdFailedToLoad += Lrdr_OnAdFailedToLoad;
             this.identifier = identifier;
             this.preloadTime = preloadTime;
             FailTime = failTime;
         }
+
+        private void Lrdr_OnAdFailedToLoad(object sender, AdFailedToLoadEventArgs e)
+        {
+            DestroyInterstitial();
+            UnityEngine.Debug.Log("FAILED TO LOAD INTERSTITIAL");
+        }
+
         private void HandleInterstitialLoaded(object sender, InterstitialAdLoadedEventArgs args)
         {
             interstitial = args.Interstitial;
@@ -60,12 +68,14 @@ namespace Monetization
         }
         public UniTask<AdShowResult> Show()
         {
-            if(interstitial != null && !Locked)
+            UnityEngine.Debug.Log("SHOW INTR");
+            if (Ready && !Locked)
             {
                 var x = Run();
                 interstitial.Show();
                 return x;
             }
+            UnityEngine.Debug.Log("INSTA FAIL TO SHOW");
             return UniTask.FromResult(Default);
         }
         public UniTask Preload()
