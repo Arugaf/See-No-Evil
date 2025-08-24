@@ -221,3 +221,4 @@ Assets/Samples/*
 /.vscode
 Builds/*
 Recordings/*
+/.utmp

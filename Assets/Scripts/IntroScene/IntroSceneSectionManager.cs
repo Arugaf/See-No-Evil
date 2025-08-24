@@ -1,15 +1,23 @@
 using System.Collections;
 using Cysharp.Threading.Tasks;
+using External;
 using Features.IntroScene;
 using SaveManager;
 using UnityEngine;
+using VContainer;
 namespace Features.IntroScene {
     public class IntroSceneSectionManager : MonoBehaviour
     {
         [SerializeField] private ListDictionaryContainer<AbstractIntroSceneStage> introSceneStages;
         [SerializeField] private string InitID = "main";
+        private IGameReporter reporter;
         private string prevIndex;
         private bool transition = false;
+        [Inject]
+        private void Construct(IGameReporter reporter)
+        {
+            this.reporter = reporter;
+        }
         public IEnumerator Start()
         {
             yield return new WaitForEndOfFrame();
@@ -19,6 +27,7 @@ namespace Features.IntroScene {
             if (introSceneStages.TryGetValue(InitID, out var result))
                 yield return result.SetActivation(true).ToCoroutine();
             transition = false;
+            reporter.GameIsReadyAndInteractable();
         }
         public void ChangeSection(string newID)
         {

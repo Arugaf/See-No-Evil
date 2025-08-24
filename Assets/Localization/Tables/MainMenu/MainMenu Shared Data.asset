@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Key: GroupURL
     m_Metadata:
       m_Items: []
+  - m_Id: 17322196309114880
+    m_Key: AndroidGameName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

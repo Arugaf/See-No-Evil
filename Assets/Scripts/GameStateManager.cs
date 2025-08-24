@@ -3,8 +3,8 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
+using External;
 using Gameplay;
-using InputModule;
 using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -33,14 +33,17 @@ public class GameStateManager: IInitializable, IAsyncStartable
     private GameStatus currentGameStatus = GameStatus.Active;
     private GameplayResultStorage gameplayResultStorage;
     private ILevelDefinition levelDefinition;
+    private IGameReporter reporter;
     
     private GameScene _currentScene = GameScene.MainMenu;
-    public GameStateManager(InputActionAsset inputActions, IGameSceneDefinition gameSceneDefinition, GameplayResultStorage storage, ILevelDefinition levelDefinition)
+    public GameStateManager(InputActionAsset inputActions, IGameSceneDefinition gameSceneDefinition,
+        IGameReporter reporter, GameplayResultStorage storage, ILevelDefinition levelDefinition)
     {
         mainAsset = inputActions;
         this.gameSceneDefinition = gameSceneDefinition;
         gameplayResultStorage = storage;
         this.levelDefinition = levelDefinition;
+        this.reporter = reporter;
     }
     void IInitializable.Initialize() 
     {
@@ -51,10 +54,15 @@ public class GameStateManager: IInitializable, IAsyncStartable
             // InputHandlerOld.GotEscapeKeyDown += OnGamePaused;
 #if UNITY_EDITOR
             // todo: delete in release build
-            InputHandlerOld.GotNKeyDown += OnNextScene;
+            mainAsset.FindAction("Crouch").performed += DebugChangeScenePerformed;
 #endif
             PauseMenu.SetState(false);
         }
+    }
+
+    private void DebugChangeScenePerformed(InputAction.CallbackContext obj)
+    {
+        OnNextScene();
     }
 
     private void PauseActionPerformed(InputAction.CallbackContext obj)
@@ -122,6 +130,7 @@ public class GameStateManager: IInitializable, IAsyncStartable
         if (_currentScene == GameScene.MainScene && currentGameStatus == GameStatus.Active)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            reporter.IsPlaying = true;
 //#if !UNITY_EDITOR && UNITY_WEBGL
 //            WebGLInput.stickyCursorLock = true;
 //#endif
@@ -129,6 +138,7 @@ public class GameStateManager: IInitializable, IAsyncStartable
         else
         {
             Cursor.lockState = CursorLockMode.None;
+            reporter.IsPlaying = false;
 //#if !UNITY_EDITOR && UNITY_WEBGL
 //            WebGLInput.stickyCursorLock = false;
 //#endif

@@ -90,6 +90,11 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+  mobileAdsManagerSettings:
+    InterstitialAdKey: R-M-16776858-1
+    RewardedAdKey: R-M-16776858-2
+    AdShowTimeout: 5
+    PreloadPromiseTime: 1
   references:
     version: 2
     RefIds: []

@@ -5,6 +5,7 @@ namespace Monetization
 {
     public class PluginYGAdManager : IAdManager
     {
+        public bool RewardedAdsAvailable => true;
         private const string ID = "idk";
         public PluginYGAdManager()
         {

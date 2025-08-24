@@ -22,7 +22,7 @@ MonoBehaviour:
   m_DisableCatalogUpdateOnStart: 0
   m_InternalIdNamingMode: 0
   m_InternalBundleIdMode: 1
-  m_AssetLoadMode: 1
+  m_AssetLoadMode: 0
   m_BundledAssetProviderType:
     m_AssemblyName: Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     m_ClassName: UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider

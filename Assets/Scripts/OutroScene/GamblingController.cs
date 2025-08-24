@@ -25,6 +25,7 @@ namespace Features.OutroScene
         private UniTask<int> WaitForButtonToClick(params Button[] btn)
         {
             UniTaskCompletionSource<int> src = new UniTaskCompletionSource<int>();
+            Debug.Log("BUTTONS");
             for (int i = 0; i < btn.Length; i++)
             {
                 int copyidx = i;
@@ -44,9 +45,11 @@ namespace Features.OutroScene
             do
             {
                 int idx = await WaitForButtonToClick(adRetryButton, confirmButton);
+                Debug.Log("BUTTONS DONE");
                 if (idx == 0)
                 {
                     var result = await adManager.ShowRewardedAdverticement();
+                    Debug.Log($"REV SUCCESS: {result.IsSuccess}");
                     if (result.IsSuccess)
                     {
                         ret = false;
@@ -54,6 +57,8 @@ namespace Features.OutroScene
                     }
                 }
                 else unconfirmed = false;
+                Debug.Log("ITER");
+                await UniTask.WaitForEndOfFrame();
             } while (unconfirmed);
             return ret;
         }
@@ -64,6 +69,7 @@ namespace Features.OutroScene
             bool retry = true;
             LootAndCount result;
             await setupper.DoSetActive(true);
+            adRetryButton.gameObject.SetActive(adManager.RewardedAdsAvailable);
             do
             {
                 setupper.StartSegment();

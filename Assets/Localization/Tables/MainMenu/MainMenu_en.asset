@@ -72,7 +72,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4847461578121216
-    m_Localized: Run to the Toilet!
+    m_Localized: Raise and shine,
     m_Metadata:
       m_Items: []
   - m_Id: 12479495339319296
@@ -92,11 +92,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14965757250895872
-    m_Localized: Thank you very much! :3
+    m_Localized: Thank you! :3
     m_Metadata:
       m_Items: []
   - m_Id: 14966068078182400
     m_Localized: News about the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17322196309114880
+    m_Localized: SLEEPBOY
     m_Metadata:
       m_Items: []
   references:

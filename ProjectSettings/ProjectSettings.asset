@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: PumpkinGames
-  productName: SseeNoEvil
+  productName: SleepBoy
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -59,12 +59,12 @@ PlayerSettings:
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
-  allowedAutorotateToPortrait: 1
-  allowedAutorotateToPortraitUpsideDown: 1
+  allowedAutorotateToPortrait: 0
+  allowedAutorotateToPortraitUpsideDown: 0
   allowedAutorotateToLandscapeRight: 1
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
-  use32BitDisplayBuffer: 1
+  use32BitDisplayBuffer: 0
   preserveFramebufferAlpha: 0
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
@@ -140,8 +140,10 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.0
-  preloadedAssets: []
+  bundleVersion: 1.0
+  preloadedAssets:
+  - {fileID: 11400000, guid: d89630fe7f3652e418a9c9607f22c863, type: 2}
+  - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -257,17 +259,17 @@ PlayerSettings:
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
-  useCustomMainGradleTemplate: 0
+  useCustomMainGradleTemplate: 1
   useCustomLauncherGradleManifest: 0
   useCustomBaseGradleTemplate: 0
-  useCustomGradlePropertiesTemplate: 0
-  useCustomGradleSettingsTemplate: 0
+  useCustomGradlePropertiesTemplate: 1
+  useCustomGradleSettingsTemplate: 1
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: P:/Keys/pumpkin.keystore
+  AndroidKeyaliasName: sleepboy
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
   AndroidBuildApkPerCpuArchitecture: 0
@@ -276,7 +278,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -292,7 +294,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 046c4bce8fce92b428eb3c14d69294cb, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1c5bdf0344d04ac4e91019bfe9cef252, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -530,8 +532,13 @@ PlayerSettings:
   - m_BuildTarget: WebGL
     m_StaticBatching: 0
     m_DynamicBatching: 0
+  - m_BuildTarget: Android
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
-  m_BuildTargetGraphicsJobs: []
+  m_BuildTargetGraphicsJobs:
+  - m_BuildTarget: AndroidPlayer
+    m_GraphicsJobs: 0
   m_BuildTargetGraphicsJobMode: []
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: iOSSupport
@@ -539,7 +546,7 @@ PlayerSettings:
     m_Automatic: 1
   - m_BuildTarget: AndroidPlayer
     m_APIs: 150000000b000000
-    m_Automatic: 0
+    m_Automatic: 1
   m_BuildTargetVRSettings: []
   m_DefaultShaderChunkSizeInMB: 16
   m_DefaultShaderChunkCount: 0
@@ -806,7 +813,7 @@ PlayerSettings:
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 32
-  webGLExceptionSupport: 1
+  webGLExceptionSupport: 2
   webGLNameFilesAsHashes: 0
   webGLShowDiagnostics: 0
   webGLDataCaching: 1
@@ -834,26 +841,29 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    LinuxHeadlessSimulation: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    Nintendo Switch: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    PS4: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    PS5: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg
+    Android: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    LinuxHeadlessSimulation: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    Nintendo Switch: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    PS4: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    PS5: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;Storage_yg;NJSON_YG2;RewardedAdv_yg;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
     VisionOS: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    WebGL: PLUGIN_YG_2;TMP_YG2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;NJSON_YG2;Leaderboards_yg
-    Windows Store Apps: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    XboxOne: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    iPhone: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
-    tvOS: PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg
+    WebGL: PLUGIN_YG_2;TMP_YG2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    Windows Store Apps: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    XboxOne: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    iPhone: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
+    tvOS: PLUGIN_YG_2;Authorization_yg;InterstitialAdv_yg;Localization_yg;QuitGameEvent_yg;RewardedAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2;Leaderboards_yg;LobotomizedPlatform_yg;EnvirData_yg;GameLabel_yg;LoadWindow_yg;OpenURL_yg;Review_yg
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   il2cppStacktraceInformation: {}
-  managedStrippingLevel: {}
+  managedStrippingLevel:
+    Android: 4
+    Standalone: 4
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
@@ -942,7 +952,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 2
+  activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 5d06fec1-6368-4ccc-b633-f04a73703015
   framebufferDepthMemorylessMode: 0

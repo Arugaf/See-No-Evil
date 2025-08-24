@@ -1,5 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
+using SaveManager;
 using UnityEngine.Events;
+using YG;
 
 public interface ILanguageResolver
 {
